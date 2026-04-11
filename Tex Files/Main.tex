@@ -1,0 +1,203 @@
+\documentclass[12pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[left=1.5in, right=1.5in, top=1in, bottom=1in, footskip=0.5in, headheight=15pt, headsep=20pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage[style=authoryear,sorting=none,backend=biber]{biblatex}
+\usepackage{etoolbox}
+\usepackage{indentfirst}
+\usepackage[english]{babel}
+\usepackage{flafter}
+\usepackage{siunitx}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{placeins}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage[version=4,arrows=pgf-filled]{mhchem}
+\usepackage[none]{hyphenat}
+\usepackage{amsthm}
+\usepackage{svg}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\sisetup{group-separator={,}}
+\DeclareSIUnit{\byte}{B}
+\DeclareSIUnit{\angstrom}{Å}
+
+\newcommand{\fullref}[1]{\ref{#1} on page ~\pageref{#1}}
+\newcommand{\Mod}[1]{\ \mathrm{mod}\ (#1)}
+\newenvironment{bsmallmatrix}
+  {\left[\begin{smallmatrix}}
+  {\end{smallmatrix}\right]}
+\newcommand*{\tran}{^{\mkern-1.5mu\mathsf{T}}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\let\cleardoublepage\clearpage
+
+\newenvironment{abstract}%
+{\begin{center}%
+	\bfseries\end{center}}%
+{\vfill\null}
+
+\addbibresource{references.bib}
+
+\graphicspath{{../Images/}}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{Sean Stetson}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\usepackage[hidelinks]{hyperref}
+
+\renewcommand{\baselinestretch}{2}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\atantwo}{\text{atan2}}
+
+\begin{document}
+\emergencystretch 3em
+{\setstretch{1}
+\frontmatter
+\input{Title}
+}
+
+\cleardoublepage
+
+\null\vspace{\stretch{1}}
+\begin{flushright}
+	\textit{\textcolor{red}{FILL IN DEDICATION}}
+\end{flushright}
+\vspace{\stretch{2}}\null
+\thispagestyle{empty}
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+\chapter{Acknowledgments}
+
+\setcounter{page}{1}
+
+\textcolor{red}{FILL IN}
+
+%My undergraduate academic journey has been one of incredible self-discovery, starting with Mathematics and Computer Science leading me all the way to Molecular Biology and Pharmacology. I would like to express my profound gratitude to Dr. Kelly Thayer for taking a chance on me in Freshman year and being so supportive of me at every step of this journey.
+%
+%Thank you to all my past and present lab mates, particularly Mark Han, Ben Cowan, Samvit Singhal, Chris Chiu, and Yehor Mishchyriak. A special thank you to Fernando Caballero for being a great friend and a hard-working lab partner, specifically with regards to our study of hydrogen bonding. I would like to thank all of the members of the Molecules to Medicine consortium, including but not limited to Dr. Michael Weir, Dr. David Beveridge, and Pete Hwang.
+%
+%Next, I would like to thank Dr. Eduard Neu, for further taking a chance on me and allowing me to confirm in my heart what career I want to pursue. I would like to thank him for our fruitful discussions regarding my simulations' experimental setup.
+%
+%Thank you to my thesis readers, Dr. Kelly Thayer, Dr. Victoria Manfredi, and Dr. Daniel Krizanc for their time, feedback, and support, both in my undergraduate career and in my thesis.
+%
+%Finally, I would like to thank all of my friends who have been by my side throughout my undergraduate years. Thank you for listening to me vent or giving me advice and being a never-ending source of laughter and smiles.
+
+\chapter{Abstract}
+\begin{abstract}
+	\textcolor{red}{UPDATE}
+\end{abstract}
+
+{\setstretch{1.5}
+\tableofcontents
+}
+\thispagestyle{empty}
+
+{\setstretch{1.5}
+\listoffigures
+}
+\thispagestyle{empty}
+
+\begingroup
+\let\cleardoublepage\clearpage
+\endgroup
+
+\thispagestyle{empty}
+
+\mainmatter
+\setcounter{chapter}{0}
+\renewcommand{\thechapter}{\arabic{chapter}}
+
+\newcommand{\figurepageref}[1]{Figure \ref{#1} on page \pageref{#1}}
+
+\chapter{Introduction}
+
+\setcounter{page}{1}
+
+\input{Introduction}
+
+\textcolor{red}{BEFORE SUBMISSION, CHECK THE LOG FOR AND RESOLVE ALL OVERFULL LINES (LINES THAT GO INTO THE MARGINS OF THE PAGE)}
+
+\chapter{Background}
+
+\input{Background}
+
+\chapter{Results}
+
+\input{Results}
+
+\chapter{Discussion}
+\label{Discussion and Conclusions}
+
+\input{DiscussionConclusion}
+
+\chapter{Conclusion}
+
+\input{Conclusion}
+
+\chapter{Methods}
+
+\input{Methods}
+
+\backmatter
+\appendix
+\chapter{Appendix}
+\input{Appendix}
+
+\cleardoublepage
+
+{\setstretch{1.5}
+\printbibliography
+}
+
+\end{document}

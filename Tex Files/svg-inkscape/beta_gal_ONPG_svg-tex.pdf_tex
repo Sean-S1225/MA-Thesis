@@ -1,0 +1,157 @@
+%% Creator: Inkscape 1.4.3 (0d15f750, 2025-12-25), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'beta_gal_ONPG_svg-tex.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{353.75257874bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.52420443)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.1685339,0.15164626){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.19497357,0.10585153){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.07390441,0.16691116){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.07390441,0.10585153){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.14209444,0.07532173){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.10034386,0.21270589){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.24844292,0.07532173){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}NO\end{tabular}}}}%
+    \put(0.28024482,0.07082918){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.37583068,0.10362753){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}β-galactosidase\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.39086664,0.18416051){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}H\end{tabular}}}}%
+    \put(0.40617819,0.17928421){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.41502121,0.18416051){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0.66744763,0.14952824){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.57281793,0.16479317){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.57281793,0.10373354){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.64100966,0.07320371){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.59925803,0.21058787){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.87660231,0.10128903){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}NO\end{tabular}}}}%
+    \put(0.9084042,0.09679648){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.69388774,0.10373354){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.80782115,0.13181883){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.03506985,0.03795875){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textit{ortho}\end{tabular}}}}%
+    \put(0.08339367,0.03795875){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-nitrophenyl-β-galactoside\end{tabular}}}}%
+    \put(0.14313096,0.0135794){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}(ONPG)\end{tabular}}}}%
+    \put(0.58277193,0.0257744){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}β-D-galactose\end{tabular}}}}%
+    \put(0.78128567,0.02578074){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textit{ortho}\end{tabular}}}}%
+    \put(0.8296097,0.02578074){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}-Nitrophenol\end{tabular}}}}%
+    \put(0.76532113,0.41367452){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}+\end{tabular}}}}%
+    \put(0.17082511,0.42141574){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.19726457,0.37562102){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.25014326,0.43668065){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.07619541,0.43668065){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.07619541,0.37562102){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.14438545,0.3450912){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.10263508,0.48247537){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=24]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.19726457,0.46721046){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=25]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.30302343,0.43668065){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=26]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.30302343,0.37562102){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=27]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.25014326,0.3450912){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=28]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.38658184,0.37551481){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}β-galactosidase\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=29]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.4016199,0.45604758){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}H\end{tabular}}}}%
+    \put(0.41692934,0.45117171){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}2\end{tabular}}}}%
+    \put(0.42577237,0.45604758){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0.68358182,0.42265474){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=30]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.90124243,0.42265474){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}O\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=31]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.58895212,0.43791965){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=32]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.58895212,0.37686024){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=33]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.65714385,0.34633042){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=34]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.71002187,0.37686024){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=35]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.80661272,0.43791965){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=36]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.80661272,0.37686024){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=37]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.87480446,0.34633042){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=38]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.92768247,0.37686024){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}OH\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=39]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.61539216,0.48371437){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=40]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.83305277,0.48371437){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}HO\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=41]{beta_gal_ONPG_svg-tex.pdf}}%
+    \put(0.17167931,0.30358932){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}lactose\end{tabular}}}}%
+    \put(0.82540762,0.3055674){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}β-D-glucose\end{tabular}}}}%
+    \put(0.59890612,0.30680555){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}β-D-galactose\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=42]{beta_gal_ONPG_svg-tex.pdf}}%
+  \end{picture}%
+\endgroup%

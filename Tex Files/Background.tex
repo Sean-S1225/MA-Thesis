@@ -1,0 +1,1091 @@
+Keeping to the interdisciplinary spirit of the College of Integrative Sciences, this thesis is written to be approachable to all disciplines, particularly those in the spectrum of disciplines between computer science, molecular biology, and chemistry. To achieve this, we will derive the content presented in the body of the thesis from first principles in this Background section. We begin from the absolute fundamentals with atoms and atomic interactions (thankfully it will not be necessary to begin with quantum mechanics!), work our way up to proteins, their dynamics, and their interactions, and end with an in-depth look at the nature of high-performance computing, molecular dynamics simulations and their analyses, and yeast genetic techniques. Finally, we will discuss the aspects of p53 relevant to this study, including but not limited to its disordered regions, clinically relevant mutations, its role as a transcription factor, clinically relevant small molecules, and the family of p53 splice variant isoforms (which comprises only a small subset of all the p53 literature).
+
+\section{Atoms and Atomic Interactions}
+
+\begin{flushright}
+	\textit{“There is nothing that living things do that cannot be understood from the point of view that they are made of atoms acting according to the laws of physics.”}\\
+– Richard Feynman\\
+\hfill\break
+\end{flushright}
+
+To understand the complex dynamics of the matter that surrounds us, we must first understand the atom. Biological function, ultimately, emerges from interactions between the atoms that compose living systems, governed by covalent and ionic bonding, electrostatic and van der Waals interactions, and hydrogen bonding. Establishing these fundamentals sets the stage for understanding both the forces that drive protein function and how these properties can be used to simulate complex biological systems.
+
+%\subsection{Atoms}
+
+%\subsubsection{Atomism as a Philosophical Theory}
+%
+%The history of the atom, in the sense of it being some indivisible particle of matter, stretches far beyond our understanding of it as the chemical particle we know today. References to atoms, in this sense, have notably appeared in the works of Ancient Greek and Indian philosophers, though these are undoubtedly not the only two instances.
+%
+%In the 5th century BCE, Democritus, pupil of Leucippus, made the following argument in favor of there being some real, tangible, indivisible particle of mass. Suppose to the contrary, that such an infinite division of matter is possible and has been done. These resulting pieces of matter either have or do ont have magnitude. If they do have magnitude, then they should be able to be divided further and can therefore not be considered the indivisible components of mass we are after. Thus our infinitely divided fragments of matter must have no magnitude. Just as a log turned to sawdust could theoretically and painstakingly be reassembled back into a log, we argue that we must be able to reassemble our fragments back into their original form. How could an object with magnitude be assembled from components without? Even an infinite number of fragments with no magnitude could not produce a body with mass and size. Therefore, an infinite division of matter is impossible, and there must be some smallest particle, one with physical size and mass.
+%
+%The belief in this idea is known as ``atomism'' coming from ``atom'' mean uncuttable or indivisible. Atomism was hotly debated for centuries. For instance, in response to Democritus' argument, Aristotle argued that ``divisible into infinity'' means ``divisible an infinite number of times'', rather than ``divisible into an infinite number of pieces''. The theory of atomism was not firmly cemented as fact until the 19th century with the work of chemist, physicist, and meteorologist John Dalton.
+%
+%\subsubsection{Classical Models of Atomic Structure}
+%
+%In 1804, John Dalton published his Law of Multiple Proportions. This said, in short, that for two compounds that share two elements, the amount of the first element per measure of the second element will differ by a ratio of small whole numbers.
+%
+%For example, Dalton studied nitrous oxide, nitric oxide, and nitrogen dioxide. He observed that, if the amount of nitrogen was fixed to \qty{140}{\gram}, then the amount of oxygen in the respective compounds was \qtylist{80;160;320}{\gram}. Dalton noticed that these came in a ratio of 1:2:4, and (using some trial and error to decide on \num{2} nitrogen atoms per compound) was able to derive the respective chemical formulas \ce{N2O}, \ce{N2O2} (simplified to \ce{NO}), and \ce{N2O4} (simplified to \ce{NO2}).
+%
+%Given that he was unable to separate oxygen or nitrogen into any further smaller products, Dalton correctly determined that he had discovered fundamental particles, and named them atoms after the philosophical theory.
+%
+%In 1897, J. J. Thompson discovered the electron by observing that in a sealed glass container, two electrodes separated by a vacuum will produce a beam of particles that can be affected by electric and magnetic charges. In 1904, he published (what is now referred to as) the Plum Pudding Model to describe the distribution of electrons in the atom. It was known that electrons have a negative charge and that the atom as a whole has no net charge, but no source for a positive charge in the atom had been discovered. Thus, Thompson proposed that the positive charge was uniformly distributed throughout the atom and that electrons arrange themselves such that they would cancel out the charge of the atom, in a way not dissimilar to raisins in a plum pudding. Thompson's model could not account for emission spectra of atoms or valencies observed in the organization of electrons.
+%
+%In 1909, Rutherford proposed an alternative to the Thompson model, positing that the majority of the charge and mass of the atom was arranged in a small volume at the center of the atom, but his model was no closer to explaining the behavior of electrons.
+%
+%\subsubsection{Crisis in Classical Physics}
+%
+%Through the end of the 19th century, the idea of electrons orbiting the core of the atom emerged. However, in 1897, Joseph Larmor showed that an accelerating charge must give off electromagnetic radiation. As the electron orbits the nucleus, its constantly changing direction means that it would be accelerating and therefore should give off electromagnetic radiation. This radiation would ultimately decrease the total energy of the electron, causing it to spiral into the core of the nucleus. A popular solution to this issue at the time was to pair electrons opposite the nucleus, which would cancel out the effect. However, in 1906, Thomson showed that the hydrogen atom had only a single electron.
+%
+%All objects emit thermal radiation from their surface. The distribution of wavelengths and intensity of the radiation (i.e., the energy and number of photons) depends on the temperature of the object; the hotter the object the brighter the intensity and the whiter the light. The derived relationship between temperature and wavelength and intensity of the radiation was given by the following,
+%
+%\begin{equation*}
+%	\rho_{T}(\nu) = \frac{8\pi k_{B}T\nu^{2}}{c^{3}}
+%\end{equation*}
+%
+%\noindent where \(\rho_{T}(\nu)\) is the intensity of the radiation at the frequency \(\nu\) for a body of temperature \(T\), \(k_{B}\) is the Boltzmann constant, and \(c\) is the speed of light. There was a serious problem with the prediction of the distribution of the intensity and wavelengths of the emitted radiation: as wavelength approached zero, the predicted intensity approached infinity. This was referred to as the Ultraviolet Catastrophe, and occurred in the late 19th century. It was not until 1901 when Max Plank was able to solve this.
+%
+%The first step Plank took was to hypothesize that the energy of the emitted photon could not be arbitrary as classical physics had proposed, instead, it was was integer multiples of \(h\nu\), where \(h\) was chosen to be an arbitrary constant with units (energy \(\cdot\) frequency\(^{-1}\)) = (energy \(\cdot\) time), though today it is known as Plank's constant, with \(h = \num{6.626e-34}\). His hypothesis said that exciting a photon can only happen if there is exactly the right amount of energy, no more, no less. This key insight allowed him to make the second step, by realizing that the probability of exciting a high frequency photon diminishes with its frequency. This allowed him to derive an alternate expression,
+%
+%\begin{equation*}
+%	\rho_{T}(\nu) = \frac{8\pi h\nu^{3}}{c^{3}} \frac{1}{e^{hv/k_{B}T} - 1}
+%\end{equation*}
+%
+%\noindent which closely followed the observed frequency and intensity distribution.
+%
+%\textcolor{red}{Einstein photons?}
+%
+%\subsubsection{Early Quantum Models of the Atom}
+%
+%\textcolor{red}{Bohr: quantized orbits, spectra, stability}
+%
+%In 1913, Niels Bohr, a post-doctoral student of Rutherford, proposed his own model for the atom. His theory said that electrons orbit a small and dense nucleus, analogous to a solar system, held together by electrostatic interactions rather than gravity. Valencies were explained by limiting the number of electrons that could occupy any given orbital, and importantly, his model was able a mathematically-sound explanation for the spectral emission lines of hydrogen: when light strikes an electron, it gains enough energy to move to a higher-energy orbital, and when it decays down to its original orbital, a photon is released. The energy the photon was predicted to have closely matched experimentally observed energy levels. The model ultimately failed to accurately describe behavior of larger, multi-electron atoms and was at times in opposition with the then nascent quantum mechanics, but its remarkable success and simplicity makes it a popular model to this day.
+%
+%As successful as the Bohr model of the atom was, there were several serious points of contention. Most simply,  This is, of course, not the case. The key insight is that of quantization.
+%
+%\subsubsection{The Quantum Mechanical Atom}
+%
+%\textcolor{red}{Schrödinger}
+%\textcolor{red}{Heisenberg}
+%\textcolor{red}{Orbitals}
+%\textcolor{red}{Bridge to chemistry}
+%
+%
+%\subsubsection{A History of the Classical Atomic Model}
+%
+%Atoms are the fundamental building block of ordinary matter and are the main players in chemical reactions. Atoms can be broken down into three components: protons, neutrons, and electrons. Protons have a positive charge and electrons have a negative charge of the same magnitude. Neutrons have no charge. The core of an atom is made up of protons and neutrons held together by the strong nuclear force.
+%
+%
+%
+%
+%
+%
+%
+%\subsubsection{The Quantum Atomic Model}
+%\textcolor{red}{fill out section}
+
+\subsection{Atomic Structure}
+\subsubsection{Protons, Neutrons, Electrons}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{AtomDiagram}
+\caption[Atom Diagram]{A diagram of an atom. Protons and neutrons are highlighted in the nucleus, and electrons can be seen orbiting the nucleus. Image source: \parencite{AtomDefinitionStructure2026}}
+\label{fig:atomdiagram}
+\end{figure}
+
+All atoms are composed of only three particles: protons, neutrons, and electrons.
+
+Protons are positively charged, and elements are defined by their proton count. Hydrogen atoms are those atoms with exactly one proton, oxygen atoms are those with exactly eight protons.
+
+Neutrons have no charged, and together with protons, they make up the nucleus of the atom. The strong atomic force is a force felt between protons and neutrons, and this is what gives the nucleus of the atom its high stability.
+
+Electrons are negatively charged, and they ``orbit'' the nucleus at extremely high speeds. In a hydrogen atom, electrons can move faster than \qty{2100}{\km\per\second} (a little less than \qty{1}{\percent} of the speed of light), and in larger atoms, where electrons feel a weaker attraction to the nucleus of the atom, they can move exceeding half the speed of light. Compared electrons, protons and neutrons are virtually stationary.
+
+Atoms are the smallest indivisible component of an element that can be uniquely identified as that element. No further subdivision of an atom retains the global properties of that element. For instance, a neutral atom of gold is comprised of 79 protons, 79 electrons, and 118 neutrons, each of which is made up of smaller particles such as quarks and leptons, but none of these components retain the properties of gold.
+
+While electrons do not physically orbit the nucleus of an atom the way planets do the sun, it is a useful way to think of their movement. Using this analogy, we can understand electron orbitals as concentric shells around the atom. Each orbital can hold a certain number of electrons. The first several electron orbitals can hold up to \numlist{2;4;10} electrons, respectively. Full orbitals are more stable than incomplete orbitals, thus, atoms may share electrons to empty or fill their electron orbitals.
+
+\subsection{Chemical Bonding}
+
+The process by which atoms may share their electrons is known as atomic bonding. The simplest and most straightforward type of atomic bonding is ionic and covalent bonding.
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{bonding-sodium-chloride-atom-one-chlorine-electrons.jpg}
+\caption{Ionic bonding involves a near complete sharing of charges. Image source: \parencite{IonicBondDefinition2026}}
+\label{fig:ionicbond}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{atoms-bond-bonds-electrons-hydrogen-oxygen-atom.jpg}
+\caption{In covalent bonds, electrons are shared between atoms. Image source: \parencite{CovalentBondDefinition2026}}
+\label{fig:covalentbond}
+\end{subfigure}
+\caption[Chemical Bonds]{The most common chemical bonds.}
+\label{fig:ioniccovalentbonds}
+\end{figure}
+
+\subsubsection{Ionic Bonding}
+
+Ionic bonding involves the near complete transfer of an electron from one atom to another. It primarily occurs between metals, with few electrons in their valence orbitals, and non-metals, which have close to a full valence shell. For example, \ce{Na} has a single valence electron whereas \ce{Cl} has 7. If \ce{Na} gives its electron to \ce{Cl}, then both will have satisfied orbitals.
+
+After the electrons have been transferred, the \ce{Na} atom has one fewer electrons that it started with, meaning it has a positive charge. Similarly, \ce{Cl} has one more electron, giving it a negative charge. Typically the transfer of electrons alone is energetically unfavorable, but when combined with the positive electrostatic interactions between the newly created ions, it becomes highly favorable.
+
+\subsubsection{Covalent Bonding}
+
+In a covalent bond, electrons between two or more atoms are shared. Contrast this with ionic bonds, where electrons are transferred from one nucleus to another; for non-metal atoms, the energetic cost of transferring an atom is too great. Electrons are still shared in such a way that after the bonding process is completed, the octets are full.
+
+In water, two \ce{H} atoms covalently bind with an \ce{O} atom. Oxygen has \num{6} valence electrons, hydrogen has \num{1}. During the bonding, each hydrogen atom shares its electron with oxygen and oxygen shares one of its electrons with each of the hydrogen atoms. In the end, the oxygen atom has \(6+1+1=8\) valence electrons, and each hydrogen atom has \(1+1=2\) valence electrons, completing the valence shall of each atom participating in the bond.
+
+\subsection{Noncovalent Interactions}
+\subsection{Electrostatic Interactions}
+Since protons and electrons have opposing charges of the same magnitude, atoms with the same number of protons and electrons are neutral, meaning they have no net charge. Ions are atoms with an unequal number of protons and electrons; cations have a net positive charge, anions have a net negative charge.
+
+The electrostatic force is one of the most fundamental forces in nature, and is crucial in keeping atoms and molecules stable. Like charges repel, and opposing charges attract. Though simple, the electrostatic force leads rise to profound features.
+
+\subsubsection{Electronegativity and Bond Polarity}
+
+Consider two atoms, \ce{F} and \ce{H}. Each of them is only one electron away from having a complete valence electron orbital. Which of them ``wants'' the electron more? That is, what system has the lowest total energy, \ce{F-} and \ce{H}, or \ce{F} and \ce{H-}?
+
+Fluorine has nine electrons and nine protons. We can say that the two electrons in the first orbital ``shield'' the charge of two protons, which leaves each of its \num{7} valence electrons roughly feeling an effective nuclear charge of \num{7}. Hydrogen, on the other hand, only has only a single proton, so its electron feels an effective nuclear charge of approximately \num{1}.
+
+Further, the strength an electron feels from the nucleus follows the inverse square law with respect to atomic radius. Because fluorine has a much larger charge, it pulls its electrons closer to the nucleus, which allows it to attract additional electrons easily. Thus, electrons will be much more attracted to \ce{F} than \ce{H}. We say that fluorine is more ``electronegative'' than hydrogen.
+
+Now consider a bond between fluorine and hydrogen, in, say, \ce{HF}. These atoms are covalently bonded, meaning the electrons are shared between the two atoms, but they are not shared equally. Given fluorine's stronger affinity for electrons, the shared electrons in the bond spend much more time closer to fluorine than they do hydrogen. This bond is referred to as polar.
+
+\subsubsection{Partial Charges}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{Hydrogen-fluoride-elpot-transparent-3D-balls.png}
+\caption[Polar Bonds]{A diagram of the \ce{HF} molecule. Hydrogen is shown in white, fluorine is show in yellow. The charge of the molecule is shown, with red regions more negative and blue regions more positive. Image source: \parencite{PolarHF}}
+\label{fig:HFpolar}
+\end{figure}
+
+When a molecule contains a polar bond, we know that electrons will be disproportionately distributed throughout the molecule. In the example of \ce{HF}, the electrons will spend more time around the fluorine atom. This will manifest itself as a ``partial charge'': the fluorine atom will act like it has a slight negative charge due to the increased electron density, and the hydrogen will act like it as a slight positive charge due to its decreased electron density, typically denotes by \(\delta^{-}\) and \(\delta^{+}\).
+
+This has profound effects on molecular interactions. A classic example is with water. Oxygen is more electronegative than hydrogen, so in a molecule of water, \ce{H2O}, the oxygen atom will have a partial negative charge due to its increased electron density, and the hydrogen atoms will each have a partial positive charge. This gives rise to water's high solubility, when a salt like \ce{NaCl} disassociates into \ce{Na+} and \ce{Cl-}, the ions are easily stabilized by surrounding water molecules.
+
+\subsubsection{Hydrogen Bonding}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{Hydrogen-bonding-in-water-2D.png}
+\caption[Hydrogen Bonds]{A diagram of a hydrogen bond between two water molecules. The Oxygen has a negative charge, while the hydrogen has a positive charge. Image source: \parencite{lambertsonWhatAreHydrogen2021}}
+\label{fig:waterHBond}
+\end{figure}
+
+An important kind of polar bond is when \ce{H} is bound to either \ce{N}, \ce{O}, or \ce{F}, which is very common in organic compounds. Because \ce{N}, \ce{O}, and \ce{F} are so much more electronegative than \ce{H}, electron sharing is highly disproportionate, leading to large partial charges.
+
+Consider to molecules with such a bond, such as \ce{H2O}. The polar bonds influence how the molecules arrange themselves in solution: a hydrogen atom will orient itself such that it is interacting with the oxygen atom of another water molecule. This is known as hydrogen bonding, and is essential to numerous biological processes, such as maintaining DNA cohesion between strains or the secondary and tertiary structure of many proteins.
+
+\subsubsection{Van der Waals Forces}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{waals.jpg}
+\caption[Van der Waals Forces]{Random electron movement can induce dipoles which then can attract one another. Image source: \parencite{Chapter3}}
+\label{fig:VDW}
+\end{figure}
+
+Whereas hydrogen bonding comes from interactions between permanent dipoles, van der Waals forces come from induced or temporary dipoles. As electrons orbit the nucleus, sometimes, by sheer chance, more of them are on one side than on another side. Even with a neutral atom, this can create a partial charge (dipole). This dipole can induce a dipole in a nearby atom, which leads to a small but not insignificant electrostatic interaction between the two. Unlike hydrogen bonding, which is strong by requires the right ``setup'', most all atoms can engage in van der Waals interactions. For example, gecko feet have millions of hair-like bristles on their toes, and it is enormous amounts of van der Waals interactions that allow the gecko to dry adhere to nearly any surface \parencite{autumnEvidenceVanWaals2002}. 
+
+\section{Proteins}
+
+\begin{flushright}
+	\textit{“One of the major lessons in all of biochemistry, cell biology and molecular medicine is that when proteins operate at the subcellular level they behave in a certain way, as if they were mechanical machinery.”}\\
+– James Rothman\\
+\hfill\break
+\end{flushright}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Protein-Structure-1.png}
+\caption[Protein Structure Hierarchy]{The protein structure hierarchy. The primary sequence is the amino acid chain, secondary structure is local folding, tertiary structure is the folded protein conformation, and quaternary structure is the (hetero- or homo-) oligomerization sate of the protein. Image source: \parencite{WhatAreAmino2021}}
+\label{fig:ProteinHierarchyLevels}
+\end{figure}
+
+It is often said that proteins are the molecular machinery of the cell. This perhaps undersells the ubiquity and truly fundamental role proteins play in the cell. They are not only the machinery that engages in cellular activity but they are also the readers of the instruction manual, the transport network (both the roads and the vehicles), the signalers between machines, the defenses for the factory. It is not a very controversial claim to say that proteins are the most diverse class of macromolecules in the cell in terms of their function.
+
+\subsection{Primary Sequence}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{Amino-Acid-Structure-1.png}
+\caption[Amino Acid Structure]{The structure of an amino acid. The amino end consists of an \ce{NH2} group, and the carboxyl end is made up of an \ce{COOH} group. The \ce{R} group is the only variable part of an amino acid. Image source: \parencite{WhatAreAmino2021}}
+\label{fig:AminoAcid}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{ProteinogenicAminoAcids.svg.png}
+\caption[The 21 Amino Acids]{The structure of each of the standard 21 amino acids at a physiological pH \num{7.4}. Image source: \parencite{ProteinogenicAminoAcids}}
+\label{fig:AminoAcids}
+\end{figure}
+
+The amino acid sequence, also known as the primary sequence, is the first level of organization of the protein.
+
+The subunits that make up proteins are called amino acids, also known as residues. The vast majority of all proteins are made up of only a 20 different amino acids. Each amino acid has a similar structure: an amino group (\ce{NH2}), a carboxyl group (\ce{COOH}), and a variable \ce{R} group, all bound to a central carbon known as the alpha carbon (\ce{C_{\alpha}}). The carbon in the carboxyl group is designated by \ce{C^{\(\prime\)}}. The amino acid chain grows as the \ce{OH} on the carboxyl end of the chain reacts with the amino hydrogen on the incoming subunit, causing a water molecule to leave.
+
+The \ce{R} group gives lends different properties to the amino acids. For example, arginine has a positive charge, glutamic acid has a negative charge, serine is polar, and tryptophan is hydrophobic. The \ce{R} group of cysteine contains a sulfur atom, and two cysteine atoms are able to bind to one another tightly, forming what is known as a sulfur bridge. 
+
+Since proteins are only made up of amino acids, they rely on them for all of their properties and abilities. Polar residues tend to be solvent-exposed (on the surface of the protein) whereas hydrophobic residues tend to be buried in the core of a protein. If a hydrophobic residue is solvent-exposed, this indicates that the protein may engage in protein-protein interactions in this region. Catalytically active sites of proteins often contain charged residues, used in positioning and stabilizing substrates in such a way that the reaction can occur.
+
+The amino acid sequence uniquely defines the three dimensional structure of the protein. The amino acid sequence is often thought of as a beaded necklace, where each bead represents an amino acid. The three dimensional sequence, then, would a highly complicated, yet often very precise, tangled ball of the beads.
+
+\subsection{Backbone Dihedral Angles}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{DihedralPlanes.png}
+\caption{Image source: \parencite{GarciaPortugues2018ToroidalDA}}
+\label{fig:DihedralPlanes}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{Ramachandran_plot_general_100K.jpg}
+\caption{Image source: \parencite{ProteinogenicAminoAcids}}
+\label{fig:RamachandranPlot}
+\end{subfigure}
+\caption[\((\phi, \psi)\) Dihedral Angles and Ramachandran Plots]{(Left) Centered around an amino acid, the two \ce{C_{\alpha}-C^{\(\prime\)}-N-C_{\alpha}} groups define rigid planes; angles \(\phi\) and \(\psi\) can be used to describe their relative positions. (Right) The \((\phi, \psi)\) angle pairs of \num{100000} amino acids. Regions of high density are circled in red, regions of lower density are circled in orange. The corresponding secondary structure is indicated.}
+\label{fig:DihedralandRamachandran}
+\end{figure}
+
+In addition to being broken up by amino acids, it is also useful to consider the primary chain of amino acids being broken up into groups from one \ce{C_{\alpha}} atom to another. Then each \ce{C_{\alpha}} atom, except from the first and last, are part of two such groups.
+
+The \ce{C_{\alpha}-C^{\(\prime\)}-N-C_{\alpha}} groups are rigid due to the \ce{C^{\(\prime\)}-N} peptide bond. The two groups fixed to a \ce{C_{\alpha}} atom, however, can, as a whole, rotate. The bond rotation around the \ce{N-C_{\alpha}} bond is known as the \(\phi\) dihedral angle, and the bond rotation around the \ce{C_{\alpha}-C^{\(\prime\)}} bond is known as the \(\psi\) dihedral angle. Since these are the only two degrees of freedom for each amino acid, the entire three-dimensional structure of the protein can be described as a sequence of \(\phi\) and \(\psi\) dihedral angles.
+
+If one were to plot each of the \((\psi, \psi)\) dihedral angle pairs for each amino acid across all proteins, they would see regions that are much more favorable than others. This plot is known as a Ramachandran plot, and the pattern observed  primarily due to steric hindrance; regions with low density are energetically unfavorable due to repulsive electron interactions between atoms.
+
+\subsection{Secondary Structure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{Secondary-Structure-of-Protein.png}
+\caption[Protein Secondary Structure]{The secondary structure of a protein is the local folding pattern. In \(\alpha\)-helices, \ce{N} and \ce{O} atoms of amino acids between turns are hydrogen bonded. In \(\beta\)-sheets, \ce{O} is hydrogen bonded with the \ce{C^{\(\prime\)}} of the opposing parallel or antiparallel \(\beta\) strand. Image source: \parencite{tamangTypesProteinStructure2023}}
+\label{fig:SecondaryStructure}
+\end{figure}
+
+Simultaneously with its synthesis at the ribosome, nascent proteins begin adopting their three-dimensional structure. The smallest and most local structure formed is known as secondary structure, which comes in two main types: \(\alpha\)-helices and \(\beta\)-sheets.
+
+\(\alpha\)-helices are found in proteins when stretches of amino acids have \(\phi\) and \(\psi\) values of around \ang{-60} and \ang{-50}, respectively. As the name implies, it forms a helical structure with \num{3.6} residues per turn. Residues between turns of the helix are stabilized by hydrogen bonds between the \ce{O} of the \ce{C^{\(\prime\)}=O} bond and the \ce{H} of the \ce{NH} bond on the next turn of the helix. The average \(\alpha\)-helix is \num{10} residues long, which equates to \qty{1.5}{\angstrom}. Additionally, \(\alpha\)-helices are polar, meaning they are most commonly on the surface of a protein.
+
+\(\beta\)-sheets are the other common local protein structure. The form when their sub-elements, \(\beta\)-strands – regions where the peptide chain is relatively extended and ``pleated'', with amino acid \ce{R} groups alternating up and down orientations – align themselves adjacent to one another. Two strands can align themselves in either a ``parallel'' or ``antiparallel'' way, in terms of the amino-to-carboxyl directionality. \(\beta\)-sheets are usually made up of entirely parallel or antiparallel \(\beta\)-strands. The dihedral angle restraints on \(\beta\)-sheets is much broader compared to \(\alpha\)-helices, comprising roughly \(-180 \leq \phi \leq 50\) and \(100 \leq \psi \leq 180\).
+
+\subsection{Tertiary Structure}
+
+Whereas secondary structure describe local elements of the protein structure, the tertiary structure is the entire, three-dimensional structure of the fully synthesized and folded protein. There are several forces that come together to give the protein its tertiary structure:
+
+\begin{enumerate}
+\item Hydrophilic Interactions
+
+Amino acids with polar \ce{R} groups orient themselves to the surface of the protein so that they are able to neutralize their partial charge with polar water molecules.
+
+\item Hydrophobic Interactions
+
+Amino acids with non-polar \ce{R} groups are pushed to the core of the protein, where they are not interacting with polar water molecules.
+
+\item Disulfide Bonds
+
+Under the right conditions, the \ce{R} groups of two cysteine amino acids can form a strong \ce{S-S} bond, known as a disulfide bond or a disulfide bridge.
+
+\item Hydrogen Bonds
+
+When amino acids with polar \ce{R} groups do appear in the core of a protein, they are especially energetically encouraged to form interactions with one another, and this often takes place in the form of hydrogen bonds.
+
+\item Ionic Bonds
+
+Amino acids with opposing charged \ce{R} groups will form strong ionic bonds with one another.
+
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{TertiaryStructure.jpg}
+\caption[Protein Tertiary Structure]{The tertiary structure is the fully-folded protein conformation, and is held together by hydrophobic interactions, hydrophilic interactions (not shown), disulfide bonds, hydrogen bonds, and ionic bonds. Image source: \parencite{TertiaryStructureOverview}}
+\label{fig:TertiaryStructure}
+\end{figure}
+
+While the majority of proteins do have a well-defined tertiary structure, there are some, known as intrinsically disordered proteins, that are defined as having no stable tertiary structure. Some proteins are a hybrid of the two, having some intrinsically disordered regions and some structured domains. The classical protein structure-function relation would posit that intrinsically disordered proteins have no function, but recent research has shown that these proteins can play very important roles in the cell.
+
+\FloatBarrier
+
+\subsection{Quaternary Structure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{QuaternaryStructure.jpg}
+\caption[Protein Quaternary Structure]{The quaternary structure of a protein is its oligomerization state. In this example, aspartate transcarbamoylase is made up of 12 subunits. Image source: \parencite{TertiaryStructureOverview}}
+\label{fig:QuaternaryStructure}
+\end{figure}
+
+The highest level of protein structure organization is its quaternary structure. The quaternary structure of a protein describes the number and arrangement of smaller subunits that compose it. Not all proteins have a quaternary structure, but those that do include both homo-oligomers and complexes. For instance, hemoglobin is made of four subunits, two \(\alpha\)-globin and \(\beta\)-globin subunits in each hemoglobin protein. Most DNA restriction enzymes have quaternary structure, their dimerization allows them to recognize palindromic sequences of DNA.
+
+\FloatBarrier
+
+\subsection{Protein Expression}
+
+The central dogma of biology posits that genetic information is stored in DNA, that this genetic information is temporarily copied to RNA for nuclear export and post-transcriptional modifications, and that finally, this RNA is used as the template for the synthesis of cellular machinery – proteins.
+
+\subsubsection{Transcription}
+
+Transcription is the process of ``transcribing'' a gene from DNA to RNA. The DNA is uncoiled and used as a template for the production of a single-stranded messenger RNA (mRNA). This is carried out primarily by the enzyme RNA polymerase. RNA polymerase binds to the a region of the gene known as the promoter, and after an enzyme known as RNA primase synthesizes and binds the first portion of the RNA sequence to the DNA, RNA polymerase is able to read the DNA and elongate the growing RNA chain.
+
+Once RNA polymerase is done synthesizing the mRNA, it undergoes some post-transcriptional modifications. This includes adding a ``cap'' to the 5' end and a ``tail'' of dozens of adenines to the 3' of the mRNA to prevent degradation and encourage nuclear export. Additionally, in many mammalian systems, genes are made up of ``exons'' and ``introns'', portions of the genome that do and do not encode for the final protein structure, respectively. Introns are removed during mRNA processing.
+
+\subsubsection{Translation}
+
+After the mRNA has been synthesized and processed, it is ready to be used as the instructions for protein synthesis in a process known as translation. The mRNA moves from the nucleus of the cell to the rough endoplasmic reticulum, a cell organ where the ribosome is located.
+
+tRNA is a specialized molecule used for transporting amino acids to the growing polypeptide chain. There are \(4\times4\times4=64\) different groups of 3 nucleotides, known as codons. For each codon, there is a tRNA molecule with the complementary anti-codon that recognizes it. This tRNA will carry the correct amino acid encoded by that codon.
+
+The ribosome binds to the mRNA and ``scans'' the mRNA from 5' to 3' for the start codon, AUG. Once it finds it, the tRNA carrying the first amino acid, methionine, will enter the ribosome in a region known as the A site. The ribosome ``ratchets'' to the next codon, sliding the tRNA carrying the methionine to the P site, and allowing another tRNA molecule to bind to its codon in the A site. Once it binds, a bond is made between the amino acid chain (in this case, just methionine) in the P site and the amino acid on the tRNA in the A site, and the bond between the tRNA in the P site and its amino acid is broken, leaving it ``uncharged''. The ribosome ratchets again, shifting the uncharged tRNA to the E site where it can exit, and the process continues with another tRNA binding in the A site and the amino acid chain extending.
+
+The process continues until one of three ``stop'' codons are reached. When this happens, a special protein shaped just like a tRNA binds the A site of the ribsosome and encourages the polypeptide chain to be released from the tRNA, completing the protein synthesis.
+
+\subsection{Transcription Factors}
+
+A transcription is a specialized protein whose job is to bind upstream of a gene promoter and regulate the rate at which RNA polymerase is able to bind and initiate transcription. They can work alone or in groups to promote (activate) RNA polymerase binding, or block (repress) binding. All transcription factors contain a DNA binding domain which gives them sequence specificity in their binding.
+
+Transcription factors may act through several means, including by stabilizing or blocking RNA polymerase – DNA interactions, by recruiting coactivators or corepressors, or by modulating DNA supercoiling.
+
+Transcription factors play essential roles in modulating cellular function. All cells contain all of the organism's DNA, it is only the careful activation and repression of genes that prevents a muscle cell from expressing neuronal proteins or a cell initiating apoptosis instead of DNA repair.
+
+\subsection{Splice Variants}
+
+Alternative splicing is the ability to make multiple different proteins from a single gene. The resulting proteins are known as splice variants.
+
+Alternative splicing can happen in a variety of ways: exons can be skipped, one of two exons is retained but not both, alternative junctions can be used between exons, introns can be retained, and more.
+
+The ability for different regions of proteins to be conditionally expressed adds yet another layer of control for complex biological processes. The same gene can encode for tissue-specific variants, can alter the localization of the protein after synthesis, or can alter protein production based on cellular needs or stresses.
+
+\section{An Introduction to Yeast Genetic\\Techniques}
+
+\subsection{DNA Plasmids}
+
+In humans, DNA is stored in chromosomes. A chromosome is a long string of DNA, with various proteins that keep it organized, such as histones/nucleosomes, which act as a spindle with which the DNA wraps around.
+
+In single-cellular organisms, such as E. coli and yeast, DNA can also be found in plasmids. Plasmids, in contrast to chromosomes, are circular rather than linear. They are also much smaller than chromosomes, on the order of thousands to tens of thousands of bases, whereas chromosomes can range between hundreds of thousands of bases to tens of millions of bases.
+
+Plasmids are (usually) the vehicles of choice when it comes to integrating custom genes into an organism, as it is relatively easy to open the cell membrane enough for the DNA to be inserted. In addition to carrying a gene of choice, plasmids will often carry a nutrition marker or antibody marker. Nutrition markers are simply genes that encode for an essential nutrient that the organism cannot naturally produce on its own, for instance, uracil. By growing the cells in media that lacks uracil, we can be sure that those that grow have the DNA insertion. Antibody markers are similar, except that they encode resistance for an antibiotic. By growing the cells in media that contains an antibody, all cells that are not resistant to it will die, ensuring that those cells that do grow have had the plasmid inserted.
+
+\subsection{\textit{E. coli}}
+
+\textit{Escherichia coli} (\textit{E. coli}) is one of the most widely-used strains of single-cellular organisms in molecular biology. \textit{E. coli} is Gram-negative, meaning they have two layers of outer membranes. The strains used for molecular biology are non-pathogenic, which means they are not associated with any diseases known in healthy adults.
+
+\textit{E. coli} makes for a good model organism because it replicates very quickly, duplicating roughly once every \num{40} minutes at \qty{37}{\degreeCelsius}. Additionally, it is relatively easy to insert (transform) DNA into \textit{E. coli}, and they will usually synthesize proteins of interest without much trouble.
+
+These features make \textit{E. coli} a good choice for long-term storage of DNA plasmids: to preserve a plasmid, transform it into \textit{E. coli}, allow them to grow overnight, and then the stock can be frozen and stored indefinitely at \qty{-80}{\kelvin}. If all the frozen stock starts running low, it is trivial to simply defrost the remaining cells, incubate them overnight, and freeze a fresh stock.
+
+The breakthrough that solidified the place of \textit{E. coli} in molecular biology was with insulin. This \num{51} amino acid protein is an essential peptide hormone produced by the pancreas, but for those with diabetes, their body does not produce enough insulin. The first medicinal insulin had to be extracted from animals. In 1982, for the first time, insulin in \textit{E. coli} became commercially available, drastically reducing the price of treatment.
+
+\subsection{\textit{Saccharomyces cerevisiae}}
+
+The model organism of the MacQueen lab is \textit{Saccharomyces cerevisiae} (\textit{S. cerevisiae}), also known as baker's yeast. \textit{S. cerevisiae} is a step up in biological complexity from \textit{E. coli}, containing both chromosomes and plasmids and possessing a more robust DNA replication path, but is still far simpler than mammalian cells.
+
+The experimental portion of this thesis used \textit{S. cerevisiae} as its model organism for its replication speed (about \num{1.5} hours at \qty{30}{\degreeCelsius}), DNA repair capabilities and affinity, and its interactions with chemical protein activators and repressors, such as galactose and glucose. 
+
+\subsection{DNA Gel Electrophoresis}
+
+One of the most widely used techniques in molecular biology is DNA gel electrophoresis. This is a procedure in which DNA samples are separated by their size, and when combined with a cocktail of DNA with known sizes (known as the ladder), allows for a semi-quantitative way to measure the size of a portion of DNA.
+
+First, a ``gel'' is prepared: a thin sheet of agarose, which forms a network of microscopic fibers, with wells in the agarose made at the top. The gel is submerged in a pH buffer, and the DNA, mixed with a loading dye to make it denser and visible, is loaded into the wells. An electric current is applied to the buffer. DNA is negatively charged, and will therefore be pushed through the gel by the current. Smaller DNA fragments are able to pass through the network of agarose fibers more easily than larger ones, so the longer the current passes through the gel, the greater the separation between smaller and larger DNA fragments will become. When the DNA reaches the bottom of the gel, it is brought to a machine where ethidium bromide within the gel, bound to the DNA, fluoresces and can be photographed.
+
+\subsection{PCR}
+
+Perhaps the most revolutionary item in this list is the polymerase chain reaction (PCR). This is a method to generate millions to billions of copies of a desired DNA sequence. Before PCR was invented – in only 1983 – gathering large amounts of a DNA sequence was a long and arduous process.
+
+There are several essential components to carrying out a PCR reaction:
+\begin{enumerate}
+\item The DNA template:  the sequence of DNA to duplicate
+\item DNA polymerase: the enzyme responsible for adding bases to an existing DNA chain
+\item DNA primers: short regions of DNA homologous to both ends of the DNA; polymerase will extend these
+\item dNTPs: deoxynucleoside triphosphates, the DNA bases that DNA polymerase will use to extend the growing chain
+\item A buffer solution: a solution with the correct pH, metal ions for polymerase, etc
+\end{enumerate} 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{Polymerase_chain_reaction-en.png}
+\caption[PCR]{One cycle of PCR entails DNA denaturation, primer annealing, and primer extension. Image source: \parencite{PCRQPCR}}
+\label{fig:PCR}
+\end{figure}
+
+One cycle of PCR is made up of three steps:
+
+\begin{enumerate}
+\item DNA denaturation:
+
+The first step in replicating DNA is by denaturing it. This is done by raising the temperature to nearly boiling, around \qty{95}{\degreeCelsius} for \qtyrange{20}{30}{\second}. This causes the hydrogen bonds between the two strands of DNA to come apart.
+
+\item Primer annealing:
+
+The next step is to encourage the binding of the primers to the denatured templates by lowering the temperature to around \qty{60}{\degreeCelsius}. The primers are designed to bind to the 3' end of the DNA, and since there are two 3' ends of the DNA, one on each strand of the original template DNA, two different primers are needed. These are known as the forward and reverse primers.
+
+\item Extension:
+
+The final step is the extension of the primers. DNA polymerase binds to the primers and uses the dNTPs in solution to extend the primer. In this step, the temperature is increased again to around \qty{78}{\degreeCelsius}, and the duration of the step depends on the length of the desired product. Typically, one would allow \num{1} minute per thousand bases, plus an extra \num{30} seconds.
+
+\end{enumerate}
+
+If there was one DNA molecule to begin with, after one iteration of this process, there would be two molecules. The PCR process is typically repeated \num{30} times, at which point the DNA polymerase starts losing its efficacy and accuracy.
+
+The maximum number of copies of the template that could be produced from just one starting DNA sequence is thus \(2^{30}\), which is about \num{1} billion copies.
+
+\subsection{Restriction Digestion}
+
+Restriction enzymes are proteins that cut DNA in specific locations. Typically restriction enzymes exist as dimers, and therefore recognize palindromic sequences.
+
+A restriction digest is a reaction where you chose restriction enzymes to cut a target DNA in a specific way. There are several ways in which they are used.
+
+One way is as a diagnostic, where after extracting and purifying a plasmid, for example, from a culture of \textit{E. coli} cells, you perform a restriction digest, either with two different enzymes that cut the DNA once each or one enzyme that cuts the DNA twice. If the digest is then run in a gel, then you can compare the expected product sizes with the actual product sizes to ensure that the plasmid you extract is really what you think it is.
+
+\subsection{Gap Repair}
+
+An extremely powerful tool in assembling custom plasmids \textit{in vivo} using existing DNA fragments is gap repair. It may be used, for example, to precisely replace gene X, under promoter P, with gene Y.
+
+To do this, the target plasmid must first be linearized, often via a restriction enzyme, near or in the region to replace. Next, the target gene is amplified using PCR, with custom terminal sequences that have sequence homology with the plasmid on either end of the break. When the linearized plasmid and the PCR product is transformed into yeast, homologous recombination machinery recognizes the sequence homology, and re-circularizes the plasmid, using the PCR product to ``bridge the gap'' and incorporating the new gene into the plasmid, removing the old one. This process takes advantage of the strong affinity of \textit{S. cerevisiae} for homologous recombination.
+
+\subsection{Site-Directed Mutagenesis}
+
+Given a plasmid containing a gene of interest, one of the best ways to introduce specific mutations is with site-directed mutagenesis. Site-directed mutagenesis is a variation of PCR, where two homologous primers are designed to bind to the DNA at the site to be mutated, with the desired mutation encoded. As PCR is carried out using these primers and the plasmid as a template, DNA polymerase will synthesize the entire plasmid, incorporating the primer with the desired mutation in the gene of interest.
+
+The DNA can be transformed into \textit{E. coli} and sequencing used to confirm the incorporation of the mutation. Alternatively, if the template DNA is from \textit{E. coli}, then GATC sites will be methylated, and the enzyme DpnI can be used to degrate the unmutated template plasmids, ensuring that transformed plasmids will carry the desired mutation.
+
+\subsection{LacZ Transcription Reporter Assay}
+
+\begin{figure}[h!]
+\centering
+\includesvg[width=\textwidth,inkscapelatex=false]{beta_gal_ONPG}
+\caption[\(\beta\)-galactosidase Function]{\(\beta\)-galactosidase hydrolyses its natural substrate, lactose, but can also hydrolyse ONPG, producing the yellow \textit{ortho}-Nitrophenol.}
+\label{fig:betagal}
+\end{figure}
+
+To measure the amount of transactivation a protein initiates, one could measure the amount of mRNA or protein of the target gene is observed. There is, however, a simpler approach.
+
+Using gap repair, replace the target gene downstream of the transcription factor's binding sequence with the lacZ gene, which encodes the protein \(\beta\)-galactosidase. As the transcription factor binds to the promoter region, it will initiate the transcription and translation of lacZ into \(\beta\)-galactosidase. After a sufficient amount of time passes, lyse the cells in a solution containing a sugar called \textit{ortho}-Nitrophenyl-\(\beta\)-galactoside (ONPG), an analog for the natural substrate of \(\beta\)-galactosidase, lactose. \(\beta\)-galactosidase will hydrolyze the ONPG, producing galactose and ortho-nitrophenol. Ortho-nitrophenol has a yellow color, and can be measured with a spectrometer observing at \qty{420}{\nano\meter}. ONPG hydrolysis is directly proportional to the concentration of \(\beta\)-galactosidase, so the amount of transactivation of the transcription factor can be easily measured relative to a control.
+
+\section{Molecular Dynamics Simulations}
+
+As powerful as \textit{in vivo} and \textit{in vitro} experiments are at examining biological processes, there are places where they fall short. For instance, to get detailed structural information about a protein, the best option is crystallization, which requires optimizing conditions and waiting days to months for crystals to grow. The fact that this can be done at all is nothing short of remarkable, but in cases where we want to know about how a protein's conformation changes during catalytic activity, for instance, the best we can do is cleverly engineer crystal structures and infer the rest. However, if we could simulate that protein undergoing the exact same catalytic function on a computer, we would have the complete atomic-level information for how the reaction proceeds. This is the goal of molecular dynamics simulations.
+
+\subsection{Theory}
+
+The theory of molecular dynamics (MD) simulations is relatively straightforward. Given the positions and velocities of all atoms in a system, use physics to predict the new positions and velocities of all the atoms after some small period of time (\(\Delta t\)), which is typically \qtyrange{1}{4}{\femto\second} (\qtyrange{1}{4}{\times10^{-14} \second}). The two commonly used packages for simulating biomolecules are Amber and Gromacs. In the Thayer Lab, we use Amber over Gromacs for its greater accuracy, at the expense of simulation speed.
+
+The algorithm that governs updating the positions and velocities of each atom is as follows:
+
+\begin{enumerate}
+\item Use the following potential energy formula to determine the force felt by each atom in the system:
+
+\begin{align}
+    U &= \sum_{\text{bonds}} k_{r}(r-r_{0})^{2} \tag{\text{Bond length}} \\
+    &+ \sum_{\text{angles}} k_{\theta}(\theta - \theta_0)^{2} \tag{\text{Angle deformation}} \\
+    & + \sum_{\text{dihedrals}} k_{\phi}[1+\cos(n\phi+\phi_0)] \tag{\text{Dihedral movement}} \\
+    &+ \sum_{\text{atom }i}\sum_{\text{atom} j\neq i} 4\varepsilon_{i,j}\left[\left(\frac{\sigma_{i,j}}{r_{i,j}}\right)^{12} - \left(\frac{\sigma_{i,j}}{r_{i,j}}\right)^{6}\right] \tag{\text{Van der Waals}} \\
+	&+ \sum_{\text{atom }i}\sum_{\text{atom} j\neq i} \frac{q_{i}q_{j}}{\varepsilon_{0}r_{i,j}} \tag{\text{Electrostatic}}
+\end{align}
+
+This equation encompasses all bond and their deviations from their equilibrium, all bond angle and dihedral angle deviations from their equilibrium, and all pairwise van der Waals and electrostatic interactions. Bond length and angle deformation are modeled as springs with the a given equilibrium length – as the bond length or angle deviates from the equilibrium it increasingly wants to ``spring'' back – and can be represented mathematically through Hooke's law. Dihedral angles are modeled as a (co-)sinusoidal wave in which energy wells representing favorable conformations are separated by energy barriers representing energetically unfavorable conformations between them. Van der Waals are approximated using their so-called ``12-6'' potential, and electrostatic interactions are given by Coulomb's law.
+
+\item Newton's first law says that \(F=ma\), that is, force is mass times acceleration. Rearranging, we get \(\frac{F}{m} = a\). To get the acceleration of each atom, we divide the force felt by each atom by its mass. We can also use the fact that acceleration is the derivative of velocity to derive the updated velocities of all the atoms, \(\int a = \int\frac{F}{m}\), the integral (anti-derivative) of the acceleration.
+
+\item Using the velocities of all the atoms, we can update their positions after \(\Delta t\) time: \(x_{f} = x_{i} + v\Delta t\), the updated position is equal to the initial position, moved in the direction of the velocity for \(\Delta t\) time.
+
+\item We recalculate the forces felt by each atom using the potential energy equation.
+
+\item Finally, we update the velocities of each atom once again to ensure the positions and velocities stay synchronized.
+
+\end{enumerate}
+
+The above procedure will simulate the new positions and velocities of all the atoms after \(\Delta t\) time. If \(\Delta t \) is a reasonable \qty{2}{\femto\second}, it would take \num{500000000} iterations to simulate \qty{1}{\micro\second} (\qty{1}{\times 10^{-6}\second}), the standard length simulation in the present year.
+
+This algorithm is extremely computationally expensive, which is why it is only within the past decade or so that computers have become powerful enough to make simulating biomolecules on relevant timescales feasible. The main bottleneck is the potential energy equation. The bond length, angle deformation, and dihedral angle terms all grow linearly with the number of atoms in the simulation – \(O(n)\) – but the van der Waals and electrostatic terms growth parabolically – \(O(n^{2})\). It is standard practice to model these non-bonded terms explicitly up to a cutoff in distance from each atom, at which point they are only approximated, but this still remains very expensive as simulations grow from tens to hundreds of thousands of atoms.
+
+It was the integration of GPU parallelization into the computation of the non-bonded terms that finally made it possible to conduct MD simulations of large-scale systems on biologically relevant timescales. After the cutoff is reached, a Particle Mesh Ewald (PME) process is used to approximate the rest using a Fast Fourier Transformation \parencite{salomon2013routine}.
+
+\subsection{Practical Steps}
+
+The process of conducting a MD simulation a molecular dynamics simulation requires several steps of set-up before the data collection can begin.
+
+\subsubsection{tLEaP}
+
+tLEaP is the first step of setting up a simulation, and its goal is to take a PDB file – a file containing the atomic coordinates of all the atoms from a protein crystal structure, cryoEM structure, etc – and turn it into a format suitable to begin simulation.
+
+The biomolecule is surrounded in a box of water, with ions added to ensure neutrality.
+
+tLEaP requires the specification of the force fields for which to use in the simulation. Force fields are important files that specify the physical constants used in the potential energy function for all of the atoms, pairs of atoms, and triplets of atoms used in the system. They may also modify the potential energy function to improve speed, precision, etc. Force fields may be mixed and matched as needed, depending on the contents of the simulation (protein, DNA, lipids, etc). For instance, there are many different force fields that parameterize water, each of them at a slightly different performance, speed, support for water-DNA, water-lipid interactions, etc.
+
+tLEaP will generate a single parameter file and coordinate file, the combination of which encodes everything the simulation needs to run.
+
+\subsubsection{Energy Minimization}
+
+When a protein is crystallized, sometimes atom positions are not energetically favorable. When the data is read, noise in the data may place atoms closer to one another than is realistic. Hydrogen atoms need especially high quality data to resolve, and if this is not possible, tLEaP will guess as to where they should be, but it is only a guess. There are many reasons why the positions of two atoms at the start of a simulation might be non-physical.
+
+If the simulation were allowed to proceed, those atoms which were too close would fly apart with a large amount of kinetic speed. They would certainly collide with other atoms, transferring some of their energy to the atoms they hit, before snapping back as they attempted to return to their equilibrium positions. The transference of kinetic energy would continue throughout the system, blowing up the protein in an error known as a ``bombs away'' error.
+
+To prevent this from happening, the next step after tLEaP is energy minimization. The interactions with the highest energy are allowed to move while freezing the rest of the atoms, then the threshold is slowly lowered until all the atoms are able to freely move, and no non-physical interactions remain.
+
+\subsubsection{Heating}
+
+By this point, the system has been relaxed, but there is no kinetic energy: the temperature of the system is \qty{0}{\kelvin}. In this stage, the temperature – the average kinetic energy – of the system is brought up to \qty{300}{\kelvin}. This is done again slowly to ensure physicality.
+
+\subsubsection{Equilibration}
+
+Now that the system has kinetic energy to it, it can relax from its perhaps unnatural crystal packing conformation to a more relaxed conformation, natural to a protein surrounded by water. This is done by simulating the system using the previously described protocol for around \qty{30}{\nano\second} and disregarding the data. Small restraints may be applied here.
+
+\subsubsection{Neutral Dynamics}
+
+Finally, the system is ready to be simulated. In normal simulations, all restraints are turned off, and the protein is free to dance around its water box. There are periodic borders to the box, if the protein drifts through a wall it will reappear on the other side as Pacman does his game board.
+
+The standard practice for simulations is to simulate for \qty{1}{\micro\second}, but depends greatly on the phenomenon being studied. For instance, to simulate the behavior of a ligand in a binding pocket, several hundred nanoseconds could be sufficient, whereas to study the dynamics of an intrinsically disordered protein, dozens of microseconds might be needed (in which case, a more sophisticated protocol may be needed).
+
+\subsubsection{Analytics}
+
+Saving the state of the system at every frame would result in an enormous quantity of data, several terabytes at least depending on the size and duration of the simulation, more than would ever be necessary, and would also slow down the process significantly. For this reason, we must chose a frequency at which to save our data. The standard protocol in the Thayer Lab is to write to the disk the state of the system \num{1000} times per nanosecond, which is once every \num{500} steps (more or less, depending on your \(\Delta t\)).
+
+Data analytics is typically conducted in CPPTRAJ, the default analytics program that comes with Amber, though it is often used as an interface to get certain data from the simulation, such as electrostatic interactions, to be used in additional and more sophisticated data analyses.
+
+\section{The Wesleyan High Performance Computing Cluster}
+
+As mentioned in the previous section, molecular dynamics simulations are as powerful as they are computationally expensive. It is for this reason we are very lucky Wesleyan has a such a powerful supercomputer.
+
+The architecture of the Wesleyan supercomputer (also known as HPC, cluster) is as follows. When you connect to the cluster, you interact with it via the head node. The head node is meant to be a ``landing page'' that facilitates interactions with the rest of the cluster. Files live on a drive known as ``zfshomes'', and the head node allows reading and writing to and from zfshomes. Jobs, computationally intense tasks you want to use the cluster's compute power on, are run on compute nodes. There are many different types of compute nodes, akin to different computers with different specs, depending on the resources needed for each jobs.
+
+\begin{figure}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{|c|c|X|X|X|}
+\hline
+Queue & \# Nodes & GB Mem per Node & GPU & Remark \\
+\hline
+exx96 & 12 & 96 & RTX2080S & Fastest, used for running simulations \\
+\hline
+amber128 & 1 & 128 & GeForce GTX 1080 Ti & Designed for Amber but not the fastest anymore \\
+\hline
+mwgpu & 5 & 256 & Tesla K20m & Greatest memory, very slow compared to exx96, amber128 \\
+\hline
+\end{tabularx}
+\caption[A Summary of Compute Resources]{A summary of compute resources available on the Wesleyan high-performance computing cluster}
+\label{HPC nodes}
+\end{figure}
+
+Despite the quality of the Wesleyan HPC, simulations still take a long time to run. A \qty{1}{\micro\second} simulation of the full-length p53 has about \num{120000} atoms and takes about \num{20} days to run. A smaller subset of the protein, the DNA binding domain, takes about \num{10} days to run. It is important to remember, though, that in the not too-distant past, it would have been remarkable to run even \qty{200}{\nano\second} of a much smaller system. As the speed of GPUs increases, the capabilities of MD simulations will only grow.
+
+\section{Protein Energetic Landscapes}
+
+\textcolor{red}{FILL}
+
+\section{Allostery}
+
+Allostery in proteins is the mechanism by which enormous number of biological processes occur, and is often referred to as the ``second secret of life'', second only to genetic code itself \parencite{monod1971chance}. Allosteric function, in short, is the ability for an interaction at one part of a protein to lead to a change on another, distal part of the protein.
+
+More specifically, allostery is classically defined as an interaction caused by to a substrate such that the effector not identical to the substrate, the effector initiates a functional change in the substrate, and that the effector binds or interacts with a region of the substrate that is topologically distinct from the active site \parencite{fenton2008allostery}. Allostery is responsible for bacterial promoter control \parencite{lewisAllosteryLacOperon2013, sharpAllosteryLacOperon2011}, DNA repair \parencite{lakhaniEvolutionaryCovarianceCombined2017, guptaMechanismMismatchRecognition2012}, G-coupled protein signaling \parencite{gentryNovelAllostericModulators2015, fengComputationalAdvancesDevelopment2015}, protein kinase activation \parencite{shiNetworksAllostericControl2006}, transcriptional activation \\ \parencite{garcia-pinoAllosteryIntrinsicDisorder2010}, and more. Despite its clear significance, the exact mechanism by which this signal can propagate through a protein remains elusive.
+
+That being said, there are two popular models: the pathway model \\ \parencite{reynoldsHotSpotsAllosteric2011, halabiProteinSectorsEvolutionary2009, rivoireEvolutionBasedFunctionalDecomposition2016, suelEvolutionarilyConservedNetworks2003, zhuravlevProteinFunctionalLandscapes2010, mcleishDynamicTransmissionProtein2015}, and the energy landscape model \parencite{mcleishDynamicTransmissionProtein2015, vijayabaskarInteractionEnergyBased2010, cooperAllosteryConformationalChange1984a, gunasekaranAllosteryIntrinsicProperty2004}. The pathway model hypothesizes that a perturbation at one site will send a mechanistic signal – perhaps through the protein non-bonded interaction network – to an allosteric site. The energy landscape hypothesis says that only through a perturbation at the distal site can the protein energetic landscape shift such that the allosterically active conformation can be accessed.
+
+There is no clear consensus as to which model is correct, though those in the Thayer Lab tend to prefer the pathway model for how it can be modeled through graph theory, leading to ease of testing. In all likelihood, as with most things in the multi-faceted and cooperative field of biology, allosteric signals probably travel through either or both of these pathways. Finding definitive evidence, in the positive or negative, for either hypothesis, would be a remarkable advancement in the field of molecular biology, and is a topic of great interest in the Thayer Lab.
+
+\section{Graph Theoretical Approaches to Protein Analysis}
+
+The move into the era of big data has had profound effects in science. For the first time, enormous datasets could be collected and analyzed on reasonable timescales. Molecular biology is no exception, with whole-genome sequencing leading to countless discoveries and innovations.
+
+A still-developing direction is in analyzing molecular dynamics simulations. Could the secret mechanism of allostery be hiding in our simulations? The only way to know is to look, to develop more sophisticated analyses, and to continue looking. One promising approach to analyzing molecular simulations is by leveraging graph theory.
+
+\subsection{A Graph Theory Primer}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Bridges_of_Konigsberg.png}
+\caption[The Seven Bridges of Königsberg]{The Seven Bridges of Königsberg. Leonhard Euler proved in 1736 that it was impossible to cross each bridge (highlighted in pink) only once. Image source: \parencite{sevenbridges}}
+\label{fig:sevenbridges}
+\end{figure}
+
+Graph theory is a branch of math that studies abstract connections between objects. The first problem that was solved using techniques that resemble what we know to be graph theory was in 1736 by Leonhard Euler, who answered the long-standing question of if it were possible to cross the seven bridges of the city of Königsberg, each only once.
+
+\FloatBarrier
+
+A simple graph \(G = (V, E)\) is defined as a tuple containing a set of vertices and a set of edges connecting two vertices. \textcolor{red}{include graphic}. Edges \(e = \{v_{i}, v_{j}\} \in E\) are unordered tuples of vertices; edges have no direction in a simple graph.
+
+The degree of a vertex, denoted \(\deg(v)\) for \(v \in V\), indicates the number of vertices connected to \(v\) (equivalently, the number of edges incident to \(v\)).
+
+A graph is connected if there exists a sequence of edges to get form any one node to any other node, and a graph is complete if every vertex is connected to every other vertex.
+
+Let \(G = (V, E)\) be a graph. How can we represent \(G\) on a computer? Define \(M_{G}\) to be an \(n \times n\) matrix where \(n = |V|\) is the number of vertices in \(G\). Number each of the \(n\) vertices 1 to \(n\) in any arbitrary fashion. Then for the \(i\)th row and \(j\)th column of our matrix, we define the matrix entry to be
+
+
+\begin{equation}
+	m_{i, j} = \begin{cases}
+1 & \{v_{i}, v_{j}\} \in E\\
+0 & \{v_{i}, v_{j}\} \not\in E
+\end{cases},\label{eq:simplematrix}
+\end{equation}
+
+\noindent that is, \(m_{i, j}\) is \(1\) if there exists an edge between vertices \(v_{i}\) and \(v_{j}\), and \(0\) otherwise. Representing graphs as a matrix is convenient computationally, but it also allows us to leverage the rich field of linear algebra, as will be seen in Section \ref{sec:spectralgraphtheory}.
+
+A weighted graph \(G = (V, E, w)\) is a graph \((V, E)\), with the addition of a weight function, \(w: E \rightarrow \mathbb{R}\) that maps an edge to a weight value. Weighted graphs are useful modeling, for example, the probability of transitioning from one state to another.
+
+We can represent weighted graphs computationally by changing our definition of \(m_{i, j}\) in Equation \ref{eq:simplematrix}:
+
+\begin{equation}
+	m_{i, j} = \begin{cases}
+w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
+0 & \{v_{i}, v_{j}\} \not\in E
+\end{cases},\label{eq:weightedmatrix}
+\end{equation}
+
+\noindent that is, rather than using a binary 1 or 0 if there is or is not an edge between the two vertices, we use the weight of the edge between them.
+
+Directed graphs are graphs in which edges have a specific edge to them. For a simple graph, if \(\{v_{i}, v_{j}\}\) is in the set of edges, then we say that \(v_{i}\) is connected to \(v_{j}\) and \(v_{j}\) is connected to \(v_{i}\), but in a directed graph, if \((v_{i}, v_{j})\) is in the set of edges (notice that edges are composed using tuples in directed graphs rather than sets), then we say that \(v_{i}\) is connected to \(v_{j}\), but \(v_{j}\) is \textit{not} connected to \(v_{i}\) (unless \((v_{i}, v_{j})\) is also in the set of edges). Directed graphs can be useful in giving a more nuanced description of the allowable states the current state could evolve into; just because we arrived to state B from state A may not necessarily mean we can return to state A.
+
+Encoding a directed graph in a matrix follows the same process as seen in Equation \ref{eq:simplematrix},
+
+\begin{equation}
+	m_{i, j} = \begin{cases}
+1 & (v_{i}, v_{j}) \in E\\
+0 & (v_{i}, v_{j}) \in E
+\end{cases},\label{eq:directedmatrix}
+\end{equation}
+
+\noindent except that the resulting may not be symmetric, i.e., in general we cannot say that \(m_{i, j} = m_{j, i}\) as we could with simple graphs.
+
+A weighted directed graph in as it sounds, edges specify directionality and are also given a weight by the weight function \(w\). Encoding as a matrix combines the ideas seen previously in Equations \ref{eq:directedmatrix} and \ref{eq:weightedmatrix}, namely,
+
+\begin{equation}
+	m_{i, j} = \begin{cases}
+w((v_{i}, v_{j})) & (v_{i}, v_{j}) \in E\\
+0 & (v_{i}, v_{j}) \in E
+\end{cases}.
+\end{equation}
+
+\subsection{Graph Representations of Proteins}
+
+How can we use a graph theoretic framework to study proteins? We will need a way to encode information about our protein of interest in the language of graphs. There are a countless number of ways to do this. One valid though not particularly useful way of representing a protein could be to let vertices represent amino acids, and connect those that are adjacent in the protein's backbone.
+
+A more useful way of representing proteins, one that is used in the Thayer Lab, is by encoding information about non-bonded interactions.
+
+We allow vertices to represent amino acids, one vertex for each amino acid of the protein's sequence. We define a complete weighted graph, where all vertices are connected with each other and the edge between any two amino acids is weighted by the strength of the non-bonded interaction between the two. If allosteric signals are conferred by a domino effect of energetic interactions, a time series history of these networks should reveal it.
+
+Observe that this creates a symmetric graph: the non-bonded interaction strength between amino acids \(i\) and \(j\) is the same as the interaction strength between \(j\) and \(i\), so for our weighted edge matrix \(M_{G}\), \(m_{i, j} = m_{j, i}\).
+
+Denser regions of the protein will naturally have greater local energetic interactions, which must be normalized. We can do this with the following procedure:
+
+For the sake of notation, we will write \(v_{i}v_{j}\) to mean specifically the edge from vertex \(v_{i}\) to \(v_{j}\). In this next step, we will be creating a directed graph, so it will be important to differentiate the edge from \(v_{i}\) to \(v_{j}\) from the edge from \(v_{j}\) to \(v_{i}\).
+
+Define
+\begin{equation}
+	\text{Norm}(v_{i}v_{j}) = \frac{w(v_{i}v_{j})}{\sum_{z\in V}w(v_{i}z)}
+\end{equation}
+
+This normalizes the graph by dividing the edge weight of \(v_{i}v_{j}\) by the sum of all edge weights incident to \(v_{i}\). Observe that this graph is no longer symmetric, that is, \(\text{Norm}(v_{i}v_{j}) \neq \text{Norm}(v_{j}v_{i})\), since \(v_{i}\) and \(v_{j}\) have different edges incident to them.
+
+When this process is applied to all of the edges in \(G\), it created a weighted directed graph. Recall that our goal is to represent the non-bonded interaction network of the protein, which intuitively should be symmetric: the force felt between amino acids \(i\) and \(j\) should be the same force felt between amino acids \(j\) and \(i\). To restore the symmetric nature of our graph, we modify our normalizing algorithm:
+
+\begin{equation}
+	\text{NormSymmetric}(v_{i}v_{j}) = \max(\text{Norm}(v_{i}v_{j}), \text{Norm}(v_{j}v_{i})).
+\end{equation}
+
+Now if we define our normalized graph \(G' = (V, E, w')\) where \(w'(v_{i}v_{j}) = \text{NormSymmetric}(v_{i}v_{j})\), we maintain the symmetric nature of \(G\).
+
+Finally, a threshold is applied based on the distribution of edge weights to isolate the signal from the noise; all values below the threshold are set to zero.
+
+\subsection{Spectral Graph Theory}
+\label{sec:spectralgraphtheory}
+
+We begin with some definitions. Let \(\mathbb{F}\) be a field of (real) scalars (i.e. a set of numbers in which addition and multiplication work as we expect them to, such as the real numbers). Let \(\vec{V}\) be a set of vectors of dimension \(n\) generated over \(\mathbb{F}\) (i.e. values of vectors in the set \(\vec{V}\) are only allowed to come from \(\mathbb{F}\)).
+
+Eigenvalues (\(\lambda\)) and eigenvectors (\(\vec{v}\)) of a matrix \(A\) are defined as those scalars \(\lambda \in \mathbb{F}\) and vectors \(\vec{v} \in \vec{V}\) such that \(A\vec{v} = \lambda\vec{v}\), that is, the linear transformation \(A\) applied to \(\vec{v}\) results in a scalar multiplication of \(\vec{v}\).
+
+For an \(n \times n\) matrix \(A\) there are exactly \(n\) eigenvectors, typically labeled such that \(\lambda_{1} \leq \lambda_{2} \leq \cdots \leq \lambda_{n}\).
+
+Next, a set of vectors is orthonormal if any two vectors from the set are perpendicular to one another. For example, over \(\mathbb{R}\), the set \(\left\{\begin{bsmallmatrix}
+1 \\ 0
+\end{bsmallmatrix}, \begin{bsmallmatrix}
+0 \\ 1
+\end{bsmallmatrix}\right\}\)
+\noindent is orthonormal, since an arrow pointing one unit up and an arrow pointing one unit right are perpendicular.
+
+A set of vectors \(B = \{b_{1}, b_{2}, \cdots b_{n}\}\) is known as a basis set of \(\vec{V}\) if for all vectors \(\vec{v} \in \vec{V}\), \(\vec{v}\) can be expressed as a linear combination of vectors in \(B\), \(\vec{v} = a_{1}b_{1} + a_{2}b_{2} + \cdots a_{n}b_{n}\), for scalars \(a_{1},~a_{2},~\cdots a_{n} \in \mathbb{F}\). The same set of vectors, \(\left\{\begin{bsmallmatrix}
+1 \\ 0
+\end{bsmallmatrix}, \begin{bsmallmatrix}
+0 \\ 1
+\end{bsmallmatrix}\right\}\), is also a basis, since for any \(\begin{bsmallmatrix}
+a \\ b
+\end{bsmallmatrix} \in \vec{V} = \mathbb{R}^{2}\), it can be expressed as \(a\begin{bsmallmatrix}
+1 \\ 0
+\end{bsmallmatrix} + b\begin{bsmallmatrix}
+0 \\ 1
+\end{bsmallmatrix}\). Thus \(\left\{\begin{bsmallmatrix}
+1 \\ 0
+\end{bsmallmatrix}, \begin{bsmallmatrix}
+0 \\ 1
+\end{bsmallmatrix}\right\}\) is referred to as an orthonormal basis.
+
+The Spectral Theorem states that all symmetric matrix have an orthonormal eigenbasis. This says for all symmetric matrices (a matrix in which for all entries \(m_{i, j}\), \(m_{i, j} = m_{j, i}\)), the set of eigenvectors of that matrix form is both orthonormal and is a basis for the set of all vectors. As will be seen in Section \ref{sec:heatkernel}, this theorem is very important because it makes difficult or even impossible computations much easier.
+
+Let \(Q\) be a matrix such that the columns of \(Q\) are the orthonormal eigenvectors of \(A\). This matrix has an important property that the inverse of \(Q\), \(Q^{-1}\), is equal to the transpose of \(Q\), \(Q\tran\). Now let \(\Lambda\) be a diagonal matrix where \(\lambda_{i, i}\) is the \(i\)th eigenvalue of \(A\). The spectral theorem tells us that for a diagonal matrix \(A\), \(A = Q\Lambda Q\tran\).
+
+\subsection{The Normalized Laplacian Matrix}
+
+We need one more tool to derive the heat kernel on graphs: the normalized Laplacian matrix, a more sophisticated way to encode a graph as a matrix than the ones seen previously.
+
+We begin with the adjacency matrix \(A\). As defined in Equation \ref{eq:weightedmatrix}, the entry at row \(i\) and column \(j\) takes the following value:
+
+\begin{equation}
+	a_{i, j} = \begin{cases}
+w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
+0 & \{v_{i}, v_{j}\} \not\in E
+\end{cases}.
+\end{equation}
+
+\noindent Next, consider the degree matrix. In the case of a undirected graph, the degree matrix encodes the degree of each vertex along the diagonal and is 0 in all other entries. For the diagonal matrix \(D\), entries are defined as follows:
+
+\begin{equation}
+	d_{i, j} = \begin{cases}
+\deg(d) & i = j\\
+0 & i \neq j
+\end{cases}.
+\end{equation}
+
+\noindent We will also need to consider the pseudo-inverse of \(D\), \(D^{-\frac{1}{2}}\), with entries given by
+
+\begin{equation}
+	D^{-\frac{1}{2}}(i, j) = \begin{cases}
+\frac{1}{\sqrt{\deg(d)}} & i = j\\
+0 & i \neq j
+\end{cases}.
+\end{equation}
+
+\noindent The Laplacian matrix is defined as \(L = D - A\), with entries given by
+
+\begin{equation}
+	L(i, j) = \begin{cases}
+\deg(d) & i = j\\
+-w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
+0 & \text{otherwise}
+\end{cases}.
+\end{equation}
+
+\noindent The diagonal of \(A\) is zero since vertices are not allowed to connect to one another, so the diagonal of \(L\) is the same as \(D\). All non-diagonal entries of \(D\) are zero, which gives the \(-w(\{v_{i}, v_{j}\})\) for adjacent vertices. All other entries are not changed.
+
+Finally, we consider the normalized Laplacian, which is given by \(\hat{L} = D^{-\frac{1}{2}}LD^{-\frac{1}{2}}\), with entries as follows:
+
+\begin{equation}
+	\hat{L}(i, j) = \begin{cases}
+1 & i = j \text{ and } \deg(i) \neq 0\\
+\frac{-w(i, j)}{\sqrt{\deg(i)\deg(j)}} & i \neq j \text{ and } \{v_{i}, v_{j}\} \in E\\
+0 & \text{otherwise}
+\end{cases}.
+\end{equation}
+
+\subsection{The Heat Kernel}
+\label{sec:heatkernel}
+
+The heat kernel is a function taken from physics, namely, it is the fundamental solution to the heat equation. In essence, it simulates how heat diffuses through a system. When applied in the context of graph theory, it can tell us how information diffuses through a network. Intuitively, highly connected regions of the graph should diffuse heat quickly while less connected regions will diffuse heat more slowly.
+
+The heat equation is given as:
+
+\begin{equation}
+	\frac{\partial h_{t}}{\partial t} = -\hat{L}h_{t},
+\end{equation}
+
+\noindent for the normalized Laplacian matrix \(\hat{L}\). The heat equation has the solution
+
+\begin{equation}
+	h_{t} = e^{-t\hat{L}}.
+\end{equation}
+
+Observe that this solution involved exponentiating the matrix \(\hat{L}\). How do you raise \(e\) to the power of a matrix? We can use the results from the previous sections to derive this.
+
+Because the normalized Laplacian matrix is symmetric, the spectral theorem tells us we can decompose \(\hat{L}\) into \(U\Lambda U\tran\) (where \(U\) is the matrix of eigenvectors and \(\Lambda\) is the diagonal matrix of eigenvalues). Further, we can use the Taylor expansion of \(e\),
+
+\begin{equation}
+	e^{x} = 1 + x + \frac{x^{2}}{2!} + \cdots = \sum_{i=0}^{\infty} \frac{x^{i}}{i!},
+\end{equation}
+
+\noindent to get that
+
+\begin{equation}
+	e^{-t\hat{L}} = 1 + (-t\hat{L}) + \frac{(-t\hat{L})^{2}}{2!} + \cdots = \sum_{i=0}^{\infty} \frac{(-t\hat{L})^{i}}{i!},
+\end{equation}
+
+
+\noindent We will need two more lemmas to continue:
+
+\begin{lemma}
+For a symmetric matrix \(\hat{L} = U\Lambda U\tran\), \(\hat{L}^{n} = U\Lambda^{n} U\tran\).\label{lemma:exp}
+\end{lemma}
+
+\begin{proof}
+To compute \(\hat{L}^{n}\), observe the following. Recall \(\hat{L}^{n} = U\Lambda U\tran\) and that \(U\tran = U^{-1}\): the transpose of \(U\) is equal to its inverse.
+
+\noindent Then,
+
+\begin{align*}
+\hat{L}^{n} & = \underbrace{(U\Lambda U\tran)(U\Lambda U\tran)\cdots (U\Lambda U\tran)}_{n}\\
+& = (U\Lambda U^{-1})(U\Lambda U^{-1}) \cdots (U\Lambda U^{-1})\\
+& = U\Lambda(U^{-1}U)\Lambda(U^{-1}U) \cdots \Lambda U^{-1}\\
+& = U\Lambda^{n} U^{-1}\refstepcounter{equation}\tag{\theequation}.
+\end{align*}
+\end{proof}
+
+\begin{lemma}
+Powers of a diagonal matrix stay diagonal and follow a formula.\label{lemma:diagpowers}
+\end{lemma}
+
+\begin{proof}
+Let
+
+\begin{equation*}
+	A = \text{diag}(a_{1,1}, a_{2,2}, \cdots, a_{n,n}) = {\setstretch{1.5}\begin{bmatrix}
+a_{1, 1} & 0 & \cdots & 0\\
+0 & a_{2, 2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}
+\end{bmatrix}}
+\end{equation*}
+
+\noindent Then
+
+\begin{equation}
+	A^{2} = {\setstretch{1.5}\begin{bmatrix}
+a_{1, 1} & 0 & \cdots & 0\\
+0 & a_{2, 2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}
+\end{bmatrix}\begin{bmatrix}
+a_{1, 1} & 0 & \cdots & 0\\
+0 & a_{2, 2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}
+\end{bmatrix} = \begin{bmatrix}
+a_{1, 1}^{2} & 0 & \cdots & 0\\
+0 & a_{2, 2}^{2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}^{2}
+\end{bmatrix}}
+\end{equation}
+
+So \(A^{2}\) is also a diagonal matrix. By induction, we can see that this pattern must extend, so all \(A^{n}\) for \(m \in \mathbb{N}\) are diagonal, and follow the form
+
+\begin{equation}
+	A^{m} = {\setstretch{1.5}\begin{bmatrix}
+a_{1, 1}^{m} & 0 & \cdots & 0\\
+0 & a_{2, 2}^{m} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}^{m}
+\end{bmatrix}}
+\end{equation}
+
+\end{proof}
+
+We now derive a closed-form equation for the heat kernel simulated on our weighted, undirected graph.
+
+\begin{proposition}
+Let \(G=(V,E,w)\) be a weighted, undirected graph. In our case, \(G\) represents the protein non-bonded interaction graph. Let \(\hat{L}\) be the (symmetric) normalized Laplacian matrix with decomposition \(\hat{L} = U\Lambda U\tran\).
+
+\noindent The heat kernel, given by
+\begin{equation*}
+	h_t = e^{-t\hat{L}},
+\end{equation*}
+has solution
+\begin{equation}
+	\operatorname{diag}(e^{-t\lambda_1}, \dots, e^{-t\lambda_n}).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Beginning with the solution to the heat equation, we have
+\begin{equation*}
+	h_t = e^{-t\hat{L}}.
+\end{equation*}
+We can use the definition of the Taylor series for \(e^{x}\) to obtain
+\begin{equation*}
+	\sum_{i=0}^{\infty} \frac{(-t\hat{L})^{i}}{i!} = \sum_{i=0}^{\infty} \frac{\hat{L}^{i}}{i!}(-t)^{i}.
+\end{equation*}
+By the spectral theorem, we can decompose \(\hat{L} = U\Lambda U\tran\):
+\begin{equation*}
+	\sum_{i=0}^{\infty} \frac{(U\Lambda U^{-1})^{i}}{i!}(-t)^{i}.
+\end{equation*}
+By Lemma \ref{lemma:exp}, \((U\Lambda U^{-1})^{n} = U\Lambda^{n} U^{-1}\),
+\begin{equation*}
+	\sum_{i=0}^{\infty} \frac{U\Lambda^{i} U^{-1}}{i!}(-t)^{i} = U\left(\sum_{i=0}^{\infty}\frac{\Lambda^{i}}{i!}(-t)^{i}\right)U\tran
+\end{equation*}
+Recall \(\Lambda\) is a diagonal matrix where the \(i\)th entry is the \(i\)th eigenvalue. By Lemma \ref{lemma:diagpowers}, raising \(\Lambda^{i}\) raises each entry to the \(i\).
+\begin{equation*}
+	U\left(\sum_{i=0}^{\infty}\frac{(-t)^{i}}{i!}{\setstretch{1}\begin{bmatrix}
+\lambda_{1}^{i} & 0 & \cdots & 0\\
+0 & \lambda_{2}^{i} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \lambda_{n}^{i}
+\end{bmatrix}}\right)U\tran
+\end{equation*}
+The factor \(\sum_{i=0}^{\infty}\frac{(-t)^{i}}{i!}\) can be brought into the matrix:
+\begin{equation*}
+	U\left({\setstretch{1}{\setlength{\arraycolsep}{1pt}\begin{bmatrix}
+\sum_{i=0}^{\infty}\frac{(-t\lambda_{1})^{i}}{i!} & 0 & \hdots & 0\\
+0 & \sum_{i=0}^{\infty}\frac{(-t\lambda_{2})^{i}}{i!} & \hdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \hdots & \sum_{i=0}^{\infty}\frac{(-t\lambda_{n})^{i}}{i!}\\
+\end{bmatrix}}}\right)U\tran
+\end{equation*}
+Finally, we recognize that each \(\sum_{i=0}^{\infty}\frac{(-t\lambda_{k})^{i}}{i!}\) is the Taylor series formula for \(e^{-t\lambda_{k}}\). Thus, we can arrive at the final formula:
+\begin{equation}
+	h_{t} = U\left({\setstretch{1}\begin{bmatrix}
+e^{-t\lambda_{1}} & 0 & \hdots & 0\\
+0 & e^{-t\lambda_{2}} & \hdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \hdots & e^{-t\lambda_{n}}\\
+\end{bmatrix}}\right)U\tran\label{eq:heatkernelmatrix}
+\end{equation}
+\end{proof}
+
+\parencite{axioms4030275, BenUndergrad, BenMasters, abramsonColorsProtein2021}.
+
+\subsection{The Wasserstein Distance Metric}
+
+The Wasserstein distance, also referred to as the Earth Mover's Distance, is a metric that measures the distance or difference between probability distributions. 
+
+Suppose you have several piles of dirt on your lawn and several holes, too, and you want to move the dirt from the piles into the holes. If the piles of dirt represent one probability distribution and the holes represent another, then the Wasserstein distance gives you the minimum amount of ``work'' needed to transport the dirt across your potentially hilly lawn from the piles to the holes.
+
+Thus, rather than measuring pointwise differences between the two distributions, the Wasserstein distance measures the minimum cost to transform one distribution into another, where cost is defined as the amount of mass moved multiplied by the distance transported.
+
+In the context of protein analysis, it is very useful. Consider the wild type (WT) and mutant forms of a protein. For each frame of the simulation, we can compute the non-bonded interaction network of the two systems. We can then use the heat kernel to simulate heat flow over each of the networks, giving us a measure of how an allosteric signal might flow locally, for each residue in the protein, for the WT and the mutant. Compiling the data for each frame of the simulations, we can use it to approximate a probability distribution, and then use the Wasserstein distance metric to compare quantitatively the difference between each residue in its ability to transmit energetic perturbations through the protein between the WT and mutant protein. This might tell us, for example, that the non-bonded interaction network of the mutant p53 is wildly different than the WT, despite a single point mutation change.
+
+\section{p53}
+
+p53, encoded by the TP53 gene \parencite{laneAntigenBoundHost1979}, is often referred to as the “guardian of the genome” for its important role in tumor suppression \parencite{laneCancerP53Guardian1992}. Its 393 amino acids are broadly made up of three domains, the N-terminal domain, the DNA binding domain, and the C-terminal domain, each of which correspond to approximately 25\%, 50\%, and 25\% of the protein. The DNA binding domain is a well-ordered beta-sandwich, held together by a Zn2\textsuperscript{+} ion \parencite{choCrystalStructureP531994, butlerStructureFunctionAggregation2003}. The N- and C-terminal domains are intrinsically disordered and contain important regulatory domains \parencite{oldfieldIntrinsicallyDisorderedProteins2014, chebaroIntrinsicallyDisorderedEnergy2015}: the N-terminal domain contains a transactivation domain \parencite{sunPhosphorylationdependentSwitchDisordered2021} and a proline-rich domain which promotes binding of apoptotic factors \parencite{baptisteProlinerichDomainP532002}, and the C-terminal domain contains a tetramerization domain needed for efficient DNA binding \parencite{jeffrey1995crystal, cheneRoleTetramerizationP532001} and is the site of numerous post-translational modifications used to modulate binding activity \parencite{guSurfPosttranslationalModification2012, knightsDistinctP53Acetylation2006, michaelP53Mdm2ModuleUbiquitin2003}.
+
+\subsection{Functional Regions}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{p53_domains.png}
+\caption[p53 Functional Domains]{p53 is primarily made up of 7 domains, the transactivation domain, the proline-rich domain, the DNA binding domain, the nuclear localization sequence, the tetramerization domain, the nuclear export sequence, and the basic domain. Image source: \parencite{tanakaPotentialTherapeuticTargets2018}}
+\label{fig:p53domains}
+\end{figure}
+
+\subsubsection{Transactivation Domain}
+
+The transactivation domain, encompassing residues \numrange{1}{61}, is actually composed of two sub-transactivation domains, spanning residues \numrange{1}{40} and \numrange{41}{63} \parencite{unger1993functional, chang1995transactivation, candau1997two, zhu1998identification}. The intrinsically disordered domain is essential for efficient transcription of target genes by promoting the recruitment of transcription factors and chromatin modulators \parencite{rajTransactivationDomainsP532017a}.
+
+In times of low cellular stress, Mdm2 and MdmX bind to the transactivation domain, inhibiting p53 activity, and promoting degradation via ubiquitination. Specifically, Mdm2 binds to the first transactivation domain \parencite{hauptMdm2PromotesRapid1997}. While both domains are required for p53 function, the first transactivation domain is especially important for p53 response to acute DNA damage \parencite{kuoP53TransactivationDomain2022}, while the second transactivation domain plays a more supportive role in p53 transactivation \parencite{millerjenkinsCharacterizationP300Taz2p532015, rajagopalanMappingPhysicalFunctional2010}.
+
+\subsubsection{Proline-Rich Domain}
+
+The proline-rich domain (PRD), defined roughly between residues \numrange{63}{97}, is a domain characterized by its large number of proline residues. It is not as strongly conserved as other regions, with human p53 containing five PXXP motifs while murine p53 only encodes two PXXP domains (two proline residues separated by two not necessarily identical non-proline residues). The PRD has been shown to be important for inhibition of cell growth, but is not required for transactivation \parencite{walker1996identification}.
+
+The role of the PRD on p53-DNA interactions remains unclear. NMR spectroscopy has shown that the PRD lowers p53 binding affinity for DNA but increases sequence specificity \parencite{he2019interaction}. However, studies using p53 mutations with deletions in the PRD show that the PRD may be essential for efficient DNA binding. p53\textsuperscript{\(\Delta62-91\)} mutants have been shown to have 60\% lower binding to the promoter region of the gene p21, whereas p53\textsuperscript{\(\Delta62-77\)} maintains WT binding \parencite{alexander2021p53}. Further studies have shown that both p53 and p53\textsuperscript{\(\Delta62-91\)} have similar affinity for the promoter region upstream of the p21 gene, but p53\textsuperscript{\(\Delta62-91\)} has impaired histone acetylation function, which reduces the efficiency of its transactivation \parencite{liu2003activation}. p53\textsuperscript{\(\Delta62-91\)} has also been shown to have reduced binding affinity for the promoter region of the PIG3 gene \parencite{roth2000tumor, venot1998requirement}.
+
+The PRD contains a polymorphic residue, residue number 72, which is found to be either proline or arginine. The frequency depends on ethnic group, but a strong trend exists between cold winter temperatures and arginine at position 72 \parencite{shi2009winter}. As with the question regarding how the PRD influences DNA interactions, results on what influence P/R72 has on the function of p53 remains unclear and contradictory. One study showed that polymorphism of residue 72 does not effect the apoptotic function of p53 \parencite{antoun2018different}, though others have shown that p53\textsuperscript{R72} has significantly enhanced apoptotic abilities \parencite{sullivan2004polymorphism, dumont2003codon}.
+
+For more, see \parencite{zhangMultifunctionalProlinerichDomain2025}. Overall, it seems that the exact impact of mutations, deletions, and regulatory domains depends strongly on the the nature of the alteration, the experimental design (\textit{in vivo} or \textit{in vitro}, yeast vs human vs mouse cells), the promoter DNA sequence being tested, and even DNA supercoiling (chromatin modifications, etc). This will be a recurring theme.
+
+\subsubsection{DNA Binding Domain}
+
+The DNA binding domain (DBD), defined from roughly residues \numrange{96}{289}, is the only structured subset of p53, and is one of the only regions of p53 for which the crystal structure has been solved. The DBD contains the surface that interacts with the DNA. The vast majority of tumorous mutations to p53 occur in the DNA binding domain, and though the exact mechanism is unknown, it seems that these are favored for their gain of function abilities.
+
+\subsubsection{Nuclear Localization Signal}
+
+In order for p53 to engage in transactivation, it must be present in the nucleus. Proteins in the cytoplasm require a sequence of amino acids, called the nuclear localization signal (NLS), to be moved across the nuclear membrane. The loss of the NLS severely inhibits p53 tumor suppressor function \parencite{liP53TransportedNucleus2011}.
+
+\subsubsection{Tetramerization Domain}
+
+Tetramerization of p53 is essential for efficient DNA binding. Tetrameric p53 has a \num{1000} time greater affinity for DNA compared to the monomer \parencite{weinberg2004cooperative}. Four copies of p53 will interact via the tetramerization domain, located between residues \numrange{326}{356}, as a dimer of dimers.
+
+p53 exists in the cell in a monomeric, dimeric, and tetrameric form, with approximately 59\% of the cellular concentration as a dimer, 28\% as a monomer, and 13\% in the tetrameric form \parencite{gaglia2013activation}. This suggests that tetramerization is a slow process, perhaps influenced by external factors \parencite{natan2009ultraslow}. After DNA damage, 93\% of cellular p53 is in its tetrameric form \parencite{gaglia2013activation}, which is consistent with the idea that p53 tetramerization is required for efficient transactivation.
+
+\subsubsection{Nuclear Export Sequence}
+
+In unstressed cells, it is important to maintain low concentrations of p53 to ensure it does not accidentally trigger apoptosis or halt the cell cycle. p53 is exported from the nucleus to the cytoplasm where Mdm2 binds to p53. Both are ubiquitinated and sequestered to the proteasome where they are degraded \parencite{sparksDegradationP53Its2014}.
+
+In stressed cells, p53 undergoes post-translational modifications in the first transactivation domain, which prevents mdm2 from interacting with p53, stabilizing it from degradation \parencite{ashcroftStressSignalsUtilize2000}.
+
+\subsection{p53's Role as a Transcription Factor}
+
+p53 is a transcription factor, meaning it binds to DNA sequences (response elements, REs) upstream of an open reading frame and promotes the recruitment of RNA polymerase, etc. to induce transcription of the gene. While many proteins have a well-defined binding sequence, p53 does not. In its place, it has a “consensus sequence” defined as two half-site consensus pentamers 5'-PuPuPuC(A/T)(T/A)GPyPyPy orientated \(\rightarrow \leftarrow\) X \(\rightarrow \leftarrow\), where X is a variable region up to 13 bases long \parencite{el-deiryDefinitionConsensusBinding1992}.
+p53 promotes the transcription of a variety of genes in several pathways, including apoptosis, DNA repair, and cell-cycle arrest.
+
+\subsubsection{BAX}
+
+The Bcl-2 protein serves to repress apoptotic cell death programs. The 21 kilodalton Bax protein binds to Bcl-2; overexpression of BAX accelerates apoptosis and overcomes the repressor function of Bcl-2 \parencite{oltvaiBcl2HeterodimerizesVivo1993}. The upstream region of the BAX gene contains four p53 binding sites: one perfect and three imperfect, and p53 was shown to bind to the BAX gene in vitro \parencite{miyashitaTumorSuppressorP531995}. Rather than contributing to apoptosis directly, it seems that a high ratio of Bax to Bcl-2 increases susceptibility to apoptosis and a low ratio favors cell survival \parencite{putriBaxBcl2Ratio2025}.
+
+\subsubsection{NOXA}
+
+The Noxa protein is a member of the Bcl-2 family of proteins, encoding only the BH3 subdomain, classifying it as a BH3-only member of the Bcl-2 family. After ectopic expression, it undergoes BH3-dependent localization to the mitochondria where it interacts with caspase-9, a central enzyme in the apoptosis pathway. The NOXA gene contains a p53 binding site, and enhanced expression of NOXA mRNA was detected upon increased p53 expression \parencite{odaNoxaBH3OnlyMember2000a}.
+
+\subsubsection{PUMA}
+
+p53 upregulated modulator of apoptosis gene (PUMA) encodes two proteins, PUMA-\(\alpha\) and PUMA-\(\gamma\), both of which are composed of a BH3 domain. Both bind to Bcl-2, localize to the mitochondria, induce cytochrome c release, and trigger apoptosis \parencite{nakanoPUMANovelProapoptotic2001}.
+
+\subsubsection{14-3-3\(\sigma\)}
+
+The 14-3-3 family of proteins play an important role in cell transduction pathways and cell cycle pathways. Within mammalian cells, the 14-3-3 family is comprised of seven proteins, of which the 14-3-3\(\sigma\) protein is one \parencite{fu1433ProteinsStructure2000, yaffeStructuralBasis14331997, aitken1433ProteinsMAP1995}. 14-3-3\(\sigma\) negatively regulates the cell cycle by interacting with cyclin-dependent kinases (CDKs) \parencite{larongaAssociationCyclindependentKinases2000a}. 14-3-3\(\sigma\) induction by DNA-damaging events, including \(\gamma\) irradiation, is modulated by a p53 response element 1.8 kb upstream from the ORF, and leads to G2 arrest \parencite{hermeking1433sP53RegulatedInhibitor1997, larongaAssociationCyclindependentKinases2000a, chan1433SigmaRequiredPrevent1999}. For more, see \parencite{leeRegulationP53MDM2Pathway2006}.
+
+\subsubsection{p53AIP1}
+
+Expression of p53-regulated Apoptosis Inducing Protein 1 (p53AIP1) leads to loss of mitochondrial electrical potential difference, leading to apoptosis. Upon severe DNA damage, p53 S46 is phosphorylated and apoptosis is introduced; S46 mutants selectively inhibit p53AIP1 production \parencite{bibidodaP53AIP1PotentialMediator2000}.
+
+\subsubsection{GADD45}
+
+GADD45 is a protein inducible by DNA damage and growth stresses associated with growth arrest \parencite{fornaceDNADamageinducibleTranscripts1988}. WT p53 binds to the GADD45 promoter region and promotes transcription whereas mutant p53 (as carried in the SW480, Raji, and KG-1a human cancer lines) does not \parencite{kastanMammalianCellCycle1992}.
+
+\subsubsection{p53R2}
+
+p53R2 is a p53-inducible gene with high similarity to the ribonucleotide reductase small subunit (R2), an enzyme involved in converting ribonucleotides to deoxyribonucleotides especially during cell division. p53R2 is induced by ultraviolet and gamma irradiation but not R2. p53R2 expression in p53-deficient cells caused G2/M arrest \parencite{tanakaRibonucleotideReductaseGene2000}.
+
+\subsubsection{PTEN}
+
+PTEN is another highly mutated protein in across human cancers. It was initially discovered as a tumor suppressor tyrosine phosphatase \parencite{liPTENPutativeProtein1997, steckIdentificationCandidateTumour1997, liTEP1EncodedCandidate1997}, but is now widely recognized for its lipid phosphatase function \parencite{maehamaTumorSuppressorPTEN1998}. There exists a p53 binding site upstream of the PTEN gene; PTEN protects p53 from MDM2’s inhibition of p53. This feedback loop provides greater sensitivity of cancer cells to additional p53 function and chemotherapy \parencite{stambolicRegulationPTENTranscription2001, mayoPTENProtectsP532002}. For more, see \parencite{leeFunctionsRegulationPTEN2018}.
+
+\subsubsection{p21}
+
+p21, sometimes referred to as CIP1, p21CIP1, WAF1, or p21WAF1, is a tightly binding inhibitor of the cyclin-dependent kinases (especially CDK2). p21 binding to CDKs can inhibit phosphorylation of Rb by cyclin A-Cdk2, cyclin E-Cdk2, cyclin D1-Cdk4, and cyclin D2-Cdk4 complexes, allowing the cell to arrest in the G1/S transition \parencite{harperP21CdkinteractingProtein1993}. The P21 gene is directly induced by a p53 binding site 2.4 kb upstream of the ORF \parencite{el-deiryWAF1PotentialMediator1993}.
+
+\subsubsection{RGC}
+
+The RGC32 protein localizes to the centromeres during meiosis and when overexpressed in cancer cells can induce arrest in the G2/M transition. The RGC gene was one of the first genes discovered to be transcriptionally regulated by p53. R175H and R273H p53 mutants were shown to be unable to bind to the RGC p53 response element even at high concentrations \parencite{kernIdentificationP53SequenceSpecific1991}; the RGC response element, often times multiple copies, is the canonical choice when designing p53 binding assays \parencite{scharerMammalianP53Can1992, ishiokaScreeningPatientsHeterozygous1993, kovvaliIdentificationPartialLoss2001, flamanSimpleP53Functional1995a, ingaP53MutantsExhibiting2001b}.
+
+\subsection{Mutations to p53}
+
+Mutations to p53 are broadly cast into two classes: DNA-contact mutations and conformational mutations. DNA contact mutations are point mutations to residues that directly contact the DNA, while conformational mutations are mutations that destabilize the protein, reducing DNA recognition.
+
+Mutations to p53 are associated with over 50\% of human cancers \parencite{hamzehloieRoleTumorProtein2012}, which can be rationalized with its great importance in modulating safe and healthy cell growth and division. While diseases affecting other transcription factors are typically associated with nonsense mutations, frameshifts, or truncations, the majority of the p53 mutations associated with cancer are missense mutations\parencite{hamzehloieRoleTumorProtein2012, baughWhyAreThere2018}. When one tabulates the frequency at which mutations occur in human cancers, it can be seen that although mutations are equally likely anywhere in the coding region of p53, the vast majority of cancerous mutations occur in the DNA binding domain \parencite{hainautSomaticTP53Mutations2016}. Further, there is a strong preference for specific point mutations: R175H, R248Q, R273H, R248W, R273C, R282W, G245S, R249S, Y220C, and V157F make up 30.55\% of all mutations in the IARC R18 database (listed in decreasing frequency, ranging between 5.6\% and 0.98\% of all cases) \parencite{hainautSomaticTP53Mutations2016}. R248(Q/H) \parencite{ngR248QMutationBeyondP53DNA2015, alvarado-ortizMutantP53GainofFunction2021, asherP53HotspotMutants2003} and R273(H/C) \parencite{tanMutantP53R273HMediates2015, gargVariableMutationsP53R2732020} are DNA contact mutations while R175H56, R282W57, G245S58, R249S59, Y220C60, and V157F are classified as conformational mutants. In fact, one case was reported in which a glioblastoma tumor began with a relatively rare mutation to p53, and the mutant allele was replaced by another more frequently occurring allele \parencite{leeSpatiotemporalGenomicArchitecture2017}.
+
+Given the variety and variation between response elements p53 interacts with and the large number of ways mutations may modulate p53 activity, it is unsurprising that some mutations preferentially disrupt binding to certain response elements. Inga et. al. used random mutagenesis applied to the DNA binding domain of p53 to identify several mutations, such as D184G, which show a knockdown of p53 binding to the PIG3 response element, an equivalent amount of binding to P21 and BAX, and greater binding than the WT to 3xRGC \parencite{ingaP53MutantsExhibiting2001b}. Resnick and Inga follow up in another study and identify, through random mutagenesis\textcolor{red}{(?)}, that the mutation 277R has approximately WT binding to several REs including PCNA, near-zero binding to the 14-3-3\(\sigma\) RE, and a 16-fold increase in binding to the MDM2-P2 RE \parencite{resnickFunctionalMutantsSequencespecific2003}.
+
+The selection of certain alleles of p53 in cancer can likely be explained by the additional properties mutant p53 gains over the wild type. Mutant p53 plays a large role in cancer cell proliferation, especially R249S which promotes the proliferation of hepatocellular carcinoma cells after a phosphorylation event at S249 \parencite{wangItTakesTeam2019, liaoMutantP53Gains2017} and R273H which binds to the mini-RNA miR-27a promoter region which activates EGFR/ERK signaling, promoting cell growth65. R172H and R273H mutant p53 have been shown to develop more metastatic tumors than p53-/- in mice \parencite{langGainFunctionP532004, oliveMutantP53Gain2004}.
+
+\subsection{p53 Splice Variants}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{p53_isoforms.jpg}
+\caption[p53 Splice Variants]{p53 has twelve tissue-dependent splice variants generated by four different translation start sites and three different alternate tail splicings. Image source: \parencite{joruizP53IsoformsKey2016}}
+\label{fig:p53splicevariants}
+\end{figure}
+
+The TP53 gene expresses at least \num{9} different mRNAs encoding \num{12} different proteins. There are four different translation start sites, resulting in N-terminal truncations relative to the full length p53. Additionally, there are three different alternative C-terminal splicings, giving the total of \num{12} possible proteins. These proteins are referred to as splice variants or isoforms of p53.
+
+N-terminal truncations are indicated by prefixing `p53' with the number of residues lost relative to the wild type, with the four options being no prefix which indicates that translation begins at codon 1, \(\Delta 40\) meaning translation begins at codon \num{40}, \(\Delta 133\), and \(\Delta 160\). C-terminal alternate splicings are indicated with \(\alpha\), \(\beta\), and \(\gamma\).
+
+Importantly, N-terminal truncations lose important regulatory domains: \(\Delta 40\)p53 lacks the first transactivation domain, \(\Delta 133\)p53 lacks both transactivation domains, the proline-rich domain, and a small amount of the DNA binding domain, and \(\Delta 160\)p53 lacks even more of the DNA binding domain. Alternative C-terminal splicings occur after the nuclear localization sequence so all splice variants contain it, though the \(\beta\) and \(\gamma\) alternate spliced tails only contain the fist seven residues of the tetramerization domain, lacking the remaining \num{25} residues \parencite{joruizP53IsoformsKey2016}.
+
+Despite the loss of regulatory domains, many of these isoforms are expressed in healthy tissue. p53\(\beta\) and \(\Delta 133\)p53\(\alpha\) have strong evidence for expression \parencite{mondalD133p53aNaturalP532018, fujitaP53IsoformsD133p532009}, and there is some evidence for the expression of \(\Delta 133\)p53\(\beta\) and \(\Delta 133\)p53\(\gamma\), \(\Delta 160\)p53\(\alpha\), \(\Delta 160\)p53\(\beta\), and \(\Delta 160\)p53\(\gamma\) \parencite{khouryP53Isoforms2011}. The expression of p53 splice variants can be altered in tumors, too. For example, it has been shown that tumors with higher amounts of \(\Delta 133\)p53\(\beta\) have greater a likelihood of metastasizing to the brain \parencite{jesusIncreasedExpressionD133p53v2023}.
+
+Despite the discovery of p53 splice variants in the mid 1980s, the exact role they play in the complex interaction network of the p53 protein (or perhaps rather, proteins) remains unclear.
+
+\subsection{PK11000}
+
+PK11000, a small 2-sulfonylpyrimidine molecule, was one of the first compounds discovered to reactivate the Y220C mutant p53. The Y220C mutation is a destabilizing mutation, with a lower melting temperature than the WT. Covalent binding of PK11000 was shown to increase the melting temperature of p53 by \(>\)\qty{1.2}{\kelvin}. Though designed to non-covalently interact in a crevasse opened by the Y220C mutation, it instead covalently binds to a cysteine on the protein surface. Cancer cells treated with PK11007, a derivative of PK11000, were shown to have lower viability, indicating that PK11007 can act as a drug to restore the mutant p53 \parencite{bauer2SulfonylpyrimidinesMildAlkylating2016}.
+
+\subsection{Rezatapopt}
+
+In contrast to PK11000, which was intended to bind to the pocket created by the Y220C mutation but actually covalently binds to the protein surface, Rezatapopt is another drug to target Y220C that actually does bind in the Y220C-induced pocket. Rezatapopt was shown to reactivate wild type p53 function of the Y220C mutant, in mouse models with human tumors containing Y220C p53 xenografted, tumor suppression was demonstrated \parencite{vuDiscoveryRezatapoptPC145862025}.
+
+Further testing \textit{in vitro} and \textit{in vivo} has shown that Rezatapopt is highly specific for Y220C p53, and that treatment of tumor cells with Rezatapopt increases markers for cell-cycle arrest, though interestingly, not apoptosis. From the Y220C p53 melting temperature (\(T_{m}\)) of \qty{34}{\degreeCelsius}, treatment with Rezatapopt increased the \(T_{m}\) to \qty{42.6}{\degreeCelsius}, slightly higher than even the wild type p53, which has a \(T_{m}\) of \qty{42}{\degreeCelsius} \parencite{puzio-kuterRestorationTumorSuppressor2025}. Rezatapopt is currently in a Phase II clinical trial.
+
+\section{p53 as a Transcription Factor in Yeast}
+
+\textcolor{red}{COMPLETE}

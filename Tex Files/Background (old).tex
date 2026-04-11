@@ -1,0 +1,192 @@
+Keeping to the interdisciplinary spirit of the College of Integrative Sciences, this thesis is written to be approachable to all disciplines, particularly those in the spectrum of disciplines between computer science, molecular biology, and chemistry. To achieve this, we will derive the content presented in the body of the thesis from first principles in this Background section. We begin from the absolute fundamentals with atoms and atomic interactions (thankfully it will not be necessary to begin with quantum mechanics!), work our way up to proteins, their dynamics, and their interactions, and end with an in-depth look at the nature of high-performance computing, molecular dynamics simulations and their analyses, and yeast genetic techniques. Finally, we will discuss the aspects of p53 relevant to this study, including but not limited to its disordered regions, clinically relevant mutations, its role as a transcription factor, clinically relevant small molecules, and the family of p53 splice variant isoforms (which comprises only a small subset of all the p53 literature).
+
+\section{Atoms and Atomic Interactions}
+
+\begin{flushright}
+	\textit{“There is nothing that living things do that cannot be understood from the point of view that they are made of atoms acting according to the laws of physics.”}\\
+– Richard Feynman\\
+\hfill\break
+\end{flushright}
+
+To understand the complex dynamics of the matter that surrounds us, we must first understand the atom. Biological function, ultimately, emerges from interactions between the atoms that compose living systems, governed by covalent and ionic bonding, electrostatic and van der Waals interactions, and hydrogen bonding. Establishing these fundamentals sets the stage for understanding both the forces that drive protein function and how these properties can be used to simulate complex biological systems.
+
+\subsection{Atoms}
+
+\subsubsection{Atomism as a Philosophical Theory}
+
+The history of the atom, in the sense of it being some indivisible particle of matter, stretches far beyond our understanding of it as the chemical particle we know today. References to atoms, in this sense, have notably appeared in the works of Ancient Greek and Indian philosophers, though these are undoubtedly not the only two instances.
+
+In the 5th century BCE, Democritus, pupil of Leucippus, made the following argument in favor of there being some real, tangible, indivisible particle of mass. Suppose to the contrary, that such an infinite division of matter is possible and has been done. These resulting pieces of matter either have or do ont have magnitude. If they do have magnitude, then they should be able to be divided further and can therefore not be considered the indivisible components of mass we are after. Thus our infinitely divided fragments of matter must have no magnitude. Just as a log turned to sawdust could theoretically and painstakingly be reassembled back into a log, we argue that we must be able to reassemble our fragments back into their original form. How could an object with magnitude be assembled from components without? Even an infinite number of fragments with no magnitude could not produce a body with mass and size. Therefore, an infinite division of matter is impossible, and there must be some smallest particle, one with physical size and mass.
+
+The belief in this idea is known as ``atomism'' coming from ``atom'' mean uncuttable or indivisible. Atomism was hotly debated for centuries. For instance, in response to Democritus' argument, Aristotle argued that ``divisible into infinity'' means ``divisible an infinite number of times'', rather than ``divisible into an infinite number of pieces''. The theory of atomism was not firmly cemented as fact until the 19th century with the work of chemist, physicist, and meteorologist John Dalton.
+
+\subsubsection{Classical Models of Atomic Structure}
+
+In 1804, John Dalton published his Law of Multiple Proportions. This said, in short, that for two compounds that share two elements, the amount of the first element per measure of the second element will differ by a ratio of small whole numbers.
+
+For example, Dalton studied nitrous oxide, nitric oxide, and nitrogen dioxide. He observed that, if the amount of nitrogen was fixed to \qty{140}{\gram}, then the amount of oxygen in the respective compounds was \qtylist{80;160;320}{\gram}. Dalton noticed that these came in a ratio of 1:2:4, and (using some trial and error to decide on \num{2} nitrogen atoms per compound) was able to derive the respective chemical formulas \ce{N2O}, \ce{N2O2} (simplified to \ce{NO}), and \ce{N2O4} (simplified to \ce{NO2}).
+
+Given that he was unable to separate oxygen or nitrogen into any further smaller products, Dalton correctly determined that he had discovered fundamental particles, and named them atoms after the philosophical theory.
+
+In 1897, J. J. Thompson discovered the electron by observing that in a sealed glass container, two electrodes separated by a vacuum will produce a beam of particles that can be affected by electric and magnetic charges. In 1904, he published (what is now referred to as) the Plum Pudding Model to describe the distribution of electrons in the atom. It was known that electrons have a negative charge and that the atom as a whole has no net charge, but no source for a positive charge in the atom had been discovered. Thus, Thompson proposed that the positive charge was uniformly distributed throughout the atom and that electrons arrange themselves such that they would cancel out the charge of the atom, in a way not dissimilar to raisins in a plum pudding. Thompson's model could not account for emission spectra of atoms or valencies observed in the organization of electrons.
+
+In 1909, Rutherford proposed an alternative to the Thompson model, positing that the majority of the charge and mass of the atom was arranged in a small volume at the center of the atom, but his model was no closer to explaining the behavior of electrons.
+
+\subsubsection{Crisis in Classical Physics}
+
+Through the end of the 19th century, the idea of electrons orbiting the core of the atom emerged. However, in 1897, Joseph Larmor showed that an accelerating charge must give off electromagnetic radiation. As the electron orbits the nucleus, its constantly changing direction means that it would be accelerating and therefore should give off electromagnetic radiation. This radiation would ultimately decrease the total energy of the electron, causing it to spiral into the core of the nucleus. A popular solution to this issue at the time was to pair electrons opposite the nucleus, which would cancel out the effect. However, in 1906, Thomson showed that the hydrogen atom had only a single electron.
+
+All objects emit thermal radiation from their surface. The distribution of wavelengths and intensity of the radiation (i.e., the energy and number of photons) depends on the temperature of the object; the hotter the object the brighter the intensity and the whiter the light. The derived relationship between temperature and wavelength and intensity of the radiation was given by the following,
+
+\begin{equation*}
+	\rho_{T}(\nu) = \frac{8\pi k_{B}T\nu^{2}}{c^{3}}
+\end{equation*}
+
+\noindent where \(\rho_{T}(\nu)\) is the intensity of the radiation at the frequency \(\nu\) for a body of temperature \(T\), \(k_{B}\) is the Boltzmann constant, and \(c\) is the speed of light. There was a serious problem with the prediction of the distribution of the intensity and wavelengths of the emitted radiation: as wavelength approached zero, the predicted intensity approached infinity. This was referred to as the Ultraviolet Catastrophe, and occurred in the late 19th century. It was not until 1901 when Max Plank was able to solve this.
+
+The first step Plank took was to hypothesize that the energy of the emitted photon could not be arbitrary as classical physics had proposed, instead, it was was integer multiples of \(h\nu\), where \(h\) was chosen to be an arbitrary constant with units (energy \(\cdot\) frequency\(^{-1}\)) = (energy \(\cdot\) time), though today it is known as Plank's constant, with \(h = \num{6.626e-34}\). His hypothesis said that exciting a photon can only happen if there is exactly the right amount of energy, no more, no less. This key insight allowed him to make the second step, by realizing that the probability of exciting a high frequency photon diminishes with its frequency. This allowed him to derive an alternate expression,
+
+\begin{equation*}
+	\rho_{T}(\nu) = \frac{8\pi h\nu^{3}}{c^{3}} \frac{1}{e^{hv/k_{B}T} - 1}
+\end{equation*}
+
+\noindent which closely followed the observed frequency and intensity distribution.
+
+\textcolor{red}{Einstein photons?}
+
+\subsubsection{Early Quantum Models of the Atom}
+
+\textcolor{red}{Bohr: quantized orbits, spectra, stability}
+
+In 1913, Niels Bohr, a post-doctoral student of Rutherford, proposed his own model for the atom. His theory said that electrons orbit a small and dense nucleus, analogous to a solar system, held together by electrostatic interactions rather than gravity. Valencies were explained by limiting the number of electrons that could occupy any given orbital, and importantly, his model was able a mathematically-sound explanation for the spectral emission lines of hydrogen: when light strikes an electron, it gains enough energy to move to a higher-energy orbital, and when it decays down to its original orbital, a photon is released. The energy the photon was predicted to have closely matched experimentally observed energy levels. The model ultimately failed to accurately describe behavior of larger, multi-electron atoms and was at times in opposition with the then nascent quantum mechanics, but its remarkable success and simplicity makes it a popular model to this day.
+
+As successful as the Bohr model of the atom was, there were several serious points of contention. Most simply,  This is, of course, not the case. The key insight is that of quantization.
+
+\subsubsection{The Quantum Mechanical Atom}
+
+\textcolor{red}{Schrödinger}
+\textcolor{red}{Heisenberg}
+\textcolor{red}{Orbitals}
+\textcolor{red}{Bridge to chemistry}
+
+
+\subsubsection{A History of the Classical Atomic Model}
+
+Atoms are the fundamental building block of ordinary matter and are the main players in chemical reactions. Atoms can be broken down into three components: protons, neutrons, and electrons. Protons have a positive charge and electrons have a negative charge of the same magnitude. Neutrons have no charge. The core of an atom is made up of protons and neutrons held together by the strong nuclear force.
+
+
+
+
+
+
+
+\subsubsection{The Quantum Atomic Model}
+\textcolor{red}{fill out section}
+
+\subsection{Atomic Structure and Electron Configuration}
+\subsubsection{Protons, Neutrons, Electrons}
+
+All atoms are composed of only three particles: protons, neutrons, and electrons.
+
+Protons are positively charged, and elements are defined by their proton count. Hydrogen atoms are those atoms with exactly one proton, oxygen atoms are those with exactly eight protons.
+
+Neutrons have no charged, and together with protons, they make up the nucleus of the atom. The strong atomic force interacts between protons and neutrons and gives the nucleus of the atom its high stability.
+
+Electrons are negatively charged, and they ``orbit'' the nucleus at extremely high speeds. In a hydrogen atom, electrons can move faster than \qty{2100}{\km\per\second} (a little less than \qty{1}{\percent} of the speed of light), and in larger atoms, where electrons feel a weaker attraction to the nucleus of the atom, they can move exceeding half the speed of light. Compared electrons, protons and neutrons are virtually stationary.
+
+Atoms are the smallest indivisible component of an element that can be uniquely identified as that element. No further subdivision of an atom retain the global properties of that element. For instance, a neutral atom of gold is comprised of 79 protons, 79 electrons, and 118 neutrons, each of which is made up of smaller particles such as quarks and leptons, but none of these components retain the properties of gold.
+
+\textcolor{blue}{below needs work}
+
+\subsubsection{Electron Configurations}
+
+
+
+Electrons exist in orbitals, which are themselves probability distributions. The shape of each orbital is given by the Schrödinger Equation, and each orbital can fit an increasing number of electrons: \numlist[list-final-separator = {, }, parse-numbers = false]{2;6;10;14;etc.}. Complete orbitals are the most stable, and are therefore ``preferred'' by atoms where possible.
+
+\subsubsection{Valence Electrons}
+
+\textcolor{red}{fill out section}
+
+\subsubsection{Periodic Trends}
+
+\textcolor{red}{fill out section}
+
+\subsection{Chemical Bonding}
+
+The simplest and most straightforward type of atomic bonding is ionic and covalent bonding.
+
+\subsubsection{Ionic Bonding}
+
+Ionic bonding involves the near complete transfer of an electron from one atom to another. It primarily occurs between metals, with few electrons in their valence orbitals, and non-metals, which have close to a full valence shell. For example, \ce{Na} has a single valence electron whereas \ce{Cl} has 7. If \ce{Na} gives its electron to \ce{Cl}, then both will have satisfied orbitals.
+
+Usually, the transfer of electrons alone is energetically unfavorable, but when combined with the positive electrostatic interactions between the newly created ions, it becomes highly favorable.
+
+\subsubsection{Covalent Bonding}
+
+\textcolor{red}{fill out section}
+
+\subsubsection{Bond Polarity and Electronegativity}
+
+\textcolor{red}{fill out section}
+
+\subsubsection{Partial Charges}
+
+\textcolor{red}{fill out section}
+
+\subsection{Electrostatic Interactions}
+
+Since protons and electrons have opposing charges of the same magnitude, atoms with the same number of protons and electrons are neutral, meaning they have no net charge. Ions are atoms with an unequal number of protons and electrons; cations have a net positive charge, anions have a net negative charge.
+
+The electrostatic force is one of the most fundamental forces in nature, and is crucial in keeping atoms and molecules stable. Like charges repel, and opposing charges attract. Though simple, the electrostatic force leads rise to profound features.
+
+\subsubsection{Coulomb's Law}
+
+\textcolor{red}{fill out section}
+
+\subsubsection{Dipole Moments}
+
+
+
+\subsubsection{Charge Distribution in Molecules}
+
+Atoms are held together by the attractive forces between protons and electrons. (The nucleus is held together by the strong nuclear force, which occurs between protons and neutrons, and is strong enough over short distances to overcome the repulsive forces between the protons.) Based on the probability distribution in space of electrons, molecules can have a ``partial'' charge. For instance, \ce{F} is highly electronegative, meaning in a compound, say, \ce{HF}, the \ce{F} atom will shift the electron probability distribution closer to itself and further away from the \ce{H} atom. 
+
+\subsection{Noncovalent Interactions}
+\subsubsection{Van der Waals Forces}
+
+\textcolor{red}{fill out section}
+
+\subsubsection{Hydrogen Bonding}
+
+\textcolor{red}{fill out section}
+
+\section{Proteins}
+
+It is often said that proteins are the molecular machinery of the cell. This perhaps undersells the ubiquity and truly fundamental role proteins play in the cell. They are not only the machinery that engages in cellular activity but they are also the readers of the instruction manual, the transport network (both the roads and the vehicles), the signalers between machines, the defenses for the factory. It is not a very controversial claim to say that proteins are the most diverse class of macromolecules in the cell in terms of their function.
+
+\subsection{Primary Sequence}
+
+The amino acid sequence, also known as the primary sequence, is the first level of organization of the protein.
+
+The subunits that make up proteins are called amino acids, also known as residues. The vast majority of all proteins are made up of only a 20 different amino acids. Each amino acid has a similar structure: an amino group (\ce{NH2}), a carboxyl group (\ce{COOH}), and a variable \ce{R} group, all bound to a central carbon known as the alpha carbon (\ce{C_{\alpha}}). The carbon in the carboxyl group is designated by \ce{C_{\beta}}. The amino acid chain grows as the \ce{OH} on the carboxyl end of the chain reacts with the amino hydrogen on the incoming subunit, causing a water molecule to leave.
+
+The \ce{R} group gives lends different properties to the amino acids. For example, arginine has a positive charge, glutamic acid has a negative charge, serine is polar, and tryptophan is hydrophobic. The \ce{R} group of cysteine contains a sulfur atom, and two cysteine atoms are able to bind to one another tightly, forming what is known as a sulfur bridge. 
+
+Since proteins are only made up of amino acids, they rely on them for all of their properties and abilities. Polar residues tend to be solvent-exposed (on the surface of the protein) whereas hydrophobic residues tend to be buried in the core of a protein. If a hydrophobic residue is solvent-exposed, this indicates that the protein may engage in protein-protein interactions in this region. Catalytically active sites of proteins often contain charged residues, used in positioning and stabilizing substrates in such a way that the reaction can occur.
+
+The amino acid sequence uniquely defines the three dimensional structure of the protein. The amino acid sequence is often thought of as a beaded necklace, where each bead represents an amino acid. The three dimensional sequence, then, would a highly complicated, yet often very precise, tangled ball of the beads.
+
+\subsection{Backbone Dihedral Angles}
+
+
+
+\subsection{Secondary Sequence}
+
+Simultaneously with its synthesis at the ribosome, nascent proteins begin adopting their three-dimensional structure. The smallest and most local structure formed is known as secondary structure, which comes in two main types: \(\alpha\)-helices and \(\beta\)-sheets. 
+
+\subsection{Tertiary Sequence}
+\subsection{Quaternary Sequence}
+\subsection{Protein Expression}
+\subsection{Splice Variants}
+\subsection{Transcription Factors}
