@@ -161,24 +161,39 @@
 \newcommand{\figurepageref}[1]{Figure \ref{#1} on page \pageref{#1}}
 
 \chapter{Introduction}
-
 \setcounter{page}{1}
-
 \input{Introduction}
 
 \textcolor{red}{BEFORE SUBMISSION, CHECK THE LOG FOR AND RESOLVE ALL OVERFULL LINES (LINES THAT GO INTO THE MARGINS OF THE PAGE)}
 
 \chapter{Background}
-
 \input{Background}
 
-\chapter{Results}
+\part{Computational Studies of p53 Function}
 
-\input{Results}
+\chapter{The Effects of the Y220C Mutation and PK11000 on p53 Isoforms}
+\chaptermark{Y220C and PK11000 Across p53 Isoforms}
+\input{Results_Isoforms}
+
+\chapter{The Coupled Dynamics of p53 and DNA Across Binding Sequences}
+\chaptermark{p53 and DNA Dynamics Across Binding Sequences}
+\input{Results_ResponseElements}
+
+\chapter{The Effects of Rezatapopt on Y220C p53}
+\input{Results_Rezatapopt}
+
+\chapter{The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics}
+\chaptermark{Effects of the p53 Hotspot Mutations}
+\input{Results_Hotspots}
+
+\part{Experimental Approaches to Test p53 Function}
+
+\chapter{Development of a \(\beta\)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}
+\chaptermark{Measuring p53-Induced Transcription}
+\input{Results_BetaGal}
 
 \chapter{Discussion}
 \label{Discussion and Conclusions}
-
 \input{DiscussionConclusion}
 
 \chapter{Conclusion}
@@ -196,6 +211,7 @@
 
 \cleardoublepage
 
+\chapter{References}
 {\setstretch{1.5}
 \printbibliography
 }
