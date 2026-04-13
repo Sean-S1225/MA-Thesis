@@ -8,7 +8,7 @@ PK11000 has been shown to have restorative effects on the Y220C mutant p53 \pare
 
 When studying the FL protein, we considered only the DNA binding domain (DBD) subset of the protein, defined from residues \numrange{96}{289} as given by the 1TUP crystal structure of the p53 DNA binding domain \parencite{choCrystalStructureP531994}. We would like an analogous subset of the FL protein, however, the \(\Delta133\), \(\Delta160\) N-terminal deletions do not contain residues \numrange{96}{132} and \numrange{96}{160}. We therefore define two additional subsets of the FL protein: the DBD', defined to encompass residues \numrange{133}{312} and the DBD'', residues \numrange{160}{312}. For isoforms with the \(\Delta160\) deletion, we say that there is no DBD' subset.
 
-\subsection{RMSD}
+\subsection{Protein RMSD Depends on Isoform and System}
 
 \begin{figure}
 \centering
@@ -67,7 +67,18 @@ A rescue score of zero means no rescue, and when the rescue score is one, the wi
 
 \textcolor{red}{ADD OTHER PLOTS IN SUPPLEMENTARY}
 
-\subsection{Radius of Gyrations}
+\begin{figure}
+\centering
+\includegraphics[width=0.95\textwidth]{Isoforms/p53_Isoforms_Growing_RMSD.png}
+\caption[Truncated p53 Isoform 1 RMSD Heatmaps]{Top: RMSD of truncated constructs of p53 isoform \num{1} as a function of truncation boundary. For each N-terminal starting residue \(n\), \(1 \leq n \leq 160\), and each C-terminal ending residue \(c\), \(312 \leq c \leq 393\), RMSD of the protein fragment between residues \(n\) and \(c\) was computed, then plotted as a heatmap. Bottom: For each N-terminal starting residue \(n\), the mean RMSD value averaging over all C-terminal ending residues \(c\).}
+\label{fig:isoforms:rmsd-growing}
+\end{figure}
+
+Inspired by looking at how the RMSD of the protein changes with certain N-terminal deletions, we took the idea a step further. For each of the N-terminal residues \(n\) with \(1 \leq n \leq 160\), and for each of the C-terminal residues \(c\) with \(312 \leq c \leq 393\), we computed the average RMSD for the fragment starting at residue \(n\) and ending at residue \(c\), shown in \figurepageref{fig:isoforms:rmsd-growing}. It was immediately clear that there were certain residues in the N-terminal domain for whose inclusion caused the RMSD to increase suddenly. The inclusion of residues \numrange{60}{80} caused the RMSD to increase from \qty{4}{\angstrom} to \qty{8}{\angstrom} in all system except for Y220C\_PK11000, which only increased a small amount. In contrast, C-terminal inclusions had a lesser effect on the overall RMSD. Some tail-end fraying was observed, including the last \num{20} residues caused the RMSD to increase slightly, but this was to be expected.
+
+\textcolor{red}{INCLUDE GRAPHIC HIGHLIGHTING RESIDUES 60-80}
+
+\subsection{Radius of Gyration Depends on Isoform and System}
 
 \begin{figure}
 \centering
@@ -80,18 +91,7 @@ The radius of gyration was computed to assess if the presence of the mutation or
 
 In a number of isoforms, namely isoforms \numlist{6;7;8}, we can see that there are a small number of frames in which the Y220C protein adopts a much less compact conformation with a greater radius of gyration. This pattern is not observed to such an extent in either the wild time or the drug bound mutant which provides another layer of computational evidence to support the observation that the mutant protein is less stable than the WT, and binding PK11000 restores some structural stability to the Y220C mutant protein.
 
-\begin{figure}
-\centering
-\includegraphics[width=0.95\textwidth]{Isoforms/p53_Isoforms_Growing_RMSD.png}
-\caption[Truncated p53 Isoform 1 RMSD Heatmaps]{Top: RMSD of truncated constructs of p53 isoform \num{1} as a function of truncation boundary. For each N-terminal starting residue \(n\), \(1 \leq n \leq 160\), and each C-terminal ending residue \(c\), \(312 \leq c \leq 393\), RMSD of the protein fragment between residues \(n\) and \(c\) was computed, then plotted as a heatmap. Bottom: For each N-terminal starting residue \(n\), the mean RMSD value averaging over all C-terminal ending residues \(c\).}
-\label{fig:isoforms:rmsd-growing}
-\end{figure}
-
-Inspired by looking at how the RMSD of the protein changes with certain N-terminal deletions, we took the idea a step further. For each of the N-terminal residues \(n\) with \(1 \leq n \leq 160\), and for each of the C-terminal residues \(c\) with \(312 \leq c \leq 393\), we computed the average RMSD for the fragment starting at residue \(n\) and ending at residue \(c\), shown in \figurepageref{fig:isoforms:rmsd-growing}. It was immediately clear that there were certain residues in the N-terminal domain for whose inclusion caused the RMSD to increase suddenly. The inclusion of residues \numrange{60}{80} caused the RMSD to increase from \qty{4}{\angstrom} to \qty{8}{\angstrom} in all system except for Y220C\_PK11000, which only increased a small amount. In contrast, C-terminal inclusions had a lesser effect on the overall RMSD. Some tail-end fraying was observed, including the last \num{20} residues caused the RMSD to increase slightly, but this was to be expected.
-
-\textcolor{red}{INCLUDE GRAPHIC HIGHLIGHTING RESIDUES 60-80}
-
-\subsection{RMSF}
+\subsection{RMSF Reveals Protein Core is Stable Across Isoforms}
 
 \begin{figure}
 \centering
@@ -124,7 +124,7 @@ We can say more concretely though that in the structured subset of the protein, 
 
 To get a better understanding of if PK11000 actually restored the WT dynamics of the protein, we computed the rescue score using RMSF as the metric. \figurepageref{fig:isoforms:rmsf-rescue-score} shows the rescue score of each residue for each of the isoforms. We observe that in isoform \num{1} through \num{6}, many residues in the core domain are not assigned a rescue score, meaning that there was  little difference between their RMSF values. In the same isoforms, there are many regions in the N- and C-terminal domains in which the presence of the drug restores WT dynamics, overshoots WT dynamics, or worsens the mutant dynamics. It is difficult to know whether these observations are real, or, if the disordered regions simply behave differently across the simulations. In isoforms \num{7} through \num{12}, we see that the rescue of the majority of residues has been overshot compared to that of the WT. This is likely related to our observations with RMSD and the radius of gyration in which the presence of the drug also caused rescue to be overshot. Notice, however, that majority of residues in the \(\Delta160\)p53\(\beta\) structure are not rescued. Additional metrics will reveal that the restoration (or lack thereof) of structural stability does not necessarily correlate with other measures of rescue.
 
-\subsection{Hydrogen Bonding}
+\subsection{Hydrogen Bonding Reveals PK11000-Dependent Restoration of WT Dynamics}
 
 \begin{figure}
 \centering

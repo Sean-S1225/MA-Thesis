@@ -1,6 +1,110 @@
 \section{Motivation}
 
+p53 is a transcription factor, meaning it binds to DNA to promote the transcription of downstream genes. There is no canonical p53-DNA binding sequence, instead, each gene has its own binding site for p53, from which a consensus binding motif has been derived \parencite{el-deiryDefinitionConsensusBinding1992}.
+
+Until now, our computational studies of p53 have been limited to studying its interactions with a single DNA sequence, an engineered DNA sequence designed to have high binding affinity for the DNA binding domain of p53 to aid in crystallization \parencite{choCrystalStructureP531994}.
+
+Further, previous experiments have shown that mutations to p53 can alter its interactions with the DNA in a variety of ways. For instance, a single point mutation to the DNA binding domain of p53 may cause p53 to lose its ability to bind one sequence of DNA, but may increase affinity for binding another sequence \textcolor{red}{CITE}. To begin to uncover the molecular basis for this phenomenon, which is to say to better understand the dynamics of how p53 and DNA are related, we have simulated the wild-type (WT) DNA binding domain (DBD) subset of p53 bound to a variety of DNA sequences whose downstream genes span a variety of signal cascade categories. Some questions that motivated the study include:
+
+\begin{enumerate}
+\item How does the DNA sequence itself change upon p53 binding?
+\item Do the dynamics of p53 depend on the DNA sequence it bound to?
+\item Is there any correlation between the character of p53-DNA dynamics and the downstream gene associated with the bound DNA sequence?
+\item Is there any correlation between the strength or specificity of p53-DNA interactions and the similarity of the DNA sequence to the consensus sequence?
+\end{enumerate}
+
 \section{Results}
+
+\subsection{Global DNA Dynamics are Altered Upon p53 Binding}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/DNA_RMSD_compare_p53.png}
+\caption[p53 Response Element RMSD]{RMSD of each of the \num{9} response elements  with and without p53 shown as a violin plot, colored by the category of the downstream gene.}
+\label{fig:promoters-dna}
+\end{figure}
+
+We began our study of the p53 response elements by first measuring how the presence of p53 alters the stability of the DNA sequences measured via RMSD. We computed the RMSD of each response element both with and without p53 bound, shown in \figurepageref{fig:promoters-dna}. We found that in nearly all cases, the presence of p53 increased the median RMSD value. The only exception was p21, for which the distribution of RMSD values was nearly identical with and without p53. Interpreting this median RMSD value as the average difference between each DNA sequence and its starting structure, we can see that p53 causes the DNA to adopt structures more different from the starting structure relative to the simulation without p53; The presence of p53 allows for a wider variety of energetically favorable DNA confirmations, such as those in which the DNA is slightly curved around the protein. Such a confirmation would be less energetically favorable without the presence of p53.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/DNA_Bend_compare_p53.png}
+\caption[p53 Response Element DNA Bend]{DNA Bend angle of each of the \num{9} response elements with and without p53 shown as a violin plot, colored by the category of the downstream gene. DNA bend is defined to be the angle defined between the first nucleotide, the last nucleotide, and a nucleotide in the middle of the DNA sequence.}
+\label{fig:promoters-bend}
+\end{figure}
+
+Next we considered the DNA bend, defined to be the angle between the first nucleotide base, the nucleotide base at the midpoint of the DNA and the last nucleotide base. \figurepageref{fig:promoters-bend} shows a violin plot of the distributions of all bend values across the different response elements. We saw the presence of p53 lowered the average DNA bend angle for a majority of response elements, though it did have little effect on the bend angle in the case of PUMA, GADD45, p21, and PTEN. The DNA without p53 has a bend of roughly \qty{165}{\degree} and the DNA with p53 bound has a bend of roughly \qty{155}{\degree}, indicating p53 that p53 causes the DNA to become more bent. Similar to RMSD, we expect this is because the presence of p53 creates more energetically favorable conformations, namely those in which the DNA is able to bend around the protein and interact with positively charged residues on the surface.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/DNA_end_to_end_compare_p53.png}
+\caption[p53 Response Element DNA End-to-End Distance]{End-to-end distance of each of the \num{9} response elements  with and without p53 shown as a violin plot, colored by the category of the downstream gene. End-to-end distance is defined as being the distance from the end of one strand of the double helix to the other end of the same strand.}
+\label{fig:promoters-e2e}
+\end{figure}
+
+Complementary to our analysis of the DNA bend, we also looked at the end-to-end distance of the DNA, defined as the distance from the end of one strand of the DNA double helix to the other end of the same strand. Here, in \figurepageref{fig:promoters-e2e}, we can see the presence of p53 has a large effect on the DNA end-to-end distance: in all promoter regions tested, it is lowered by between \qty{10}{\angstrom} and \qty{20}{\angstrom}. Plotting the end-to-end distance against the DNA bend, we do not see a correlation \textcolor{red}{include in appendix}, nor is there a correlation with the mean DNA roll \textcolor{red}{define}, which together suggest that the decreasing end-to-end distance of the DNA upon p53 binding is not due to the DNA as a whole becoming more bent/scrunched. \textcolor{red}{Continue investigating with contour length}
+
+\subsection{p53 Alters Local DNA Dynamics}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/p53_RE_RMSF_Heatmap_compare.png}
+\caption[p53 Response Element \(\Delta\)RMSF]{\(\Delta\)RMSF of each nucleotide of each promoter, defined as the (RMSF without p53) \textminus{} (RMSF with p53). A value greater than zero for a nucleotide indicates the p53-bound DNA is less flexible than the nucleotide without p53 bound. Boxed nucleotides are ones that p53 interacts with for at least \qty{10}{\percent} of frames considered.}
+\label{fig:promoters-rmsf}
+\end{figure}
+
+In addition to our global measures of how the presence of p53 alters the dynamics of the DNA, we also wanted to look closer at how the presence of p53 alters the individual nucleotide bases. We began by looking at how the presence of p53 alters the RMSF of each individual nucleotide. \figurepageref{fig:promoters-rmsf} shows the \(\Delta\)RMSF\textsubscript{Unbound \textminus{} p53-Bound} for each nucleotide across the different response elements. There are DNA sequences in which the binding of p53 caused the DNA to be less flexible than without (14-3-3\(\sigma\), p53R2, and PTEN), there are DNA sequences in whcih the binding of p53 caused the DNA to be more flexible than without (GADD45), and there are DNA sequences for which the binding of p53 caused some regions to become more flexible while others became less flexible (BAX, p53AIP1, p21).
+
+One pattern persists across the DNA sequences, though. When looking at regions of the DNA for which p53 made significant interactions, we can see that if the region is made more flexible upon p53 binding, the center of the p53-interaction region was even more flexible (GADD45). The opposite pattern could be seen, too. In regions of the DNA where the binding of p53 made the DNA less flexible, the center of the region in which p53 interacted was made even less flexible (Noxa, p53R2). The regions that were made less flexible had high G/C content (Noxa), whereas the regions that were made more flexible had high A/T content (GADD45), so this difference may be due to relative nucleotide-nucleotide strength via hydrogen bonding.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/DNA_DNA_HBonds.png}
+\caption[Response Element DNA-DNA Hydrogen Bonds]{Nucleotide-nucleotide hydrogen bonds with (red) and without p53 (blue). Top left shows the TRT, the average number of DNA-DNA hydrogen bonds per frame. Top right the number of unique nucleotide-nucleotide hydrogen bonds, bottom left shows the number of unique atom-atom hydrogen bonds, and bottom right shows the number of unique atom-atom hydrogen bonds that persist for at least \qty{10}{\percent} of the simulation.}
+\label{fig:promoters-dna-dna-hbond}
+\end{figure}
+
+\figurepageref{fig:promoters-dna-dna-hbond} shows an analysis of hydrogen bonds between nucleotides with and without p53 bound. The first is the total residence time, or the average number of hydrogen bonds per frame. We can see that the TRT score is very consistent between replicates and is independent of p53 binding. Although the minimum number of expected hydrogen bonds for a \num{20}-mer DNA sequence is \num{40} (for a DNA sequence corresponding of only adenine or thymine nucleotides), we can see that none of our DNA sequences had more than an average of \num{40} hydrogen bonds per frame. Thus we can conclude that though adenine-thymine pairs are expected to have \num{2} hydrogen bonds and guanine-cytosine pairs are expected to have \num{3} hydrogen bonds, this is a theoretical number and does not represent the true number of hydrogen bonds at any given moment.
+
+The bottom left panel of Figure \ref{fig:promoters-dna-dna-hbond} shows the number of unique atomic-level hydrogen bonds being made across each response element. Here we do see some variation between simulations and dependence on p53 binding. For instance, in the BAX, p53AIP1, 14-3-3\(\sigma\), p21, and p53R2, we can see a statistically significant increase in the number of atomic-level hydrogen bonds when p53 is bound. GADD45, however, sees a decrease in the number of hydrogen bonds upon p53 binding. Looking to the top right of Figure \ref{fig:promoters-dna-dna-hbond}, we see the number of nucleotide-nucleotide interactions (\num{1} if there is a hydrogen bond between any or multiple of the atoms between the two nucleotides, \num{0} otherwise), and we see that for all of the simulations, the number is exactly 40, which tells us that there are no interactions between a nucleotide and anything other than its partner nucleotide. Further, the bottom right of Figure \ref{fig:promoters-dna-dna-hbond} shows the total number of atomic-level hydrogen bonds made in each of the response elements with and without p53 bound, and we see that though there is some difference between response element, there is virtually no difference between between p53 unbound and p53 bound. This confirms that our previous observation was that the binding of p53 increases the number of transient hydrogen bonds between the two strands of DNA, possibly by pulling slightly on the DNA and exposing additional possible contacts (except in the case of GADD45).
+
+\subsection{p53 Dynamics are Modulated by its Bound DNA Molecule}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/p53_RMSD.png}
+\caption[p53 RMSD Across Response Elements]{A violin plot showing the distributions of RMSD values of p53 when bound to different DNA sequences.}
+\label{fig:promoters-p53-rmsd}
+\end{figure}
+
+Having seen that the dynamics of DNA can be altered upon p53 binding, we sought to understand how p53 might change depending on the DNA sequence it is bound to. \figurepageref{fig:promoters-p53-rmsd} shows violin plots of the distributions of RMSD values of p53 when bound to the different response elements. We can see that there are significant differences. For each of the binding elements tested, the DNA binding domain of p53 was approximately \qtyrange{2}{4}{\angstrom} away from its starting structyre for the majority of frames, however, when p53 was bound to the 14-3-3\(\sigma\), p53R2, or PTEN response elements, there were a significant number of frames in which p53 was between \qtyrange{4}{8}{\angstrom} from its starting structure. Even within the response elements for which p53 stayed bounded below \qty{4}{\angstrom} from its starting structure, there were differences. For instance, binding the Noxa response element allowed p53 to deviate further from its starting structure on average than binding to PUMA or GADD45.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/p53_RMSF_Heatmap.png}
+\caption[p53 RMSF Across Response Elements]{}
+\label{fig:promoters-p53-rmsf}
+\end{figure}
+
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/DNA_p53_HBonds.png}
+\caption[Response Element p53-DNA Hydrogen Bonds]{}
+\label{fig:promoters-p53-dna-hbond}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/DNA_p53_HBonds_scatter_consensus.png}
+\caption[p53-DNA Hydrogen Bonds vs p53 Consensus Similarity]{}
+\label{fig:promoters-p53-dna-hbond-vs-consensus-similarity}
+\end{figure}
+
+Next, we turned our attention to hydrogen bonding. \figurepageref{fig:promoters-p53-dna-hbond} shows the same analyses as we did in \figurepageref{fig:promoters-dna-dna-hbond}, but strictly p53-DNA interactions (rather than nucleotide-nucleotide interactions). Across replicate simulations, we can see that the average number of hydrogen bonds between P 53 and the DNA per frame is relatively constant. However, across the different response elements, we can see that the number fluctuates between \num{5} and \num{8} hydrogen bonds per frame. p53AIP1 and GADD45 have the fewest number of hydrogen bonds per frame, below \num{6}, whereas Noxa, PUMA, and 14-3-3\(\sigma\) have the greatest hydrogen bond count out of all of the response elements, at approximately seven per frame.
+
+We then looked to the number of unique atomic level hydrogen bonds made between p53 and the different response elements, shown in the bottom left of Figure \ref{fig:promoters-p53-dna-hbond-vs-consensus-similarity}. p53 makes between \num{300} and \num{600} different hydrogen bonds with the DNA, with p53AIP1 and GADD45 making the greatest number of interactions. We can see that when we look at the number of residue-nucleotide hydrogen bonds (\num{1} if any or multiple atoms form a hydrogen bond between a residue and a nucleotide base and \num{0} otherwise), the pattern remains. That is, p53AIP1 and GADD45 still make the greatest number of interactions. This shows that these interactions are not just many different ways of making a hydrogen bond between a residue and a nucleotide base, but these are truly different interactions that are being made. Finally, when we apply a threshold to our analysis of the number of atomic hydrogen bonds made, we can see that p53AIP1 and GADD45 make the fewest, while Noxa, 14-3-3\(\sigma\), and p53R2 make the most. We conclude that p53 bound to the Noxa and 14-3-3\(\sigma\) response elements make some of the strongest and most specific interactions, while p53 bound to the Noxa and GADD45 response elements make some of the weakest and least specific interactions. Given this model, we suspect that if p53 is mutated and loses some of its binding specificity, then it would lose the ability to bind the p53AIP1 and GADD45 more readily than it would lose the ability to bind the Noxa, Puma, or 14-3-3\(\sigma\) response elements.
 
 \section{Discussion}
 

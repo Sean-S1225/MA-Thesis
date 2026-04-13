@@ -26,8 +26,8 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces p53 Isoform RMSD Violin Plot}}{80}{figure.caption.65}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces p53 Isoform RMSD Difference Plot}}{83}{figure.caption.66}%
 \contentsline {figure}{\numberline {3.4}{\ignorespaces p53 Isoform RMSD Rescue Score}}{85}{figure.caption.67}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces p53 Isoform Violin Plot}}{87}{figure.caption.68}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Truncated p53 Isoform 1 RMSD Heatmaps}}{89}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Truncated p53 Isoform 1 RMSD Heatmaps}}{87}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces p53 Isoform Violin Plot}}{89}{figure.caption.69}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces p53 Isoform RMSF}}{91}{figure.caption.70}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces p53 Isoform RMSF Difference Plot}}{92}{figure.caption.71}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces p53 Isoform RMSF Rescue Score}}{94}{figure.caption.72}%
@@ -35,6 +35,15 @@
 \contentsline {figure}{\numberline {3.11}{\ignorespaces p53 Isoform Hydrogen Bonding Difference Plot}}{98}{figure.caption.74}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces p53 Isoform Hydrogen Bonding Rescue Score}}{99}{figure.caption.75}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces p53 Response Element RMSD}}{107}{figure.caption.76}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces p53 Response Element DNA Bend}}{108}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces p53 Response Element DNA End-to-End Distance}}{110}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces p53 Response Element \(\Delta \)RMSF}}{111}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Response Element DNA-DNA Hydrogen Bonds}}{113}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces p53 RMSD Across Response Elements}}{116}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces p53 RMSF Across Response Elements}}{117}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Response Element p53-DNA Hydrogen Bonds}}{117}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces p53-DNA Hydrogen Bonds vs p53 Consensus Similarity}}{118}{figure.caption.84}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
