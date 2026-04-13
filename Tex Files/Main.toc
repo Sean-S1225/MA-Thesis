@@ -98,26 +98,26 @@
 \contentsline {subsection}{\numberline {4.2.1}Global DNA Dynamics are Altered Upon p53 Binding}{106}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}p53 Alters Local DNA Dynamics}{109}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}p53 Dynamics are Modulated by its Bound DNA Molecule}{115}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Discussion}{120}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Methods}{120}{section.4.4}%
-\contentsline {chapter}{\numberline {5}The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics}{121}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Motivation}{121}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Results}{121}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Discussion}{121}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Methods}{121}{section.5.4}%
-\contentsline {chapter}{\numberline {6}The Effects of Rezatapopt on Y220C p53}{122}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Motivation}{122}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Results}{122}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Discussion}{122}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Methods}{122}{section.6.4}%
-\contentsline {part}{II\hspace {1em}Experimental Approaches to Test p53 Function}{123}{part.2}%
-\contentsline {chapter}{\numberline {7}Development of a \(\beta \)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}{124}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Motivation}{124}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Results}{124}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Discussion}{124}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Methods}{124}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Discussion}{125}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Conclusion}{126}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Methods}{127}{chapter.10}%
-\contentsline {chapter}{Appendix}{128}{appendix*.85}%
-\contentsline {chapter}{References}{129}{appendix*.86}%
+\contentsline {section}{\numberline {4.3}Discussion}{122}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Methods}{122}{section.4.4}%
+\contentsline {chapter}{\numberline {5}The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics}{123}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Motivation}{123}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Results}{123}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Discussion}{123}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Methods}{123}{section.5.4}%
+\contentsline {chapter}{\numberline {6}The Effects of Rezatapopt on Y220C p53}{124}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Motivation}{124}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Results}{124}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Discussion}{124}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Methods}{124}{section.6.4}%
+\contentsline {part}{II\hspace {1em}Experimental Approaches to Test p53 Function}{125}{part.2}%
+\contentsline {chapter}{\numberline {7}Development of a \(\beta \)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}{126}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Motivation}{126}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Results}{126}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Discussion}{126}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Methods}{126}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Discussion}{127}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Conclusion}{128}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Methods}{129}{chapter.10}%
+\contentsline {chapter}{Appendix}{130}{appendix*.85}%
+\contentsline {chapter}{References}{131}{appendix*.86}%
