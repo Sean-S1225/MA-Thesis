@@ -105,19 +105,19 @@
 \contentsline {section}{\numberline {5.2}Results}{123}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Discussion}{123}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Methods}{123}{section.5.4}%
-\contentsline {chapter}{\numberline {6}The Effects of Rezatapopt on Y220C p53}{124}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Motivation}{124}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Results}{125}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Discussion}{125}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Methods}{125}{section.6.4}%
-\contentsline {part}{II\hspace {1em}Experimental Approaches to Test p53 Function}{141}{part.2}%
-\contentsline {chapter}{\numberline {7}Development of a \(\beta \)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}{142}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Motivation}{142}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Results}{142}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Discussion}{142}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Methods}{142}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Discussion}{143}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Conclusion}{144}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Methods}{145}{chapter.10}%
-\contentsline {chapter}{Appendix}{146}{appendix*.102}%
-\contentsline {chapter}{References}{147}{appendix*.103}%
+\contentsline {chapter}{\numberline {6}The Effects of Rezatapopt on Y220C p53}{131}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Motivation}{131}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Results}{132}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Discussion}{132}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Methods}{132}{section.6.4}%
+\contentsline {part}{II\hspace {1em}Experimental Approaches to Test p53 Function}{148}{part.2}%
+\contentsline {chapter}{\numberline {7}Development of a \(\beta \)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}{149}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Motivation}{149}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Results}{149}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Discussion}{149}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Methods}{149}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Discussion}{150}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Conclusion}{151}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Methods}{152}{chapter.10}%
+\contentsline {chapter}{Appendix}{153}{appendix*.110}%
+\contentsline {chapter}{References}{154}{appendix*.111}%

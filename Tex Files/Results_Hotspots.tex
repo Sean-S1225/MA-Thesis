@@ -2,6 +2,62 @@
 
 \section{Results}
 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RMSD_vs_Time.png}
+\caption[p53 Hotspots RMSD vs Time]{RMSD versus time for the \num{10} hotspot mutations of p53 with and without the drug PK11000. The unbound mutant is shown in red, and the drug bound mutant is shown in green. For reference, the wild type is shown as a blue ghost line.}
+\label{fig:hotspot:rmsd-time}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RMSD.png}
+\caption[p53 Hotspots RMSD Violin Plot]{The distribution of RMSD values for each of the hotspots with and without PK11000 shown as a violin plot. The unbound mutant is shown in red, and the drug bound mutant is shown in green. Horizontal lines with the appropriate color represent each simulation's median RMSD value. For reference, the median wild type RMSD value is shown as a blue line.}
+\label{fig:hotspot:rmsd-violin}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RoG_vs_Time.png}
+\caption[p53 Hotspots RoG vs Time]{RoG versus time for the \num{10} hotspot mutations of p53 with and without the drug PK11000. The unbound mutant is shown in red, and the drug bound mutant is shown in green. For reference, the wild type is shown as a blue ghost line.}
+\label{fig:hotspot:rog-time}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RoG.png}
+\caption[p53 Hotspots RoG Violin Plot]{The distribution of Radius of Gyration values for each of the hotspots with and without PK11000 shown as a violin plot. The unbound mutant is shown in red, and the drug bound mutant is shown in green. Horizontal lines with the appropriate color represent each simulation's median Radius of Gyration value. For reference, the median wild type Radius of Gyration value is shown as a blue line.}
+\label{fig:hotspot:rog-violin}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RMSF.png}
+\caption[p53 Hotspots RMSF]{}
+\label{fig:hotspot:rmsf}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RMSF_RescueScore.png}
+\caption[p53 Hotspots RMSF Rescue Score]{The PK11000 rescue score using RMSF as the metric. For each mutant form of p53, for each residue, PK11000's rescue score is plotted as a heatmap. A score between \num{0} and \num{1} indicates a partial rescue of WT function, a score greater than \num{1} indicates an overshoot of WT function, and a score less than \num{0} indicates the presence of the drug worsens the effect of the mutation.}
+\label{fig:hotspot:rmsf-rescue-score}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Hotspots/p53_HBond_Metrics.png}
+\caption[p53 Hydrogen Bonding Metrics]{p53-DNA hydrogen bonds viewed through several metrics. The average number of hydrogen bonds per frame between p53 and the DNA (TRT), the average number of hydrogen bonds per frame between the DNA and residues K120, S241, R248, R273, A276, C277, R289, R283 (Specific TRT), the average number of hydrogen bonds made between the DNA and K120, C277, and R280 (Sugar-Interacting TRT), the total number of atom-atom hydrogen bonds made throughout the simulation (EHBS) the number of atom-atom hydrogen bonds made that persist for at least \qty{10}{\percent} of frames (EHBS; cutoff = \qty{10}{\percent}), and the number of residue-nucleotide hydrogen bonds.}
+\label{fig:hotspot:hbonding}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Hotspots/p53_HBond_Metrics_Rescue_Score.png}
+\caption[p53 Hydrogen Bonding Rescue Score]{The PK11000 rescue score when considering different hydrogen bonding metrics, those defined in \figurepageref{fig:hotspot:hbonding}. A rescue score between \num{0} and \num{1} indicates a partial rescue, a rescue score greater than \num{1} indicates an overshoot of the wild type, and a score less than \num{0} indicates that the presence of the drug worsens the mutant behavior.}
+\label{fig:hotspot:hbonding-resuce-score}
+\end{figure}
+
 \section{Discussion}
 
 \section{Methods}
