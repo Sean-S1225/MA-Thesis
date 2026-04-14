@@ -9158,6 +9158,80 @@
       \verb https://doi.org/10.1021/acsomega.5c05639
       \endverb
     \endentry
+    \entry{boecklerTargetedRescueDestabilized2008}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=7dc1f4478126ff312872f7860a94dd21}{%
+           family={Boeckler},
+           familyi={B\bibinitperiod},
+           given={Frank\bibnamedelima M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40687eadba62bf90716f8de342d91355}{%
+           family={Joerger},
+           familyi={J\bibinitperiod},
+           given={Andreas\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0c782adca2354c35c32354e1f4fbf62c}{%
+           family={Jaggi},
+           familyi={J\bibinitperiod},
+           given={Gaurav},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d4e7b49f9701cc07677dd9a79b998fd}{%
+           family={Rutherford},
+           familyi={R\bibinitperiod},
+           given={Trevor\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=618bacf60a1e34ee0ea1c8abaa43b757}{%
+           family={Veprintsev},
+           familyi={V\bibinitperiod},
+           given={Dmitry\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=caf0791686918062333d1c8f41d5cf0e}{%
+           family={Fersht},
+           familyi={F\bibinitperiod},
+           given={Alan\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{89587892d4482c3979dad54d120d535f}
+      \strng{fullhash}{106aabfd6a9e3a4d11fd5d4af636cb03}
+      \strng{bibnamehash}{89587892d4482c3979dad54d120d535f}
+      \strng{authorbibnamehash}{89587892d4482c3979dad54d120d535f}
+      \strng{authornamehash}{89587892d4482c3979dad54d120d535f}
+      \strng{authorfullhash}{106aabfd6a9e3a4d11fd5d4af636cb03}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The tumor suppressor p53 is mutationally inactivated in approximately 50\% of human cancers. Approximately one-third of the mutations lower the melting temperature of the protein, leading to its rapid denaturation. Small molecules that bind to those mutants and stabilize them could be effective anticancer drugs. The mutation Y220C, which occurs in approximately 75,000 new cancer cases per annum, creates a surface cavity that destabilizes the protein by 4 kcal/mol, at a site that is not functional. We have designed a series of binding molecules from an in silico analysis of the crystal structure using virtual screening and rational drug design. One of them, a carbazole derivative (PhiKan083), binds to the cavity with a dissociation constant of approximately 150 muM. It raises the melting temperature of the mutant and slows down its rate of denaturation. We have solved the crystal structure of the protein-PhiKan083 complex at 1.5-A resolution. The structure implicates key interactions between the protein and ligand and conformational changes that occur on binding, which will provide a basis for lead optimization. The Y220C mutant is an excellent "druggable" target for developing and testing novel anticancer drugs based on protein stabilization. We point out some general principles in relationships between binding constants, raising of melting temperatures, and increase of protein half-lives by stabilizing ligands.}
+      \field{day}{29}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1091-6490}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences of the United States of America}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{30}
+      \field{shortjournal}{Proc Natl Acad Sci U S A}
+      \field{title}{Targeted Rescue of a Destabilized Mutant of P53 by an in Silico Screened Drug}
+      \field{volume}{105}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{pages}{10360\bibrangedash 10365}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.0805326105
+      \endverb
+      \verb{eprint}
+      \verb 18650397
+      \endverb
+      \keyw{Apoptosis,Biophysics,Calorimetry,Computational Biology,Crystallography X-Ray,DNA Mutational Analysis,Drug Screening Assays Antitumor,Genes p53,Genes Tumor Suppressor,Humans,Molecular Conformation,Mutation,Neoplasms,Thermodynamics,Tumor Suppressor Protein p53}
+    \endentry
   \enddatalist
   \missing{bibidodaP53AIP1PotentialMediator2000}
 \endrefsection

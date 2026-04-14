@@ -1,6 +1,129 @@
 \section{Motivation}
 
+Although the Y220C mutation to p53 is in the top ten most common point mutations associated with cancer, it is in seventh place, making up only \qty{1.88}{\percent} of reported tumors. Despite this, it is one of the mutations that has shown the greatest promise in restoration by small molecules. PhiKan083 was one of the first compounds to be discovered to bind to the crevasse formed by mutant p53, followed by PK11000 (which covalently binds to a different site and acts allosterically) and Rezatapopt \parencite{boecklerTargetedRescueDestabilized2008, bauer2SulfonylpyrimidinesMildAlkylating2016, puzio-kuterRestorationTumorSuppressor2025}.
+
+Our previous efforts in the lab have sought to characterize the restorative capabilities of PK11000 \textit{in silico} \parencite{hanInsightsRationalDesign2022, stetsonRestorationY220CP532025}. However, to achieve the lab's mission of using machine learning to design novel, allosterically acting, restorative compounds to target the p53 protein, we need to look at a wide variety of drugs. For this reason, we have sought to characterize the restorative capabilities of the drug Rezatapopt \textit{in silico}, using our molecular dynamics pipeline. 
+
 \section{Results}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_RMSD.png}
+\caption[RMSD of FL p53 + Rezatapopt]{RMSD vs time of the full-length p53 across the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. The entire FL p53 is considered, as is the DBD' subset and the DBD'' subset. Standard error for each frame is indicated with a lighter color.}
+\label{fig:rezatapopt-fl-p53-rmsd}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_RMSD.png}
+\caption[RMSD of DBD p53 + Rezatapopt]{RMSD vs time of the simulated DNA binding domain of p53 across the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. The entire p53 DBD is considered, as is a subset which lacks any fraying on the N-terminal end. Standard error for each frame is indicated with a lighter color.}
+\label{fig:rezatapopt-dbd-p53-rmsd}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_RMSD_Violin.png}
+\caption[Violin Plots of FL and DBD p53 + Rezatapopt RMSD]{Violin plots for the distribution of RMSD values across the different subsets of the FL and DBD p53, for each of the systems considered.}
+\label{fig:rezatapopt-fl-dbd-p53-rmsd-violin}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_RoG.png}
+\caption[RoG of FL p53 + Rezatapopt]{Radius of Gyration vs time of the full-length p53 across the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. The entire FL p53 is considered, as is the DBD' subset and the DBD'' subset. Standard error for each frame is indicated with a lighter color.}
+\label{fig:rezatapopt-fl-p53-rog}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_RoG.png}
+\caption[RoG of DBD p53 + Rezatapopt]{Radius of Gyration vs time of the simulated DNA binding domain of p53 across the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. The entire p53 DBD is considered, as is a subset which lacks any fraying on the N-terminal end. Standard error for each frame is indicated with a lighter color.}
+\label{fig:rezatapopt-dbd-p53-rog}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_DBD_Rezatapopt_RoG_Violin.png}
+\caption[Violin Plots of FL and DBD p53 + Rezatapopt RoG]{Violin plots for the distribution of Radius of Gyration values across the different subsets of the FL and DBD p53, for each of the systems considered.}
+\label{fig:rezatapopt-fl-dbd-p53-rog-violin}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_DBD_Rezatapopt_RMSF.png}
+\caption[DBD and FL p53 RMSF + Rezatapopt]{RMSF values for the different systems, WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt, between the FL and DBD p53 simulations.}
+\label{fig:rezatapopt-fl-dbd-p53-rmsf}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_RMSF_Diff.png}
+\caption[FL p53 RMSF Difference Plot]{Difference RMSF plot for the FL p53. \(\Delta\)RMSF\textsubscript{WT \textminus{} Y220C}, \(\Delta\)RMSF\textsubscript{Y220C\_PK11000 \textminus{} Y220C}, and \(\Delta\)RMSF\textsubscript{Y220C\_Rezatapopt \textminus{} Y220C} are shown. A value greater than zero means that the Y220C p53 is less flexible than the other protein at that residue.}
+\label{fig:rezatapopt-fl-rmsf-diff}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_RMSF_RescueScore.png}
+\caption[FL p53 RMSF Rescue Score]{The rescue score for PK11000 and Rezatapopt, using the metric of the FL p53 RMSF. A rescue score between \num{0} and \num{1} indicates a partial rescue of WT function, a score greater than \num{1} indicates an overshoot of WT function, and a score less than \num{0} indicates the presence of the drug worsens the deleterious effect of the mutation.}
+\label{fig:rezatapopt-fl-rmsf-rescue-score}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_RMSF_Diff.png}
+\caption[p53 DBD RMSF Difference Plot]{Difference RMSF plot for the p53 DBD. \(\Delta\)RMSF\textsubscript{WT \textminus{} Y220C}, \(\Delta\)RMSF\textsubscript{Y220C\_PK11000 \textminus{} Y220C}, and \(\Delta\)RMSF\textsubscript{Y220C\_Rezatapopt \textminus{} Y220C} are shown. A value greater than zero means that the Y220C p53 is less flexible than the other protein at that residue.}
+\label{fig:rezatapopt-dbd-rmsf-diff}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_RMSF_RescueScore.png}
+\caption[DBD p53 RMSF Rescue Score]{The rescue score for PK11000 and Rezatapopt, using the metric of the p53 DBD RMSF. A rescue score between \num{0} and \num{1} indicates a partial rescue of WT function, a score greater than \num{1} indicates an overshoot of WT function, and a score less than \num{0} indicates the presence of the drug worsens the deleterious effect of the mutation.}
+\label{fig:rezatapopt-dbd-rmsf-rescue-score}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_HBond_vs_Time.png}
+\caption[FL p53 HBonding vs Time]{Hydrogen bond metrics vs time, for the FL p53 across different the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. Top left: the average number of hydrogen bonds between p53 and the DNA for each frame. Top center: the average number of hydrogen bonds between the DNA and K120, S241, R248, R273, A276, C277, R289, and R283 per frame. Top right: the number of hydrogen bonds between the DNA and residues K120, C277, and R280 per frame. Bottom left: the number of unique atom-atom hydrogen bonds made over the simulation. Bottom center: the number of residue-nucleotide hydrogen bonds made over the simulation. Bottom right: the number of atom-atom hydrogen bonds made over the simulation, counting only those that persisted for at least \qty{10}{\percent} of frames.}
+\label{fig:rezatapopt-fl-hbond}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_HBond_vs_Time.png}
+\caption[DBD p53 HBonding vs Time]{Hydrogen bond metrics vs time, for the p53 DBD across different the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. Metrics are as described in \figurepageref{fig:rezatapopt-fl-hbond}.}
+\label{fig:rezatapopt-dbd-hbond}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_DBD_subset_Rezatapopt_HBond_vs_Time.png}
+\caption[p53|\textsubscript{DBD} HBonding vs Time]{Hydrogen bond metrics vs time, for the p53 FL|\textsubscript{DBD} across different the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. TRT, EHBS, Res-Nuc EHBS, and EHBS with a \qty{10}{\percent} cutoff is shown.}
+\label{fig:rezatapopt-dbd-subset-hbond}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_CTD_subset_Rezatapopt_HBond_vs_Time.png}
+\caption[p53|\textsubscript{CTD} HBonding vs Time]{Hydrogen bond metrics vs time, for the p53 FL|\textsubscript{CTD} across different the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. TRT, EHBS, Res-Nuc EHBS, and EHBS with a \qty{10}{\percent} cutoff is shown.}
+\label{fig:rezatapopt-ctd-subset-hbond}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_HBond_PCA_Decimposition.png}
+\caption[FL p53 HBonding PCA]{PCA decomposition of the full length p53-DNA hydrogen bonds under three lenses: residue-nucleotide level, residue-level, and nucleotide-level. For each decomposition, principal component \num{1} is plotted against principal component \num{2} for each frame, with marginal distributions of each principal component above its axis. Additionally, the \num{10} interactions that contribute the most highly to principal component \num{1} are plotted as a bar graph.}
+\label{fig:rezatapopt-fl-pca}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_HBond_PCA_Decimposition.png}
+\caption[DBD p53 HBonding PCA]{PCA decomposition of the full length p53 DBD-hydrogen bonds under three lenses: residue-nucleotide level, residue-level, and nucleotide-level. For each decomposition, principal component \num{1} is plotted against principal component \num{2} for each frame, with marginal distributions of each principal component above its axis. Additionally, the \num{10} interactions that contribute the most highly to principal component \num{1} are plotted as a bar graph.}
+\label{fig:rezatapopt-dbd-pca}
+\end{figure}
 
 \section{Discussion}
 

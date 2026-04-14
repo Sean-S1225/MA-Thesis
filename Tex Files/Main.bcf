@@ -2532,6 +2532,11 @@
     <bcf:citekey order="125" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
     <bcf:citekey order="126" intorder="1">el-deiryDefinitionConsensusBinding1992</bcf:citekey>
     <bcf:citekey order="127" intorder="1">choCrystalStructureP531994</bcf:citekey>
+    <bcf:citekey order="128" intorder="1">boecklerTargetedRescueDestabilized2008</bcf:citekey>
+    <bcf:citekey order="128" intorder="2">bauer2SulfonylpyrimidinesMildAlkylating2016</bcf:citekey>
+    <bcf:citekey order="128" intorder="3">puzio-kuterRestorationTumorSuppressor2025</bcf:citekey>
+    <bcf:citekey order="129" intorder="1">hanInsightsRationalDesign2022</bcf:citekey>
+    <bcf:citekey order="129" intorder="2">stetsonRestorationY220CP532025</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
