@@ -1,18 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Main.blg'
-[56] biber-darwin:340> INFO - === Mon Apr 13, 2026, 19:13:57
-[73] Biber.pm:419> INFO - Reading 'Main.bcf'
-[170] Biber.pm:979> INFO - Found 135 citekeys in bib section 0
-[182] Biber.pm:4419> INFO - Processing section 0
-[191] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
-[208] bibtex.pm:1713> INFO - LaTeX decoding ...
-[405] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[1323] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1323] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1323] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1324] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1410] bbl.pm:660> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[1583] bbl.pm:763> INFO - Output to Main.bbl
-[1584] Biber.pm:131> WARN - online entry 'sevenbridges' (references.bib): Invalid format '2025-9-17' of date field 'date' - ignoring
-[1584] Biber.pm:131> WARN - I didn't find a database entry for 'bibidodaP53AIP1PotentialMediator2000' (section 0)
-[1584] Biber.pm:133> INFO - WARNINGS: 2
+[56] biber-darwin:340> INFO - === Wed Apr 15, 2026, 04:16:10
+[92] Biber.pm:419> INFO - Reading 'Main.bcf'
+[198] Biber.pm:979> INFO - Found 136 citekeys in bib section 0
+[225] Biber.pm:4419> INFO - Processing section 0
+[234] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
+[250] bibtex.pm:1713> INFO - LaTeX decoding ...
+[455] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[1370] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1370] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1370] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1370] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1470] bbl.pm:660> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[1637] bbl.pm:763> INFO - Output to Main.bbl
+[1639] Biber.pm:131> WARN - online entry 'sevenbridges' (references.bib): Invalid format '2025-9-17' of date field 'date' - ignoring
+[1639] Biber.pm:131> WARN - I didn't find a database entry for 'bibidodaP53AIP1PotentialMediator2000' (section 0)
+[1639] Biber.pm:133> INFO - WARNINGS: 2

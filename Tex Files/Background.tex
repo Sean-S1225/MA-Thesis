@@ -1,4 +1,4 @@
-Keeping to the interdisciplinary spirit of the College of Integrative Sciences, this thesis is written to be approachable to all disciplines, particularly those in the spectrum of disciplines between computer science, molecular biology, and chemistry. To achieve this, we will derive the content presented in the body of the thesis from first principles in this Background section. We begin from the absolute fundamentals with atoms and atomic interactions (thankfully it will not be necessary to begin with quantum mechanics!), work our way up to proteins, their dynamics, and their interactions, and end with an in-depth look at the nature of high-performance computing, molecular dynamics simulations and their analyses, and yeast genetic techniques. Finally, we will discuss the aspects of p53 relevant to this study, including but not limited to its disordered regions, clinically relevant mutations, its role as a transcription factor, clinically relevant small molecules, and the family of p53 splice variant isoforms (which comprises only a small subset of all the p53 literature).
+Keeping to the interdisciplinary spirit of the College of Integrative Sciences, this thesis is written to be approachable by those in all disciplines, particularly those in the spectrum between computer science, molecular biology, and chemistry. To achieve this, we will derive the content presented in the body of the thesis from first principles in this Background section. We begin from the absolute fundamentals with atoms and atomic interactions (thankfully it will not be necessary to begin with quantum mechanics!), work our way up to proteins, their dynamics, and their interactions, and end with an in-depth look at the nature of high-performance computing, molecular dynamics simulations and their analyses, and yeast genetic techniques. Finally, we will discuss the aspects of p53 relevant to this study, including but not limited to its disordered regions, clinically relevant mutations, its role as a transcription factor, clinically relevant small molecules, and the family of p53 splice variant isoforms (all of which comprises only a small subset of all the p53 literature) \textcolor{red}{ensure that this summary remains correct as the thesis gets shuffled around}.
 
 \section{Atoms and Atomic Interactions}
 
@@ -8,7 +8,7 @@ Keeping to the interdisciplinary spirit of the College of Integrative Sciences, 
 \hfill\break
 \end{flushright}
 
-To understand the complex dynamics of the matter that surrounds us, we must first understand the atom. Biological function, ultimately, emerges from interactions between the atoms that compose living systems, governed by covalent and ionic bonding, electrostatic and van der Waals interactions, and hydrogen bonding. Establishing these fundamentals sets the stage for understanding both the forces that drive protein function and how these properties can be used to simulate complex biological systems.
+To understand the complex dynamics of the matter that surrounds us, we must first understand the atom. Biological function, ultimately, emerges from interactions between the atoms that compose living systems, governed by covalent and ionic bonding, electrostatic and van der Waals interactions, and hydrogen bonding. Establishing these fundamentals sets the stage for understanding both how forces drive protein function and how these properties can be used to simulate complex biological systems.
 
 %\subsection{Atoms}
 
@@ -93,17 +93,17 @@ To understand the complex dynamics of the matter that surrounds us, we must firs
 \label{fig:atomdiagram}
 \end{figure}
 
-All atoms are composed of only three particles: protons, neutrons, and electrons.
+All atoms are composed of only three particles: protons, neutrons, and electrons. \figurepageref{fig:atomdiagram} shows a (highly simplified) diagram of the structure of an atom.
 
 Protons are positively charged, and elements are defined by their proton count. Hydrogen atoms are those atoms with exactly one proton, oxygen atoms are those with exactly eight protons.
 
-Neutrons have no charged, and together with protons, they make up the nucleus of the atom. The strong atomic force is a force felt between protons and neutrons, and this is what gives the nucleus of the atom its high stability.
+Neutrons have no charge, and together with protons, they make up the nucleus of the atom. The strong nuclear force is a force felt between protons and neutrons, and is what gives the nucleus of the atom its high stability.
 
-Electrons are negatively charged, and they ``orbit'' the nucleus at extremely high speeds. In a hydrogen atom, electrons can move faster than \qty{2100}{\km\per\second} (a little less than \qty{1}{\percent} of the speed of light), and in larger atoms, where electrons feel a weaker attraction to the nucleus of the atom, they can move exceeding half the speed of light. Compared electrons, protons and neutrons are virtually stationary.
+Electrons are negatively charged, and they ``orbit'' the nucleus at extremely high speeds. In a hydrogen atom, electrons can move faster than \qty{2100}{\km\per\second} (a little less than \qty{1}{\percent} of the speed of light), and in larger atoms, where electrons feel a weaker attraction to the nucleus of the atom, they can move at speeds exceeding half the speed of light. Compared electrons, protons and neutrons are virtually stationary.
 
 Atoms are the smallest indivisible component of an element that can be uniquely identified as that element. No further subdivision of an atom retains the global properties of that element. For instance, a neutral atom of gold is comprised of 79 protons, 79 electrons, and 118 neutrons, each of which is made up of smaller particles such as quarks and leptons, but none of these components retain the properties of gold.
 
-While electrons do not physically orbit the nucleus of an atom the way planets do the sun, it is a useful way to think of their movement. Using this analogy, we can understand electron orbitals as concentric shells around the atom. Each orbital can hold a certain number of electrons. The first several electron orbitals can hold up to \numlist{2;4;10} electrons, respectively. Full orbitals are more stable than incomplete orbitals, thus, atoms may share electrons to empty or fill their electron orbitals.
+While electrons do not physically orbit the nucleus of an atom the way planets do the sun, it is a useful way to think of their movement. Using this analogy, we can understand electron orbitals as concentric shells around the atom. Each orbital can hold a certain number of electrons. The first several electron orbitals can hold up to \numlist{2;4;10} electrons, respectively. Full orbitals are more stable than incomplete orbitals, thus, atoms have an incentive to empty or fill their electron orbitals by sharing electrons through a process known as chemical bonding.
 
 \subsection{Chemical Bonding}
 
@@ -128,29 +128,30 @@ The process by which atoms may share their electrons is known as atomic bonding.
 
 \subsubsection{Ionic Bonding}
 
-Ionic bonding involves the near complete transfer of an electron from one atom to another. It primarily occurs between metals, with few electrons in their valence orbitals, and non-metals, which have close to a full valence shell. For example, \ce{Na} has a single valence electron whereas \ce{Cl} has 7. If \ce{Na} gives its electron to \ce{Cl}, then both will have satisfied orbitals.
+Because protons and electrons have opposing charges of the same magnitude, atoms with the same number of protons and electrons are neutral, meaning they have no net charge. Ions are atoms with an unequal number of protons and electrons; cations have a net positive charge, anions have a net negative charge.
 
-After the electrons have been transferred, the \ce{Na} atom has one fewer electrons that it started with, meaning it has a positive charge. Similarly, \ce{Cl} has one more electron, giving it a negative charge. Typically the transfer of electrons alone is energetically unfavorable, but when combined with the positive electrostatic interactions between the newly created ions, it becomes highly favorable.
+Ionic bonding involves the near complete transfer of an electron from one atom to another, creating an anion and a cation. It primarily occurs between metals with few electrons in their valence orbitals, and non-metals which have close to a full valence shell. For example, \ce{Na} has a single valence electron whereas \ce{Cl} has 7. If \ce{Na} gives its electron to \ce{Cl}, then both will have satisfied orbitals. \figurepageref{fig:ionicbond} depicts such an interaction.
+
+After the electron has been transferred, the \ce{Na} atom has one fewer electron than it started with. Assuming it started neutrally charged, it will now have a positive charge. Similarly, \ce{Cl} has one more electron than it started with, and again assuming it began the reaction with a neutral charge, it will now have a negative charge. Typically, the transfer of electrons alone is energetically unfavorable, but when combined with the highly favorable electrostatic interactions between the newly created anion and cation, it becomes highly favorable.
 
 \subsubsection{Covalent Bonding}
 
-In a covalent bond, electrons between two or more atoms are shared. Contrast this with ionic bonds, where electrons are transferred from one nucleus to another; for non-metal atoms, the energetic cost of transferring an atom is too great. Electrons are still shared in such a way that after the bonding process is completed, the octets are full.
+In a covalent bond, electrons are shared between two atoms, rather than transferred as is the case with ionic bonding. Covalent bonds typically occur between non-metal atoms; the energetic cost of transferring an atom is too great for non-metals. Electrons are still shared in such a way that after the bonding process is completed, the octets are full.
 
-In water, two \ce{H} atoms covalently bind with an \ce{O} atom. Oxygen has \num{6} valence electrons, hydrogen has \num{1}. During the bonding, each hydrogen atom shares its electron with oxygen and oxygen shares one of its electrons with each of the hydrogen atoms. In the end, the oxygen atom has \(6+1+1=8\) valence electrons, and each hydrogen atom has \(1+1=2\) valence electrons, completing the valence shall of each atom participating in the bond.
+Consider the water molecule. In it, two \ce{H} atoms covalently bind with an \ce{O} atom. Oxygen has \num{6} valence electrons, hydrogen has \num{1}. During the bonding, each hydrogen atom shares its electron with oxygen and oxygen shares one of its electrons with each of the hydrogen atoms. In the end, the oxygen atom has \(6+1+1=8\) valence electrons, and each hydrogen atom has \(1+1=2\) valence electrons, completing the valence shell of each atom participating in the bond. \figurepageref{fig:covalentbond} shows how a water molecule forms via covalent bonds.
 
 \subsection{Noncovalent Interactions}
-\subsection{Electrostatic Interactions}
-Since protons and electrons have opposing charges of the same magnitude, atoms with the same number of protons and electrons are neutral, meaning they have no net charge. Ions are atoms with an unequal number of protons and electrons; cations have a net positive charge, anions have a net negative charge.
+\subsubsection{Electrostatic Interactions}
 
-The electrostatic force is one of the most fundamental forces in nature, and is crucial in keeping atoms and molecules stable. Like charges repel, and opposing charges attract. Though simple, the electrostatic force leads rise to profound features.
+The electrostatic force is one of the most fundamental forces in nature, and is crucial in keeping atoms and molecules stable. Like charges repel, and opposing charges attract. Though the concept is simple, it leads to profound effects.
 
 \subsubsection{Electronegativity and Bond Polarity}
 
-Consider two atoms, \ce{F} and \ce{H}. Each of them is only one electron away from having a complete valence electron orbital. Which of them ``wants'' the electron more? That is, what system has the lowest total energy, \ce{F-} and \ce{H}, or \ce{F} and \ce{H-}?
+Consider two atoms, \ce{F} and \ce{H}. Each of them is only one electron away from having a complete valence electron orbital. But which of them ``wants'' the electron more? That is, what system has the lowest total energy, \ce{F-} and \ce{H}, or \ce{F} and \ce{H-}?
 
-Fluorine has nine electrons and nine protons. We can say that the two electrons in the first orbital ``shield'' the charge of two protons, which leaves each of its \num{7} valence electrons roughly feeling an effective nuclear charge of \num{7}. Hydrogen, on the other hand, only has only a single proton, so its electron feels an effective nuclear charge of approximately \num{1}.
+Fluorine has nine electrons and nine protons. We can say that the two electrons in the first orbital ``shield'' the charge of two protons, which leaves each of its \num{7} valence electrons roughly feeling an effective nuclear charge of \num{7}. Hydrogen, on the other hand, only has only a single proton, so its electron feels an effective nuclear charge of \num{1}.
 
-Further, the strength an electron feels from the nucleus follows the inverse square law with respect to atomic radius. Because fluorine has a much larger charge, it pulls its electrons closer to the nucleus, which allows it to attract additional electrons easily. Thus, electrons will be much more attracted to \ce{F} than \ce{H}. We say that fluorine is more ``electronegative'' than hydrogen.
+Further, the force exerted by the nucleus on an electron follows an inverse-square relationship with atomic radius. Because fluorine has a much larger charge, it pulls its electrons closer to the nucleus, which allows it to attract additional electrons easily. Thus, electrons will be much more attracted to \ce{F} than \ce{H}. We say that fluorine is more ``electronegative'' than hydrogen.
 
 Now consider a bond between fluorine and hydrogen, in, say, \ce{HF}. These atoms are covalently bonded, meaning the electrons are shared between the two atoms, but they are not shared equally. Given fluorine's stronger affinity for electrons, the shared electrons in the bond spend much more time closer to fluorine than they do hydrogen. This bond is referred to as polar.
 
@@ -163,9 +164,9 @@ Now consider a bond between fluorine and hydrogen, in, say, \ce{HF}. These atoms
 \label{fig:HFpolar}
 \end{figure}
 
-When a molecule contains a polar bond, we know that electrons will be disproportionately distributed throughout the molecule. In the example of \ce{HF}, the electrons will spend more time around the fluorine atom. This will manifest itself as a ``partial charge'': the fluorine atom will act like it has a slight negative charge due to the increased electron density, and the hydrogen will act like it as a slight positive charge due to its decreased electron density, typically denotes by \(\delta^{-}\) and \(\delta^{+}\).
+When a molecule contains a polar bond, we know that electrons will be disproportionately distributed throughout the molecule. In the example of \ce{HF}, the electrons will spend more time around the fluorine atom. This will manifest itself as a ``partial charge'': the fluorine atom will act like it has a slight negative charge due to the increased electron density, and the hydrogen will act like it as a slight positive charge due to its decreased electron density, typically denotes by \(\delta^{-}\) and \(\delta^{+}\). This is depicted visually in \figurepageref{fig:HFpolar}.
 
-This has profound effects on molecular interactions. A classic example is with water. Oxygen is more electronegative than hydrogen, so in a molecule of water, \ce{H2O}, the oxygen atom will have a partial negative charge due to its increased electron density, and the hydrogen atoms will each have a partial positive charge. This gives rise to water's high solubility, when a salt like \ce{NaCl} disassociates into \ce{Na+} and \ce{Cl-}, the ions are easily stabilized by surrounding water molecules.
+This has profound effects on molecular interactions. A classic example is with water. Oxygen is more electronegative than hydrogen, so in a molecule of water, \ce{H2O}, the oxygen atom will have a partial negative charge due to its increased electron density, and the hydrogen atoms will each have a partial positive charge. This gives rise to water's high solubility; when a salt like \ce{NaCl} disassociates into \ce{Na+} and \ce{Cl-}, the ions are easily stabilized by surrounding water molecules. The positively charged \ce{Na+} is shielded by the oxygen atoms, and the negatively charged \ce{Cl-} is shielded by the hydrogen atoms.
 
 \subsubsection{Hydrogen Bonding}
 
@@ -176,9 +177,9 @@ This has profound effects on molecular interactions. A classic example is with w
 \label{fig:waterHBond}
 \end{figure}
 
-An important kind of polar bond is when \ce{H} is bound to either \ce{N}, \ce{O}, or \ce{F}, which is very common in organic compounds. Because \ce{N}, \ce{O}, and \ce{F} are so much more electronegative than \ce{H}, electron sharing is highly disproportionate, leading to large partial charges.
+An important kind of polar bond is when \ce{H} is bound to either \ce{N}, \ce{O}, or \ce{F}. Such a bond is very common in organic compounds. Because \ce{N}, \ce{O}, and \ce{F} are so much more electronegative than \ce{H}, electron sharing is highly disproportionate, leading to large partial charges and polar bonds.
 
-Consider to molecules with such a bond, such as \ce{H2O}. The polar bonds influence how the molecules arrange themselves in solution: a hydrogen atom will orient itself such that it is interacting with the oxygen atom of another water molecule. This is known as hydrogen bonding, and is essential to numerous biological processes, such as maintaining DNA cohesion between strains or the secondary and tertiary structure of many proteins.
+Consider two molecules with such a polar bond, such as \ce{H2O}. The partial charges influence how the molecules arrange themselves in solution: a hydrogen atom will orient itself such that it is interacting with the oxygen atom of another water molecule. This is known as hydrogen bonding, and is essential to numerous biological processes, such as maintaining DNA cohesion between strands, and is essential to the stabilization of protein secondary and tertiary structure. \figurepageref{fig:waterHBond} shows a hydrogen bond between the \ce{H} atom of one water molecule and an \ce{O} atom of another.
 
 \subsubsection{Van der Waals Forces}
 
@@ -189,7 +190,7 @@ Consider to molecules with such a bond, such as \ce{H2O}. The polar bonds influe
 \label{fig:VDW}
 \end{figure}
 
-Whereas hydrogen bonding comes from interactions between permanent dipoles, van der Waals forces come from induced or temporary dipoles. As electrons orbit the nucleus, sometimes, by sheer chance, more of them are on one side than on another side. Even with a neutral atom, this can create a partial charge (dipole). This dipole can induce a dipole in a nearby atom, which leads to a small but not insignificant electrostatic interaction between the two. Unlike hydrogen bonding, which is strong by requires the right ``setup'', most all atoms can engage in van der Waals interactions. For example, gecko feet have millions of hair-like bristles on their toes, and it is enormous amounts of van der Waals interactions that allow the gecko to dry adhere to nearly any surface \parencite{autumnEvidenceVanWaals2002}. 
+Whereas hydrogen bonding comes from interactions between permanent dipoles, van der Waals forces come from induced or temporary dipoles. As electrons orbit the nucleus, sometimes, by sheer chance, more of them are on one side than on another side. Even with a neutral atom, this can create a partial charge (dipole). This dipole can induce a dipole in a nearby atom, which leads to a small but not insignificant electrostatic interaction between the two, as shown in \figurepageref{fig:VDW}. Unlike hydrogen bonding, which is strong but requires the right circumstances, most all atoms can engage in van der Waals interactions. Can der Waals interactions are important in stabilizing protein-protein interactions, additionally, gecko feet have millions of hair-like bristles on their toes, and it is enormous amounts of van der Waals interactions that allow the gecko to dry adhere to nearly any surface \parencite{autumnEvidenceVanWaals2002}. 
 
 \section{Proteins}
 
@@ -206,7 +207,7 @@ Whereas hydrogen bonding comes from interactions between permanent dipoles, van 
 \label{fig:ProteinHierarchyLevels}
 \end{figure}
 
-It is often said that proteins are the molecular machinery of the cell. This perhaps undersells the ubiquity and truly fundamental role proteins play in the cell. They are not only the machinery that engages in cellular activity but they are also the readers of the instruction manual, the transport network (both the roads and the vehicles), the signalers between machines, the defenses for the factory. It is not a very controversial claim to say that proteins are the most diverse class of macromolecules in the cell in terms of their function.
+It is often said that proteins are the molecular machinery of the cell. This perhaps undersells the ubiquity and truly fundamental role proteins play in the cell. They are not only the machinery that engages in cellular activity but they are also the readers of the instruction manual, the transport network (both the roads and the vehicles), the signalers between machines, the defenses for the factory. It is not a very controversial claim to say that proteins are the most diverse class of macromolecules in the cell in terms of their function. \figurepageref{fig:ProteinHierarchyLevels} shows the levels of hierarchy all proteins follow.
 
 \subsection{Primary Sequence}
 
@@ -226,13 +227,15 @@ It is often said that proteins are the molecular machinery of the cell. This per
 
 The amino acid sequence, also known as the primary sequence, is the first level of organization of the protein.
 
-The subunits that make up proteins are called amino acids, also known as residues. The vast majority of all proteins are made up of only a 20 different amino acids. Each amino acid has a similar structure: an amino group (\ce{NH2}), a carboxyl group (\ce{COOH}), and a variable \ce{R} group, all bound to a central carbon known as the alpha carbon (\ce{C_{\alpha}}). The carbon in the carboxyl group is designated by \ce{C^{\(\prime\)}}. The amino acid chain grows as the \ce{OH} on the carboxyl end of the chain reacts with the amino hydrogen on the incoming subunit, causing a water molecule to leave.
+The subunits that make up proteins are called amino acids, known interchangeably as residues. The vast majority of all human proteins are made up of only 20 different amino acids. Each amino acid has a similar structure: an amino group (\ce{NH2}), a carboxyl group (\ce{COOH}), a variable \ce{R} group, and a hydrogen atom, all bound to a central carbon known as the alpha carbon (\ce{C_{\alpha}}). Note that the \ce{C_{\alpha}} is bound to four different groups (with the exception of glycine, for which the \ce{R} group is \ce{H}), which means the \ce{C_{\alpha}} is a chiral center. The carbon in the carboxyl group is designated by \ce{C^{\(\prime\)}}. \figurepageref{fig:AminoAcid} shows the structure of an amino acid.
 
-The \ce{R} group gives lends different properties to the amino acids. For example, arginine has a positive charge, glutamic acid has a negative charge, serine is polar, and tryptophan is hydrophobic. The \ce{R} group of cysteine contains a sulfur atom, and two cysteine atoms are able to bind to one another tightly, forming what is known as a sulfur bridge. 
+The amino acid chain grows as the \ce{OH} on the carboxyl end of the chain reacts with the amino hydrogen on the incoming subunit, creating a water molecule as a byproduct. The reaction is thus classified as a dehydration synthesis reaction, and the term ``residue'' comes from the fact that the growing polypeptide chain is made up of residues form the synthesis reaction.
 
-Since proteins are only made up of amino acids, they rely on them for all of their properties and abilities. Polar residues tend to be solvent-exposed (on the surface of the protein) whereas hydrophobic residues tend to be buried in the core of a protein. If a hydrophobic residue is solvent-exposed, this indicates that the protein may engage in protein-protein interactions in this region. Catalytically active sites of proteins often contain charged residues, used in positioning and stabilizing substrates in such a way that the reaction can occur.
+The \ce{R} group gives different properties to the amino acids. For example, arginine has a positive charge, glutamic acid has a negative charge, serine is polar, and tryptophan is hydrophobic. The \ce{R} group of cysteine contains a sulfur atom, and two cysteine atoms are able to bind to one another tightly, forming what is known as a sulfur bridge. \figurepageref{fig:AminoAcids} shows the \num{20} different amino acids found in humans.
 
-The amino acid sequence uniquely defines the three dimensional structure of the protein. The amino acid sequence is often thought of as a beaded necklace, where each bead represents an amino acid. The three dimensional sequence, then, would a highly complicated, yet often very precise, tangled ball of the beads.
+Because proteins are only made up of amino acids\footnote{And also post-translational phosphorylations, methylations, etc.}, they rely on them for all of their properties and abilities. Polar residues tend to be solvent-exposed (on the surface of the protein) whereas hydrophobic residues tend to be buried in the core of a protein. If a hydrophobic residue is solvent-exposed, this indicates that the protein may engage in protein-protein interactions in this region. Catalytically active sites of proteins often contain charged residues, used in positioning and stabilizing substrates in such a way that the reaction can occur.
+
+The amino acid sequence uniquely defines the three dimensional structure of the protein\footnote{\dots except for proteins who lack a well-defined structure, or contain regions that lack a well-defined structure, also proteins should be thought of as ensembles of conformations rather than a single structure}. The amino acid sequence is often thought of as a beaded necklace, where each bead represents an amino acid. The three dimensional sequence, then, would be a highly complicated, yet often very precisely arranged, tangled ball of the beads.
 
 \subsection{Backbone Dihedral Angles}
 
@@ -249,34 +252,41 @@ The amino acid sequence uniquely defines the three dimensional structure of the 
 \caption{Image source: \parencite{ProteinogenicAminoAcids}}
 \label{fig:RamachandranPlot}
 \end{subfigure}
-\caption[\((\phi, \psi)\) Dihedral Angles and Ramachandran Plots]{(Left) Centered around an amino acid, the two \ce{C_{\alpha}-C^{\(\prime\)}-N-C_{\alpha}} groups define rigid planes; angles \(\phi\) and \(\psi\) can be used to describe their relative positions. (Right) The \((\phi, \psi)\) angle pairs of \num{100000} amino acids. Regions of high density are circled in red, regions of lower density are circled in orange. The corresponding secondary structure is indicated.}
+\caption[\((\phi, \psi)\) Dihedral Angles and Ramachandran Plots]{(Left) Centered around an amino acid, the two \ce{C_{\alpha}-C^{\(\prime\)}-N-C_{\alpha}} groups define rigid planes; angles \(\phi\) and \(\psi\) can be used to describe their relative positions. (Right) A Ramachandran plot showing the \((\phi, \psi)\) angle pairs of \num{100000} amino acids. Regions of high density are circled in red, regions of lower density are circled in orange. The corresponding secondary structure is indicated.}
 \label{fig:DihedralandRamachandran}
 \end{figure}
 
-In addition to being broken up by amino acids, it is also useful to consider the primary chain of amino acids being broken up into groups from one \ce{C_{\alpha}} atom to another. Then each \ce{C_{\alpha}} atom, except from the first and last, are part of two such groups.
+Besides considering the primary chain in terms of individual amino acids, it is also useful to consider it as a series of groups extending from one \ce{C_{\alpha}} atom to the next. This means that each \ce{C_{\alpha}} atom, except from the first and last, are part of two such groups.
 
-The \ce{C_{\alpha}-C^{\(\prime\)}-N-C_{\alpha}} groups are rigid due to the \ce{C^{\(\prime\)}-N} peptide bond. The two groups fixed to a \ce{C_{\alpha}} atom, however, can, as a whole, rotate. The bond rotation around the \ce{N-C_{\alpha}} bond is known as the \(\phi\) dihedral angle, and the bond rotation around the \ce{C_{\alpha}-C^{\(\prime\)}} bond is known as the \(\psi\) dihedral angle. Since these are the only two degrees of freedom for each amino acid, the entire three-dimensional structure of the protein can be described as a sequence of \(\phi\) and \(\psi\) dihedral angles.
+The \ce{C_{\alpha}-C^{\(\prime\)}-N-C_{\alpha}} groups are rigid due to the \ce{C^{\(\prime\)}-N} peptide bond. The two groups fixed to a \ce{C_{\alpha}} atom, however, can, as a whole, rotate. The bond rotation around the \ce{N-C_{\alpha}} bond is known as the \(\phi\) dihedral angle, and the bond rotation around the \ce{C_{\alpha}-C^{\(\prime\)}} bond is known as the \(\psi\) dihedral angle. This is depicted in \figurepageref{fig:RamachandranPlot}. Since these are the only two degrees of freedom for each amino acid, the entire three-dimensional structure of the protein can be described as a sequence of \(\phi\) and \(\psi\) dihedral angles.
 
-If one were to plot each of the \((\psi, \psi)\) dihedral angle pairs for each amino acid across all proteins, they would see regions that are much more favorable than others. This plot is known as a Ramachandran plot, and the pattern observed  primarily due to steric hindrance; regions with low density are energetically unfavorable due to repulsive electron interactions between atoms.
+If one were to plot each of the \((\phi, \psi)\) dihedral angle pairs for each amino acid across all proteins, as has been done in \figurepageref{fig:DihedralandRamachandran}, they would see certain regions that are much more populated than others. This plot is known as a Ramachandran plot, and the pattern observed is primarily due to steric hindrance preventing certain \((\phi, \psi)\) pairs; regions with low density are energetically unfavorable due to repulsive electron interactions between atoms\footnote{or steric hindrance, which is ultimately a form of electron-electron repulsion}.
 
 \subsection{Secondary Structure}
 
 \begin{figure}
 \centering
 \includegraphics[width=0.6\textwidth]{Secondary-Structure-of-Protein.png}
-\caption[Protein Secondary Structure]{The secondary structure of a protein is the local folding pattern. In \(\alpha\)-helices, \ce{N} and \ce{O} atoms of amino acids between turns are hydrogen bonded. In \(\beta\)-sheets, \ce{O} is hydrogen bonded with the \ce{C^{\(\prime\)}} of the opposing parallel or antiparallel \(\beta\) strand. Image source: \parencite{tamangTypesProteinStructure2023}}
+\caption[Protein Secondary Structure]{The secondary structure of a protein is the local folding pattern. In \(\alpha\)-helices, \ce{N} and \ce{O} atoms of amino acids between turns are hydrogen bonded. In \(\beta\)-sheets, \ce{O} is hydrogen bonded with the \ce{C^{\(\prime\)}} of the opposing \(\beta\) strand. parallel or antiparallel . Image source: \parencite{tamangTypesProteinStructure2023}}
 \label{fig:SecondaryStructure}
 \end{figure}
 
-Simultaneously with its synthesis at the ribosome, nascent proteins begin adopting their three-dimensional structure. The smallest and most local structure formed is known as secondary structure, which comes in two main types: \(\alpha\)-helices and \(\beta\)-sheets.
+Simultaneously with their synthesis at the ribosome, nascent proteins begin adopting their three-dimensional structure. The smallest and most local structure formed is known as secondary structure, which comes in two main types: \(\alpha\)-helices and \(\beta\)-sheets, and are shown in atomic detail in \figurepageref{fig:SecondaryStructure}.
 
-\(\alpha\)-helices are found in proteins when stretches of amino acids have \(\phi\) and \(\psi\) values of around \ang{-60} and \ang{-50}, respectively. As the name implies, it forms a helical structure with \num{3.6} residues per turn. Residues between turns of the helix are stabilized by hydrogen bonds between the \ce{O} of the \ce{C^{\(\prime\)}=O} bond and the \ce{H} of the \ce{NH} bond on the next turn of the helix. The average \(\alpha\)-helix is \num{10} residues long, which equates to \qty{1.5}{\angstrom}. Additionally, \(\alpha\)-helices are polar, meaning they are most commonly on the surface of a protein.
+\(\alpha\)-helices are found in proteins when stretches of amino acids have \(\phi\) and \(\psi\) angles of around \ang{-60} and \ang{-50}, respectively. As the name implies, it forms a helical structure with \num{3.6} residues per turn. Residues between turns of the helix are stabilized by hydrogen bonds between the \ce{O} of the \ce{C^{\(\prime\)}=O} bond and the \ce{H} of the \ce{NH} bond on the next turn of the helix. The average \(\alpha\)-helix is \num{10} residues long, or \qty{1.5}{\angstrom} in length. Additionally, \(\alpha\)-helices are polar, meaning they are most commonly on the surface of a protein.
 
-\(\beta\)-sheets are the other common local protein structure. The form when their sub-elements, \(\beta\)-strands – regions where the peptide chain is relatively extended and ``pleated'', with amino acid \ce{R} groups alternating up and down orientations – align themselves adjacent to one another. Two strands can align themselves in either a ``parallel'' or ``antiparallel'' way, in terms of the amino-to-carboxyl directionality. \(\beta\)-sheets are usually made up of entirely parallel or antiparallel \(\beta\)-strands. The dihedral angle restraints on \(\beta\)-sheets is much broader compared to \(\alpha\)-helices, comprising roughly \(-180 \leq \phi \leq 50\) and \(100 \leq \psi \leq 180\).
+\(\beta\)-sheets are the other common local protein structure. They form when their sub-elements, \(\beta\)-strands, which are regions where the peptide chain is relatively extended and ``pleated'' with amino acid \ce{R} groups alternating up and down orientations, align themselves adjacent to one another. Two strands can align themselves in either a ``parallel'' or ``antiparallel'' way, in terms of the amino-to-carboxyl directionality. \(\beta\)-sheets are usually made up of entirely parallel or antiparallel \(\beta\)-strands. The dihedral angle restraints on \(\beta\)-sheets is much broader compared to \(\alpha\)-helices, comprising roughly \(-180 \leq \phi \leq 50\) and \(100 \leq \psi \leq 180\).
 
 \subsection{Tertiary Structure}
 
-Whereas secondary structure describe local elements of the protein structure, the tertiary structure is the entire, three-dimensional structure of the fully synthesized and folded protein. There are several forces that come together to give the protein its tertiary structure:
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{TertiaryStructure.jpg}
+\caption[Protein Tertiary Structure]{The tertiary structure is the fully-folded protein conformation, and is held together by hydrophobic interactions, hydrophilic interactions (not shown), disulfide bonds, hydrogen bonds, and ionic bonds. Image source: \parencite{TertiaryStructureOverview}}
+\label{fig:TertiaryStructure}
+\end{figure}
+
+Whereas secondary structure describes local elements of the protein structure, the tertiary structure is the entire, three-dimensional structure of the fully synthesized and folded protein. Shown in \figurepageref{fig:TertiaryStructure}, there are several forces that come together to give the protein its tertiary structure:
 
 \begin{enumerate}
 \item Hydrophilic Interactions
@@ -301,16 +311,7 @@ Amino acids with opposing charged \ce{R} groups will form strong ionic bonds wit
 
 \end{enumerate}
 
-\begin{figure}
-\centering
-\includegraphics[width=0.8\textwidth]{TertiaryStructure.jpg}
-\caption[Protein Tertiary Structure]{The tertiary structure is the fully-folded protein conformation, and is held together by hydrophobic interactions, hydrophilic interactions (not shown), disulfide bonds, hydrogen bonds, and ionic bonds. Image source: \parencite{TertiaryStructureOverview}}
-\label{fig:TertiaryStructure}
-\end{figure}
-
-While the majority of proteins do have a well-defined tertiary structure, there are some, known as intrinsically disordered proteins, that are defined as having no stable tertiary structure. Some proteins are a hybrid of the two, having some intrinsically disordered regions and some structured domains. The classical protein structure-function relation would posit that intrinsically disordered proteins have no function, but recent research has shown that these proteins can play very important roles in the cell.
-
-\FloatBarrier
+While the majority of proteins do have a well-defined tertiary structure, there are some proteins that lack a stable tertiary structure, and they are known as intrinsically disordered proteins. Some proteins are a hybrid, having some intrinsically disordered regions and some structured domains. The classical protein structure-function relation, the idea that a protein's function is uniquely determined by its structure, would posit that intrinsically disordered proteins have no function, but recent research has shown that these proteins can play very important roles in the cell. \figurepageref{fig:QuaternaryStructure} shows the quaternary structure of the aspartate transcarbamoylase protein, a protein which contains \num{12} polypeptide subunits.
 
 \subsection{Quaternary Structure}
 
@@ -323,17 +324,15 @@ While the majority of proteins do have a well-defined tertiary structure, there 
 
 The highest level of protein structure organization is its quaternary structure. The quaternary structure of a protein describes the number and arrangement of smaller subunits that compose it. Not all proteins have a quaternary structure, but those that do include both homo-oligomers and complexes. For instance, hemoglobin is made of four subunits, two \(\alpha\)-globin and \(\beta\)-globin subunits in each hemoglobin protein. Most DNA restriction enzymes have quaternary structure, their dimerization allows them to recognize palindromic sequences of DNA.
 
-\FloatBarrier
-
 \subsection{Protein Expression}
 
-The central dogma of biology posits that genetic information is stored in DNA, that this genetic information is temporarily copied to RNA for nuclear export and post-transcriptional modifications, and that finally, this RNA is used as the template for the synthesis of cellular machinery – proteins.
+The central dogma of biology posits that genetic information is stored in DNA, that this genetic information is temporarily copied to RNA for nuclear export and post-transcriptional modifications, and that finally, this RNA is used as the template for the synthesis of cellular machinery: proteins.
 
 \subsubsection{Transcription}
 
 Transcription is the process of ``transcribing'' a gene from DNA to RNA. The DNA is uncoiled and used as a template for the production of a single-stranded messenger RNA (mRNA). This is carried out primarily by the enzyme RNA polymerase. RNA polymerase binds to the a region of the gene known as the promoter, and after an enzyme known as RNA primase synthesizes and binds the first portion of the RNA sequence to the DNA, RNA polymerase is able to read the DNA and elongate the growing RNA chain.
 
-Once RNA polymerase is done synthesizing the mRNA, it undergoes some post-transcriptional modifications. This includes adding a ``cap'' to the 5' end and a ``tail'' of dozens of adenines to the 3' of the mRNA to prevent degradation and encourage nuclear export. Additionally, in many mammalian systems, genes are made up of ``exons'' and ``introns'', portions of the genome that do and do not encode for the final protein structure, respectively. Introns are removed during mRNA processing.
+Once RNA polymerase is done synthesizing the mRNA, it undergoes post-transcriptional modifications. This includes adding a ``cap'' to the 5' end and a ``tail'' of dozens of adenines to the 3' of the mRNA to prevent degradation and encourage nuclear export. Additionally, in many mammalian systems, genes are made up of ``exons'' and ``introns'', portions of the genome that do and do not encode for the final protein structure, respectively. Introns are removed during mRNA processing.
 
 \subsubsection{Translation}
 
@@ -341,23 +340,25 @@ After the mRNA has been synthesized and processed, it is ready to be used as the
 
 tRNA is a specialized molecule used for transporting amino acids to the growing polypeptide chain. There are \(4\times4\times4=64\) different groups of 3 nucleotides, known as codons. For each codon, there is a tRNA molecule with the complementary anti-codon that recognizes it. This tRNA will carry the correct amino acid encoded by that codon.
 
-The ribosome binds to the mRNA and ``scans'' the mRNA from 5' to 3' for the start codon, AUG. Once it finds it, the tRNA carrying the first amino acid, methionine, will enter the ribosome in a region known as the A site. The ribosome ``ratchets'' to the next codon, sliding the tRNA carrying the methionine to the P site, and allowing another tRNA molecule to bind to its codon in the A site. Once it binds, a bond is made between the amino acid chain (in this case, just methionine) in the P site and the amino acid on the tRNA in the A site, and the bond between the tRNA in the P site and its amino acid is broken, leaving it ``uncharged''. The ribosome ratchets again, shifting the uncharged tRNA to the E site where it can exit, and the process continues with another tRNA binding in the A site and the amino acid chain extending.
+The ribosome binds to the mRNA and ``scans'' the mRNA from 5' to 3' for the start codon, AUG. Once it finds it, the tRNA carrying the first amino acid, methionine, will enter the ribosome in a region known as the A site. The ribosome ``ratchets'' to the next codon, sliding the tRNA carrying the methionine to the P site, and allowing another tRNA molecule to bind to its codon in the A site. Once it binds, a bond is made between the amino acid chain (in this case, just methionine) in the P site and the amino acid on the tRNA in the A site. The bond between the tRNA in the P site and its amino acid is broken, leaving it ``uncharged''. The ribosome ratchets again, shifting the uncharged tRNA to the E site where it can exit, and the process continues with another tRNA binding in the A site and the amino acid chain extending.
 
 The process continues until one of three ``stop'' codons are reached. When this happens, a special protein shaped just like a tRNA binds the A site of the ribsosome and encourages the polypeptide chain to be released from the tRNA, completing the protein synthesis.
 
 \subsection{Transcription Factors}
 
-A transcription is a specialized protein whose job is to bind upstream of a gene promoter and regulate the rate at which RNA polymerase is able to bind and initiate transcription. They can work alone or in groups to promote (activate) RNA polymerase binding, or block (repress) binding. All transcription factors contain a DNA binding domain which gives them sequence specificity in their binding.
+A transcription factor is a specialized protein whose job is to bind upstream of a gene promoter and regulate the rate at which RNA polymerase is able to bind and initiate transcription. They can work alone or in groups to promote (activate) RNA polymerase binding, or block (repress) binding. All transcription factors contain a DNA binding domain which gives them sequence specificity in their binding.
 
 Transcription factors may act through several means, including by stabilizing or blocking RNA polymerase – DNA interactions, by recruiting coactivators or corepressors, or by modulating DNA supercoiling.
 
-Transcription factors play essential roles in modulating cellular function. All cells contain all of the organism's DNA, it is only the careful activation and repression of genes that prevents a muscle cell from expressing neuronal proteins or a cell initiating apoptosis instead of DNA repair.
+Transcription factors play essential roles in modulating cellular function. Every cells of an organism contain the entirety of its DNA. It is only the careful activation and repression of genes that prevents a muscle cell from expressing neuronal proteins or a cell initiating apoptosis instead of DNA repair.
 
 \subsection{Splice Variants}
 
-Alternative splicing is the ability to make multiple different proteins from a single gene. The resulting proteins are known as splice variants.
+Alternative splicing is the ability to make different proteins from a single gene. The resulting proteins are known as splice variants.
 
-Alternative splicing can happen in a variety of ways: exons can be skipped, one of two exons is retained but not both, alternative junctions can be used between exons, introns can be retained, and more.
+Alternative splicing can happen in a variety of ways in a protein complex known as the spliceosome. For example, an exon may be skipped, one of two exons may be retained but not both, alternative junctions may be used between exons, introns may be retained, and more.
+
+Another way in which a single gene can encode multiple proteins is by using an alternative transcription start site. If the ribosome binds downstream of a protein's start codon, it may find the next methionine and begin translation there.
 
 The ability for different regions of proteins to be conditionally expressed adds yet another layer of control for complex biological processes. The same gene can encode for tissue-specific variants, can alter the localization of the protein after synthesis, or can alter protein production based on cellular needs or stresses.
 
@@ -365,45 +366,45 @@ The ability for different regions of proteins to be conditionally expressed adds
 
 \subsection{DNA Plasmids}
 
-In humans, DNA is stored in chromosomes. A chromosome is a long string of DNA, with various proteins that keep it organized, such as histones/nucleosomes, which act as a spindle with which the DNA wraps around.
+In humans, DNA is stored in chromosomes. A chromosome is a long string of DNA, with various proteins that keep it organized, such as histones, which act as a spindle which the DNA wraps around.
 
-In single-cellular organisms, such as E. coli and yeast, DNA can also be found in plasmids. Plasmids, in contrast to chromosomes, are circular rather than linear. They are also much smaller than chromosomes, on the order of thousands to tens of thousands of bases, whereas chromosomes can range between hundreds of thousands of bases to tens of millions of bases.
+In single-cellular organisms, such as \textit{E. coli} and yeast, DNA can also be found in plasmids. Plasmids, in contrast to chromosomes, are circular rather than linear. They are also much smaller than chromosomes, on the order of thousands to tens of thousands of bases, whereas chromosomes can range between hundreds of thousands of bases to tens of millions of bases.
 
-Plasmids are (usually) the vehicles of choice when it comes to integrating custom genes into an organism, as it is relatively easy to open the cell membrane enough for the DNA to be inserted. In addition to carrying a gene of choice, plasmids will often carry a nutrition marker or antibody marker. Nutrition markers are simply genes that encode for an essential nutrient that the organism cannot naturally produce on its own, for instance, uracil. By growing the cells in media that lacks uracil, we can be sure that those that grow have the DNA insertion. Antibody markers are similar, except that they encode resistance for an antibiotic. By growing the cells in media that contains an antibody, all cells that are not resistant to it will die, ensuring that those cells that do grow have had the plasmid inserted.
+Plasmids are (usually) the vehicles of choice when it comes to integrating custom genes into an organism, as it is relatively easy to open the cell membrane enough for the DNA pass through it. In addition to carrying a gene of choice, plasmids will often carry a nutrition marker or antibody marker. Nutrition markers are simply genes that encode for an essential nutrient that the organism cannot naturally produce on its own, for instance, uracil. By growing the cells in media that lacks uracil, we can be sure that any \textit{E. coli} or yeast that grows contains our plasmid. Antibody markers are similar, except that they encode resistance for an antibiotic. By growing the cells in media that contains an antibody, all cells that are not resistant to it will die, ensuring that those cells that do grow have had the plasmid inserted.
 
 \subsection{\textit{E. coli}}
 
-\textit{Escherichia coli} (\textit{E. coli}) is one of the most widely-used strains of single-cellular organisms in molecular biology. \textit{E. coli} is Gram-negative, meaning they have two layers of outer membranes. The strains used for molecular biology are non-pathogenic, which means they are not associated with any diseases known in healthy adults.
+\textit{Escherichia coli} (\textit{E. coli}) is one of the most widely-used strains of single-cellular organisms in molecular biology. \textit{E. coli} is Gram-negative, meaning they have two layers of outer membranes. It is also prokaryotic, meaning it lacks membrane-separated cellular organelles. The strains used for molecular biology are non-pathogenic, which means they are not associated with any diseases known in healthy adults.
 
-\textit{E. coli} makes for a good model organism because it replicates very quickly, duplicating roughly once every \num{40} minutes at \qty{37}{\degreeCelsius}. Additionally, it is relatively easy to insert (transform) DNA into \textit{E. coli}, and they will usually synthesize proteins of interest without much trouble.
+\textit{E. coli} makes for a good model organism because it replicates very quickly, duplicating roughly once every \num{40} minutes at \qty{37}{\degreeCelsius}. Additionally, it is relatively easy to insert (transform) DNA plasmids into \textit{E. coli}, and they will usually synthesize proteins of interest without much trouble.
 
-These features make \textit{E. coli} a good choice for long-term storage of DNA plasmids: to preserve a plasmid, transform it into \textit{E. coli}, allow them to grow overnight, and then the stock can be frozen and stored indefinitely at \qty{-80}{\kelvin}. If all the frozen stock starts running low, it is trivial to simply defrost the remaining cells, incubate them overnight, and freeze a fresh stock.
+These features make \textit{E. coli} a good choice for long-term storage of DNA plasmids. To preserve a plasmid, one can simply transform it into \textit{E. coli}, allow them to grow overnight, then the stock can be frozen and stored indefinitely at \qty{-80}{\kelvin}. If the frozen stock starts running low, it is trivial to simply defrost the remaining cells, incubate them overnight, and freeze a fresh stock.
 
 The breakthrough that solidified the place of \textit{E. coli} in molecular biology was with insulin. This \num{51} amino acid protein is an essential peptide hormone produced by the pancreas, but for those with diabetes, their body does not produce enough insulin. The first medicinal insulin had to be extracted from animals. In 1982, for the first time, insulin in \textit{E. coli} became commercially available, drastically reducing the price of treatment.
 
 \subsection{\textit{Saccharomyces cerevisiae}}
 
-The model organism of the MacQueen lab is \textit{Saccharomyces cerevisiae} (\textit{S. cerevisiae}), also known as baker's yeast. \textit{S. cerevisiae} is a step up in biological complexity from \textit{E. coli}, containing both chromosomes and plasmids and possessing a more robust DNA replication path, but is still far simpler than mammalian cells.
+The model organism of the MacQueen lab is \textit{Saccharomyces cerevisiae} (\textit{S. cerevisiae}), also known as baker's yeast. \textit{S. cerevisiae} is a step up in biological complexity from \textit{E. coli}, containing both chromosomes and plasmids and possessing a more robust DNA replication path. Additionally, though it is a single-cellular organism, it is eukaryotic, meaning it has membrane-defined cellular organelles. Despite these developmental complexities compared to \textit{E. coli}, it is still far simpler than mammalian cells.
 
-The experimental portion of this thesis used \textit{S. cerevisiae} as its model organism for its replication speed (about \num{1.5} hours at \qty{30}{\degreeCelsius}), DNA repair capabilities and affinity, and its interactions with chemical protein activators and repressors, such as galactose and glucose. 
+The experimental portion of this thesis used \textit{S. cerevisiae} as its model organism for its replication speed (about \num{1.5} hours at \qty{30}{\degreeCelsius}), DNA repair capabilities and propensity, and its interactions with chemical protein activators and repressors, such as galactose and glucose. 
 
 \subsection{DNA Gel Electrophoresis}
 
-One of the most widely used techniques in molecular biology is DNA gel electrophoresis. This is a procedure in which DNA samples are separated by their size, and when combined with a cocktail of DNA with known sizes (known as the ladder), allows for a semi-quantitative way to measure the size of a portion of DNA.
+One of the most widely used techniques in molecular biology is DNA gel electrophoresis. This is a procedure in which DNA samples are separated by their size, and when compared against a cocktail of DNA fragments with known sizes (referred to as the ladder), allows for a semi-quantitative way to measure the size of a portion of DNA.
 
-First, a ``gel'' is prepared: a thin sheet of agarose, which forms a network of microscopic fibers, with wells in the agarose made at the top. The gel is submerged in a pH buffer, and the DNA, mixed with a loading dye to make it denser and visible, is loaded into the wells. An electric current is applied to the buffer. DNA is negatively charged, and will therefore be pushed through the gel by the current. Smaller DNA fragments are able to pass through the network of agarose fibers more easily than larger ones, so the longer the current passes through the gel, the greater the separation between smaller and larger DNA fragments will become. When the DNA reaches the bottom of the gel, it is brought to a machine where ethidium bromide within the gel, bound to the DNA, fluoresces and can be photographed.
+First, a ``gel'' is prepared: a thin sheet of agarose, which forms a network of microscopic fibers, with wells in the agarose made at the top. The gel is submerged in a pH buffer, and the DNA, mixed with a loading dye to make it denser and visible, is loaded into the wells. An electric current is applied to the buffer. DNA is negatively charged, and will therefore be pushed through the gel by the electrical current. Smaller DNA fragments are able to pass through the network of agarose fibers more easily than larger ones, so the longer the current passes through the gel, the greater the separation between smaller and larger DNA fragments will become. When the DNA reaches the bottom of the gel, it is brought to a UV transilluminator where ethidium bromide within the gel, bound to the DNA, fluoresces and can be recorded (photographed).
 
 \subsection{PCR}
 
-Perhaps the most revolutionary item in this list is the polymerase chain reaction (PCR). This is a method to generate millions to billions of copies of a desired DNA sequence. Before PCR was invented – in only 1983 – gathering large amounts of a DNA sequence was a long and arduous process.
+Perhaps the most revolutionary item in this list is the polymerase chain reaction (PCR). This is a method to generate millions to billions of copies of a desired DNA sequence. Before PCR was invented – in only 1983! – gathering large amounts of a DNA sequence was a long and arduous process.
 
 There are several essential components to carrying out a PCR reaction:
 \begin{enumerate}
 \item The DNA template:  the sequence of DNA to duplicate
 \item DNA polymerase: the enzyme responsible for adding bases to an existing DNA chain
-\item DNA primers: short regions of DNA homologous to both ends of the DNA; polymerase will extend these
+\item DNA primers: short DNA sequences complementary to the ends of a target region that serve as starting points for DNA polymerase
 \item dNTPs: deoxynucleoside triphosphates, the DNA bases that DNA polymerase will use to extend the growing chain
-\item A buffer solution: a solution with the correct pH, metal ions for polymerase, etc
+\item A buffer solution: a solution with the optimal pH for the DNA polymerase, metal ions for the polymerase, etc
 \end{enumerate} 
 
 \begin{figure}[h!]
@@ -413,7 +414,7 @@ There are several essential components to carrying out a PCR reaction:
 \label{fig:PCR}
 \end{figure}
 
-One cycle of PCR is made up of three steps:
+Shown visually in \figurepageref{fig:PCR}, one cycle of PCR is made up of three steps:
 
 \begin{enumerate}
 \item DNA denaturation:
@@ -422,37 +423,44 @@ The first step in replicating DNA is by denaturing it. This is done by raising t
 
 \item Primer annealing:
 
-The next step is to encourage the binding of the primers to the denatured templates by lowering the temperature to around \qty{60}{\degreeCelsius}. The primers are designed to bind to the 3' end of the DNA, and since there are two 3' ends of the DNA, one on each strand of the original template DNA, two different primers are needed. These are known as the forward and reverse primers.
+The next step is to encourage the binding of the primers to the denatured templates by lowering the temperature to around \qty{60}{\degreeCelsius}. The primers are designed to bind to the 3' end of the DNA, and since there are two 3' ends of the DNA, one on each strand of the original template DNA, two different primers are needed. These are known as the forward and reverse primers, and are typically between \numrange{20}{40} bases long.
 
 \item Extension:
 
-The final step is the extension of the primers. DNA polymerase binds to the primers and uses the dNTPs in solution to extend the primer. In this step, the temperature is increased again to around \qty{78}{\degreeCelsius}, and the duration of the step depends on the length of the desired product. Typically, one would allow \num{1} minute per thousand bases, plus an extra \num{30} seconds.
+The final step is the extension of the primers. DNA polymerase binds to the primers and uses the dNTPs in solution to extend the primer in the 5' to 3' direction. In this step, the temperature is increased again to around \qty{78}{\degreeCelsius}, and the duration of the step depends on the length of the desired product. Typically, one would allow \num{1} minute per thousand bases, plus an extra \num{30} seconds.
 
 \end{enumerate}
 
-If there was one DNA molecule to begin with, after one iteration of this process, there would be two molecules. The PCR process is typically repeated \num{30} times, at which point the DNA polymerase starts losing its efficacy and accuracy.
+If there were one DNA molecule to begin with, after one iteration of this process, there would be two molecules. The PCR process is typically repeated \num{30} times, at which point the DNA polymerase starts losing its efficacy and accuracy.
 
 The maximum number of copies of the template that could be produced from just one starting DNA sequence is thus \(2^{30}\), which is about \num{1} billion copies.
 
 \subsection{Restriction Digestion}
 
-Restriction enzymes are proteins that cut DNA in specific locations. Typically restriction enzymes exist as dimers, and therefore recognize palindromic sequences.
+Restriction enzymes are proteins that recognize specific DNA sequences and cut the DNA at that site. Typically restriction enzymes exist as dimers, and therefore recognize palindromic sequences.
 
-A restriction digest is a reaction where you chose restriction enzymes to cut a target DNA in a specific way. There are several ways in which they are used.
+A restriction digest is a reaction where one chooses a restriction enzyme to cut a target DNA sequence at a specific location. There are several ways in which they are used.
 
-One way is as a diagnostic, where after extracting and purifying a plasmid, for example, from a culture of \textit{E. coli} cells, you perform a restriction digest, either with two different enzymes that cut the DNA once each or one enzyme that cuts the DNA twice. If the digest is then run in a gel, then you can compare the expected product sizes with the actual product sizes to ensure that the plasmid you extract is really what you think it is.
+One way is as a diagnostic, where after extracting and purifying a plasmid, for example, from a culture of \textit{E. coli} cells, one performs a restriction digest, either with two different enzymes that cut the DNA once each or one enzyme that cuts the DNA twice. If the digest is then run on a gel, the expected product sizes can be compared with the observed product sizes to ensure it is consistent with expectations (and the wrong plasmid was not incorrectly expressed and purified).
 
 \subsection{Gap Repair}
 
-An extremely powerful tool in assembling custom plasmids \textit{in vivo} using existing DNA fragments is gap repair. It may be used, for example, to precisely replace gene X, under promoter P, with gene Y.
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{Basic-gap-repair-cloning-procedure-DNA-fragments-from-a-linearized-plasmid-vector-are.png}
+\caption[Gap Repair]{A schematic of using homologous recombination to build new DNA plasmids, called gap repair. Modified from: \parencite{chinoPlasmidConstructionUsing2010}}
+\label{fig:GapRepair}
+\end{figure}
+
+An extremely powerful tool in assembling custom plasmids \textit{in vivo} using existing DNA fragments is gap repair. It may be used, for example, to precisely replace gene X, under promoter P, with gene Y. \figurepageref{fig:GapRepair} shows a schematic of gap repair.
 
 To do this, the target plasmid must first be linearized, often via a restriction enzyme, near or in the region to replace. Next, the target gene is amplified using PCR, with custom terminal sequences that have sequence homology with the plasmid on either end of the break. When the linearized plasmid and the PCR product is transformed into yeast, homologous recombination machinery recognizes the sequence homology, and re-circularizes the plasmid, using the PCR product to ``bridge the gap'' and incorporating the new gene into the plasmid, removing the old one. This process takes advantage of the strong affinity of \textit{S. cerevisiae} for homologous recombination.
 
 \subsection{Site-Directed Mutagenesis}
 
-Given a plasmid containing a gene of interest, one of the best ways to introduce specific mutations is with site-directed mutagenesis. Site-directed mutagenesis is a variation of PCR, where two homologous primers are designed to bind to the DNA at the site to be mutated, with the desired mutation encoded. As PCR is carried out using these primers and the plasmid as a template, DNA polymerase will synthesize the entire plasmid, incorporating the primer with the desired mutation in the gene of interest.
+Given a plasmid containing a gene of interest, one of the best ways to introduce specific mutations is with site-directed mutagenesis. It is a variation of PCR, where two homologous primers are designed to bind to the DNA at the site to be mutated, with the desired mutation encoded. As PCR is carried out using these primers and the plasmid as a template, DNA polymerase will synthesize the entire plasmid, incorporating the primer with the desired mutation in the gene of interest.
 
-The DNA can be transformed into \textit{E. coli} and sequencing used to confirm the incorporation of the mutation. Alternatively, if the template DNA is from \textit{E. coli}, then GATC sites will be methylated, and the enzyme DpnI can be used to degrate the unmutated template plasmids, ensuring that transformed plasmids will carry the desired mutation.
+The DNA can be transformed into \textit{E. coli} and sequenced to confirm the incorporation of the mutation. Alternatively, if the template DNA is from \textit{E. coli}, then GATC sites will be methylated, and the enzyme DpnI can be used to degrade the unmutated template plasmids at these methylated sites, ensuring that transformed plasmids will carry the desired mutation.
 
 \subsection{LacZ Transcription Reporter Assay}
 
@@ -465,7 +473,7 @@ The DNA can be transformed into \textit{E. coli} and sequencing used to confirm 
 
 To measure the amount of transactivation a protein initiates, one could measure the amount of mRNA or protein of the target gene is observed. There is, however, a simpler approach.
 
-Using gap repair, replace the target gene downstream of the transcription factor's binding sequence with the lacZ gene, which encodes the protein \(\beta\)-galactosidase. As the transcription factor binds to the promoter region, it will initiate the transcription and translation of lacZ into \(\beta\)-galactosidase. After a sufficient amount of time passes, lyse the cells in a solution containing a sugar called \textit{ortho}-Nitrophenyl-\(\beta\)-galactoside (ONPG), an analog for the natural substrate of \(\beta\)-galactosidase, lactose. \(\beta\)-galactosidase will hydrolyze the ONPG, producing galactose and ortho-nitrophenol. Ortho-nitrophenol has a yellow color, and can be measured with a spectrometer observing at \qty{420}{\nano\meter}. ONPG hydrolysis is directly proportional to the concentration of \(\beta\)-galactosidase, so the amount of transactivation of the transcription factor can be easily measured relative to a control.
+Using gap repair, replace the gene downstream of the transcription factor's binding sequence with the lacZ gene, which encodes the protein \(\beta\)-galactosidase. As the transcription factor binds to the promoter region, it will initiate the transcription and translation of \textit{lacZ} into \(\beta\)-galactosidase. After a sufficient amount of time passes, lyse the cells in a solution containing a sugar called \textit{ortho}-Nitrophenyl-\(\beta\)-galactoside (ONPG), an analog for the natural substrate of \(\beta\)-galactosidase, lactose. \(\beta\)-galactosidase will hydrolyze the ONPG, producing \(\beta\)-D-galactose and ortho-nitrophenol. Ortho-nitrophenol has a yellow color, and can be measured with a spectrometer observing at \qty{420}{\nano\meter}. ONPG hydrolysis is directly proportional to the concentration of \(\beta\)-galactosidase, so the amount of transactivation of the transcription factor can be easily measured relative to a control.
 
 \section{Molecular Dynamics Simulations}
 
@@ -484,13 +492,13 @@ The algorithm that governs updating the positions and velocities of each atom is
     U &= \sum_{\text{bonds}} k_{r}(r-r_{0})^{2} \tag{\text{Bond length}} \\
     &+ \sum_{\text{angles}} k_{\theta}(\theta - \theta_0)^{2} \tag{\text{Angle deformation}} \\
     & + \sum_{\text{dihedrals}} k_{\phi}[1+\cos(n\phi+\phi_0)] \tag{\text{Dihedral movement}} \\
-    &+ \sum_{\text{atom }i}\sum_{\text{atom} j\neq i} 4\varepsilon_{i,j}\left[\left(\frac{\sigma_{i,j}}{r_{i,j}}\right)^{12} - \left(\frac{\sigma_{i,j}}{r_{i,j}}\right)^{6}\right] \tag{\text{Van der Waals}} \\
+    &+ \sum_{\text{atom }i}\sum_{\text{atom} j\neq i} 4\varepsilon_{i,j}\left[\left(\frac{\sigma_{i,j}}{r_{i,j}}\right)^{12} - \left(\frac{\sigma_{i,j}}{r_{i,j}}\right)^{6}\right] \tag{\text{van der Waals}} \\
 	&+ \sum_{\text{atom }i}\sum_{\text{atom} j\neq i} \frac{q_{i}q_{j}}{\varepsilon_{0}r_{i,j}} \tag{\text{Electrostatic}}
 \end{align}
 
-This equation encompasses all bond and their deviations from their equilibrium, all bond angle and dihedral angle deviations from their equilibrium, and all pairwise van der Waals and electrostatic interactions. Bond length and angle deformation are modeled as springs with the a given equilibrium length – as the bond length or angle deviates from the equilibrium it increasingly wants to ``spring'' back – and can be represented mathematically through Hooke's law. Dihedral angles are modeled as a (co-)sinusoidal wave in which energy wells representing favorable conformations are separated by energy barriers representing energetically unfavorable conformations between them. Van der Waals are approximated using their so-called ``12-6'' potential, and electrostatic interactions are given by Coulomb's law.
+This equation encompasses all bonds and their deviations from their equilibrium, all bond angle and dihedral angle deviations from their equilibrium, and all pairwise van der Waals and electrostatic interactions. Bond length and angle deformation are modeled as springs with the a given equilibrium length, as the bond length or angle deviates from the equilibrium it increasingly wants to ``spring'' back, and can be represented mathematically through Hooke's law. Dihedral angles are modeled as a (co-)sinusoidal wave in which energy wells representing favorable conformations are separated by energy barriers representing energetically unfavorable conformations between them. Van der Waals interactions are approximated using their so-called ``12-6'' potential, and electrostatic interactions are given by Coulomb's law.
 
-\item Newton's first law says that \(F=ma\), that is, force is mass times acceleration. Rearranging, we get \(\frac{F}{m} = a\). To get the acceleration of each atom, we divide the force felt by each atom by its mass. We can also use the fact that acceleration is the derivative of velocity to derive the updated velocities of all the atoms, \(\int a = \int\frac{F}{m}\), the integral (anti-derivative) of the acceleration.
+\item Newton's first law says that \(F=ma\), that is, force is mass times acceleration. Rearranging, we get \(\frac{F}{m} = a\). To get the acceleration of each atom, we divide the force felt by each atom by its mass. We can also use the fact that acceleration is the derivative of velocity to derive the updated velocities of all the atoms, \(\int a = \int\frac{F}{m}\), the anti-derivative of the acceleration.
 
 \item Using the velocities of all the atoms, we can update their positions after \(\Delta t\) time: \(x_{f} = x_{i} + v\Delta t\), the updated position is equal to the initial position, moved in the direction of the velocity for \(\Delta t\) time.
 
@@ -500,11 +508,11 @@ This equation encompasses all bond and their deviations from their equilibrium, 
 
 \end{enumerate}
 
-The above procedure will simulate the new positions and velocities of all the atoms after \(\Delta t\) time. If \(\Delta t \) is a reasonable \qty{2}{\femto\second}, it would take \num{500000000} iterations to simulate \qty{1}{\micro\second} (\qty{1}{\times 10^{-6}\second}), the standard length simulation in the present year.
+The above procedure will calculate the new positions and velocities of all the atoms after \(\Delta t\) time. If \(\Delta t \) is a reasonable \qty{2}{\femto\second}, it would take \num{500000000} iterations to simulate \qty{1}{\micro\second} (\qty{1}{\times 10^{-6}\second}), the standard length simulation in the present year.
 
-This algorithm is extremely computationally expensive, which is why it is only within the past decade or so that computers have become powerful enough to make simulating biomolecules on relevant timescales feasible. The main bottleneck is the potential energy equation. The bond length, angle deformation, and dihedral angle terms all grow linearly with the number of atoms in the simulation – \(O(n)\) – but the van der Waals and electrostatic terms growth parabolically – \(O(n^{2})\). It is standard practice to model these non-bonded terms explicitly up to a cutoff in distance from each atom, at which point they are only approximated, but this still remains very expensive as simulations grow from tens to hundreds of thousands of atoms.
+This algorithm is extremely computationally expensive, which is why it is only within the past decade or so that computers have become powerful enough to make simulating biomolecules on relevant timescales feasible. The main bottleneck is the potential energy equation. The bond length, angle deformation, and dihedral angle terms all grow linearly with the number of atoms in the simulation, \(O(n)\), but the van der Waals and electrostatic terms growth parabolically, \(O(n^{2})\). Standard practice is to model these non-bonded terms explicitly up to a cutoff in distance from each atom (usually \qtyrange{8}{12}{\angstrom}), at which point they are only approximated, but this still remains very expensive as simulations grow from tens to hundreds of thousands of atoms.
 
-It was the integration of GPU parallelization into the computation of the non-bonded terms that finally made it possible to conduct MD simulations of large-scale systems on biologically relevant timescales. After the cutoff is reached, a Particle Mesh Ewald (PME) process is used to approximate the rest using a Fast Fourier Transformation \parencite{salomon2013routine}.
+The integration of GPU parallelization into the computation of the non-bonded terms finally made it possible to conduct MD simulations of large-scale systems on biologically relevant timescales. After the cutoff is reached, a Particle Mesh Ewald (PME) process is used to approximate the rest using a Fast Fourier Transformation \parencite{salomon2013routine}.
 
 \subsection{Practical Steps}
 

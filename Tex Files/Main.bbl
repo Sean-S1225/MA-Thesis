@@ -469,6 +469,65 @@
       \verb https://www.biomol.com/resources/applications/pcr-and-qpcr/
       \endverb
     \endentry
+    \entry{chinoPlasmidConstructionUsing2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=29c6d1db4e97dfc3126786e1d0f60161}{%
+           family={Chino},
+           familyi={C\bibinitperiod},
+           given={Ayako},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=ec13cda2cbfddcda8775a94455efdce0}{%
+           family={Watanabe},
+           familyi={W\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=c6997e01984f4ba5e5ee0f00b7c6929c}{%
+           family={Moriya},
+           familyi={M\bibinitperiod},
+           given={Hisao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{49bb1f3b0ffb81d0089b3de27f695d74}
+      \strng{fullhash}{49bb1f3b0ffb81d0089b3de27f695d74}
+      \strng{bibnamehash}{49bb1f3b0ffb81d0089b3de27f695d74}
+      \strng{authorbibnamehash}{49bb1f3b0ffb81d0089b3de27f695d74}
+      \strng{authornamehash}{49bb1f3b0ffb81d0089b3de27f695d74}
+      \strng{authorfullhash}{49bb1f3b0ffb81d0089b3de27f695d74}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{BACKGROUND: Construction of plasmids is crucial in modern genetic manipulation. As of now, the common method for constructing plasmids is to digest specific DNA sequences with restriction enzymes and to ligate the resulting DNA fragments with DNA ligase. Another potent method to construct plasmids, known as gap-repair cloning (GRC), is commonly used in the budding yeast Saccharomyces cerevisiae. GRC makes use of the homologous recombination activity that occurs within the yeast cells. Due to its flexible design and efficiency, GRC has been frequently used for constructing plasmids with complex structures as well as genome-wide plasmid collections. Although there have been reports indicating GRC feasibility in the fission yeast Schizosaccharomyces pombe, this species is not commonly used for GRC as systematic studies of reporting GRC efficiency in S. pombe have not been performed till date. METHODOLOGY/PRINCIPAL FINDINGS: We investigated GRC efficiency in S. pombe in this study. We first showed that GRC was feasible in S. pombe by constructing a plasmid that contained the LEU2 auxotrophic marker gene in vivo and showed sufficient efficiency with short homology sequences ({$>$}25 bp). No preference was shown for the sequence length from the cut site in the vector plasmid. We next showed that plasmids could be constructed in a proper way using 3 DNA fragments with 70\% efficiency without any specific selections being made. The GRC efficiency with 3 DNA fragments was dramatically increased {$>$}95\% in lig4Delta mutant cell, where non-homologous end joining is deficient. Following this approach, we successfully constructed plasmid vectors with leu1+, ade6+, his5+, and lys1+ markers with the low-copy stable plasmid pDblet as a backbone by applying GRC in S. pombe. CONCLUSIONS/SIGNIFICANCE: We concluded that GRC was sufficiently feasible in S. pombe for genome-wide gene functional analysis as well as for regular plasmid construction. Plasmids with different markers constructed in this research are available from NBRP-yeast (http://yeast.lab.nig.ac.jp/).}
+      \field{day}{11}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1932-6203}
+      \field{journaltitle}{PloS One}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{3}
+      \field{shortjournal}{PLoS One}
+      \field{title}{Plasmid Construction Using Recombination Activity in the Fission Yeast {{Schizosaccharomyces}} Pombe}
+      \field{volume}{5}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{e9652}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0009652
+      \endverb
+      \verb{eprint}
+      \verb 20300182
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/FG4ZFLGF/Chino et al. - 2010 - Plasmid construction using recombination activity in the fission yeast Schizosaccharomyces pombe.pdf
+      \endverb
+      \keyw{3-Isopropylmalate Dehydrogenase,DNA,Genetic Markers,Genetic Vectors,Genome Fungal,Genome-Wide Association Study,Green Fluorescent Proteins,Models Genetic,Mutation,Plasmids,Recombination Genetic,Saccharomyces cerevisiae Proteins,Schizosaccharomyces}
+    \endentry
     \entry{salomon2013routine}{article}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=364798c240c0c7ef3f34a7af049e59fc}{%
@@ -978,8 +1037,8 @@
       \strng{authorbibnamehash}{b2a45b5b5596f5d69bf620032abdc1a0}
       \strng{authornamehash}{b2a45b5b5596f5d69bf620032abdc1a0}
       \strng{authorfullhash}{b2a45b5b5596f5d69bf620032abdc1a0}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -1080,8 +1139,8 @@
       \strng{authorbibnamehash}{ed43ae8033dd4ab06dbd77ef91cd1ee8}
       \strng{authornamehash}{ed43ae8033dd4ab06dbd77ef91cd1ee8}
       \strng{authorfullhash}{de9d22bd64c0015a1941346bd99e0944}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2094,8 +2153,8 @@
       \strng{authorbibnamehash}{0a6123fd4e89517c9419d76dc71b2a06}
       \strng{authornamehash}{0a6123fd4e89517c9419d76dc71b2a06}
       \strng{authorfullhash}{0a6123fd4e89517c9419d76dc71b2a06}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2166,8 +2225,8 @@
       \strng{authorbibnamehash}{0fa86becb14b6a7982c48647547d79ca}
       \strng{authornamehash}{0fa86becb14b6a7982c48647547d79ca}
       \strng{authorfullhash}{ead01b70d0f5ced723fbeb6b76dcc202}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2233,8 +2292,8 @@
       \strng{authorbibnamehash}{031af6a0c62e08c283a40f157bc62fef}
       \strng{authornamehash}{031af6a0c62e08c283a40f157bc62fef}
       \strng{authorfullhash}{031af6a0c62e08c283a40f157bc62fef}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2673,12 +2732,12 @@
            given={Toshimichi},
            giveni={T\bibinitperiod},
            givenun=1}}%
-        {{un=0,uniquepart=base,hash=454cec15abcf0ebd6fb2cb607946c691}{%
+        {{un=1,uniquepart=given,hash=454cec15abcf0ebd6fb2cb607946c691}{%
            family={Watanabe},
            familyi={W\bibinitperiod},
            given={Masahiko},
            giveni={M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=d4c28001828215069f7fa99b38bb2c9c}{%
            family={Yamashita},
            familyi={Y\bibinitperiod},
@@ -3147,8 +3206,8 @@
       \strng{authorbibnamehash}{152bc852f83b4a7002b494b57733d7d9}
       \strng{authornamehash}{152bc852f83b4a7002b494b57733d7d9}
       \strng{authorfullhash}{972af54c2239473a4fd1a6c63797ee7b}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3233,8 +3292,8 @@
       \strng{authorbibnamehash}{1aafeb432ddffed58d7f860064e74277}
       \strng{authornamehash}{1aafeb432ddffed58d7f860064e74277}
       \strng{authorfullhash}{199f46282693b19ef04af9bbb34ae283}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3309,8 +3368,8 @@
       \strng{authorbibnamehash}{5314f4e6bfdcc19e8f938533b8249f2a}
       \strng{authornamehash}{5314f4e6bfdcc19e8f938533b8249f2a}
       \strng{authorfullhash}{b3eef2132b1249e04da05186970934cc}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4034,8 +4093,8 @@
       \strng{authorbibnamehash}{fe0e868270c886c52ac83576f4870e10}
       \strng{authornamehash}{fe0e868270c886c52ac83576f4870e10}
       \strng{authorfullhash}{fe0e868270c886c52ac83576f4870e10}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4092,8 +4151,8 @@
       \strng{authorbibnamehash}{c7f06b669f37c0ed952d3d3b4b2f3655}
       \strng{authornamehash}{c7f06b669f37c0ed952d3d3b4b2f3655}
       \strng{authorfullhash}{c7f06b669f37c0ed952d3d3b4b2f3655}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4574,8 +4633,8 @@
       \strng{authorbibnamehash}{dcfdfed7dc476abbe4255429035ff8f6}
       \strng{authornamehash}{dcfdfed7dc476abbe4255429035ff8f6}
       \strng{authorfullhash}{dcfdfed7dc476abbe4255429035ff8f6}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4624,8 +4683,8 @@
       \strng{authorbibnamehash}{5d47e4725cb70ca7f7c89fa1646c2a5f}
       \strng{authornamehash}{5d47e4725cb70ca7f7c89fa1646c2a5f}
       \strng{authorfullhash}{5d47e4725cb70ca7f7c89fa1646c2a5f}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5433,8 +5492,8 @@
       \strng{authorbibnamehash}{c57f48ff924b1352a3a74e7cc626139e}
       \strng{authornamehash}{c57f48ff924b1352a3a74e7cc626139e}
       \strng{authorfullhash}{c74cffbfe68a853054e4827c1a6d1f46}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5526,8 +5585,8 @@
       \strng{authorbibnamehash}{9a714ee852c23eefa8c00529beac4d7b}
       \strng{authornamehash}{9a714ee852c23eefa8c00529beac4d7b}
       \strng{authorfullhash}{78a01aa166354927c948f8a43a68194e}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6835,8 +6894,8 @@
       \strng{authorbibnamehash}{2277eec588c9936b6d0146d0250698b0}
       \strng{authornamehash}{2277eec588c9936b6d0146d0250698b0}
       \strng{authorfullhash}{ce1d5c30e5f816a0221c35aad79e6f91}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6902,8 +6961,8 @@
       \strng{authorbibnamehash}{df9963711900bc1c644d545417bf3564}
       \strng{authornamehash}{df9963711900bc1c644d545417bf3564}
       \strng{authorfullhash}{3d9e1d4ebb18e4f6d2e09567b43cfa01}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
