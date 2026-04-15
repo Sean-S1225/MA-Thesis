@@ -2537,6 +2537,8 @@
     <bcf:citekey order="128" intorder="3">puzio-kuterRestorationTumorSuppressor2025</bcf:citekey>
     <bcf:citekey order="129" intorder="1">hanInsightsRationalDesign2022</bcf:citekey>
     <bcf:citekey order="129" intorder="2">stetsonRestorationY220CP532025</bcf:citekey>
+    <bcf:citekey order="130" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
+    <bcf:citekey order="131" intorder="1">choCrystalStructureP531994</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

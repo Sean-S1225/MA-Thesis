@@ -4,7 +4,11 @@ Although the Y220C mutation to p53 is in the top ten most common point mutations
 
 Our previous efforts in the lab have sought to characterize the restorative capabilities of PK11000 \textit{in silico} \parencite{hanInsightsRationalDesign2022, stetsonRestorationY220CP532025}. However, to achieve the lab's mission of using machine learning to design novel, allosterically acting, restorative compounds to target the p53 protein, we need to look at a wide variety of drugs. For this reason, we have sought to characterize the restorative capabilities of the drug Rezatapopt \textit{in silico}, using our molecular dynamics pipeline. 
 
+To do this, we have simulated two different versions of p53 with the Y220C mutation bound with the drug Rezatapopt. The first version is the full-length, \num{393} amino acid protein. The second version is the DNA binding domain (DBD) subset, defined to be p53 between residues \numlist{96;289}. The N- and C-terminal domains, while important in the overall function of p53, add another complicating factor to the simulation, so keeping in line with the study on PK11000 \parencite{stetsonRestorationY220CP532025}, we chose to simulate both versions of p53, with and without these disordered regions, to see if the results differ. 
+
 \section{Results}
+
+\subsection{Global Dynamics are Not Clearly Rescued by Rezatapopt}
 
 \begin{figure}
 \centering
@@ -20,12 +24,22 @@ Our previous efforts in the lab have sought to characterize the restorative capa
 \label{fig:rezatapopt-dbd-p53-rmsd}
 \end{figure}
 
+To begin to understand how the presence of Rezatapopt altered the dynamics of p53, we computed RMSD. For our simulations of the full-length p53, we calculated RMSD of the whole protein, the DBD', and the DBD'' subsets. For our simulations of the DNA binding domain of p53, we computed RMSD for the full DBD and an N-terminal truncated subset, which eliminates some tail and fraying. \figurepageref{fig:rezatapopt-fl-p53-rmsd} shows RMSD of the full-length p53, and \figurepageref{fig:rezatapopt-dbd-p53-rmsd} shows RMSD of the p53 DBD. 
+
+When looking at the entire full length p53, we can see that the RMSD values average to between roughly \qtyrange{6}{8}{\angstrom}. When looking at the DBD' and DBD''  subsets, we can see that the RMSD values very quickly plateau at about \qty{2}{\angstrom}. Comparing mean values between the four systems, we can see that in the entire full length protein, the WT and PK11000 bound mutant p53 are almost identical, whereas the Y220C mutant and the Rezatapopt bound p53 have very similar values, slightly higher values. When looking at the DBD' and DBD'', we can see that the Rezatapopt bound Y220C p53 alone has a slightly higher RMSD than the rest.
+
+Comparing these results with the simulated DNA binding domain subset of p53, we can see that the results are slightly different. When considering the entire DBD, RMSD increases from \num{0} to between \qtyrange{1.5}{4}{\angstrom}, and after we remove a few residues from the N-terminal end, we see the value remains bounded between \qtyrange{1.5}{3}{\angstrom}. In the entire p53 DBD, we can see that for nearly all frames the Y220C\_PK11000 has a higher average RMSD value than the WT or Y220C. The Rezatapopt bound mutant, however, has an average RMSD value more in line with the WT and mutant for the first \qty{800}{\nano\second} before the protein adopts a different confirmation and the RMSD value increases slightly. When we remove and tail effects from consideration, looking at the truncated subset of the DBD, we can see that mean RMSD value for the PK11000 bound mutant lowers to the same range of values as the WT and the Y220C, indicating that the high RMSD observed in the full DBD were due to tail-end effects in the end terminal region of the DBD, rather than within the core of the DBD. However, the mean RMSD value of the Rozetapopt-bound mutant is nearly identical between the entire DBD and the truncated DBD, which indicates that the confirmation adopted in the last \qty{200}{\nano\second} is not an tail-end effect, but it is a truly different confirmation in the structured subset. 
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_RMSD_Violin.png}
 \caption[Violin Plots of FL and DBD p53 + Rezatapopt RMSD]{Violin plots for the distribution of RMSD values across the different subsets of the FL and DBD p53, for each of the systems considered.}
 \label{fig:rezatapopt-fl-dbd-p53-rmsd-violin}
 \end{figure}
+
+The distributions of the considered RMSD values are shown as a violin plot in \figurepageref{fig:rezatapopt-fl-dbd-p53-rmsd-violin}. Here it is more clear the behavior of the global dynamics of the proteins over the simulations. In the entire full length p53, we can see that the Y220C mutation causes the distribution of RMSD values to increase with mean value at approximately \qty{8}{\angstrom}, whereas the binding of PK11000 lowers distribution of values to more closely match that of the WT. We can see that when Rezatapopt is bound, there are a subset of frames for which the RMSD value is close to that of the WT, however, the greater subset of frames has a higer RMSD value, closer to that of the mutant. Considering the DBD' and the DBD'' subsets, can see the WT, Y220C, and Y220C\_PK11000 all behave very similarly, and the binding of Rezatapopt increases the distribution of RMSD values slightly.
+
+Considering the entire simulated DNA binding domain, we can see that the mutant has a distribution of RMSD values very closely matching that of the WT, and the presence of PK11000 increases this distribution. The Rezatapopt mutant has a subset of frames with a slightly higher RMSD than the wild type and mutant, but a greater number of frames are concentrated in the same range as the wild type and the mutant, lower than the PK11000 bound protein. When we remove from consideration the terminal residues that had frayed, we can see that all four systems have essentially the same distribution of RMSD values, except for the Rezatapopt bound mutant, for which there is a small subset of frames that have a slightly higher RMSD value.
 
 \begin{figure}
 \centering
@@ -41,6 +55,12 @@ Our previous efforts in the lab have sought to characterize the restorative capa
 \label{fig:rezatapopt-dbd-p53-rog}
 \end{figure}
 
+To get a further handle on how the global dynamics of p53 are altered upon binding of Rezatapopt, we computed the radius of gyration (RoG). We calculated the RoG for the same subsets as we did RMSD, the entire FL p53 and its DBD' and DBD'' subsets, and the entire p53 DBD and its truncated form. \figurepageref{fig:rezatapopt-fl-p53-rog} shows the RoG values of the FL p53 as a function of time, and \figurepageref{fig:rezatapopt-dbd-p53-rog} shows the RoG values for the p53 DBD.
+
+Although the values fluctuate between simulations, we see that for the full-length p53, the average radius of gyration remains quite stable. The entire full-length p53 has an average radius of gyration between \qtyrange{30}{40}{\angstrom}. It appears that the mutant p53 has a slightly higher radius of gyration value on average, compared to the rest of the systems. For the DBD' and the DBD'' subsets, the average radius of gyration value is slightly below \qty{30}{\angstrom}. The Rezatapopt-bound mutant protein has a slightly higher radius of duration than the other systems.
+
+When considering the entire simulated DNA binding domain of p53, we can see that, with the exception of PK11000 bound Y220C mutant, the average radius of generation values fluctuates around approximately \qty{21}{\angstrom}. The Y220C\_PK11000 p53 has some large fluctuations for the first \qty{600}{\nano\second} of the simulation. When we truncate some of the N-terminal residues, we can see that the fluctuations of the PK11000-bound mutant are eliminated and that all systems have a stable average radius of gyration value of about \qty{21}{\angstrom}.
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_FL_DBD_Rezatapopt_RoG_Violin.png}
@@ -48,12 +68,20 @@ Our previous efforts in the lab have sought to characterize the restorative capa
 \label{fig:rezatapopt-fl-dbd-p53-rog-violin}
 \end{figure}
 
+Finally, we plotted the distribution of radius of gyration values as a violin plot, shown in \figurepageref{fig:rezatapopt-fl-dbd-p53-rog-violin}. When we look at the distribution of radius of generation values for the mutant protein in the complete, full-length, p53, we can see that relative to the wild type, the Y220C distribution has been shifted upwards. The binding of both PK11000 and Rezatapopt lowers the distribution to the wild type levels, although PK11000 lowers the distribution more than Rezatapopt. When we look at the DBD' and DBD'' subsets of the full-length protein, we can see that the wild type, Y220C, and Y220C\_PK11000 simulations have essentially identical distributions. However, the Rezatapopt bound mutant has a significantly higher distribution of values. In contrast, in the simulations of the DBD alone, we see that, especially with tail fraying effects removed, all four systems have it essentially identical distributions of radius of gyration values.
+
+\subsection{Rezatapopt Rescues Some Local Dynamics of p53}
+
+Having seen that broadly, the binding of Rezatapopt increases the conformational diversity of p53 relative to the WT, Y220C, and Y220C\_PK11000, we next sought to understand how the binding of Rezatapopt would alter the local, residue-level dynamics of p53.
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_FL_DBD_Rezatapopt_RMSF.png}
 \caption[DBD and FL p53 RMSF + Rezatapopt]{RMSF values for the different systems, WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt, between the FL and DBD p53 simulations.}
 \label{fig:rezatapopt-fl-dbd-p53-rmsf}
 \end{figure}
+
+First, we plotted RMSF per residue between our system for the FL p53 and the p53 DBD, shown in \figurepageref{fig:rezatapopt-fl-dbd-p53-rmsf}. We can see in the FL p53 that the structured subset, defined to be between residues \numlist{96;289}, the RMSF is below \qty{5}{\angstrom} for each residue. However, the intrinsically disordered N- and C-terminal domains have much greater flexibility. The corresponding residues in the simulated DBD also have very low flexibility. We can see, especially in the Y220C\_PK11000 protein, that the \num{15} most N-terminal residues have much higher flexibility; this is why we observe larger RMSD and RoG values for the Y220C\_PK11000 comapred to teh WT that lowers back to WT levels when we remove these more flexible residues, as seen in \figurepageref{fig:rezatapopt-fl-dbd-p53-rmsd-violin} and \figurepageref{fig:rezatapopt-fl-dbd-p53-rog-violin}.
 
 \begin{figure}
 \centering
@@ -69,6 +97,12 @@ Our previous efforts in the lab have sought to characterize the restorative capa
 \label{fig:rezatapopt-fl-rmsf-rescue-score}
 \end{figure}
 
+To see more clearly exactly how the binding of Rezatapopt was altering the dynamics of each residue, we computed the \(\Delta\)RMSF\textsubscript{WT \textminus Y220C}, \(\Delta\)RMSF\textsubscript{Y220C\_PK11000 \textminus Y220C}, and \(\Delta\)RMSF\textsubscript{Y220C\_Rezatapopt \textminus Y220C}, shown in figure \figurepageref{fig:rezatapopt-fl-rmsf-diff} and the rescue score for both PK11000 and Rezatapopt using the metric of RMSF, shown in \figurepageref{fig:rezatapopt-fl-rmsf-rescue-score}.
+
+For the \(\Delta\)RMSF plots, a value greater than \num{0} indicates the Y220C p53 is less flexible than the system it is being compared with. Generally speaking, in the N-terminal domain, the Y220C p53 is less flexible than the WT, whereas in the C-terminal domain, it is more flexible than the WT. \textcolor{red}{connection w/ CTD flexibility and HBonding?} We see that when PK11000 is bound to the Y220C mutant, it becomes much less flexible than the Y220C p53 throughout the entirety of the N-terminal domain. There are some residues in the C-terminal domain for which the Y220C is more flexible, and some where the Y220C\_PK11000 is more flexible. When Rezatapopt is bound to the Y220C p53, however, we see a roughly even spread in the N-terminal domain for residues that are made more or less flexible. In the C-terminal domain, nearly every residue is made more flexible by PK11000 binding. Given that the CTD of the Y220C mutant is already more flexible than the WT, this tells us the CTD of the Rezatapopt-bound Y220C is even more flexible than the WT.
+
+When we look to the rescue score, it is not immediately apparent whether either drugs are able to restore the WT dynamics to the mutant p53. Certainly if they do, there must be more to the story than just RMSF. For PK11000, we can see some rescued residues in the DBD and some residues that are worsened by the presence of the drug, but comparing the same residues with the difference plot, we can see that there is only a small difference between the wild type, the mutant and the PK11000 bound p53. The disordered and N- and C-terminal domains show a variety all three possibilities: some residues are rescued, some residues overshoot WT function, and some residues are made worse. We see a similar pattern in the Rezatapopt-bound p53; residues within the DNA binding domain are either rescued or overshoot wild type dynamics, which is better than PK11000, but in the intrinsically disordered regions, we observe the sames variety of dynamics. Likely, these regions are too unstructured to draw conclusions regarding the rescue of p53.
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_RMSF_Diff.png}
@@ -83,12 +117,28 @@ Our previous efforts in the lab have sought to characterize the restorative capa
 \label{fig:rezatapopt-dbd-rmsf-rescue-score}
 \end{figure}
 
+We computed the same analyses for the simulated DBD. We computed the \(\Delta\)RMSF\textsubscript{WT \textminus Y220C}, \(\Delta\)RMSF\textsubscript{Y220C\_PK11000 \textminus Y220C}, and \(\Delta\)RMSF\textsubscript{Y220C\_Rezatapopt \textminus Y220C}, shown in figure \figurepageref{fig:rezatapopt-dbd-rmsf-diff} and the rescue score for both PK11000 and Rezatapopt using the metric of RMSF, shown in \figurepageref{fig:rezatapopt-dbd-rmsf-rescue-score}.
+
+Looking at the difference plot, we can see that the Y220C mutant is more flexible than the WT for most of the residues within the DBD. We see the same trend between the Y220C\_PK11000 and the Y220C; the Y220C is less flexible than the Y220C\_PK11000. Similarly, we can see that the Y220C is less flexible than Y220\_Rezatapopt for the majority of residues within the DBD, except several residues around residue \num{180}.
+
+Looking at the rescue score, we can see PK11000 rescues a large number of residues through the core domain. Comparing with Rezatapopt, we can see fewer residues are rescued, such as those around residue \num{195}, and some residues overshoot the WT behavior, such as those between \numlist{100;140}.
+
+\subsection{Rezatapopt Makes Different Hydrogen Bonds with the DNA Compared to WT, Y220C}
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_HBond_vs_Time.png}
 \caption[FL p53 HBonding vs Time]{Hydrogen bond metrics vs time, for the FL p53 across different the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. Top left: the average number of hydrogen bonds between p53 and the DNA for each frame. Top center: the average number of hydrogen bonds between the DNA and K120, S241, R248, R273, A276, C277, R289, and R283 per frame. Top right: the number of hydrogen bonds between the DNA and residues K120, C277, and R280 per frame. Bottom left: the number of unique atom-atom hydrogen bonds made over the simulation. Bottom center: the number of residue-nucleotide hydrogen bonds made over the simulation. Bottom right: the number of atom-atom hydrogen bonds made over the simulation, counting only those that persisted for at least \qty{10}{\percent} of frames.}
 \label{fig:rezatapopt-fl-hbond}
 \end{figure}
+
+\figurepageref{fig:rezatapopt-fl-hbond} shows six different metrics for measuring hydrogen bonding between p53 and the DNA. First, the average number of hydrogen bonds made between the protein and the DNA. We can see that, over the course of the simulation, the WT and Y220C\_PK11000 make approximately \num{15} hydrogen bonds per frame with the DNA. The Y220C and Y220C\_PK11000 p53 systems make fewer, at around \num{12.5} hydrogen bonds per frame.
+
+Next, we look at the average number of hydrogen bonds per frame between the DNA and residues K120, S241, R248, R273, A276, C277, R289, and R283, which are known to be strongly interacting with DNA \parencite{choCrystalStructureP531994}. The WT, Y220C, and Y220C\_PK11000 each make around \num{4.5} of these ``specific'' hydrogen bonds per frame with the DNA, whereas the Y220C\_Rezatapopt makes less than \num{4} on average, though the error bars do extend to \num{4.5}.
+
+We additionally computed the average number of hydrogen bonds per frame between the DNA and residues K120, C277, and R280. The Y220C and Y220C\_PK11000 make around \num{1.5} hydrogen bonds per frame on average, higher than the WT which makes a little over \num{1} bond per frame on average. The Y220C\_Rezatapopt p53 makes even fewer hydrogen bonds on average, below \num{1} per frame.
+
+In addition to measuring the strength of the p53-DNA hydrogen bonds, we also wanted to compute the specificity of the interactions. The Exhaustive Hydrogen Bond Sum (EHBS) measures the total number of hydrogen bonds made between p53 and the DNA over the simulation. We can see that by the end of the simulation, the WT, Y220C, and Y220C\_PK11000 had each made between \numrange{500}{600} different hydrogen bonds with the DNA, whereas the Y220C\_Rezatapopt had made \num{800}. Many of these interactions are different ways hydrogen bonds can be formed between a given residue and nucleotide, so we repeated the computation, counting unique residue-nucleotide hydrogen bonds. We see the number is reduced, with the WT, Y220C, and Y220C\_PK11000 making between \numlist{100;125} unique interactions, but the Y220C\_Rezatapopt still makes far more than either of the other three, at \num{175}. Finally, we applied a cutoff to our measure of unique atomic level interactions, counting only those which had persisted for \qty{10}{\percent} of frames. We see that the WT and Y220C\_PK11000 interact very similarly over time, having made around \num{35} such hydrogen bonds by the end of the simulation. The Y220C lags behind the rest, but increases at the end of the simulation to match the WT and Y220C\_PK11000. The Y220C\_Rezatapopt never reaches the same level as the WT and Y220C\_PK11000, and in the end, has only made about \num{20} such hydrogen bonds.
 
 \begin{figure}
 \centering
@@ -97,19 +147,26 @@ Our previous efforts in the lab have sought to characterize the restorative capa
 \label{fig:rezatapopt-dbd-hbond}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_DBD_subset_Rezatapopt_HBond_vs_Time.png}
-\caption[p53|\textsubscript{DBD} HBonding vs Time]{Hydrogen bond metrics vs time, for the p53 FL|\textsubscript{DBD} across different the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. TRT, EHBS, Res-Nuc EHBS, and EHBS with a \qty{10}{\percent} cutoff is shown.}
-\label{fig:rezatapopt-dbd-subset-hbond}
-\end{figure}
+Our analysis of the same metrics in the simulated p53 DBD showed a different result, however, as shown in \figurepageref{fig:rezatapopt-dbd-hbond}. We see that the WT makes an average of \num{8} hydrogen bonds per frame with the DNA, but the Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt each make an average of \num{6} hydrogen bonds per frame with the DNA.
+
+For the number of specific hydrogen bonds made between the DNA and p53, the WT p53 makes the most hydrogen bonds at around \num{4.75}, followed by the Y220C\_PK11000 and the Y220C\_Rezatapopt which behave nearly identically and make about \num{4.5} hydrogen bonds per frame, and the Y220C p53 makes the fewest specific hydrogen bonds per frame, around \num{4}. The number of sugar-interacting hydrogen bonds tells a similar story, the WT, Y220C\_PK11000, and Y220C\_Rezatapopt make about \num{1.25} hydrogen bonds per frame and the Y220C makes fewer, only around \num{1} bonds per frame.
+
+As for the specificity of the hydrogen bonds, we can see the Y220C p53 makes slightly more interactions with the DNA than the WT, Y220C\_PK11000, or Y220C\_Rezatapopt, close to \num{450} rather than \num{300}. The difference is clearer to see when we simplify our analysis to residue-nucleotide interactions, where the Y220C clearly makes more bonds than the WT or the drug-bound mutant proteins. When we apply the \qty{10}{\percent} cutoff, we see that the WT makes the most interactions, around \num{22.5}, whereas the mutant and drug-bound mutants make close to \num{15} interactions per frame.
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_CTD_subset_Rezatapopt_HBond_vs_Time.png}
-\caption[p53|\textsubscript{CTD} HBonding vs Time]{Hydrogen bond metrics vs time, for the p53 FL|\textsubscript{CTD} across different the WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. TRT, EHBS, Res-Nuc EHBS, and EHBS with a \qty{10}{\percent} cutoff is shown.}
-\label{fig:rezatapopt-ctd-subset-hbond}
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_DBD_vs_CTD_subset_Rezatapopt_HBond_vs_Time.png}
+\caption[p53\textbar\textsubscript{DBD} HBonding vs p53\textbar\textsubscript{CTD}]{Hydrogen bond metrics vs time, compared between the p53\textbar\textsubscript{DBD} and the p53\textbar\textsubscript{CTD}, across the different WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt systems. TRT, EHBS, Res-Nuc EHBS, and EHBS with a \qty{10}{\percent} cutoff is shown.}
+\label{fig:rezatapopt-ctd-dbd-subset-hbond}
 \end{figure}
+
+Seeing the large difference in behavior between the simulated FL p53 and p53 DBD, with the FL Y220C\_Rezatapopt making many more interactions compared to the DBD Y220C\_Rezatapopt, we wondered if this was attributable to interactions outside the DNA binding domain. Using the FL p53, we repeated a subset of our analyses but restricting them to either the FL\textbar\textsubscript{DBD} or the FL\textbar\textsubscript{CTD}, and the results are summarized in \figurepageref{fig:rezatapopt-ctd-dbd-subset-hbond}.
+
+Within the FL\textbar\textsubscript{DBD}, the TRT among all four systems is nearly identical, at about \num{5} hydrogen bonds per frame. Within the FL\textbar\textsubscript{CTD} is where we see the difference, WT and Y220C\_PK11000 making about \num{10} bonds per frame, Y220C making slightly more than \num{8} and Y220C\_Rezatapopt making slightly less.
+
+The FL\textbar\textsubscript{DBD} Y220C\_Rezatapopt makes slightly more unique hydrogen bonds compared to the WT, Y220C, and Y220C\_PK11000, but again, a greater separation comes in the FL\textbar\textsubscript{CTD}, where the WT makes the fewest, the Y220C and Y220C\_PK11000 make slightly more than the WT, and the Y220C\_Rezatapopt makes far more than the rest. The same goes for the residue-nucleotide EHBS.
+
+In the EHBS with a \qty{10}{\percent} cutoff, we see that the FL\textbar\textsubscript{DBD} Y220C\_Rezatapopt makes slightly fewer interactions than the other systems. In the FL\textbar\textsubscript{CTD}, we again see that the WT and Y220C\_PK11000 behave very similarly, making approximately \num{25} strong interactions, then the Y220C makes \num{15}, and the Y220C\_Rezatapopt makes only \num{10}.
 
 \begin{figure}
 \centering
@@ -118,12 +175,30 @@ Our previous efforts in the lab have sought to characterize the restorative capa
 \label{fig:rezatapopt-fl-pca}
 \end{figure}
 
+Finally, we sought to understand precisely how the simulations differed from one another. To do this, we wanted to identify specific hydrogen bonds or interactions that differ greatly between systems across the full-length p53 or p53 DBD simulations. Collecting all hydrogen bonds made during the simulation, then, for each frame, assigning each hydrogen bond a value of \num{1} or \num{0} depending on if it is present, we were able to treat the status of the hydrogen bonding between p53 and the DNA for each frame as a vector that lives in some high dimensional space. From there we can perform a principal component analysis, in which we decompose our high dimensional vector space to a lower dimensional vector space, in our case, two dimensions. This effectively creates a plane of best fit through our high dimensional data, and then projects each vector representing a single frame's worth of hydrogen bonding onto that plane. \figurepageref{fig:rezatapopt-fl-pca} shows the resulting decomposition for the full-length p53.
+
+We computed the decomposition under three lenses: the residue-nucleotide level, the residue level, and the nucleotide level. For each lens, we plot principal component \num{1} (PC1) against principal component \num{2} (PC2). The marginal distributions for each principal component are shown above the plot. Additionally, we isolated the \num{10} features corresponding to the \num{10} interactions that were assigned at the greatest weight according to principal component \num{1}, which is the direction in which the data varies the most. Essentially, this identifies the most important interactions that differ between systems.
+
+Looking at the scatter plot of the residue-nucleotide level decomposition, we can see that broadly the WT and the Y220C form one cluster and the two drug bound mutant systems form another cluster. When we look at the greatest contributors to PC1, we see that these are primarily interactions made between the Rezatapopt-bound structure and the DNA. The PK11000-bound mutant shares some of these interactions, but neither the wild type nor the mutant protein engage in these interactions.
+
+When we look at the residue-level decomposition, we see that there is no residue that interacts with the DNA significantly for only one or two of our simulations. Rather, there are residues such as serine \num{371} for which in all three mutant systems, it interacts significantly with the DNA but not in the WT simulation, and arginine \num{333} for which strong interactions exist between it and the DNA in the WT and drug-bound mutants but not Y220C.
+
+Whereas there was a little distinction between clusters in the residue-level decomposition, in the nucleotide-level decomposition, we do see a strong separation of frames in PC1. The greatest contributors to PC1 are nucleotides for which there are strong interactions in the Y220C\_PK11000 and Y220C\_Rezatapopt simulations but not in the WT or Y220C, such as Gua408, Gua435, Ade420, Cyt431, and Thy430.
+
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_HBond_PCA_Decimposition.png}
 \caption[DBD p53 HBonding PCA]{PCA decomposition of the full length p53 DBD-hydrogen bonds under three lenses: residue-nucleotide level, residue-level, and nucleotide-level. For each decomposition, principal component \num{1} is plotted against principal component \num{2} for each frame, with marginal distributions of each principal component above its axis. Additionally, the \num{10} interactions that contribute the most highly to principal component \num{1} are plotted as a bar graph.}
 \label{fig:rezatapopt-dbd-pca}
 \end{figure}
+
+\figurepageref{fig:rezatapopt-dbd-pca} shows a similar decomposition of hydrogen bonding values as Figure \ref{fig:rezatapopt-fl-pca}. The PCA decomposition scatter plots have a clear structure to them; this is likely due to relatively small space of hydrogen bonds being made in the DNA binding domain subset of p53, especially compared to that of the FL p53.
+
+The residue-nucleotide level decomposition of the hydrogen bonds pulls out many interactions that are unique to the Y220C\_PK11000 simulation, but looking at the marginal distribution of PC1, we can see that the Y220C\_Rezatapopt is at least as different from the WT and Y220C as the Y220C\_PK11000 is, so there are likely several unique interactions being made by the Y220C\_Rezatapopt p53 that are not shown.
+
+The scatter plot in the residue-level decomposition would appear to indicate that the Y220C p53 is very different from the rest of the simulations, but looking at the marginal distributions of PC1 and PC2, we can see that the clusters of frames have a very low density compared to the the larger cluster, which is mostly obscured by the Y220C\_PK11000 points. This decomposition does identify several residues that interact with the DNA in the WT simulations and rarely in others, such as R249, N288, Q165, K132, and S240.
+
+Finally, in the nucleotide-level decomposition, we see that according to PC1, the WT and Y220C p53 clusters apart from the Y220C\_PK11000 and Y220C\_Rezatapopt. Several notable nucleotide interactions are identified: Thy326, which interacts basically only in the Y220C\_PK11000, Thy317, which interacts much more with the WT and Y220C p53 rather than the Y220C\_PK11000 and Y220C\_Rezatapopt p53, and Thy303 and Gua304, which both only interact with the Y220C\_PK11000 and Y220C\_Rezatapopt p53, rather than the WT or Y220C.
 
 \section{Discussion}
 
