@@ -584,7 +584,193 @@
       \field{pages}{3878\bibrangedash 3888}
       \range{pages}{11}
     \endentry
-    \entry{monod1971chance}{article}{}
+    \entry{ponomarevIonMotionsMolecular2004}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7abdb2419b83fa0ae3e970393406bd9e}{%
+           family={Ponomarev},
+           familyi={P\bibinitperiod},
+           given={Sergei\bibnamedelima Y.},
+           giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+           family={Thayer},
+           familyi={T\bibinitperiod},
+           given={Kelly\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=97064b4b87668c90a3a05f5f177bae83}{%
+           family={Beveridge},
+           familyi={B\bibinitperiod},
+           given={David\bibnamedelima L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Proceedings of the National Academy of Sciences}%
+      }
+      \strng{namehash}{f68f92c2c89c6d5aa2688732003de180}
+      \strng{fullhash}{f68f92c2c89c6d5aa2688732003de180}
+      \strng{bibnamehash}{f68f92c2c89c6d5aa2688732003de180}
+      \strng{authorbibnamehash}{f68f92c2c89c6d5aa2688732003de180}
+      \strng{authornamehash}{f68f92c2c89c6d5aa2688732003de180}
+      \strng{authorfullhash}{f68f92c2c89c6d5aa2688732003de180}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Counterions play a significant role in DNA structure and function, and molecular dynamics (MD) simulations offer the prospect of detailed description of the dynamical structure of ions at the molecular level. However, the motions of mobile counterions are notably slow to converge in MD on DNA. Obtaining accurate and reliable MD simulations requires knowing just how much sampling is required for convergence of each of the properties of interest. To address this issue, MD on a d(CGCGAATTCGCG) duplex in a dilute aqueous solution of water and 22 Na+ counterions was performed until convergence was achieved. The calculated first shell ion occupancies and DNA–Na+ radial distribution functions were computed as a function of time to assess convergence, and compared with relaxation times of the DNA internal parameters shift, slide, rise, tilt, roll, and twist. The sequence dependence of fractional occupancies of ions in the major and minor grooves of the DNA is examined, and the possibility of correlation between ion proximity and DNA minor groove widths is investigated.}
+      \field{day}{12}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{10}
+      \field{number}{41}
+      \field{title}{Ion Motions in Molecular Dynamics Simulations on {{DNA}}}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{101}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{14771\bibrangedash 14775}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1073/pnas.0406435101
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/WPF6HCN2/Ponomarev et al. - 2004 - Ion motions in molecular dynamics simulations on DNA.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pnas.org/doi/10.1073/pnas.0406435101
+      \endverb
+      \verb{url}
+      \verb https://www.pnas.org/doi/10.1073/pnas.0406435101
+      \endverb
+    \endentry
+    \entry{muntauInnovativeStrategiesTreat2014}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=0a671388b344c5195293058b5357d6a2}{%
+           family={Muntau},
+           familyi={M\bibinitperiod},
+           given={Ania\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecd9027fdf89b95f5b0f63ff514ba003}{%
+           family={Leandro},
+           familyi={L\bibinitperiod},
+           given={João},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d9ea230eef436a92fd515fd83de807f}{%
+           family={Staudigl},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=81ee685a4fc72ddef2827717b36b0f8a}{%
+           family={Mayer},
+           familyi={M\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=491d4cc60a69a290159470d097b3c591}{%
+           family={Gersting},
+           familyi={G\bibinitperiod},
+           given={Søren\bibnamedelima W.},
+           giveni={S\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f87648c26453acc6abd0b2e3ac473423}
+      \strng{fullhash}{10df88bd6ccea39e8e25e54b41737c05}
+      \strng{bibnamehash}{f87648c26453acc6abd0b2e3ac473423}
+      \strng{authorbibnamehash}{f87648c26453acc6abd0b2e3ac473423}
+      \strng{authornamehash}{f87648c26453acc6abd0b2e3ac473423}
+      \strng{authorfullhash}{10df88bd6ccea39e8e25e54b41737c05}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{To attain functionality, proteins must fold into their three-dimensional native state. The intracellular balance between protein synthesis, folding, and degradation is constantly challenged by genetic or environmental stress factors. In the last ten years, protein misfolding induced by missense mutations was demonstrated to be the seminal molecular mechanism in a constantly growing number of inborn errors of metabolism. In these cases, loss of protein function results from early degradation of missense-induced misfolded proteins. Increasing knowledge on the proteostasis network and the protein quality control system with distinct mechanisms in different compartments of the cell paved the way for the development of new treatment strategies for conformational diseases using small molecules. These comprise proteostasis regulators that enhance the capacity of the proteostasis network and pharmacological chaperones that specifically bind and rescue misfolded proteins by conformational stabilization. They can be used either alone or in combination, the latter to exploit synergistic effects. Many of these small molecule compounds currently undergo preclinical and clinical pharmaceutical development and two have been approved: saproterin dihydrochloride for the treatment of phenylketonuria and tafamidis for the treatment of transthyretin-related hereditary amyloidosis. Different technologies are exploited for the discovery of new small molecule compounds that belong to the still young class of pharmaceutical products discussed here. These compounds may in the near future improve existing treatment strategies or even offer a first-time treatment to patients suffering from nowadays-untreatable inborn errors of metabolism.}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1573-2665}
+      \field{journaltitle}{Journal of Inherited Metabolic Disease}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{4}
+      \field{shortjournal}{J Inherit Metab Dis}
+      \field{shorttitle}{Innovative Strategies to Treat Protein Misfolding in Inborn Errors of Metabolism}
+      \field{title}{Innovative Strategies to Treat Protein Misfolding in Inborn Errors of Metabolism: Pharmacological Chaperones and Proteostasis Regulators}
+      \field{volume}{37}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{505\bibrangedash 523}
+      \range{pages}{19}
+      \verb{doi}
+      \verb 10.1007/s10545-014-9701-z
+      \endverb
+      \verb{eprint}
+      \verb 24687294
+      \endverb
+      \keyw{Animals,Drug Delivery Systems,Endoplasmic Reticulum-Associated Degradation,Humans,Kinetics,Metabolism Inborn Errors,Molecular Chaperones,Protein Folding,Proteins,Proteostasis Deficiencies}
+    \endentry
+    \entry{onuchicTheoryProteinFolding1997}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4f7355917a3bf455ec5e19950d07917c}{%
+           family={Onuchic},
+           familyi={O\bibinitperiod},
+           given={J.\bibnamedelimi N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d81cafcfd8c45baaa51de8e3475ea84a}{%
+           family={Luthey-Schulten},
+           familyi={L\bibinithyphendelim S\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b4a5a3c8031e46062674711cc251693d}{%
+           family={Wolynes},
+           familyi={W\bibinitperiod},
+           given={P.\bibnamedelimi G.},
+           giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7078529b7fb5666abbb1db43cb2662ab}
+      \strng{fullhash}{7078529b7fb5666abbb1db43cb2662ab}
+      \strng{bibnamehash}{7078529b7fb5666abbb1db43cb2662ab}
+      \strng{authorbibnamehash}{7078529b7fb5666abbb1db43cb2662ab}
+      \strng{authornamehash}{7078529b7fb5666abbb1db43cb2662ab}
+      \strng{authorfullhash}{7078529b7fb5666abbb1db43cb2662ab}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The energy landscape theory of protein folding is a statistical description of a protein's potential surface. It assumes that folding occurs through organizing an ensemble of structures rather than through only a few uniquely defined structural intermediates. It suggests that the most realistic model of a protein is a minimally frustrated heteropolymer with a rugged funnel-like landscape biased toward the native structure. This statistical description has been developed using tools from the statistical mechanics of disordered systems, polymers, and phase transitions of finite systems. We review here its analytical background and contrast the phenomena in homopolymers, random heteropolymers, and protein-like heteropolymers that are kinetically and thermodynamically capable of folding. The connection between these statistical concepts and the results of minimalist models used in computer simulations is discussed. The review concludes with a brief discussion of how the theory helps in the interpretation of results from fast folding experiments and in the practical task of protein structure prediction.}
+      \field{eprinttype}{pubmed}
+      \field{issn}{0066-426X}
+      \field{journaltitle}{Annual Review of Physical Chemistry}
+      \field{langid}{english}
+      \field{shortjournal}{Annu Rev Phys Chem}
+      \field{shorttitle}{Theory of Protein Folding}
+      \field{title}{Theory of Protein Folding: The Energy Landscape Perspective}
+      \field{volume}{48}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{pages}{545\bibrangedash 600}
+      \range{pages}{56}
+      \verb{doi}
+      \verb 10.1146/annurev.physchem.48.1.545
+      \endverb
+      \verb{eprint}
+      \verb 9348663
+      \endverb
+      \keyw{Amino Acid Sequence,Computer Simulation,Models Molecular,Molecular Sequence Data,Polymers,Protein Folding,Sequence Homology Amino Acid,Thermodynamics}
+    \endentry
+    \entry{monod1971chance}{book}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=3541aa420a52430a00f443172f924c5e}{%
            family={Monod},
@@ -592,6 +778,9 @@
            given={Jacques},
            giveni={J\bibinitperiod},
            givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Knopf}%
       }
       \strng{namehash}{3541aa420a52430a00f443172f924c5e}
       \strng{fullhash}{3541aa420a52430a00f443172f924c5e}
@@ -605,8 +794,17 @@
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Chance and necessity}
+      \field{isbn}{978-0-394-46615-6}
+      \field{series}{A {{Borzoi}} Book}
+      \field{title}{Chance and Necessity: {{An}} Essay on the Natural Philosophy of Modern Biology}
       \field{year}{1971}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=CAcUAQAAIAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=CAcUAQAAIAAJ
+      \endverb
     \endentry
     \entry{fenton2008allostery}{article}{}
       \name{author}{1}{}{%
@@ -626,8 +824,8 @@
       \strng{authorbibnamehash}{d9f72c9f0fef915f1c35766923b9619d}
       \strng{authornamehash}{d9f72c9f0fef915f1c35766923b9619d}
       \strng{authorfullhash}{d9f72c9f0fef915f1c35766923b9619d}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -655,8 +853,8 @@
       \strng{authorbibnamehash}{d9acd35e7aa62ffb7a2caf4bbf370839}
       \strng{authornamehash}{d9acd35e7aa62ffb7a2caf4bbf370839}
       \strng{authorfullhash}{d9acd35e7aa62ffb7a2caf4bbf370839}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -708,8 +906,8 @@
       \strng{authorbibnamehash}{04e8418e140d0dfced82f0c2ff6cddb7}
       \strng{authornamehash}{04e8418e140d0dfced82f0c2ff6cddb7}
       \strng{authorfullhash}{04e8418e140d0dfced82f0c2ff6cddb7}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -783,8 +981,8 @@
       \strng{authorbibnamehash}{5daafa7a4a633b4a916d0c1b41f1f677}
       \strng{authornamehash}{5daafa7a4a633b4a916d0c1b41f1f677}
       \strng{authorfullhash}{070c9ed4a4863523bc5860e0840f6f0e}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -846,8 +1044,8 @@
       \strng{authorbibnamehash}{cb97dfd18ef1c94f1357addf7412ea0d}
       \strng{authornamehash}{cb97dfd18ef1c94f1357addf7412ea0d}
       \strng{authorfullhash}{cb97dfd18ef1c94f1357addf7412ea0d}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -902,8 +1100,8 @@
       \strng{authorbibnamehash}{037431b2f0de371758c3485c24fe3c2a}
       \strng{authornamehash}{037431b2f0de371758c3485c24fe3c2a}
       \strng{authorfullhash}{037431b2f0de371758c3485c24fe3c2a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -972,8 +1170,8 @@
       \strng{authorbibnamehash}{5480892e6545a25e7d45ee48c363c52b}
       \strng{authornamehash}{5480892e6545a25e7d45ee48c363c52b}
       \strng{authorfullhash}{0a4279a4c5f32228ea8be0ea5b63e53c}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -1739,18 +1937,58 @@
       \keyw{allosteric transition,allostery,conformational ensembles,drug discovery,energy landscape,function,population redistribution}
     \endentry
     \entry{sevenbridges}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=46cf91ac94d484ee63378db3bec63781}{%
+           family={Twotwos},
+           familyi={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Wikipedia}%
+      }
+      \strng{namehash}{46cf91ac94d484ee63378db3bec63781}
+      \strng{fullhash}{46cf91ac94d484ee63378db3bec63781}
+      \strng{bibnamehash}{46cf91ac94d484ee63378db3bec63781}
+      \strng{authorbibnamehash}{46cf91ac94d484ee63378db3bec63781}
+      \strng{authornamehash}{46cf91ac94d484ee63378db3bec63781}
+      \strng{authorfullhash}{46cf91ac94d484ee63378db3bec63781}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labeldatesource}{nodate}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{day}{17}
+      \field{month}{9}
       \field{title}{Bridges of Konigsberg}
+      \field{year}{2025}
+      \field{dateera}{ce}
       \verb{urlraw}
       \verb https://commons.wikimedia.org/wiki/File:Bridges_of_Konigsberg.png
       \endverb
       \verb{url}
       \verb https://commons.wikimedia.org/wiki/File:Bridges_of_Konigsberg.png
       \endverb
-      \warn{\item online entry 'sevenbridges' (references.bib): Invalid format '2025-9-17' of date field 'date' - ignoring}
+    \endentry
+    \entry{GirlsTalkMath}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{url}
+      \field{labeltitlesource}{title}
+      \field{title}{Girls {{Talk Math Camp}} — {{Promoting}} Girls in Math}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/AVJN45XT/graph2024.html
+      \endverb
+      \verb{urlraw}
+      \verb http://gtm.math.umd.edu/blogs_2024/graph2024.html
+      \endverb
+      \verb{url}
+      \verb http://gtm.math.umd.edu/blogs_2024/graph2024.html
+      \endverb
     \endentry
     \entry{axioms4030275}{article}{}
       \name{author}{2}{}{%
@@ -1773,8 +2011,8 @@
       \strng{authorbibnamehash}{312fe9187771d383316b1bbd66fc8b9c}
       \strng{authornamehash}{312fe9187771d383316b1bbd66fc8b9c}
       \strng{authorfullhash}{312fe9187771d383316b1bbd66fc8b9c}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -1817,8 +2055,8 @@
       \strng{authornamehash}{e930dac227dbad7915f48def5609208e}
       \strng{authorfullhash}{e930dac227dbad7915f48def5609208e}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -1847,8 +2085,8 @@
       \strng{authornamehash}{e930dac227dbad7915f48def5609208e}
       \strng{authorfullhash}{e930dac227dbad7915f48def5609208e}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -1879,8 +2117,8 @@
       \strng{authorbibnamehash}{83f2a307f9d59ad123015febe220870d}
       \strng{authornamehash}{83f2a307f9d59ad123015febe220870d}
       \strng{authorfullhash}{83f2a307f9d59ad123015febe220870d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -1927,8 +2165,8 @@
       \strng{authorbibnamehash}{75f5ae4906e8dbda19bcd6c4fbd0b5ee}
       \strng{authornamehash}{75f5ae4906e8dbda19bcd6c4fbd0b5ee}
       \strng{authorfullhash}{75f5ae4906e8dbda19bcd6c4fbd0b5ee}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -1978,8 +2216,8 @@
       \strng{authorbibnamehash}{63fb96f3de560154d62d6808cfdeab0c}
       \strng{authornamehash}{63fb96f3de560154d62d6808cfdeab0c}
       \strng{authorfullhash}{63fb96f3de560154d62d6808cfdeab0c}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2039,8 +2277,8 @@
       \strng{authorbibnamehash}{5426dc5d1cada9fded74177c4f50ed97}
       \strng{authornamehash}{5426dc5d1cada9fded74177c4f50ed97}
       \strng{authorfullhash}{d6611e1d1e71f0eb1e5e3f3e2b9123c1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2093,8 +2331,8 @@
       \strng{authorbibnamehash}{8a580ae4d6ba67449b8cbe3724cb417d}
       \strng{authornamehash}{8a580ae4d6ba67449b8cbe3724cb417d}
       \strng{authorfullhash}{8a580ae4d6ba67449b8cbe3724cb417d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2400,24 +2638,24 @@
     \endentry
     \entry{jeffrey1995crystal}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=dfd0fbcb19840866513488887087b8a2}{%
+        {{un=2,uniquepart=given,hash=dfd0fbcb19840866513488887087b8a2}{%
            family={Jeffrey},
            familyi={J\bibinitperiod},
            given={Philip\bibnamedelima D},
            giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
+           givenun=2}}%
         {{un=0,uniquepart=base,hash=4dbc19363c6c31618c9d249c6f903a04}{%
            family={Gorina},
            familyi={G\bibinitperiod},
            given={Svetlana},
            giveni={S\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=366f0d88c6b522686220eea288707911}{%
+        {{un=2,uniquepart=given,hash=366f0d88c6b522686220eea288707911}{%
            family={Pavletich},
            familyi={P\bibinitperiod},
            given={Nikola\bibnamedelima P},
            giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
+           givenun=2}}%
       }
       \list{publisher}{1}{%
         {American Association for the Advancement of Science}%
@@ -2428,8 +2666,10 @@
       \strng{authorbibnamehash}{7f45e472965c624a44929559cee29a97}
       \strng{authornamehash}{7f45e472965c624a44929559cee29a97}
       \strng{authorfullhash}{7f45e472965c624a44929559cee29a97}
+      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2520,8 +2760,8 @@
       \strng{authorbibnamehash}{c7919eef836648bc4298c02b6693cee3}
       \strng{authornamehash}{c7919eef836648bc4298c02b6693cee3}
       \strng{authorfullhash}{c7919eef836648bc4298c02b6693cee3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2630,8 +2870,8 @@
       \strng{authorbibnamehash}{93748c9b759859426999b14c78188bbe}
       \strng{authornamehash}{93748c9b759859426999b14c78188bbe}
       \strng{authorfullhash}{612fb3d39d8b222024d41e9219cf55e3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2687,8 +2927,8 @@
       \strng{authorbibnamehash}{a70d0f91de99389ba22cec5c3cdf6325}
       \strng{authornamehash}{a70d0f91de99389ba22cec5c3cdf6325}
       \strng{authorfullhash}{a70d0f91de99389ba22cec5c3cdf6325}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2751,8 +2991,8 @@
       \strng{authorbibnamehash}{2a10ffc2a5ef943064dbd30cc96a4a61}
       \strng{authornamehash}{2a10ffc2a5ef943064dbd30cc96a4a61}
       \strng{authorfullhash}{2a10ffc2a5ef943064dbd30cc96a4a61}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2833,8 +3073,8 @@
       \strng{authorbibnamehash}{b5f0dfa73d9bada90e8383bd3b7096c8}
       \strng{authornamehash}{b5f0dfa73d9bada90e8383bd3b7096c8}
       \strng{authorfullhash}{ae86b4fd3bb4aaef0c9beeca2f3163bc}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2889,8 +3129,8 @@
       \strng{authorbibnamehash}{2b47ab75af625f5327b58a96a8ccf176}
       \strng{authornamehash}{2b47ab75af625f5327b58a96a8ccf176}
       \strng{authorfullhash}{49a542d263ca59d3dc48ac11e3618b88}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -2951,8 +3191,8 @@
       \strng{authorbibnamehash}{748c27018e35e930f1000d807f54aa98}
       \strng{authornamehash}{748c27018e35e930f1000d807f54aa98}
       \strng{authorfullhash}{90c34d232a0f18d80e5495588a4df58b}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3001,8 +3241,8 @@
       \strng{authorbibnamehash}{5cb8fe442ca38c07e0bc132724584f46}
       \strng{authornamehash}{5cb8fe442ca38c07e0bc132724584f46}
       \strng{authorfullhash}{94aebdc23c593f23ef4542e7b4143df1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3036,8 +3276,8 @@
       \strng{authorbibnamehash}{b56c1ec1eee071e84d4ed372cd2fee20}
       \strng{authornamehash}{b56c1ec1eee071e84d4ed372cd2fee20}
       \strng{authorfullhash}{b56c1ec1eee071e84d4ed372cd2fee20}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3111,8 +3351,8 @@
       \strng{authorbibnamehash}{7add867d0891d01b6235e81944d11a78}
       \strng{authornamehash}{7add867d0891d01b6235e81944d11a78}
       \strng{authorfullhash}{3b07258a3d0be9c32e4df9cfa3d22196}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3440,6 +3680,64 @@
       \field{pages}{15335\bibrangedash 15340}
       \range{pages}{6}
     \endentry
+    \entry{zhangMultifunctionalProlinerichDomain2025}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=289900238fadd23bffd12a3b9cce2024}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yuesheng},
+           giveni={Y\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=3bf39f5053cd8daf3bb1617774317d86}{%
+           family={Dutta},
+           familyi={D\bibinitperiod},
+           given={Madhuri},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fe0e868270c886c52ac83576f4870e10}
+      \strng{fullhash}{fe0e868270c886c52ac83576f4870e10}
+      \strng{bibnamehash}{fe0e868270c886c52ac83576f4870e10}
+      \strng{authorbibnamehash}{fe0e868270c886c52ac83576f4870e10}
+      \strng{authornamehash}{fe0e868270c886c52ac83576f4870e10}
+      \strng{authorfullhash}{fe0e868270c886c52ac83576f4870e10}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The p53 tumor suppressor is a multi-domain protein. The proline-rich domain (PRD) resides next to the transactivation domains at the N-terminus and before the DNA binding domain. The PRD has been studied extensively for nearly three decades and has been shown to be a key component for the tumor suppressor functions of p53. However, study findings have not been analyzed systematically. Herein, we undertake a comprehensive review of the studies which examined the roles of the PRD in the biological functions, stability, and protein-protein interactions of p53. While p53 is one of the most frequently mutated cellular proteins in human cancer, mutation in its PRD is uncommon, which will be discussed. The importance of the PRD in regulation of mutant p53 has also been investigated and will be reviewed as well. In addition, one of the amino acids in the PRD in human p53 is polymorphic. Information about the polymorphism and its impact on p53 function and association with disease outcomes will also be reviewed. Collectively, studies to date demonstrate that the PRD is a multifunctional domain critical for a variety of p53 functions as well as p53 stability, and that the PRD polymorphism is a potential biomarker of cancer risk and cancer outcome. Its involvement in regulation of both wild-type and mutant p53 offers opportunities for potential development of novel cancer therapeutic strategies.}
+      \field{day}{1}
+      \field{issn}{0304-419X}
+      \field{journaltitle}{Biochimica et Biophysica Acta (BBA) - Reviews on Cancer}
+      \field{month}{7}
+      \field{number}{3}
+      \field{shortjournal}{Biochimica et Biophysica Acta (BBA) - Reviews on Cancer}
+      \field{title}{The Multifunctional Proline-Rich Domain of P53 Tumor Suppressor}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{volume}{1880}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{189326}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.bbcan.2025.189326
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/UMS3DFSK/Zhang and Dutta - 2025 - The multifunctional proline-rich domain of p53 tumor suppressor.pdf;/Users/Sean/Zotero/storage/XCPIAJCH/S0304419X2500068X.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304419X2500068X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304419X2500068X
+      \endverb
+      \keyw{Gene polymorphism,p53,Proline-rich domain,Transcription-independent regulation,Transcriptional regulation,Tumor suppressor}
+    \endentry
     \entry{he2019interaction}{article}{}
       \name{author}{8}{}{%
         {{un=0,uniquepart=base,hash=da10f79913dfac250b8dff48367690bd}{%
@@ -3588,8 +3886,8 @@
       \strng{authorbibnamehash}{4307e93c9e3dad8b6c91d3bda7fb5522}
       \strng{authornamehash}{4307e93c9e3dad8b6c91d3bda7fb5522}
       \strng{authorfullhash}{1b5e9a736189d40d45551362009c682d}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3632,8 +3930,8 @@
       \strng{authorbibnamehash}{757a2c77fbdbfe2ffce11c4c8b10cc69}
       \strng{authornamehash}{757a2c77fbdbfe2ffce11c4c8b10cc69}
       \strng{authorfullhash}{757a2c77fbdbfe2ffce11c4c8b10cc69}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3682,8 +3980,8 @@
       \strng{authorbibnamehash}{79b07d8eb7de6f9c73766977bc3e0a98}
       \strng{authornamehash}{79b07d8eb7de6f9c73766977bc3e0a98}
       \strng{authorfullhash}{9f648cba318fb045bc4d31ffeecf1a5b}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3744,8 +4042,8 @@
       \strng{authorbibnamehash}{9f2f5ff66fd639922aede6c39f0d4f25}
       \strng{authornamehash}{9f2f5ff66fd639922aede6c39f0d4f25}
       \strng{authorfullhash}{f9c52501022afe8355fbec225919b7b3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3832,8 +4130,8 @@
       \strng{authorbibnamehash}{66b585be2e4119140d57cbc963ccacd4}
       \strng{authornamehash}{66b585be2e4119140d57cbc963ccacd4}
       \strng{authorfullhash}{53cd8dd97e43427a181f8667295f7093}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3912,8 +4210,8 @@
       \strng{authorbibnamehash}{4dba4b778677469d41a38bdf883c16b0}
       \strng{authornamehash}{4dba4b778677469d41a38bdf883c16b0}
       \strng{authorfullhash}{0b4aafe39688467434092df99df6825e}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -3984,12 +4282,12 @@
            given={Paul},
            giveni={P\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=e20b6fceb410a42e1abe17804a826487}{%
+        {{un=1,uniquepart=given,hash=e20b6fceb410a42e1abe17804a826487}{%
            family={Lu},
            familyi={L\bibinitperiod},
            given={Xin},
            giveni={X\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{publisher}{1}{%
         {Nature Publishing Group}%
@@ -4000,8 +4298,8 @@
       \strng{authorbibnamehash}{2d1df02fb2826c92d3de2902465acae8}
       \strng{authornamehash}{2d1df02fb2826c92d3de2902465acae8}
       \strng{authorfullhash}{8d6faa779d5bed884c8ba21e941878d6}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4058,8 +4356,8 @@
       \strng{authorbibnamehash}{d1bc014793efa691625096d59ea6baca}
       \strng{authornamehash}{d1bc014793efa691625096d59ea6baca}
       \strng{authorfullhash}{59c503c47b4e5f45dcb63037d745bfb0}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4071,64 +4369,6 @@
       \field{year}{2003}
       \field{pages}{357\bibrangedash 365}
       \range{pages}{9}
-    \endentry
-    \entry{zhangMultifunctionalProlinerichDomain2025}{article}{}
-      \name{author}{2}{}{%
-        {{un=1,uniquepart=given,hash=289900238fadd23bffd12a3b9cce2024}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Yuesheng},
-           giveni={Y\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=3bf39f5053cd8daf3bb1617774317d86}{%
-           family={Dutta},
-           familyi={D\bibinitperiod},
-           given={Madhuri},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{fe0e868270c886c52ac83576f4870e10}
-      \strng{fullhash}{fe0e868270c886c52ac83576f4870e10}
-      \strng{bibnamehash}{fe0e868270c886c52ac83576f4870e10}
-      \strng{authorbibnamehash}{fe0e868270c886c52ac83576f4870e10}
-      \strng{authornamehash}{fe0e868270c886c52ac83576f4870e10}
-      \strng{authorfullhash}{fe0e868270c886c52ac83576f4870e10}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The p53 tumor suppressor is a multi-domain protein. The proline-rich domain (PRD) resides next to the transactivation domains at the N-terminus and before the DNA binding domain. The PRD has been studied extensively for nearly three decades and has been shown to be a key component for the tumor suppressor functions of p53. However, study findings have not been analyzed systematically. Herein, we undertake a comprehensive review of the studies which examined the roles of the PRD in the biological functions, stability, and protein-protein interactions of p53. While p53 is one of the most frequently mutated cellular proteins in human cancer, mutation in its PRD is uncommon, which will be discussed. The importance of the PRD in regulation of mutant p53 has also been investigated and will be reviewed as well. In addition, one of the amino acids in the PRD in human p53 is polymorphic. Information about the polymorphism and its impact on p53 function and association with disease outcomes will also be reviewed. Collectively, studies to date demonstrate that the PRD is a multifunctional domain critical for a variety of p53 functions as well as p53 stability, and that the PRD polymorphism is a potential biomarker of cancer risk and cancer outcome. Its involvement in regulation of both wild-type and mutant p53 offers opportunities for potential development of novel cancer therapeutic strategies.}
-      \field{day}{1}
-      \field{issn}{0304-419X}
-      \field{journaltitle}{Biochimica et Biophysica Acta (BBA) - Reviews on Cancer}
-      \field{month}{7}
-      \field{number}{3}
-      \field{shortjournal}{Biochimica et Biophysica Acta (BBA) - Reviews on Cancer}
-      \field{title}{The Multifunctional Proline-Rich Domain of P53 Tumor Suppressor}
-      \field{urlday}{24}
-      \field{urlmonth}{3}
-      \field{urlyear}{2026}
-      \field{volume}{1880}
-      \field{year}{2025}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{189326}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1016/j.bbcan.2025.189326
-      \endverb
-      \verb{file}
-      \verb /Users/Sean/Zotero/storage/UMS3DFSK/Zhang and Dutta - 2025 - The multifunctional proline-rich domain of p53 tumor suppressor.pdf;/Users/Sean/Zotero/storage/XCPIAJCH/S0304419X2500068X.html
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S0304419X2500068X
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S0304419X2500068X
-      \endverb
-      \keyw{Gene polymorphism,p53,Proline-rich domain,Transcription-independent regulation,Transcriptional regulation,Tumor suppressor}
     \endentry
     \entry{liP53TransportedNucleus2011}{article}{}
       \name{author}{2}{}{%
@@ -4151,8 +4391,8 @@
       \strng{authorbibnamehash}{c7f06b669f37c0ed952d3d3b4b2f3655}
       \strng{authornamehash}{c7f06b669f37c0ed952d3d3b4b2f3655}
       \strng{authorfullhash}{c7f06b669f37c0ed952d3d3b4b2f3655}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4220,8 +4460,8 @@
       \strng{authorbibnamehash}{e67a5448ba33bf2cd654b76f32cd4545}
       \strng{authornamehash}{e67a5448ba33bf2cd654b76f32cd4545}
       \strng{authorfullhash}{e67a5448ba33bf2cd654b76f32cd4545}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4270,8 +4510,8 @@
       \strng{authorbibnamehash}{a6266184703a10ca816db09bb09316e1}
       \strng{authornamehash}{a6266184703a10ca816db09bb09316e1}
       \strng{authorfullhash}{003d6bbf81e1d23ae6f4a5be923f6da7}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4326,8 +4566,8 @@
       \strng{authorbibnamehash}{ecabd23ea4da07c9070ffd086aaa8c0b}
       \strng{authornamehash}{ecabd23ea4da07c9070ffd086aaa8c0b}
       \strng{authorfullhash}{eff3f7afd35d67180f30d96ce88be3cc}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4388,8 +4628,8 @@
       \strng{authorbibnamehash}{17a743cad16b72d87bdb840684b7c0db}
       \strng{authornamehash}{17a743cad16b72d87bdb840684b7c0db}
       \strng{authorfullhash}{ac9754cd48279c591fe6b4200b0bd464}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4451,8 +4691,8 @@
       \strng{authorbibnamehash}{220c820b90c747c257a72f706b45ea69}
       \strng{authornamehash}{220c820b90c747c257a72f706b45ea69}
       \strng{authorfullhash}{220c820b90c747c257a72f706b45ea69}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4485,6 +4725,666 @@
       \endverb
       \verb{url}
       \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC85616/
+      \endverb
+    \endentry
+    \entry{jeffreyCrystalStructureTetramerization1995}{article}{}
+      \name{author}{3}{}{%
+        {{un=2,uniquepart=given,hash=dfd0fbcb19840866513488887087b8a2}{%
+           family={Jeffrey},
+           familyi={J\bibinitperiod},
+           given={Philip\bibnamedelima D.},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=2}}%
+        {{un=0,uniquepart=base,hash=4dbc19363c6c31618c9d249c6f903a04}{%
+           family={Gorina},
+           familyi={G\bibinitperiod},
+           given={Svetlana},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=2,uniquepart=given,hash=366f0d88c6b522686220eea288707911}{%
+           family={Pavletich},
+           familyi={P\bibinitperiod},
+           given={Nikola\bibnamedelima P.},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{7f45e472965c624a44929559cee29a97}
+      \strng{fullhash}{7f45e472965c624a44929559cee29a97}
+      \strng{bibnamehash}{7f45e472965c624a44929559cee29a97}
+      \strng{authorbibnamehash}{7f45e472965c624a44929559cee29a97}
+      \strng{authornamehash}{7f45e472965c624a44929559cee29a97}
+      \strng{authorfullhash}{7f45e472965c624a44929559cee29a97}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The p53 protein is a tetrameric transcription factor that plays a central role in the prevention of neoplastic transformation. Oligomerization appears to be essential for the tumor suppressing activity of p53 because oligomerization-deficient p53 mutants cannot suppress the growth of carcinoma cell lines. The crystal structure of the tetramerization domain of p53 (residues 325 to 356) was determined at 1.7 angstrom resolution and refined to a crystallographic R factor of 19.2 percent. The monomer, which consists of a β strand and an α helix, associates with a second monomer across an antiparallel β sheet and an antiparallel helix-helix interface to form a dimer. Two of these dimers associate across a second and distinct parallel helix-helix interface to form the tetramer.}
+      \field{day}{10}
+      \field{journaltitle}{Science}
+      \field{month}{3}
+      \field{number}{5203}
+      \field{title}{Crystal {{Structure}} of the {{Tetramerization Domain}} of the P53 {{Tumor Suppressor}} at 1.7 {{Angstroms}}}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{267}
+      \field{year}{1995}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1498\bibrangedash 1502}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1126/science.7878469
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/10.1126/science.7878469
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/10.1126/science.7878469
+      \endverb
+    \endentry
+    \entry{okorokovStructureP53Tumour2006}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=0eeac4fa8798f76ea4a41f30e97e2533}{%
+           family={Okorokov},
+           familyi={O\bibinitperiod},
+           given={Andrei\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e6c96d8b00880811a98ea7591fe9e26}{%
+           family={Sherman},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=623ba2fd401286146ca8f211637482e8}{%
+           family={Plisson},
+           familyi={P\bibinitperiod},
+           given={Celia},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13743615442dbac64ab95d3b17e3d1a9}{%
+           family={Grinkevich},
+           familyi={G\bibinitperiod},
+           given={Vera},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c99aea317a4d06cf2a6e5051c4335bd}{%
+           family={Sigmundsson},
+           familyi={S\bibinitperiod},
+           given={Kristmundur},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a49a05970b61e42bb2e0e91ff9d5de9}{%
+           family={Selivanova},
+           familyi={S\bibinitperiod},
+           given={Galina},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e2b5a1ea003e0135bbeabea60d34aecc}{%
+           family={Milner},
+           familyi={M\bibinitperiod},
+           given={Jo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8525e2830065760235f971ff8adb8bfe}{%
+           family={Orlova},
+           familyi={O\bibinitperiod},
+           given={Elena\bibnamedelima V.},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{33010d7b0dedc24cafad1cb5ac3d6212}
+      \strng{fullhash}{653286c346c4539f0f90cd6f66963c35}
+      \strng{bibnamehash}{33010d7b0dedc24cafad1cb5ac3d6212}
+      \strng{authorbibnamehash}{33010d7b0dedc24cafad1cb5ac3d6212}
+      \strng{authornamehash}{33010d7b0dedc24cafad1cb5ac3d6212}
+      \strng{authorfullhash}{653286c346c4539f0f90cd6f66963c35}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{p53 major tumour suppressor protein has presented a challenge for structural biology for two decades. The intact and complete p53 molecule has eluded previous attempts to obtain its structure, largely due to the intrinsic flexibility of the protein. Using ATP‐stabilised p53, we have employed cryoelectron microscopy and single particle analysis to solve the first three‐dimensional structure of the full‐length p53 tetramer (resolution 13.7 Å). The p53 molecule is a D2 tetramer, resembling a hollow skewed cube with node‐like vertices of two sizes. Four larger nodes accommodate central core domains, as was demonstrated by fitting of its X‐ray structure. The p53 monomers are connected via their juxtaposed N‐ and C‐termini within smaller N/C nodes to form dimers. The dimers form tetramers through the contacts between core nodes and N/C nodes. This structure revolutionises existing concepts of p53's molecular organisation and resolves conflicting data relating to its biochemical properties. This architecture of p53 in toto suggests novel mechanisms for structural plasticity, which enables the protein to bind variably spaced DNA target sequences, essential for p53 transactivation and tumour suppressor functions.}
+      \field{day}{1}
+      \field{issn}{1460-2075}
+      \field{journaltitle}{The EMBO Journal}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{21}
+      \field{shortjournal}{EMBO J}
+      \field{title}{The Structure of P53 Tumour Suppressor Protein Reveals the Basis for Its Functional Plasticity}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{25}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{5191\bibrangedash 5200}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1038/sj.emboj.7601382
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/W4NZMAIB/Okorokov et al. - 2006 - The structure of p53 tumour suppressor protein reveals the basis for its functional plasticity.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/sj.emboj.7601382
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/sj.emboj.7601382
+      \endverb
+      \keyw{cryoelectron microscopy,p53,single particle analysis,structure,tumour suppressor}
+    \endentry
+    \entry{aramayoQuaternaryStructureSpecific2011}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=5d55c26ff92398cd82e01f1fc041319b}{%
+           family={Aramayo},
+           familyi={A\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e6c96d8b00880811a98ea7591fe9e26}{%
+           family={Sherman},
+           familyi={S\bibinitperiod},
+           given={Michael\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a17b45d06081de7738a640ce30108e75}{%
+           family={Brownless},
+           familyi={B\bibinitperiod},
+           given={Kathryne},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13d79e25103397aba70ee0646b42413d}{%
+           family={Lurz},
+           familyi={L\bibinitperiod},
+           given={Rudi},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0eeac4fa8798f76ea4a41f30e97e2533}{%
+           family={Okorokov},
+           familyi={O\bibinitperiod},
+           given={Andrei\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8525e2830065760235f971ff8adb8bfe}{%
+           family={Orlova},
+           familyi={O\bibinitperiod},
+           given={Elena\bibnamedelima V.},
+           giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3d4903f543ae89f4e7dbb9c1aa686972}
+      \strng{fullhash}{26efa367652cced43ff2ba32de32d998}
+      \strng{bibnamehash}{3d4903f543ae89f4e7dbb9c1aa686972}
+      \strng{authorbibnamehash}{3d4903f543ae89f4e7dbb9c1aa686972}
+      \strng{authornamehash}{3d4903f543ae89f4e7dbb9c1aa686972}
+      \strng{authorfullhash}{26efa367652cced43ff2ba32de32d998}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The p53 tumour suppressor is a transcriptional activator that controls cell fate in response to various stresses. p53 can initiate cell cycle arrest, senescence and/or apoptosis via transactivation of p53 target genes, thus preventing cancer onset. Mutations that impair p53 usually occur in the core domain and negate the p53 sequence-specific DNA binding. Moreover, these mutations exhibit a dominant negative effect on the remaining wild-type p53. Here, we report the cryo electron microscopy structure of the full-length p53 tetramer bound to a DNA-encoding transcription factor response element (RE) at a resolution of 21\,A. While two core domains from both dimers of the p53 tetramer interact with DNA within the complex, the other two core domains remain available for binding another DNA site. This finding helps to explain the dominant negative effect of p53 mutants based on the fact that p53 dimers are formed co-translationally before the whole tetramer assembles; therefore, a single mutant dimer would prevent the p53 tetramer from binding DNA. The structure indicates that the Achilles' heel of p53 is in its dimer-of-dimers organization, thus the tetramer activity can be negated by mutation in only one allele followed by tumourigenesis.}
+      \field{day}{1}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1362-4962}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{number}{20}
+      \field{shortjournal}{Nucleic Acids Res}
+      \field{title}{Quaternary Structure of the Specific P53-{{DNA}} Complex Reveals the Mechanism of P53 Mutant Dominance}
+      \field{volume}{39}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \field{pages}{8960\bibrangedash 8971}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1093/nar/gkr386
+      \endverb
+      \verb{eprint}
+      \verb 21764777
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/Q5V2G4TQ/Aramayo et al. - 2011 - Quaternary structure of the specific p53-DNA complex reveals the mechanism of p53 mutant dominance.pdf
+      \endverb
+      \keyw{Animals,Cryoelectron Microscopy,DNA,Mice,Models Molecular,Mutation,Nucleic Acid Conformation,Protein Binding,Protein Structure Tertiary,Response Elements,Tumor Suppressor Protein p53}
+    \endentry
+    \entry{solaresHighResolutionImagingHuman2022}{article}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=fb61832aa66c33caf815dcf8567e231d}{%
+           family={Solares},
+           familyi={S\bibinitperiod},
+           given={Maria\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a1441f68e2165816d6a637e9f430cfe}{%
+           family={Jonaid},
+           familyi={J\bibinitperiod},
+           given={G.\bibnamedelimi M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddaad4f592fc1016ba0693f7a8464e6e}{%
+           family={Luqiu},
+           familyi={L\bibinitperiod},
+           given={William\bibnamedelima Y.},
+           giveni={W\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b42dff4a6e06bbfbd6f7d6d1c691a41}{%
+           family={Berry},
+           familyi={B\bibinitperiod},
+           given={Samantha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=adaaeaee82186b6e59ae2f86f57ab51e}{%
+           family={Khadela},
+           familyi={K\bibinitperiod},
+           given={Janki},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bb86055b12a0a3d29d5b4facfabafae6}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Yanping},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d121ce874d9d7ce22c666d7a3f2e0c3}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Madison\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0be7cff681c91b96bed7adbf1fef0a7a}{%
+           family={Pridham},
+           familyi={P\bibinitperiod},
+           given={Kevin\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e8593d9f139fae4c1d6e633812c9401}{%
+           family={Dearnaley},
+           familyi={D\bibinitperiod},
+           given={William\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=138b269d6723b851ffe1fdb9c1b48a84}{%
+           family={Sheng},
+           familyi={S\bibinitperiod},
+           given={Zhi},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=111313ba737f028af06ad62e292319c1}{%
+           family={Kelly},
+           familyi={K\bibinitperiod},
+           given={Deborah\bibnamedelima F.},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b2ad7a671476e534e871b5ec8e5c6fce}
+      \strng{fullhash}{0645c017b7e2c6d5b8678388600e2575}
+      \strng{bibnamehash}{b2ad7a671476e534e871b5ec8e5c6fce}
+      \strng{authorbibnamehash}{b2ad7a671476e534e871b5ec8e5c6fce}
+      \strng{authornamehash}{b2ad7a671476e534e871b5ec8e5c6fce}
+      \strng{authorfullhash}{0645c017b7e2c6d5b8678388600e2575}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Mutations in tumor suppressor genes, such as Tumor Protein 53 (TP53), are heavily implicated in aggressive cancers giving rise to gain- and loss-of-function phenotypes. While individual domains of the p53 protein have been studied extensively, structural information for full-length p53 remains incomplete. Functionalized microprocessor chips (microchips) with properties amenable to electron microscopy permitted us to visualize complete p53 assemblies for the first time. The new structures revealed p53 in an inactive dimeric state independent of DNA binding. Residues located at the protein-protein interface corresponded with modification sites in cancer-related hot spots. Changes in these regions may amplify the toxic effects of clinical mutations. Taken together, these results contribute advances in technology and imaging approaches to decode native protein models in different states of activation.}
+      \field{day}{5}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1439-7633}
+      \field{journaltitle}{Chembiochem: A European Journal of Chemical Biology}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{17}
+      \field{shortjournal}{Chembiochem}
+      \field{title}{High-{{Resolution Imaging}} of {{Human Cancer Proteins Using Microprocessor Materials}}}
+      \field{volume}{23}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{e202200310}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1002/cbic.202200310
+      \endverb
+      \verb{eprint}
+      \verb 35789183
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/LIEYACV4/Solares et al. - 2022 - High-Resolution Imaging of Human Cancer Proteins Using Microprocessor Materials.pdf
+      \endverb
+      \keyw{cancer,electron microscopy,Humans,microchips,Microcomputers,Mutation,Neoplasms,p53 molecular modeling,Tumor Suppressor Protein p53}
+    \endentry
+    \entry{luMolecularDynamicsSimulations2007}{article}{}
+      \name{author}{3}{}{%
+        {{un=1,uniquepart=given,hash=f019c1e7782ba7e024cf10d16463fcce}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=196c22c7118453cb3dfd04523093a929}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Yu-Hong},
+           giveni={Y\bibinithyphendelim H\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=8d96a327b7d5ad8c230f636591e1df1d}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Ray},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5bbc0f79bb7f4633ba1f1ccef14d1459}
+      \strng{fullhash}{5bbc0f79bb7f4633ba1f1ccef14d1459}
+      \strng{bibnamehash}{5bbc0f79bb7f4633ba1f1ccef14d1459}
+      \strng{authorbibnamehash}{5bbc0f79bb7f4633ba1f1ccef14d1459}
+      \strng{authornamehash}{5bbc0f79bb7f4633ba1f1ccef14d1459}
+      \strng{authorfullhash}{5bbc0f79bb7f4633ba1f1ccef14d1459}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We have studied room-temperature structural and dynamic properties of the p53 DNA-binding domain in both DNA-bound and DNA-free states. A cumulative 55 ns of explicit solvent molecular dynamics simulations with the particle mesh Ewald treatment of electrostatics was performed. It was found that the mean structures in the production portions of the trajectories agree well with the crystal structure: backbone root-mean-square deviations are in the range of 1.6 and 2.0 A. In both simulations, noticeable backbone deviations from the crystal structure are observed only in loop L6, due to the lack of crystal packing in the simulations. More deviations are observed in the DNA-free simulation, apparently due to the absence of DNA. Computed backbone B-factor is also in qualitative agreement with the crystal structure. Interestingly, little backbone structural change is observed between the mean simulated DNA-bound and DNA-free structures. A notable difference is observed only at the DNA-binding interface. The correlation between native contacts and inactivation mechanisms of tumor mutations is also discussed. In the H2 region, tumor mutations at sites D281, R282, E285, and E286 may weaken five key interactions that stabilize H2, indicating that their inactivation mechanisms may be related to the loss of local structure around H2, which in turn may reduce the overall stability to a measurable amount. In the L2 region, tumor mutations at sites Y163, K164, E171, V173, L194, R249, I251, and E271 are likely to be responsible for the loss of stability in the protein. In addition to apparent DNA contacts that are related to DNA binding, interactions R175/S183, S183/R196, and E198/N235 are highly occupied only in the DNA-bound form, indicating that they are more likely to be responsible for DNA binding.}
+      \field{day}{4}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1520-6106}
+      \field{journaltitle}{The Journal of Physical Chemistry. B}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{39}
+      \field{shortjournal}{J Phys Chem B}
+      \field{title}{Molecular Dynamics Simulations of P53 {{DNA-binding}} Domain}
+      \field{volume}{111}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{pages}{11538\bibrangedash 11545}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1021/jp0742261
+      \endverb
+      \verb{eprint}
+      \verb 17824689
+      \endverb
+      \keyw{Computer Simulation,Crystallography X-Ray,DNA,DNA-Binding Proteins,Models Molecular,Mutation,Protein Conformation,Static Electricity,Tumor Suppressor Protein p53}
+    \endentry
+    \entry{chenBindingInducedFolding2007}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=3fd3b7e3ad4fea0bf3e170c57ff807b7}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Hai-Feng},
+           giveni={H\bibinithyphendelim F\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=8d96a327b7d5ad8c230f636591e1df1d}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Ray},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b870c416e32aa8bccd9853fb25057011}
+      \strng{fullhash}{b870c416e32aa8bccd9853fb25057011}
+      \strng{bibnamehash}{b870c416e32aa8bccd9853fb25057011}
+      \strng{authorbibnamehash}{b870c416e32aa8bccd9853fb25057011}
+      \strng{authornamehash}{b870c416e32aa8bccd9853fb25057011}
+      \strng{authorfullhash}{b870c416e32aa8bccd9853fb25057011}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The MDM2 N-terminal domain can bind to the transactivation domain of p53 and downregulate its ability to activate transcription. It was found that binding with p53 stabilizes the MDM2 N-terminal domain. Thus the coupling between binding and folding is essential in the normal functional interactions between p53 and MDM2. We have performed explicit-solvent molecular dynamics simulations (MD) for both bound MDM2(N) and apo-MDM2 to study the interdependence of binding and folding in the p53-MDM2 complex. Kinetic analysis of high-temperature MD simulations shows that both bound MDM2(N) and apo-MDM2 unfold via a two-state process. Both kinetics and free energy landscape analyses indicate that bound MDM2 unfolds in the order of p53 unbinding, tertiary unfolding, and finally secondary structure unfolding. Our data show that the unfolding pathways are different between bound MDM2(N) and apo-MDM2: the unfolding order of unstable helices and tertiary contacts is reversed. Transition state analysis shows that the transition state of bound MDM2 is more nativelike and more heterogeneous than that of apo-MDM2. The predicted Phi-values suggest that the stable helices are more nativelike than other regions in both bound MDM2(N) and apo-MDM2. Within the stable helices, helix II in bound MDM2 is more nativelike than that in apo-MDM2. However, helix I and IV in bound MDM2 are less nativelike than those in apo-MDM2.}
+      \field{day}{14}
+      \field{eprinttype}{pubmed}
+      \field{issn}{0002-7863}
+      \field{journaltitle}{Journal of the American Chemical Society}
+      \field{langid}{english}
+      \field{month}{3}
+      \field{number}{10}
+      \field{shortjournal}{J Am Chem Soc}
+      \field{title}{Binding Induced Folding in P53-{{MDM2}} Complex}
+      \field{volume}{129}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{pages}{2930\bibrangedash 2937}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1021/ja0678774
+      \endverb
+      \verb{eprint}
+      \verb 17302414
+      \endverb
+      \keyw{Computer Simulation,Humans,Kinetics,Protein Binding,Protein Conformation,Protein Denaturation,Protein Folding,Protein Structure Secondary,Proto-Oncogene Proteins c-mdm2,Temperature,Tumor Suppressor Protein p53}
+    \endentry
+    \entry{hanInsightsRationalDesign2022}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ce09e144ea7e61de1d873d0eef2273f2}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={In\bibnamedelima Sub\bibnamedelima M.},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=728cf99ac8630068a50b786a77d78bd5}{%
+           family={Abramson},
+           familyi={A\bibinitperiod},
+           given={Dylan},
+           giveni={D\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+           family={Thayer},
+           familyi={T\bibinitperiod},
+           given={Kelly\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{ad51766f4fd918fe924b81c8ae2f92a9}
+      \strng{fullhash}{ad51766f4fd918fe924b81c8ae2f92a9}
+      \strng{bibnamehash}{ad51766f4fd918fe924b81c8ae2f92a9}
+      \strng{authorbibnamehash}{ad51766f4fd918fe924b81c8ae2f92a9}
+      \strng{authornamehash}{ad51766f4fd918fe924b81c8ae2f92a9}
+      \strng{authorfullhash}{ad51766f4fd918fe924b81c8ae2f92a9}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The development of drugs to restore protein function has been a major advance facilitated by molecular medicine. Allosteric regulation, a phenomenon widely observed in nature, in which a molecule binds to control a distance active site, holds great promise for regulating proteins, yet how to rationally design such a molecule remains a mystery. Over the past few years, we and others have developed several techniques based on molecular dynamics (MD) simulations: MD-Markov state models to capture global conformational substates, and network theory approach utilizing the interaction energy within the protein to confer local allosteric control. We focus on the key case study of the p53 Y220C mutation restoration by PK11000, a compound experimentally shown to reactivate p53 native function in Y220C mutant present tumors. We gain insights into the mutation and allosteric reactivation of the protein, which we anticipate will be applicable to de novo design to engineer new compounds not only for this mutation, but in other macromolecular systems as well.}
+      \field{day}{25}
+      \field{journaltitle}{ACS Omega}
+      \field{month}{1}
+      \field{number}{3}
+      \field{shortjournal}{ACS Omega}
+      \field{title}{Insights into {{Rational Design}} of a {{New Class}} of {{Allosteric Effectors}} with {{Molecular Dynamics Markov State Models}} and {{Network Theory}}}
+      \field{urlday}{10}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{7}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2831\bibrangedash 2841}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1021/acsomega.1c05624
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/KWNY9WHM/Han et al. - 2022 - Insights into Rational Design of a New Class of Allosteric Effectors with Molecular Dynamics Markov.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/acsomega.1c05624
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/acsomega.1c05624
+      \endverb
+    \endentry
+    \entry{stetsonRestorationY220CP532025}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=05489d0914ccf245f2d84c39647d6b54}{%
+           family={Stetson},
+           familyi={S\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dd6955b4a8a61c02fb1af6d7a089c982}{%
+           family={Caballero\bibnamedelima Mancía},
+           familyi={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+           family={Thayer},
+           familyi={T\bibinitperiod},
+           given={Kelly\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{a6cff164edac8ca19b1fda45826122fc}
+      \strng{fullhash}{a6cff164edac8ca19b1fda45826122fc}
+      \strng{bibnamehash}{a6cff164edac8ca19b1fda45826122fc}
+      \strng{authorbibnamehash}{a6cff164edac8ca19b1fda45826122fc}
+      \strng{authornamehash}{a6cff164edac8ca19b1fda45826122fc}
+      \strng{authorfullhash}{a6cff164edac8ca19b1fda45826122fc}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The tumor suppressor protein p53 plays a key role in cellular homeostasis, with its dysfunction linked to over half of all cases of human cancer. The Y220C mutation in the DNA-binding domain (DBD) destabilizes p53, compromising its function. The most well-studied case of Y220C p53 rescue via a small molecule, PK11000, has been shown to restore stability and reinstate activity both in vitro and in vivo in rodent models. While prior in silico studies have focused on the DBD in isolation, this work explores the full-length p53 protein, incorporating its intrinsically disordered N- and C-terminal regulatory regions, which are known to be sites of extensive post-translational modifications utilized to modulate its activity. Using molecular dynamics (MD) simulations, we investigate the wild-type (WT) p53, the destabilized Y220C mutant, and the PK11000-rescued Y220C variant. Our findings illuminate a multilayered allosteric landscape: the Y220C mutation disrupts DBD stability through long-range effects while PK11000 counteracts this destabilization through its own distal interactions. Importantly, the N- and C-terminal regions mediate additional allosteric regulation, dynamically influencing both the mutation’s impact and the rescue mechanism. This triple allosteric framework underscores the regulatory regions’ critical role in restoring p53 functionality. By providing a first-order exploration into the behavior of full-length p53, this study advances our understanding of its regulatory mechanisms and sets the stage for developing targeted therapies aimed at reactivating mutant p53 in cancer.}
+      \field{day}{18}
+      \field{journaltitle}{ACS Omega}
+      \field{month}{11}
+      \field{shortjournal}{ACS Omega}
+      \field{shorttitle}{Restoration of the {{Y220C}} P53 {{Full-Length Mutant}} by {{PK11000}}}
+      \field{title}{Restoration of the {{Y220C}} P53 {{Full-Length Mutant}} by {{PK11000}}: A {{Molecular Dynamics Study}} of an {{Intrinsically Disordered Protein}}}
+      \field{urlday}{21}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1021/acsomega.5c05639
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/3V6ZQU4I/Stetson et al. - 2025 - Restoration of the Y220C p53 Full-Length Mutant by PK11000 a Molecular Dynamics Study of an Intrins.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/acsomega.5c05639
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/acsomega.5c05639
+      \endverb
+    \endentry
+    \entry{passowContrastingPatternsRapid2019}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=e70e70acf54d9cc7142894eadf7d2d84}{%
+           family={Passow},
+           familyi={P\bibinitperiod},
+           given={Courtney\bibnamedelima N},
+           giveni={C\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a275fc085fe4756147bfe4c5be8326a2}{%
+           family={Bronikowski},
+           familyi={B\bibinitperiod},
+           given={Anne\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a61b0054a23c46b2b4497cfc8994c946}{%
+           family={Blackmon},
+           familyi={B\bibinitperiod},
+           given={Heath},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b934d372666fb2344167bdb1690c1bcc}{%
+           family={Parsai},
+           familyi={P\bibinitperiod},
+           given={Shikha},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e21cbab818ef54349406bd826a9476a9}{%
+           family={Schwartz},
+           familyi={S\bibinitperiod},
+           given={Tonia\bibnamedelima S},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1046661b009e372f6dbc9063e74b3076}{%
+           family={McGaugh},
+           familyi={M\bibinitperiod},
+           given={Suzanne\bibnamedelima E},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eb97e46afc8b8975f6a5b3af7d9b6572}
+      \strng{fullhash}{30afdb7b270bb27818acf29d9d0af234}
+      \strng{bibnamehash}{eb97e46afc8b8975f6a5b3af7d9b6572}
+      \strng{authorbibnamehash}{eb97e46afc8b8975f6a5b3af7d9b6572}
+      \strng{authornamehash}{eb97e46afc8b8975f6a5b3af7d9b6572}
+      \strng{authorfullhash}{30afdb7b270bb27818acf29d9d0af234}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Cancer is a threat to multicellular organisms, yet the molecular evolution of pathways that prevent the accumulation of genetic damage has been largely unexplored. The p53 network regulates how cells respond to DNA-damaging stressors. We know little about p53 network molecular evolution as a whole. In this study, we performed comparative genetic analyses of the p53 network to quantify the number of genes within the network that are rapidly evolving and constrained, and the association between lifespan and the patterns of evolution. Based on our previous published data set, we used genomes and transcriptomes of 34 sauropsids and 32 mammals to analyze the molecular evolution of 45 genes within the p53 network. We found that genes in the network exhibited evidence of positive selection and divergent molecular evolution in mammals and sauropsids. Specifically, we found more evidence of positive selection in sauropsids than mammals, indicating that sauropsids have different targets of selection. In sauropsids, more genes upstream in the network exhibited positive selection, and this observation is driven by positive selection in squamates, which is consistent with previous work showing rapid divergence and adaptation of metabolic and stress pathways in this group. Finally, we identified a negative correlation between maximum lifespan and the number of genes with evidence of divergent molecular evolution, indicating that species with longer lifespans likely experienced less variation in selection across the network. In summary, our study offers evidence that comparative genomic approaches can provide insights into how molecular networks have evolved across diverse species.}
+      \field{day}{21}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1759-6653}
+      \field{journaltitle}{Genome Biology and Evolution}
+      \field{month}{1}
+      \field{number}{3}
+      \field{shortjournal}{Genome Biol Evol}
+      \field{title}{Contrasting {{Patterns}} of {{Rapid Molecular Evolution}} within the P53 {{Network}} across {{Mammal}} and {{Sauropsid Lineages}}}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{11}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{629\bibrangedash 643}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1093/gbe/evy273
+      \endverb
+      \verb{eprint}
+      \verb 30668691
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/QWY86VF8/Passow et al. - 2019 - Contrasting Patterns of Rapid Molecular Evolution within the p53 Network across Mammal and Sauropsid.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC6406535/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC6406535/
       \endverb
     \endentry
     \entry{el-deiryDefinitionConsensusBinding1992}{article}{}
@@ -4528,8 +5428,8 @@
       \strng{authorbibnamehash}{015852f16cf99e6a98da116af6f192d4}
       \strng{authornamehash}{015852f16cf99e6a98da116af6f192d4}
       \strng{authorfullhash}{968471131979f7104fe1b8231824998e}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4583,8 +5483,8 @@
       \strng{authorbibnamehash}{970bc7b9e5394d14030506b157462313}
       \strng{authornamehash}{970bc7b9e5394d14030506b157462313}
       \strng{authorfullhash}{970bc7b9e5394d14030506b157462313}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4633,8 +5533,8 @@
       \strng{authorbibnamehash}{dcfdfed7dc476abbe4255429035ff8f6}
       \strng{authornamehash}{dcfdfed7dc476abbe4255429035ff8f6}
       \strng{authorfullhash}{dcfdfed7dc476abbe4255429035ff8f6}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4683,8 +5583,8 @@
       \strng{authorbibnamehash}{5d47e4725cb70ca7f7c89fa1646c2a5f}
       \strng{authornamehash}{5d47e4725cb70ca7f7c89fa1646c2a5f}
       \strng{authorfullhash}{5d47e4725cb70ca7f7c89fa1646c2a5f}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4723,12 +5623,12 @@
     \endentry
     \entry{odaNoxaBH3OnlyMember2000a}{article}{}
       \name{author}{9}{}{%
-        {{un=0,uniquepart=base,hash=100fc013f761a6defb981694ccaf40c2}{%
+        {{un=1,uniquepart=given,hash=100fc013f761a6defb981694ccaf40c2}{%
            family={Oda},
            familyi={O\bibinitperiod},
            given={Eri},
            giveni={E\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=e5832e3056044492b303f8541ad460b3}{%
            family={Ohki},
            familyi={O\bibinitperiod},
@@ -4787,8 +5687,8 @@
       \strng{authorbibnamehash}{a2631496c5b471bcab1530a6ea5aa9b0}
       \strng{authornamehash}{a2631496c5b471bcab1530a6ea5aa9b0}
       \strng{authorfullhash}{6bfc9115ec0f47f10d05b90ac06a960f}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4842,8 +5742,8 @@
       \strng{authorbibnamehash}{d48c6594e58417838f27497cc88dad94}
       \strng{authornamehash}{d48c6594e58417838f27497cc88dad94}
       \strng{authorfullhash}{d48c6594e58417838f27497cc88dad94}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -4903,8 +5803,8 @@
       \strng{authorbibnamehash}{3d70a00e7432ec97da1e2f611c7f5c33}
       \strng{authornamehash}{3d70a00e7432ec97da1e2f611c7f5c33}
       \strng{authorfullhash}{3d70a00e7432ec97da1e2f611c7f5c33}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5003,8 +5903,8 @@
       \strng{authorbibnamehash}{4c0a0a23303fb17cd93f0b44951f7a54}
       \strng{authornamehash}{4c0a0a23303fb17cd93f0b44951f7a54}
       \strng{authorfullhash}{3798b4956eafb04bf2a91f460be3f11a}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5055,8 +5955,8 @@
       \strng{authorbibnamehash}{4e495af013ab28ee4507918f7e0522be}
       \strng{authornamehash}{4e495af013ab28ee4507918f7e0522be}
       \strng{authorfullhash}{4e495af013ab28ee4507918f7e0522be}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5115,8 +6015,8 @@
       \strng{authorbibnamehash}{0daf01fb126263ae8f5ce433700b2329}
       \strng{authornamehash}{0daf01fb126263ae8f5ce433700b2329}
       \strng{authorfullhash}{e5100c933ab56b93336b3caeee90c8bc}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5208,8 +6108,8 @@
       \strng{authorbibnamehash}{c57469c0fd1d5130aab1493973a1431e}
       \strng{authornamehash}{c57469c0fd1d5130aab1493973a1431e}
       \strng{authorfullhash}{d9550f9f57489ae353b59c960fa8367f}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5283,8 +6183,8 @@
       \strng{authorbibnamehash}{1e2b25f777678c4285ea73062ae983f1}
       \strng{authornamehash}{1e2b25f777678c4285ea73062ae983f1}
       \strng{authorfullhash}{57c138ac5f2856dd622bb69685b03dea}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5333,8 +6233,8 @@
       \strng{authorbibnamehash}{dbffa745aec8758564337820bacb151f}
       \strng{authornamehash}{dbffa745aec8758564337820bacb151f}
       \strng{authorfullhash}{dbffa745aec8758564337820bacb151f}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5371,6 +6271,117 @@
       \endverb
       \keyw{14-3-3,Cell cycle,Mdm2,p53,Tumor suppressor}
     \endentry
+    \entry{odaP53AIP1PotentialMediator2000}{article}{}
+      \name{author}{11}{}{%
+        {{un=1,uniquepart=given,hash=691cd17c3824571ccaebb7f7769ce953}{%
+           family={Oda},
+           familyi={O\bibinitperiod},
+           given={Katsutoshi},
+           giveni={K\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=65ac7846761f7ad34633e7c1f6078dd5}{%
+           family={Arakawa},
+           familyi={A\bibinitperiod},
+           given={Hirofumi},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=643888ddb4715971b481784cc86323c9}{%
+           family={Tanaka},
+           familyi={T\bibinitperiod},
+           given={Tomoaki},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcdd0118454ed729448643d69fd30d29}{%
+           family={Matsuda},
+           familyi={M\bibinitperiod},
+           given={Koichi},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45ed2dc893cb724f62516f6681c5ed17}{%
+           family={Tanikawa},
+           familyi={T\bibinitperiod},
+           given={Chizu},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6983230c47503ce4608c7342b341c894}{%
+           family={Mori},
+           familyi={M\bibinitperiod},
+           given={Toshiki},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=929ecc27650b1af871b439cc84dd815e}{%
+           family={Nishimori},
+           familyi={N\bibinitperiod},
+           given={Hiroyuki},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6dbb08299a7f0b07df28ba68a4b75abf}{%
+           family={Tamai},
+           familyi={T\bibinitperiod},
+           given={Katsuyuki},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a91f2ad13e26ba9c9516237a4fd38b2}{%
+           family={Tokino},
+           familyi={T\bibinitperiod},
+           given={Takashi},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fce5f02c29b910d380143ff82e0f0c80}{%
+           family={Nakamura},
+           familyi={N\bibinitperiod},
+           given={Yusuke},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c03849691259d8df66523267108caca}{%
+           family={Taya},
+           familyi={T\bibinitperiod},
+           given={Yoichi},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{67779e2a7c9b7a285940bca1bde47324}
+      \strng{fullhash}{d25421cabba93a8ed06949da64f6cc7a}
+      \strng{bibnamehash}{67779e2a7c9b7a285940bca1bde47324}
+      \strng{authorbibnamehash}{67779e2a7c9b7a285940bca1bde47324}
+      \strng{authornamehash}{67779e2a7c9b7a285940bca1bde47324}
+      \strng{authorfullhash}{d25421cabba93a8ed06949da64f6cc7a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Through direct cloning of p53 binding sequences from human genomic DNA, we have isolated a novel gene, designated p53AIP1 (p53-regulated Apoptosis-Inducing Protein 1), whose expression is inducible by wild-type p53. Ectopically expressed p53AIP1, which is localized within mitochondria, leads to apoptotic cell death through dissipation of mitochondrial \(Delta\)Ψm. We have found that upon severe DNA damage, Ser-46 on p53 is phosphorylated and apoptosis is induced. In addition, substitution of Ser-46 inhibits the ability of p53 to induce apoptosis and selectively blocks expression of p53AIP1. Our results suggest that p53AIP1 is likely to play an important role in mediating p53-dependent apoptosis, and phosphorylation of Ser-46 regulates the transcriptional activation of this apoptosis-inducing gene.}
+      \field{day}{15}
+      \field{issn}{0092-8674}
+      \field{journaltitle}{Cell}
+      \field{month}{9}
+      \field{number}{6}
+      \field{shortjournal}{Cell}
+      \field{title}{{{{\mkbibemph{p53AIP1}}}}, a {{Potential Mediator}} of P53-{{Dependent Apoptosis}}, and {{Its Regulation}} by {{Ser-46-Phosphorylated}} P53}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{102}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{849\bibrangedash 862}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/S0092-8674(00)00073-8
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/IIINGUIG/Oda et al. - 2000 - p53AIP1, a Potential Mediator of p53-Dependent Apoptosis, and Its Regulation by Ser-46-Phosph.pdf;/Users/Sean/Zotero/storage/MZKAUUR8/S0092867400000738.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0092867400000738
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0092867400000738
+      \endverb
+    \endentry
     \entry{fornaceDNADamageinducibleTranscripts1988}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=7c34925c780db33dd23753dece8b6ad3}{%
@@ -5398,8 +6409,8 @@
       \strng{authorbibnamehash}{886a448e3ef2b1972fc3a1d30cbfdc54}
       \strng{authornamehash}{886a448e3ef2b1972fc3a1d30cbfdc54}
       \strng{authorfullhash}{886a448e3ef2b1972fc3a1d30cbfdc54}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5492,8 +6503,8 @@
       \strng{authorbibnamehash}{c57f48ff924b1352a3a74e7cc626139e}
       \strng{authornamehash}{c57f48ff924b1352a3a74e7cc626139e}
       \strng{authorfullhash}{c74cffbfe68a853054e4827c1a6d1f46}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5585,8 +6596,8 @@
       \strng{authorbibnamehash}{9a714ee852c23eefa8c00529beac4d7b}
       \strng{authornamehash}{9a714ee852c23eefa8c00529beac4d7b}
       \strng{authorfullhash}{78a01aa166354927c948f8a43a68194e}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5725,8 +6736,8 @@
       \strng{authorbibnamehash}{dc73eb82d413aea5c979b3637814969e}
       \strng{authornamehash}{dc73eb82d413aea5c979b3637814969e}
       \strng{authorfullhash}{7a3769f3982d34f2077dc727ad5c4e96}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5853,8 +6864,8 @@
       \strng{authorbibnamehash}{d3253f82cc98eccfc16f07ba725d3a6c}
       \strng{authornamehash}{d3253f82cc98eccfc16f07ba725d3a6c}
       \strng{authorfullhash}{ee027b880a3356fb42d86624f114b6a9}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5902,8 +6913,8 @@
       \strng{authorbibnamehash}{722ef36fc197292396c818e921aa65d8}
       \strng{authornamehash}{722ef36fc197292396c818e921aa65d8}
       \strng{authorfullhash}{722ef36fc197292396c818e921aa65d8}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -5949,8 +6960,8 @@
       \strng{authorbibnamehash}{a69113413cfc6b2906573a83d3ac4df9}
       \strng{authornamehash}{a69113413cfc6b2906573a83d3ac4df9}
       \strng{authorfullhash}{a69113413cfc6b2906573a83d3ac4df9}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6038,8 +7049,8 @@
       \strng{authorbibnamehash}{5fadaac2f242fc8496c6017f0e5afef8}
       \strng{authornamehash}{5fadaac2f242fc8496c6017f0e5afef8}
       \strng{authorfullhash}{8913537fcb6aab2158cf5419c3e59be5}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6108,8 +7119,8 @@
       \strng{authorbibnamehash}{6f58f95c41bd1f9ef7e3377d63fd8e5c}
       \strng{authornamehash}{6f58f95c41bd1f9ef7e3377d63fd8e5c}
       \strng{authorfullhash}{1bb5abbc89edc63e47cbaa74623192c3}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6170,8 +7181,8 @@
       \strng{authorbibnamehash}{efe22d8db293c0ade1f58f3e8c158270}
       \strng{authornamehash}{efe22d8db293c0ade1f58f3e8c158270}
       \strng{authorfullhash}{efe22d8db293c0ade1f58f3e8c158270}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6250,8 +7261,8 @@
       \strng{authorbibnamehash}{7019693adde71d8da6350cc403cbb6b9}
       \strng{authornamehash}{7019693adde71d8da6350cc403cbb6b9}
       \strng{authorfullhash}{6582e0eadd89fe981b4912142a0c3e1e}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6361,8 +7372,8 @@
       \strng{authorbibnamehash}{68031b63b8ef438f2b80002ef19a9b15}
       \strng{authornamehash}{68031b63b8ef438f2b80002ef19a9b15}
       \strng{authorfullhash}{849a36746dbb7825e85cabc6506c68ba}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6444,8 +7455,8 @@
       \strng{authorbibnamehash}{7e8bc578abc465ee6e63fe0a24cb6a11}
       \strng{authornamehash}{7e8bc578abc465ee6e63fe0a24cb6a11}
       \strng{authorfullhash}{a3708f9c9509ff5a69baefbeca177f8b}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6497,8 +7508,8 @@
       \strng{authorbibnamehash}{b621518d2b4b26fb2be9aa5dc7c60312}
       \strng{authornamehash}{b621518d2b4b26fb2be9aa5dc7c60312}
       \strng{authorfullhash}{b621518d2b4b26fb2be9aa5dc7c60312}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6583,8 +7594,8 @@
       \strng{authorbibnamehash}{d2445a69ccad66ee6f026bf713106358}
       \strng{authornamehash}{d2445a69ccad66ee6f026bf713106358}
       \strng{authorfullhash}{6802eb277f10bf65caf55ec469a07b31}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6652,8 +7663,8 @@
       \strng{authorbibnamehash}{2a72e13f4ce0de0544b0b1db827fc819}
       \strng{authornamehash}{2a72e13f4ce0de0544b0b1db827fc819}
       \strng{authorfullhash}{e1e1f79e9641c2753a77644260f63d09}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6761,8 +7772,8 @@
       \strng{authorbibnamehash}{736e543391096a6995a46286203c0560}
       \strng{authornamehash}{736e543391096a6995a46286203c0560}
       \strng{authorfullhash}{7859aa5085131bf1e6d0f8be99178bb0}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -6832,8 +7843,8 @@
       \strng{authorbibnamehash}{c6fbbe31e4c3e69f71397a1b9f4a309b}
       \strng{authornamehash}{c6fbbe31e4c3e69f71397a1b9f4a309b}
       \strng{authorfullhash}{428ebea12efd4e45be8f67e1a9634deb}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
@@ -7713,72 +8724,14 @@
       \endverb
       \keyw{Brain Neoplasms,Genomics,Glioblastoma,Humans,Mutation,Neoplasm Recurrence Local,Phosphatidylinositol 3-Kinases,Precision Medicine}
     \endentry
-    \entry{resnickFunctionalMutantsSequencespecific2003}{article}{}
-      \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=175eed6e0a953990a5a6ee9047cd3d83}{%
-           family={Resnick},
-           familyi={R\bibinitperiod},
-           given={Michael\bibnamedelima A.},
-           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
-        {{un=2,uniquepart=given,hash=3e1568e900dba641f6657a1c496ebdb1}{%
-           family={Inga},
-           familyi={I\bibinitperiod},
-           given={Alberto},
-           giveni={A\bibinitperiod},
-           givenun=2}}%
-      }
-      \list{publisher}{1}{%
-        {Proceedings of the National Academy of Sciences}%
-      }
-      \strng{namehash}{5253e57491b209202c86cf8a6bb2972e}
-      \strng{fullhash}{5253e57491b209202c86cf8a6bb2972e}
-      \strng{bibnamehash}{5253e57491b209202c86cf8a6bb2972e}
-      \strng{authorbibnamehash}{5253e57491b209202c86cf8a6bb2972e}
-      \strng{authornamehash}{5253e57491b209202c86cf8a6bb2972e}
-      \strng{authorfullhash}{5253e57491b209202c86cf8a6bb2972e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{There are many sources of genetic diversity, ranging from programmed mutagenesis in antibody genes to random mutagenesis during species evolution or development of cancer. We propose that mutations in DNA sequence-specific transcription factors that target response elements (REs) in many genes can also provide for rapid and broad phenotypic diversity, if the mutations lead to altered binding affinities at individual REs. To test this concept, we examined the in vivo transactivation capacity of wild-type human and murine p53 and 25 partial function mutants. The p53s were expressed in yeast from a rheostatable promoter, and the transactivation capacities toward {$>$}15 promoter REs upstream of a reporter gene were measured. Surprisingly, there was wide variation in transactivation by the mutant p53s toward the various REs. This is the first study to address directly the impact of mutations in a sequence-specific transcription factor on transactivation from a wide array of REs. We propose a master gene hypothesis for phenotypic diversity where the master gene is a single transcriptional activator (or repressor) that regulates many genes through different REs. Mutations of the master gene can lead to a variety of simultaneous changes in both the selection of targets and the extent of transcriptional modulation at the individual targets, resulting in a vast number of potential phenotypes that can be created with minimal mutational changes without altering existing protein–protein interactions.}
-      \field{day}{19}
-      \field{journaltitle}{Proceedings of the National Academy of Sciences}
-      \field{month}{8}
-      \field{number}{17}
-      \field{title}{Functional Mutants of the Sequence-Specific Transcription Factor P53 and Implications for Master Genes of Diversity}
-      \field{urlday}{3}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{volume}{100}
-      \field{year}{2003}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{9934\bibrangedash 9939}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1073/pnas.1633803100
-      \endverb
-      \verb{file}
-      \verb /Users/Sean/Zotero/storage/KZFEFIUJ/Resnick and Inga - 2003 - Functional mutants of the sequence-specific transcription factor p53 and implications for master gen.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.pnas.org/doi/full/10.1073/pnas.1633803100
-      \endverb
-      \verb{url}
-      \verb https://www.pnas.org/doi/full/10.1073/pnas.1633803100
-      \endverb
-    \endentry
     \entry{wangItTakesTeam2019}{article}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=167e08f20c89ae2eea1390bbf0f14ef1}{%
+        {{un=1,uniquepart=given,hash=167e08f20c89ae2eea1390bbf0f14ef1}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={Huai},
            giveni={H\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=f267aed8da13ec806df41f04b8caf9f5}{%
            family={Liao},
            familyi={L\bibinitperiod},
@@ -7945,6 +8898,85 @@
       \verb /Users/Sean/Zotero/storage/R9PF5EBW/Liao et al. - 2017 - Mutant p53 Gains Its Function via c-Myc Activation upon CDK4 Phosphorylation at Serine 249 and Conse.pdf
       \endverb
       \keyw{c-Myc,Carcinoma Hepatocellular,CDK4,cell proliferation,Cell Proliferation,Cyclin-Dependent Kinase 4,FBW7a,gain of function,GOF,Humans,Liver Neoplasms,Mutation,NIMA-Interacting Peptidylprolyl Isomerase,p53-R249S,phosphorylation,Phosphorylation,PIN1,Protein Binding,Proto-Oncogene Proteins c-myc,ribosomal biogenesis,Serine,transcription,Tumor Cells Cultured,Tumor Suppressor Protein p53}
+    \endentry
+    \entry{wangMutantP53R273HGains2013}{article}{}
+      \name{author}{5}{}{%
+        {{un=1,uniquepart=given,hash=8c0d8d495d30364a6fdc14d3ee19f5b7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=b692d039e259283dae05f366b8395ab3}{%
+           family={Cheng},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39629bc1025a4a7c67cdc9e6107cb9a0}{%
+           family={Miao},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0ad711c6f03cbc4c42dd9892a2023eb}{%
+           family={Mei},
+           familyi={M\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd478291134e5efdbf172615f331fec0}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{82258e666869d4f882ef5ec016bc3fdb}
+      \strng{fullhash}{5088e0a0a362d7c010eb3d4f6edeb46b}
+      \strng{bibnamehash}{82258e666869d4f882ef5ec016bc3fdb}
+      \strng{authorbibnamehash}{82258e666869d4f882ef5ec016bc3fdb}
+      \strng{authornamehash}{82258e666869d4f882ef5ec016bc3fdb}
+      \strng{authorfullhash}{5088e0a0a362d7c010eb3d4f6edeb46b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{p53 is a major tumor suppressor whose function is pivotal for protection against cancer. In over half of human cancers, p53 is inactivated due to either point mutation or loss of p53 gene. It has been well established that in addition to abrogating the tumor-suppressive function of wild-type p53, mutant p53 gains new functions and actively contributes to various stages of tumor progression. However, little is known about whether microRNA (miRNA) is involved in the gain-of-function of mutant p53. Here we report miR-27a as a novel downstream transcriptional target of mutant p53-273H. Mutant p53 binds to the miR-27a promoter region and suppresses its expression. We also identify epidermal growth factor receptor (EGFR) as a direct target of miR-27a. Via the miR-27a/EGFR axis, mutant p53-273H promotes a sustained EGF-induced extracellular signal–regulated kinase 1/2 activation, thereby facilitating cell proliferation and tumorigenesis. Collectively, this work reveals a direct link between the gain-of-function of mutant p53 and miRNA and uncovers a novel mutant p53-273H/miR-27a/EGFR pathway that has an important role in promoting tumor development.}
+      \field{issn}{2041-4889}
+      \field{journaltitle}{Cell Death \& Disease}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shortjournal}{Cell Death Dis}
+      \field{title}{Mutant P53-{{R273H}} Gains New Function in Sustained Activation of {{EGFR}} Signaling via Suppressing {{miR-27a}} Expression}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{4}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e574\bibrangedash e574}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1038/cddis.2013.97
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/F39QPF73/Wang et al. - 2013 - Mutant p53-R273H gains new function in sustained activation of EGFR signaling via suppressing miR-27.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/cddis201397
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/cddis201397
+      \endverb
+      \keyw{Cell signalling,miRNAs,Oncogenesis,Tumour suppressors}
     \endentry
     \entry{langGainFunctionP532004}{article}{}
       \name{author}{12}{}{%
@@ -9090,131 +10122,62 @@
       \verb https://doi.org/10.1158/2159-8290.CD-24-1421
       \endverb
     \endentry
-    \entry{hanInsightsRationalDesign2022}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=ce09e144ea7e61de1d873d0eef2273f2}{%
-           family={Han},
-           familyi={H\bibinitperiod},
-           given={In\bibnamedelima Sub\bibnamedelima M.},
-           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim M\bibinitperiod},
+    \entry{resnickFunctionalMutantsSequencespecific2003}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=175eed6e0a953990a5a6ee9047cd3d83}{%
+           family={Resnick},
+           familyi={R\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
            givenun=0}}%
-        {{un=1,uniquepart=given,hash=728cf99ac8630068a50b786a77d78bd5}{%
-           family={Abramson},
-           familyi={A\bibinitperiod},
-           given={Dylan},
-           giveni={D\bibinitperiod},
-           givenun=1}}%
-        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
-           family={Thayer},
-           familyi={T\bibinitperiod},
-           given={Kelly\bibnamedelima M.},
-           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+        {{un=2,uniquepart=given,hash=3e1568e900dba641f6657a1c496ebdb1}{%
+           family={Inga},
+           familyi={I\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=2}}%
       }
       \list{publisher}{1}{%
-        {American Chemical Society}%
+        {Proceedings of the National Academy of Sciences}%
       }
-      \strng{namehash}{ad51766f4fd918fe924b81c8ae2f92a9}
-      \strng{fullhash}{ad51766f4fd918fe924b81c8ae2f92a9}
-      \strng{bibnamehash}{ad51766f4fd918fe924b81c8ae2f92a9}
-      \strng{authorbibnamehash}{ad51766f4fd918fe924b81c8ae2f92a9}
-      \strng{authornamehash}{ad51766f4fd918fe924b81c8ae2f92a9}
-      \strng{authorfullhash}{ad51766f4fd918fe924b81c8ae2f92a9}
+      \strng{namehash}{5253e57491b209202c86cf8a6bb2972e}
+      \strng{fullhash}{5253e57491b209202c86cf8a6bb2972e}
+      \strng{bibnamehash}{5253e57491b209202c86cf8a6bb2972e}
+      \strng{authorbibnamehash}{5253e57491b209202c86cf8a6bb2972e}
+      \strng{authornamehash}{5253e57491b209202c86cf8a6bb2972e}
+      \strng{authorfullhash}{5253e57491b209202c86cf8a6bb2972e}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The development of drugs to restore protein function has been a major advance facilitated by molecular medicine. Allosteric regulation, a phenomenon widely observed in nature, in which a molecule binds to control a distance active site, holds great promise for regulating proteins, yet how to rationally design such a molecule remains a mystery. Over the past few years, we and others have developed several techniques based on molecular dynamics (MD) simulations: MD-Markov state models to capture global conformational substates, and network theory approach utilizing the interaction energy within the protein to confer local allosteric control. We focus on the key case study of the p53 Y220C mutation restoration by PK11000, a compound experimentally shown to reactivate p53 native function in Y220C mutant present tumors. We gain insights into the mutation and allosteric reactivation of the protein, which we anticipate will be applicable to de novo design to engineer new compounds not only for this mutation, but in other macromolecular systems as well.}
-      \field{day}{25}
-      \field{journaltitle}{ACS Omega}
-      \field{month}{1}
-      \field{number}{3}
-      \field{shortjournal}{ACS Omega}
-      \field{title}{Insights into {{Rational Design}} of a {{New Class}} of {{Allosteric Effectors}} with {{Molecular Dynamics Markov State Models}} and {{Network Theory}}}
-      \field{urlday}{10}
-      \field{urlmonth}{4}
-      \field{urlyear}{2026}
-      \field{volume}{7}
-      \field{year}{2022}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \field{pages}{2831\bibrangedash 2841}
-      \range{pages}{11}
-      \verb{doi}
-      \verb 10.1021/acsomega.1c05624
-      \endverb
-      \verb{file}
-      \verb /Users/Sean/Zotero/storage/KWNY9WHM/Han et al. - 2022 - Insights into Rational Design of a New Class of Allosteric Effectors with Molecular Dynamics Markov.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1021/acsomega.1c05624
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1021/acsomega.1c05624
-      \endverb
-    \endentry
-    \entry{stetsonRestorationY220CP532025}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=05489d0914ccf245f2d84c39647d6b54}{%
-           family={Stetson},
-           familyi={S\bibinitperiod},
-           given={Sean},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dd6955b4a8a61c02fb1af6d7a089c982}{%
-           family={Caballero\bibnamedelima Mancía},
-           familyi={C\bibinitperiod\bibinitdelim M\bibinitperiod},
-           given={Fernando},
-           giveni={F\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
-           family={Thayer},
-           familyi={T\bibinitperiod},
-           given={Kelly\bibnamedelima M.},
-           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {American Chemical Society}%
-      }
-      \strng{namehash}{a6cff164edac8ca19b1fda45826122fc}
-      \strng{fullhash}{a6cff164edac8ca19b1fda45826122fc}
-      \strng{bibnamehash}{a6cff164edac8ca19b1fda45826122fc}
-      \strng{authorbibnamehash}{a6cff164edac8ca19b1fda45826122fc}
-      \strng{authornamehash}{a6cff164edac8ca19b1fda45826122fc}
-      \strng{authorfullhash}{a6cff164edac8ca19b1fda45826122fc}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{The tumor suppressor protein p53 plays a key role in cellular homeostasis, with its dysfunction linked to over half of all cases of human cancer. The Y220C mutation in the DNA-binding domain (DBD) destabilizes p53, compromising its function. The most well-studied case of Y220C p53 rescue via a small molecule, PK11000, has been shown to restore stability and reinstate activity both in vitro and in vivo in rodent models. While prior in silico studies have focused on the DBD in isolation, this work explores the full-length p53 protein, incorporating its intrinsically disordered N- and C-terminal regulatory regions, which are known to be sites of extensive post-translational modifications utilized to modulate its activity. Using molecular dynamics (MD) simulations, we investigate the wild-type (WT) p53, the destabilized Y220C mutant, and the PK11000-rescued Y220C variant. Our findings illuminate a multilayered allosteric landscape: the Y220C mutation disrupts DBD stability through long-range effects while PK11000 counteracts this destabilization through its own distal interactions. Importantly, the N- and C-terminal regions mediate additional allosteric regulation, dynamically influencing both the mutation’s impact and the rescue mechanism. This triple allosteric framework underscores the regulatory regions’ critical role in restoring p53 functionality. By providing a first-order exploration into the behavior of full-length p53, this study advances our understanding of its regulatory mechanisms and sets the stage for developing targeted therapies aimed at reactivating mutant p53 in cancer.}
-      \field{day}{18}
-      \field{journaltitle}{ACS Omega}
-      \field{month}{11}
-      \field{shortjournal}{ACS Omega}
-      \field{shorttitle}{Restoration of the {{Y220C}} P53 {{Full-Length Mutant}} by {{PK11000}}}
-      \field{title}{Restoration of the {{Y220C}} P53 {{Full-Length Mutant}} by {{PK11000}}: A {{Molecular Dynamics Study}} of an {{Intrinsically Disordered Protein}}}
-      \field{urlday}{21}
-      \field{urlmonth}{11}
+      \field{abstract}{There are many sources of genetic diversity, ranging from programmed mutagenesis in antibody genes to random mutagenesis during species evolution or development of cancer. We propose that mutations in DNA sequence-specific transcription factors that target response elements (REs) in many genes can also provide for rapid and broad phenotypic diversity, if the mutations lead to altered binding affinities at individual REs. To test this concept, we examined the in vivo transactivation capacity of wild-type human and murine p53 and 25 partial function mutants. The p53s were expressed in yeast from a rheostatable promoter, and the transactivation capacities toward {$>$}15 promoter REs upstream of a reporter gene were measured. Surprisingly, there was wide variation in transactivation by the mutant p53s toward the various REs. This is the first study to address directly the impact of mutations in a sequence-specific transcription factor on transactivation from a wide array of REs. We propose a master gene hypothesis for phenotypic diversity where the master gene is a single transcriptional activator (or repressor) that regulates many genes through different REs. Mutations of the master gene can lead to a variety of simultaneous changes in both the selection of targets and the extent of transcriptional modulation at the individual targets, resulting in a vast number of potential phenotypes that can be created with minimal mutational changes without altering existing protein–protein interactions.}
+      \field{day}{19}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{8}
+      \field{number}{17}
+      \field{title}{Functional Mutants of the Sequence-Specific Transcription Factor P53 and Implications for Master Genes of Diversity}
+      \field{urlday}{3}
+      \field{urlmonth}{12}
       \field{urlyear}{2025}
-      \field{year}{2025}
+      \field{volume}{100}
+      \field{year}{2003}
       \field{dateera}{ce}
       \field{urldateera}{ce}
+      \field{pages}{9934\bibrangedash 9939}
+      \range{pages}{6}
       \verb{doi}
-      \verb 10.1021/acsomega.5c05639
+      \verb 10.1073/pnas.1633803100
       \endverb
       \verb{file}
-      \verb /Users/Sean/Zotero/storage/3V6ZQU4I/Stetson et al. - 2025 - Restoration of the Y220C p53 Full-Length Mutant by PK11000 a Molecular Dynamics Study of an Intrins.pdf
+      \verb /Users/Sean/Zotero/storage/KZFEFIUJ/Resnick and Inga - 2003 - Functional mutants of the sequence-specific transcription factor p53 and implications for master gen.pdf
       \endverb
       \verb{urlraw}
-      \verb https://doi.org/10.1021/acsomega.5c05639
+      \verb https://www.pnas.org/doi/full/10.1073/pnas.1633803100
       \endverb
       \verb{url}
-      \verb https://doi.org/10.1021/acsomega.5c05639
+      \verb https://www.pnas.org/doi/full/10.1073/pnas.1633803100
       \endverb
     \endentry
     \entry{boecklerTargetedRescueDestabilized2008}{article}{}
@@ -9292,7 +10255,6 @@
       \keyw{Apoptosis,Biophysics,Calorimetry,Computational Biology,Crystallography X-Ray,DNA Mutational Analysis,Drug Screening Assays Antitumor,Genes p53,Genes Tumor Suppressor,Humans,Molecular Conformation,Mutation,Neoplasms,Thermodynamics,Tumor Suppressor Protein p53}
     \endentry
   \enddatalist
-  \missing{bibidodaP53AIP1PotentialMediator2000}
 \endrefsection
 \endinput
 

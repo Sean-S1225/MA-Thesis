@@ -520,17 +520,19 @@ The process of conducting a MD simulation a molecular dynamics simulation requir
 
 \subsubsection{tLEaP}
 
-tLEaP is the first step of setting up a simulation, and its goal is to take a PDB file – a file containing the atomic coordinates of all the atoms from a protein crystal structure, cryoEM structure, etc – and turn it into a format suitable to begin simulation.
+tLEaP, a terminal-based version of the Load Edit and Prepare script, is the first step of setting up a simulation, and its goal is to take a PDB file, a file containing the atomic coordinates of all the atoms from a protein crystal structure, cryoEM structure, etc., and turn it into a format suitable to begin simulation.
 
-The biomolecule is surrounded in a box of water, with ions added to ensure neutrality.
+The biomolecule is surrounded in a box of water molecules with some amount of padding, typically \qty{12}{\angstrom}. Ions are added to ensure neutrality of the solution, which is necessary to ensure non-physical interactions are felt across the periodic boundaries. The edges of the water box are treated in such a way that rather than being a hard edge water molecules or the protein might bump into, passing outside the box on one side causes the atom to appear on the other side, in a Pac-Man sort of way. The same is true for forces, atoms on one side of the box feel atoms on the opposite. This ensures that although our water box is finite and of a relatively small size, the physics engine treats it as as infinitely repeating. Water molecules make up the bulk of the atoms in a simulation; to cut down on this slightly, an octahedral water box is often chosen, which has the effect of just slicing off the corners from a cubic water box.
 
-tLEaP requires the specification of the force fields for which to use in the simulation. Force fields are important files that specify the physical constants used in the potential energy function for all of the atoms, pairs of atoms, and triplets of atoms used in the system. They may also modify the potential energy function to improve speed, precision, etc. Force fields may be mixed and matched as needed, depending on the contents of the simulation (protein, DNA, lipids, etc). For instance, there are many different force fields that parameterize water, each of them at a slightly different performance, speed, support for water-DNA, water-lipid interactions, etc.
+tLEaP requires the specification of the force fields for which to use in the simulation. Force fields are important files that specify the physical constants used in the potential energy function for all of the atoms, pairs of atoms (bond parameters), triplets of atoms (bond angle parameters) and all quadruplets of atoms (dihedral parameters) found in the system. They may also modify the potential energy function to improve speed or precision of certain molecules, such as water. Force fields may be mixed and matched as needed, depending on the contents of the simulation (protein, DNA, lipids, etc)\footnote{Although one should be careful as many force fields are parameterized with specific partner models in mind (e.g., particular water or protein force fields)}. For instance, there are many different force fields that parameterize water, each of them at a slightly different performance, speed, support for water-DNA, water-lipid interactions, etc.
 
 tLEaP will generate a single parameter file and coordinate file, the combination of which encodes everything the simulation needs to run.
 
+tLEaP, in combination with the General Amber Force Filed is capable of parameterizing most small organic molecules, though highly complex compound or non-standard amino acids would likely require a zeroth step of preparing a force field file (which contains all of the atom, bond, angle, and dihedral parameters) for the molecule which the force field can then use to build the simulation.
+
 \subsubsection{Energy Minimization}
 
-When a protein is crystallized, sometimes atom positions are not energetically favorable. When the data is read, noise in the data may place atoms closer to one another than is realistic. Hydrogen atoms need especially high quality data to resolve, and if this is not possible, tLEaP will guess as to where they should be, but it is only a guess. There are many reasons why the positions of two atoms at the start of a simulation might be non-physical.
+During the process of protein crystallization, sometimes atoms move into positions that would not be energetically favorable at biological conditions. When the data is collected, noise in the data may place atoms closer to one another than is realistic. Hydrogen atoms need especially high quality data to resolve, and if this is not possible, tLEaP will guess as to where they should be, but it is only a guess. In a cryo-EM structure, not all atoms may be resolved, meaning they need to be filled in somehow. These are only some of the ways in which an input structure may have non-physical interactions.
 
 If the simulation were allowed to proceed, those atoms which were too close would fly apart with a large amount of kinetic speed. They would certainly collide with other atoms, transferring some of their energy to the atoms they hit, before snapping back as they attempted to return to their equilibrium positions. The transference of kinetic energy would continue throughout the system, blowing up the protein in an error known as a ``bombs away'' error.
 
@@ -538,29 +540,29 @@ To prevent this from happening, the next step after tLEaP is energy minimization
 
 \subsubsection{Heating}
 
-By this point, the system has been relaxed, but there is no kinetic energy: the temperature of the system is \qty{0}{\kelvin}. In this stage, the temperature – the average kinetic energy – of the system is brought up to \qty{300}{\kelvin}. This is done again slowly to ensure physicality.
+By this point, the system has been relaxed, but there is no kinetic energy: the temperature of the system is \qty{0}{\kelvin}. In this stage, the temperature, which is to say the average kinetic energy of the system is brought up to \qty{300}{\kelvin}. This, again, is done slowly to ensure physicality, with velocities populated from a distribution.
 
 \subsubsection{Equilibration}
 
-Now that the system has kinetic energy to it, it can relax from its perhaps unnatural crystal packing conformation to a more relaxed conformation, natural to a protein surrounded by water. This is done by simulating the system using the previously described protocol for around \qty{30}{\nano\second} and disregarding the data. Small restraints may be applied here.
+Now that the system has had kinetic energy added to it, it can relax from its perhaps unnatural crystal packing conformation to a more relaxed conformation, natural to a protein surrounded by water. This is distinct from energy minimization, in which unfavorable atomic interactions were resolved, here, the whole protein conformation relaxes. This is done by simulating the system using the previously described protocol for around \qty{30}{\nano\second} and disregarding the data. Small restraints may be applied, and lowered to zero before the end of the equilibration.
 
 \subsubsection{Neutral Dynamics}
 
-Finally, the system is ready to be simulated. In normal simulations, all restraints are turned off, and the protein is free to dance around its water box. There are periodic borders to the box, if the protein drifts through a wall it will reappear on the other side as Pacman does his game board.
+Finally, the system is ready to be simulated. In normal simulations, all restraints are turned off, and the protein is free to dance around its water box. If the protein drifts through a wall, it will reappear on the other side due to the periodic boundaries.
 
-The standard practice for simulations is to simulate for \qty{1}{\micro\second}, but depends greatly on the phenomenon being studied. For instance, to simulate the behavior of a ligand in a binding pocket, several hundred nanoseconds could be sufficient, whereas to study the dynamics of an intrinsically disordered protein, dozens of microseconds might be needed (in which case, a more sophisticated protocol may be needed).
+The standard practice for simulations is to run the simulation for \qty{1}{\micro\second} and running the entire simulation in triplicate (restarting with heating where velocities are assigned stochastically), but this depends greatly on the phenomenon being studied. For instance, to simulate the behavior of a ligand in a binding pocket, several hundred nanoseconds could be sufficient, whereas to study the dynamics of an intrinsically disordered protein, dozens of microseconds might be needed\footnote{in this case, a more sophisticated simulation protocol may be needed}.
 
 \subsubsection{Analytics}
 
-Saving the state of the system at every frame would result in an enormous quantity of data, several terabytes at least depending on the size and duration of the simulation, more than would ever be necessary, and would also slow down the process significantly. For this reason, we must chose a frequency at which to save our data. The standard protocol in the Thayer Lab is to write to the disk the state of the system \num{1000} times per nanosecond, which is once every \num{500} steps (more or less, depending on your \(\Delta t\)).
+Saving the state of the system at every frame would result in an enormous quantity of data, several terabytes at least depending on the size and duration of the simulation. This is more than would ever be necessary, and would also slow down the simulation significantly. For this reason, we must chose a frequency at which to save our data. The standard protocol in the Thayer Lab is to write to the disk the state of the system \num{1000} times per nanosecond, which is once every \num{500} steps (more or less, depending on the \(\Delta t\)).
 
-Data analytics is typically conducted in CPPTRAJ, the default analytics program that comes with Amber, though it is often used as an interface to get certain data from the simulation, such as electrostatic interactions, to be used in additional and more sophisticated data analyses.
+Data analytics are typically conducted in CPPTRAJ, the default analytics program that comes with Amber. Often, CPPTRAJ used as an interface to get certain data from the simulation, such as electrostatic interactions, to be used in additional and more sophisticated data analyses.
 
 \section{The Wesleyan High Performance Computing Cluster}
 
 As mentioned in the previous section, molecular dynamics simulations are as powerful as they are computationally expensive. It is for this reason we are very lucky Wesleyan has a such a powerful supercomputer.
 
-The architecture of the Wesleyan supercomputer (also known as HPC, cluster) is as follows. When you connect to the cluster, you interact with it via the head node. The head node is meant to be a ``landing page'' that facilitates interactions with the rest of the cluster. Files live on a drive known as ``zfshomes'', and the head node allows reading and writing to and from zfshomes. Jobs, computationally intense tasks you want to use the cluster's compute power on, are run on compute nodes. There are many different types of compute nodes, akin to different computers with different specs, depending on the resources needed for each jobs.
+The architecture of the Wesleyan supercomputer (also known as the HPC or the cluster) is as follows. When one connect to the cluster, they interact with it via the head node. The head node is meant to be a ``landing page'' that facilitates interactions with the rest of the cluster. Files live on a drive known as ``zfshomes'', and the head node allows reading and writing to and from zfshomes. Jobs, computationally intense tasks you want to use the cluster's compute power on, are run on compute nodes. There are many different types of compute nodes, akin to different computers with different specs, depending on the resources needed for each jobs.
 
 \begin{figure}[htbp]
 \centering
@@ -575,31 +577,44 @@ amber128 & 1 & 128 & GeForce GTX 1080 Ti & Designed for Amber but not the fastes
 mwgpu & 5 & 256 & Tesla K20m & Greatest memory, very slow compared to exx96, amber128 \\
 \hline
 \end{tabularx}
-\caption[A Summary of Compute Resources]{A summary of compute resources available on the Wesleyan high-performance computing cluster}
+\caption[A Summary of Compute Resources]{A summary of Amber-capable compute resources available on the Wesleyan high-performance computing cluster}
 \label{HPC nodes}
 \end{figure}
 
-Despite the quality of the Wesleyan HPC, simulations still take a long time to run. A \qty{1}{\micro\second} simulation of the full-length p53 has about \num{120000} atoms and takes about \num{20} days to run. A smaller subset of the protein, the DNA binding domain, takes about \num{10} days to run. It is important to remember, though, that in the not too-distant past, it would have been remarkable to run even \qty{200}{\nano\second} of a much smaller system. As the speed of GPUs increases, the capabilities of MD simulations will only grow.
+Despite the quality of the Wesleyan HPC, simulations still take a long time to run. A \qty{1}{\micro\second} simulation of the full-length p53 has around \num{120000} atoms and takes about \num{20} days to run. A smaller subset of the protein, the DNA binding domain, takes about \num{10} days to run. It is important to remember, though, that in the not too-distant past, it would have been remarkable to run even \qty{200}{\nano\second} of a much smaller system. In 2004, a state-of-the-art MD paper studying the effects of ion motions on DNA simulated roughly \num{5000} atoms, and took \num{6} months on a national supercomputer \parencite{ponomarevIonMotionsMolecular2004}. As the speed of GPUs increases, the capabilities of MD simulations will only grow.
 
 \section{Protein Energetic Landscapes}
 
-\textcolor{red}{FILL}
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Energy-landscape-of-protein-folding-and-misfolding-From-the-unfolded-state-toward-the}
+\caption[The Protein Energetic Landscape]{The protein energetic landscape, used to understand how a protein moves from its unfolded conformation to a folded, stable, protein. Image source: \parencite{muntauInnovativeStrategiesTreat2014}}
+\label{fig:energy-landscape}
+\end{figure}
+
+Consider a protein with \(N\) atoms. We can uniquely represent this protein using \(6N\) variables, representing the \(x\), \(y\), \(z\) coordinates of each atom, and the velocities in each direction, \(v_{x}\), \(v_{y}\), and \(v_{z}\). This defines a high-dimensional space in which every frame of our simulation lives.
+
+Certainly, certain regions of this space will not be populated, such as positions for which atoms overlap. Other regions will be highly populated, such as the region surrounding the folded, native conformation of the protein.
+
+This implies that there is a subsurface of our high-dimensional space in which a protein could plausibly exist and move along, according to the laws of physics. If we consider the energy associated with the protein at each point along this \(6N\)-dimensional space, we will see that the highly populated regions defines energy wells, and less densely populated regions are associated with higher energy barriers between lower energy conformations.
+
+This mental model provides the framework witch which to derive more theoretical results in molecular biology. For instance, protein folding can be thought of as the protein moving along the energy landscape from an unfolded conformation to the folded energy well \parencite{onuchicTheoryProteinFolding1997}, shown in \figurepageref{fig:energy-landscape}. It also provides the framework which which allosteric models are proposed.
 
 \section{Allostery}
 
-Allostery in proteins is the mechanism by which enormous number of biological processes occur, and is often referred to as the ``second secret of life'', second only to genetic code itself \parencite{monod1971chance}. Allosteric function, in short, is the ability for an interaction at one part of a protein to lead to a change on another, distal part of the protein.
+Allostery in proteins is the mechanism by which a vast variety of biological processes occur, and is often referred to as the ``second secret of life'', second only to genetic code itself \parencite{monod1971chance}. Allosteric function, in short, is the ability for an interaction at one part of a protein to lead to a change on another, distal part of the protein.
 
-More specifically, allostery is classically defined as an interaction caused by to a substrate such that the effector not identical to the substrate, the effector initiates a functional change in the substrate, and that the effector binds or interacts with a region of the substrate that is topologically distinct from the active site \parencite{fenton2008allostery}. Allostery is responsible for bacterial promoter control \parencite{lewisAllosteryLacOperon2013, sharpAllosteryLacOperon2011}, DNA repair \parencite{lakhaniEvolutionaryCovarianceCombined2017, guptaMechanismMismatchRecognition2012}, G-coupled protein signaling \parencite{gentryNovelAllostericModulators2015, fengComputationalAdvancesDevelopment2015}, protein kinase activation \parencite{shiNetworksAllostericControl2006}, transcriptional activation \\ \parencite{garcia-pinoAllosteryIntrinsicDisorder2010}, and more. Despite its clear significance, the exact mechanism by which this signal can propagate through a protein remains elusive.
+More specifically, allostery is classically defined as a process in which an effector, distinct from the substrate, binds to a site on a protein that is topologically distinct from the active site and thereby induces a functional change \parencite{fenton2008allostery}. Allostery is responsible for bacterial promoter control \parencite{lewisAllosteryLacOperon2013, sharpAllosteryLacOperon2011}, DNA repair \parencite{lakhaniEvolutionaryCovarianceCombined2017, guptaMechanismMismatchRecognition2012}, G-coupled protein signaling \parencite{gentryNovelAllostericModulators2015, fengComputationalAdvancesDevelopment2015}, protein kinase activation \parencite{shiNetworksAllostericControl2006}, transcriptional activation \parencite{garcia-pinoAllosteryIntrinsicDisorder2010}, and more. Despite its clear significance, the exact mechanism by which this signal can propagate through a protein remains elusive.
 
-That being said, there are two popular models: the pathway model \\ \parencite{reynoldsHotSpotsAllosteric2011, halabiProteinSectorsEvolutionary2009, rivoireEvolutionBasedFunctionalDecomposition2016, suelEvolutionarilyConservedNetworks2003, zhuravlevProteinFunctionalLandscapes2010, mcleishDynamicTransmissionProtein2015}, and the energy landscape model \parencite{mcleishDynamicTransmissionProtein2015, vijayabaskarInteractionEnergyBased2010, cooperAllosteryConformationalChange1984a, gunasekaranAllosteryIntrinsicProperty2004}. The pathway model hypothesizes that a perturbation at one site will send a mechanistic signal – perhaps through the protein non-bonded interaction network – to an allosteric site. The energy landscape hypothesis says that only through a perturbation at the distal site can the protein energetic landscape shift such that the allosterically active conformation can be accessed.
+That being said, there are two popular models: the pathway model \\ \parencite{reynoldsHotSpotsAllosteric2011, halabiProteinSectorsEvolutionary2009, rivoireEvolutionBasedFunctionalDecomposition2016, suelEvolutionarilyConservedNetworks2003, zhuravlevProteinFunctionalLandscapes2010, mcleishDynamicTransmissionProtein2015}, and the energy landscape model \parencite{mcleishDynamicTransmissionProtein2015, vijayabaskarInteractionEnergyBased2010, cooperAllosteryConformationalChange1984a, gunasekaranAllosteryIntrinsicProperty2004}. The pathway model hypothesizes that a perturbation at one site will send a mechanistic signal, perhaps through the protein non-bonded interaction network, to an allosteric site. The energy landscape hypothesis says that when there is a perturbation at a distal sight, the entire energy landscape shifts such that the allosterically active conformation can be accessed.
 
-There is no clear consensus as to which model is correct, though those in the Thayer Lab tend to prefer the pathway model for how it can be modeled through graph theory, leading to ease of testing. In all likelihood, as with most things in the multi-faceted and cooperative field of biology, allosteric signals probably travel through either or both of these pathways. Finding definitive evidence, in the positive or negative, for either hypothesis, would be a remarkable advancement in the field of molecular biology, and is a topic of great interest in the Thayer Lab.
+There is no clear consensus as to which model is correct, though those in the Thayer Lab tend to prefer a derivative of the pathway model that is modeled through graph theory. In all likelihood, as with most things in the multi-faceted and cooperative field of biology, allosteric signals probably travel through some combination of these pathways. Finding definitive evidence, in the positive or negative, for either hypothesis, would be a remarkable advancement in the field of molecular biology, and is a topic of great interest in the Thayer Lab.
 
 \section{Graph Theoretical Approaches to Protein Analysis}
 
-The move into the era of big data has had profound effects in science. For the first time, enormous datasets could be collected and analyzed on reasonable timescales. Molecular biology is no exception, with whole-genome sequencing leading to countless discoveries and innovations.
+The move into the era of big data has had profound effects in science. For the first time, enormous datasets can be collected and analyzed on reasonable timescales. Molecular biology is no exception, with whole-genome sequencing leading to countless discoveries and innovations.
 
-A still-developing direction is in analyzing molecular dynamics simulations. Could the secret mechanism of allostery be hiding in our simulations? The only way to know is to look, to develop more sophisticated analyses, and to continue looking. One promising approach to analyzing molecular simulations is by leveraging graph theory.
+A still-developing direction is in analyzing molecular dynamics simulations. Can we use simulations with allosteric effects to uncover its secret mechanism? The only way to know is to look, to develop more sophisticated analyses, and to continue looking. One promising approach to analyzing molecular dynamics simulations is by leveraging graph theory.
 
 \subsection{A Graph Theory Primer}
 
@@ -610,17 +625,22 @@ A still-developing direction is in analyzing molecular dynamics simulations. Cou
 \label{fig:sevenbridges}
 \end{figure}
 
-Graph theory is a branch of math that studies abstract connections between objects. The first problem that was solved using techniques that resemble what we know to be graph theory was in 1736 by Leonhard Euler, who answered the long-standing question of if it were possible to cross the seven bridges of the city of Königsberg, each only once.
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{graph.png}
+\caption[An Example of a Graph]{An example of a graph, as defined in Graph Theory. Nodes are abstract representations of features, and edges connect features. Image source: \parencite{GirlsTalkMath}}
+\label{fig:example-graph}
+\end{figure}
 
-\FloatBarrier
+Graph theory is a branch of math that studies abstract connections between objects. The first problem that was solved using techniques that resemble what we know today to be graph theory was in 1736 by Leonhard Euler, who answered the long-standing question of if it were possible to cross the seven bridges of the city of Königsberg, each only once.
 
-A simple graph \(G = (V, E)\) is defined as a tuple containing a set of vertices and a set of edges connecting two vertices. \textcolor{red}{include graphic}. Edges \(e = \{v_{i}, v_{j}\} \in E\) are unordered tuples of vertices; edges have no direction in a simple graph.
+A simple graph \(G = (V, E)\) is defined as a tuple containing a set of vertices and a set of edges connecting two vertices. Edges \(e = \{v_{i}, v_{j}\} \in E\) are unordered tuples of vertices; edges have no direction in a simple graph. \figurepageref{fig:example-graph} shows an example of a graph as defined in graph theory, with \num{5} nodes and \num{8} edges. 
 
 The degree of a vertex, denoted \(\deg(v)\) for \(v \in V\), indicates the number of vertices connected to \(v\) (equivalently, the number of edges incident to \(v\)).
 
-A graph is connected if there exists a sequence of edges to get form any one node to any other node, and a graph is complete if every vertex is connected to every other vertex.
+A graph is connected if there exists a sequence of edges to get from any one node to any other node, and a graph is complete if every vertex is connected to every other vertex.
 
-Let \(G = (V, E)\) be a graph. How can we represent \(G\) on a computer? Define \(M_{G}\) to be an \(n \times n\) matrix where \(n = |V|\) is the number of vertices in \(G\). Number each of the \(n\) vertices 1 to \(n\) in any arbitrary fashion. Then for the \(i\)th row and \(j\)th column of our matrix, we define the matrix entry to be
+Let \(G = (V, E)\) be a graph. How can we represent \(G\) on a computer? Define \(M_{G}\) to be an \(n \times n\) matrix where \(n = |V|\) is the number of vertices in \(G\). Number each of the \(n\) vertices 1 to \(n\) in any arbitrary fashion. Then, for the \(i\)th row and \(j\)th column of our matrix, we define the matrix entry to be
 
 
 \begin{equation}
@@ -632,9 +652,9 @@ Let \(G = (V, E)\) be a graph. How can we represent \(G\) on a computer? Define 
 
 \noindent that is, \(m_{i, j}\) is \(1\) if there exists an edge between vertices \(v_{i}\) and \(v_{j}\), and \(0\) otherwise. Representing graphs as a matrix is convenient computationally, but it also allows us to leverage the rich field of linear algebra, as will be seen in Section \ref{sec:spectralgraphtheory}.
 
-A weighted graph \(G = (V, E, w)\) is a graph \((V, E)\), with the addition of a weight function, \(w: E \rightarrow \mathbb{R}\) that maps an edge to a weight value. Weighted graphs are useful modeling, for example, the probability of transitioning from one state to another.
+A weighted graph \(G = (V, E, w)\) is a graph \((V, E)\), with the addition of a weight function, \(w: E \rightarrow \mathbb{R}\) that maps each edge in the graph to a real number. Weighted graphs are useful modeling, for example, the probability of transitioning from one state to another.
 
-We can represent weighted graphs computationally by changing our definition of \(m_{i, j}\) in Equation \ref{eq:simplematrix}:
+We can represent weighted graphs computationally by changing the definition of \(m_{i, j}\) in Equation \ref{eq:simplematrix}:
 
 \begin{equation}
 	m_{i, j} = \begin{cases}
@@ -643,52 +663,52 @@ w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
 \end{cases},\label{eq:weightedmatrix}
 \end{equation}
 
-\noindent that is, rather than using a binary 1 or 0 if there is or is not an edge between the two vertices, we use the weight of the edge between them.
+\noindent that is, rather than using a binary 1 or 0 if there is an edge between the two vertices, we use the weight of the edge between them.
 
-Directed graphs are graphs in which edges have a specific edge to them. For a simple graph, if \(\{v_{i}, v_{j}\}\) is in the set of edges, then we say that \(v_{i}\) is connected to \(v_{j}\) and \(v_{j}\) is connected to \(v_{i}\), but in a directed graph, if \((v_{i}, v_{j})\) is in the set of edges (notice that edges are composed using tuples in directed graphs rather than sets), then we say that \(v_{i}\) is connected to \(v_{j}\), but \(v_{j}\) is \textit{not} connected to \(v_{i}\) (unless \((v_{i}, v_{j})\) is also in the set of edges). Directed graphs can be useful in giving a more nuanced description of the allowable states the current state could evolve into; just because we arrived to state B from state A may not necessarily mean we can return to state A.
+Directed graphs are graphs in which edges have a directionality to them. Rather than just generically saying \(v_{i}\) and \(v_{j}\) are connected, we can say that there is a connection staring at \(v_{i}\) and ending at \(v_{j}\). For a simple graph, if \(\{v_{i}, v_{j}\}\) is in the set of edges, then we say that \(v_{i}\) is connected to \(v_{j}\) and \(v_{j}\) is connected to \(v_{i}\), but in a directed graph, if \((v_{i}, v_{j})\) is in the set of edges (notice that edges are composed using tuples in directed graphs rather than sets), then we say that \(v_{i}\) is connected to \(v_{j}\), but \(v_{j}\) is \textit{not} connected to \(v_{i}\) (unless \((v_{j}, v_{i})\) is also in the set of edges). If a graph is being used to represent the connections allowable between states in a system, using a directed graph allows for a more nuanced description the state transitions; just because the system arrived to state B from state A may not necessarily mean it can return to state A directly.
 
 Encoding a directed graph in a matrix follows the same process as seen in Equation \ref{eq:simplematrix},
 
 \begin{equation}
 	m_{i, j} = \begin{cases}
 1 & (v_{i}, v_{j}) \in E\\
-0 & (v_{i}, v_{j}) \in E
+0 & (v_{i}, v_{j}) \not\in E
 \end{cases},\label{eq:directedmatrix}
 \end{equation}
 
-\noindent except that the resulting may not be symmetric, i.e., in general we cannot say that \(m_{i, j} = m_{j, i}\) as we could with simple graphs.
+\noindent except that the resulting may not be symmetric, i.e., in general is not guaranteed that \(m_{i, j} = m_{j, i}\), as was the case with simple graphs.
 
-A weighted directed graph in as it sounds, edges specify directionality and are also given a weight by the weight function \(w\). Encoding as a matrix combines the ideas seen previously in Equations \ref{eq:directedmatrix} and \ref{eq:weightedmatrix}, namely,
+A weighted directed graph is as it sounds, edges specify directionality and are also given a weight by the weight function \(w\). Encoding as a matrix combines the ideas seen previously in Equations \ref{eq:directedmatrix} and \ref{eq:weightedmatrix}, namely,
 
 \begin{equation}
 	m_{i, j} = \begin{cases}
 w((v_{i}, v_{j})) & (v_{i}, v_{j}) \in E\\
-0 & (v_{i}, v_{j}) \in E
+0 & (v_{i}, v_{j}) \not\in E
 \end{cases}.
 \end{equation}
 
 \subsection{Graph Representations of Proteins}
 
-How can we use a graph theoretic framework to study proteins? We will need a way to encode information about our protein of interest in the language of graphs. There are a countless number of ways to do this. One valid though not particularly useful way of representing a protein could be to let vertices represent amino acids, and connect those that are adjacent in the protein's backbone.
+How can one use a graph theoretic framework to study proteins? A way to encode information about a protein of interest in the language of graphs is required. There are a countless number of ways to do this. One valid approach, though one with limited applications, is to let vertices represent amino acids, connecting nodes according to adjacent amino acids in the protein's backbone.
 
-A more useful way of representing proteins, one that is used in the Thayer Lab, is by encoding information about non-bonded interactions.
+A promising way to capture long-range allosteric signals is by using edges to encode information about non-bonded interactions.
 
-We allow vertices to represent amino acids, one vertex for each amino acid of the protein's sequence. We define a complete weighted graph, where all vertices are connected with each other and the edge between any two amino acids is weighted by the strength of the non-bonded interaction between the two. If allosteric signals are conferred by a domino effect of energetic interactions, a time series history of these networks should reveal it.
+First, vertices are defined to represent amino acids, with one vertex for each amino acid of the protein's sequence. Next, all possible edges are added to the graph, connecting every residue to every other residue, and are weighted by the strength of the non-bonded interaction between the two. If allosteric signals are conferred by a domino effect of energetic interactions, a time series history of these networks should reveal it.
 
-Observe that this creates a symmetric graph: the non-bonded interaction strength between amino acids \(i\) and \(j\) is the same as the interaction strength between \(j\) and \(i\), so for our weighted edge matrix \(M_{G}\), \(m_{i, j} = m_{j, i}\).
+Observe that this creates a simple weighted (symmetric) graph: the non-bonded interaction strength between amino acids \(i\) and \(j\) is the same as the interaction strength between \(j\) and \(i\), so the for weighted edge matrix \(M_{G}\), \(m_{i, j} = m_{j, i}\).
 
-Denser regions of the protein will naturally have greater local energetic interactions, which must be normalized. We can do this with the following procedure:
+More densely packed regions of the protein will naturally have greater local energetic interactions, which must be normalized. We can do this with the following procedure.
 
 For the sake of notation, we will write \(v_{i}v_{j}\) to mean specifically the edge from vertex \(v_{i}\) to \(v_{j}\). In this next step, we will be creating a directed graph, so it will be important to differentiate the edge from \(v_{i}\) to \(v_{j}\) from the edge from \(v_{j}\) to \(v_{i}\).
 
 Define
 \begin{equation}
-	\text{Norm}(v_{i}v_{j}) = \frac{w(v_{i}v_{j})}{\sum_{z\in V}w(v_{i}z)}
+	\text{Norm}(v_{i}v_{j}) = \frac{w(v_{i}v_{j})}{\sum\limits_{z\in V}w(v_{i}z)}
 \end{equation}
 
-This normalizes the graph by dividing the edge weight of \(v_{i}v_{j}\) by the sum of all edge weights incident to \(v_{i}\). Observe that this graph is no longer symmetric, that is, \(\text{Norm}(v_{i}v_{j}) \neq \text{Norm}(v_{j}v_{i})\), since \(v_{i}\) and \(v_{j}\) have different edges incident to them.
+This normalizes the graph by dividing the edge weight of \(v_{i}v_{j}\) by the sum of all edge weights incident to \(v_{i}\). Observe that this graph is no longer symmetric; that is, \(\text{Norm}(v_{i}v_{j}) \neq \text{Norm}(v_{j}v_{i})\), because \(v_{i}\) and \(v_{j}\) have different edges incident to them.
 
-When this process is applied to all of the edges in \(G\), it created a weighted directed graph. Recall that our goal is to represent the non-bonded interaction network of the protein, which intuitively should be symmetric: the force felt between amino acids \(i\) and \(j\) should be the same force felt between amino acids \(j\) and \(i\). To restore the symmetric nature of our graph, we modify our normalizing algorithm:
+When this process is applied to all of the edges in \(G\), it creates a weighted directed graph. Recall that the goal is to represent the non-bonded interaction network of the protein, which intuitively should be symmetric: the force felt between amino acids \(i\) and \(j\) should be the same force felt between amino acids \(j\) and \(i\). To restore the symmetric nature of our graph, we modify our normalizing algorithm:
 
 \begin{equation}
 	\text{NormSymmetric}(v_{i}v_{j}) = \max(\text{Norm}(v_{i}v_{j}), \text{Norm}(v_{j}v_{i})).
@@ -703,16 +723,17 @@ Finally, a threshold is applied based on the distribution of edge weights to iso
 
 We begin with some definitions. Let \(\mathbb{F}\) be a field of (real) scalars (i.e. a set of numbers in which addition and multiplication work as we expect them to, such as the real numbers). Let \(\vec{V}\) be a set of vectors of dimension \(n\) generated over \(\mathbb{F}\) (i.e. values of vectors in the set \(\vec{V}\) are only allowed to come from \(\mathbb{F}\)).
 
-Eigenvalues (\(\lambda\)) and eigenvectors (\(\vec{v}\)) of a matrix \(A\) are defined as those scalars \(\lambda \in \mathbb{F}\) and vectors \(\vec{v} \in \vec{V}\) such that \(A\vec{v} = \lambda\vec{v}\), that is, the linear transformation \(A\) applied to \(\vec{v}\) results in a scalar multiplication of \(\vec{v}\).
+Eigenvalues (\(\lambda\)) and eigenvectors (\(\vec{v}\)) of a matrix \(A\) are defined as those scalars \(\lambda \in \mathbb{F}\) and vectors \(\vec{v} \in \vec{V}\) such that \(A\vec{v} = \lambda\vec{v}\), that is, the linear transformation \(A\) applied to \(\vec{v}\) results in a scalar multiplication of \(\vec{v}\). For an \(n \times n\) matrix \(A\) there are exactly \(n\) eigenvectors, typically labeled such that \(\lambda_{1} \leq \lambda_{2} \leq \cdots \leq \lambda_{n}\).
 
-For an \(n \times n\) matrix \(A\) there are exactly \(n\) eigenvectors, typically labeled such that \(\lambda_{1} \leq \lambda_{2} \leq \cdots \leq \lambda_{n}\).
+A normalized vector is a vector with length \num{1}. For a vector \(\begin{bsmallmatrix}
+a_{1} & a_{2} & \cdots & a_{n}
+\end{bsmallmatrix}\tran\), the length is given by \(\sqrt{a_{1}^{2} + a_{2}^{2} + \cdots + a_{n}^{n}}\).
 
-Next, a set of vectors is orthonormal if any two vectors from the set are perpendicular to one another. For example, over \(\mathbb{R}\), the set \(\left\{\begin{bsmallmatrix}
+Next, a set of vectors is orthonormal if the length of each vector is \num{1} and any two vectors from the set are perpendicular to one another. For example, over \(\mathbb{R}\), the set of vectors pointing one unit up and one unit right, \(\left\{\begin{bsmallmatrix}
 1 \\ 0
 \end{bsmallmatrix}, \begin{bsmallmatrix}
 0 \\ 1
-\end{bsmallmatrix}\right\}\)
-\noindent is orthonormal, since an arrow pointing one unit up and an arrow pointing one unit right are perpendicular.
+\end{bsmallmatrix}\right\}\), is orthonormal, because the vectors are perpendicular.
 
 A set of vectors \(B = \{b_{1}, b_{2}, \cdots b_{n}\}\) is known as a basis set of \(\vec{V}\) if for all vectors \(\vec{v} \in \vec{V}\), \(\vec{v}\) can be expressed as a linear combination of vectors in \(B\), \(\vec{v} = a_{1}b_{1} + a_{2}b_{2} + \cdots a_{n}b_{n}\), for scalars \(a_{1},~a_{2},~\cdots a_{n} \in \mathbb{F}\). The same set of vectors, \(\left\{\begin{bsmallmatrix}
 1 \\ 0
@@ -724,21 +745,21 @@ a \\ b
 1 \\ 0
 \end{bsmallmatrix} + b\begin{bsmallmatrix}
 0 \\ 1
-\end{bsmallmatrix}\). Thus \(\left\{\begin{bsmallmatrix}
+\end{bsmallmatrix}\). A set of vectors is referred to as an orthonormal basis if they are orthonormal and form a basis for the vector space. Thus \(\left\{\begin{bsmallmatrix}
 1 \\ 0
 \end{bsmallmatrix}, \begin{bsmallmatrix}
 0 \\ 1
-\end{bsmallmatrix}\right\}\) is referred to as an orthonormal basis.
+\end{bsmallmatrix}\right\}\) is an orthonormal basis.
 
-The Spectral Theorem states that all symmetric matrix have an orthonormal eigenbasis. This says for all symmetric matrices (a matrix in which for all entries \(m_{i, j}\), \(m_{i, j} = m_{j, i}\)), the set of eigenvectors of that matrix form is both orthonormal and is a basis for the set of all vectors. As will be seen in Section \ref{sec:heatkernel}, this theorem is very important because it makes difficult or even impossible computations much easier.
+The Spectral Theorem states that all symmetric matrices have an orthonormal eigenbasis. That is, for all symmetric matrices (a matrix in which for all entries \(m_{i, j}\), \(m_{i, j} = m_{j, i}\)), the set of eigenvectors of that matrix is both orthonormal and is a basis for the vector space. As will be seen in Section \ref{sec:heatkernel}, this theorem is very important, because it makes difficult or even impossible computations much easier.
 
-Let \(Q\) be a matrix such that the columns of \(Q\) are the orthonormal eigenvectors of \(A\). This matrix has an important property that the inverse of \(Q\), \(Q^{-1}\), is equal to the transpose of \(Q\), \(Q\tran\). Now let \(\Lambda\) be a diagonal matrix where \(\lambda_{i, i}\) is the \(i\)th eigenvalue of \(A\). The spectral theorem tells us that for a diagonal matrix \(A\), \(A = Q\Lambda Q\tran\).
+Let \(Q\) be a matrix such that the columns of \(Q\) are the orthonormal eigenvectors of \(A\) as given by the spectral theorem. This matrix has an important property that the inverse of \(Q\), \(Q^{-1}\), is equal to the transpose of \(Q\), \(Q\tran\). Now let \(\Lambda\) be a diagonal matrix where \(\lambda_{i, i}\) is the \(i\)th eigenvalue of \(A\). The spectral theorem tells us that for a diagonal matrix \(A\), \(A = Q\Lambda Q\tran\).
 
 \subsection{The Normalized Laplacian Matrix}
 
-We need one more tool to derive the heat kernel on graphs: the normalized Laplacian matrix, a more sophisticated way to encode a graph as a matrix than the ones seen previously.
+One more tool is needed to derive the heat kernel on graphs: the normalized Laplacian matrix, a more sophisticated way to encode a graph as a matrix than the ways seen previously.
 
-We begin with the adjacency matrix \(A\). As defined in Equation \ref{eq:weightedmatrix}, the entry at row \(i\) and column \(j\) takes the following value:
+Begin with the adjacency matrix \(A\). As defined in Equation \ref{eq:weightedmatrix}, the entry at row \(i\) and column \(j\) takes the following value:
 
 \begin{equation}
 	a_{i, j} = \begin{cases}
@@ -747,20 +768,20 @@ w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
 \end{cases}.
 \end{equation}
 
-\noindent Next, consider the degree matrix. In the case of a undirected graph, the degree matrix encodes the degree of each vertex along the diagonal and is 0 in all other entries. For the diagonal matrix \(D\), entries are defined as follows:
+\noindent Next, consider the degree matrix. In the case of a undirected graph, the degree matrix encodes the degree of each vertex (the number of edges incident to it) along the diagonal and is 0 in all other entries. For the diagonal degree matrix \(D\), entries are defined as follows:
 
 \begin{equation}
 	d_{i, j} = \begin{cases}
-\deg(d) & i = j\\
+\deg(v_{i}) & i = j\\
 0 & i \neq j
 \end{cases}.
 \end{equation}
 
-\noindent We will also need to consider the pseudo-inverse of \(D\), \(D^{-\frac{1}{2}}\), with entries given by
+\noindent The pseudo-inverse of \(D\), \(D^{-\frac{1}{2}}\), has entries given by
 
 \begin{equation}
 	D^{-\frac{1}{2}}(i, j) = \begin{cases}
-\frac{1}{\sqrt{\deg(d)}} & i = j\\
+\frac{1}{\sqrt{\deg(v_{i})}} & i = j\\
 0 & i \neq j
 \end{cases}.
 \end{equation}
@@ -769,20 +790,20 @@ w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
 
 \begin{equation}
 	L(i, j) = \begin{cases}
-\deg(d) & i = j\\
+\deg(v_{i}) & i = j\\
 -w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
 0 & \text{otherwise}
 \end{cases}.
 \end{equation}
 
-\noindent The diagonal of \(A\) is zero since vertices are not allowed to connect to one another, so the diagonal of \(L\) is the same as \(D\). All non-diagonal entries of \(D\) are zero, which gives the \(-w(\{v_{i}, v_{j}\})\) for adjacent vertices. All other entries are not changed.
+\noindent This definition of \(L\) comes from the fact that the diagonal of \(A\) is zero, since vertices are not allowed to connect to themselves, so the diagonal of \(L\) is the same as \(D\). All non-diagonal entries of \(D\) are zero, which gives the \(-w(\{v_{i}, v_{j}\})\) for adjacent vertices. All other entries are zero.
 
 Finally, we consider the normalized Laplacian, which is given by \(\hat{L} = D^{-\frac{1}{2}}LD^{-\frac{1}{2}}\), with entries as follows:
 
 \begin{equation}
 	\hat{L}(i, j) = \begin{cases}
-1 & i = j \text{ and } \deg(i) \neq 0\\
-\frac{-w(i, j)}{\sqrt{\deg(i)\deg(j)}} & i \neq j \text{ and } \{v_{i}, v_{j}\} \in E\\
+1 & i = j \text{ and } \deg(v_{i}) \neq 0\\
+\frac{-w(\{i, j\})}{\sqrt{\deg(v_{i})\deg(v_{j})}} & i \neq j \text{ and } \{v_{i}, v_{j}\} \in E\\
 0 & \text{otherwise}
 \end{cases}.
 \end{equation}
@@ -790,7 +811,7 @@ Finally, we consider the normalized Laplacian, which is given by \(\hat{L} = D^{
 \subsection{The Heat Kernel}
 \label{sec:heatkernel}
 
-The heat kernel is a function taken from physics, namely, it is the fundamental solution to the heat equation. In essence, it simulates how heat diffuses through a system. When applied in the context of graph theory, it can tell us how information diffuses through a network. Intuitively, highly connected regions of the graph should diffuse heat quickly while less connected regions will diffuse heat more slowly.
+The heat kernel is a function taken from physics; namely, it is the fundamental solution to the heat equation. In essence, it simulates how heat diffuses through a system. When applied in the context of graph theory, it can tell us how information diffuses through a network. Intuitively, highly connected regions of the graph should diffuse heat quickly while less connected regions will diffuse heat more slowly.
 
 The heat equation is given as:
 
@@ -804,34 +825,35 @@ The heat equation is given as:
 	h_{t} = e^{-t\hat{L}}.
 \end{equation}
 
-Observe that this solution involved exponentiating the matrix \(\hat{L}\). How do you raise \(e\) to the power of a matrix? We can use the results from the previous sections to derive this.
+Observe that this solution involved exponentiating the matrix \(\hat{L}\). How does one raise \(e\) to the power of a matrix? The results from the previous sections will help.
 
-Because the normalized Laplacian matrix is symmetric, the spectral theorem tells us we can decompose \(\hat{L}\) into \(U\Lambda U\tran\) (where \(U\) is the matrix of eigenvectors and \(\Lambda\) is the diagonal matrix of eigenvalues). Further, we can use the Taylor expansion of \(e\),
+Because the normalized Laplacian matrix is symmetric, the spectral theorem says it can decompose \(\hat{L}\) into \(U\Lambda U\tran\) (where \(U\) is the matrix of eigenvectors and \(\Lambda\) is the diagonal matrix of eigenvalues). Further, the Taylor expansion of \(e\),
 
 \begin{equation}
 	e^{x} = 1 + x + \frac{x^{2}}{2!} + \cdots = \sum_{i=0}^{\infty} \frac{x^{i}}{i!},
 \end{equation}
 
-\noindent to get that
+\noindent allows us to get
 
 \begin{equation}
-	e^{-t\hat{L}} = 1 + (-t\hat{L}) + \frac{(-t\hat{L})^{2}}{2!} + \cdots = \sum_{i=0}^{\infty} \frac{(-t\hat{L})^{i}}{i!},
+	e^{-t\hat{L}} = 1 + (-t\hat{L}) + \frac{(-t\hat{L})^{2}}{2!} + \cdots = \sum_{i=0}^{\infty} \frac{(-t\hat{L})^{i}}{i!}.
 \end{equation}
 
 
-\noindent We will need two more lemmas to continue:
+\noindent Two more lemmas will be needed to continue:
 
 \begin{lemma}
 For a symmetric matrix \(\hat{L} = U\Lambda U\tran\), \(\hat{L}^{n} = U\Lambda^{n} U\tran\).\label{lemma:exp}
 \end{lemma}
 
 \begin{proof}
-To compute \(\hat{L}^{n}\), observe the following. Recall \(\hat{L}^{n} = U\Lambda U\tran\) and that \(U\tran = U^{-1}\): the transpose of \(U\) is equal to its inverse.
+To compute \(\hat{L}^{n}\), observe the following. Recall \(\hat{L}^{n} = U\Lambda U\tran\) and that \(U\tran = U^{-1}\), i.e., the transpose of \(U\) is equal to its inverse.
 
 \noindent Then,
 
 \begin{align*}
-\hat{L}^{n} & = \underbrace{(U\Lambda U\tran)(U\Lambda U\tran)\cdots (U\Lambda U\tran)}_{n}\\
+\hat{L}^{n} & = \underbrace{\hat{L}\hat{L}\cdots \hat{L}}_{n}\\
+& = (U\Lambda U\tran)(U\Lambda U\tran)\cdots (U\Lambda U\tran)\\
 & = (U\Lambda U^{-1})(U\Lambda U^{-1}) \cdots (U\Lambda U^{-1})\\
 & = U\Lambda(U^{-1}U)\Lambda(U^{-1}U) \cdots \Lambda U^{-1}\\
 & = U\Lambda^{n} U^{-1}\refstepcounter{equation}\tag{\theequation}.
@@ -888,10 +910,10 @@ a_{1, 1}^{m} & 0 & \cdots & 0\\
 
 \end{proof}
 
-We now derive a closed-form equation for the heat kernel simulated on our weighted, undirected graph.
+Now, a closed-form equation for the heat kernel simulated on our weighted, undirected graph can be derived.
 
 \begin{proposition}
-Let \(G=(V,E,w)\) be a weighted, undirected graph. In our case, \(G\) represents the protein non-bonded interaction graph. Let \(\hat{L}\) be the (symmetric) normalized Laplacian matrix with decomposition \(\hat{L} = U\Lambda U\tran\).
+Let \(G=(V,E,w)\) be a weighted, undirected graph. In this case, \(G\) represents the protein non-bonded interaction graph. Let \(\hat{L}\) be the (symmetric) normalized Laplacian matrix with decomposition \(\hat{L} = U\Lambda U\tran\).
 
 \noindent The heat kernel, given by
 \begin{equation*}
@@ -955,15 +977,15 @@ e^{-t\lambda_{1}} & 0 & \hdots & 0\\
 
 The Wasserstein distance, also referred to as the Earth Mover's Distance, is a metric that measures the distance or difference between probability distributions. 
 
-Suppose you have several piles of dirt on your lawn and several holes, too, and you want to move the dirt from the piles into the holes. If the piles of dirt represent one probability distribution and the holes represent another, then the Wasserstein distance gives you the minimum amount of ``work'' needed to transport the dirt across your potentially hilly lawn from the piles to the holes.
+Suppose there have several piles of dirt on a lawn and several holes, too. If the piles of dirt represent one probability distribution and the holes represent another, then the Wasserstein distance gives the minimum amount of ``work'' needed to transport the dirt across the potentially hilly lawn from the piles to the holes.
 
 Thus, rather than measuring pointwise differences between the two distributions, the Wasserstein distance measures the minimum cost to transform one distribution into another, where cost is defined as the amount of mass moved multiplied by the distance transported.
 
-In the context of protein analysis, it is very useful. Consider the wild type (WT) and mutant forms of a protein. For each frame of the simulation, we can compute the non-bonded interaction network of the two systems. We can then use the heat kernel to simulate heat flow over each of the networks, giving us a measure of how an allosteric signal might flow locally, for each residue in the protein, for the WT and the mutant. Compiling the data for each frame of the simulations, we can use it to approximate a probability distribution, and then use the Wasserstein distance metric to compare quantitatively the difference between each residue in its ability to transmit energetic perturbations through the protein between the WT and mutant protein. This might tell us, for example, that the non-bonded interaction network of the mutant p53 is wildly different than the WT, despite a single point mutation change.
+In the context of protein analysis, it is very useful. Consider the wild type (WT) and mutant forms of a protein. For each frame of the simulation, the non-bonded interaction network of the two systems can be computed. From there, the heat kernel simulates heat flow over each of the networks, giving a measure of how an allosteric signal might flow across each residue in the protein, comparing between the WT and the mutant. Compiling the data for each frame of the simulations, it can be used to approximate a probability distribution, then the Wasserstein distance metric compares quantitatively the difference between each residue in its ability to transmit energetic perturbations through the protein between the WT and mutant protein. This might say, for example, that the non-bonded interaction network of the mutant p53 is highly different than the WT, despite only a single point mutation change.
 
 \section{p53}
 
-p53, encoded by the TP53 gene \parencite{laneAntigenBoundHost1979}, is often referred to as the “guardian of the genome” for its important role in tumor suppression \parencite{laneCancerP53Guardian1992}. Its 393 amino acids are broadly made up of three domains, the N-terminal domain, the DNA binding domain, and the C-terminal domain, each of which correspond to approximately 25\%, 50\%, and 25\% of the protein. The DNA binding domain is a well-ordered beta-sandwich, held together by a Zn2\textsuperscript{+} ion \parencite{choCrystalStructureP531994, butlerStructureFunctionAggregation2003}. The N- and C-terminal domains are intrinsically disordered and contain important regulatory domains \parencite{oldfieldIntrinsicallyDisorderedProteins2014, chebaroIntrinsicallyDisorderedEnergy2015}: the N-terminal domain contains a transactivation domain \parencite{sunPhosphorylationdependentSwitchDisordered2021} and a proline-rich domain which promotes binding of apoptotic factors \parencite{baptisteProlinerichDomainP532002}, and the C-terminal domain contains a tetramerization domain needed for efficient DNA binding \parencite{jeffrey1995crystal, cheneRoleTetramerizationP532001} and is the site of numerous post-translational modifications used to modulate binding activity \parencite{guSurfPosttranslationalModification2012, knightsDistinctP53Acetylation2006, michaelP53Mdm2ModuleUbiquitin2003}.
+p53, encoded by the \textit{TP53} gene \parencite{laneAntigenBoundHost1979}, is often referred to as the “guardian of the genome” for its important role in tumor suppression \parencite{laneCancerP53Guardian1992}. Its \num{393} amino acids are broadly made up of three domains, the N-terminal domain, the DNA binding domain, and the C-terminal domain, which correspond to approximately \qty{25}{\percent}, \qty{50}{\percent}, and \qty{25}{\percent} of the protein, respectively. The DNA binding domain is a well-ordered beta-sandwich, held together by a \ce{Zn}\textsuperscript{\num{2}+} ion \parencite{choCrystalStructureP531994, butlerStructureFunctionAggregation2003}. The N- and C-terminal domains are intrinsically disordered and contain important regulatory domains \parencite{oldfieldIntrinsicallyDisorderedProteins2014, chebaroIntrinsicallyDisorderedEnergy2015}: the N-terminal domain contains a transactivation domain \parencite{sunPhosphorylationdependentSwitchDisordered2021} and a proline-rich domain which promotes binding of apoptotic factors \parencite{baptisteProlinerichDomainP532002}, and the C-terminal domain contains a tetramerization domain needed for efficient DNA binding \parencite{jeffrey1995crystal, cheneRoleTetramerizationP532001} and is the site of numerous post-translational modifications used to modulate binding activity \parencite{guSurfPosttranslationalModification2012, knightsDistinctP53Acetylation2006, michaelP53Mdm2ModuleUbiquitin2003}.
 
 \subsection{Functional Regions}
 
@@ -982,17 +1004,45 @@ In times of low cellular stress, Mdm2 and MdmX bind to the transactivation domai
 
 \subsubsection{Proline-Rich Domain}
 
-The proline-rich domain (PRD), defined roughly between residues \numrange{63}{97}, is a domain characterized by its large number of proline residues. It is not as strongly conserved as other regions, with human p53 containing five PXXP motifs while murine p53 only encodes two PXXP domains (two proline residues separated by two not necessarily identical non-proline residues). The PRD has been shown to be important for inhibition of cell growth, but is not required for transactivation \parencite{walker1996identification}.
+The proline-rich domain (PRD), defined roughly between residues \numrange{63}{97}, is a domain characterized by its large number of proline residues. It is not as strongly conserved as other regions, with human p53 containing five PXXP motifs while murine p53 only encodes two PXXP domains (two proline residues separated by two not necessarily identical non-proline residues). The PRD has been shown to be important for inhibition of cell growth, but is not required for transactivation \parencite{walker1996identification, zhangMultifunctionalProlinerichDomain2025}.
 
 The role of the PRD on p53-DNA interactions remains unclear. NMR spectroscopy has shown that the PRD lowers p53 binding affinity for DNA but increases sequence specificity \parencite{he2019interaction}. However, studies using p53 mutations with deletions in the PRD show that the PRD may be essential for efficient DNA binding. p53\textsuperscript{\(\Delta62-91\)} mutants have been shown to have 60\% lower binding to the promoter region of the gene p21, whereas p53\textsuperscript{\(\Delta62-77\)} maintains WT binding \parencite{alexander2021p53}. Further studies have shown that both p53 and p53\textsuperscript{\(\Delta62-91\)} have similar affinity for the promoter region upstream of the p21 gene, but p53\textsuperscript{\(\Delta62-91\)} has impaired histone acetylation function, which reduces the efficiency of its transactivation \parencite{liu2003activation}. p53\textsuperscript{\(\Delta62-91\)} has also been shown to have reduced binding affinity for the promoter region of the PIG3 gene \parencite{roth2000tumor, venot1998requirement}.
 
 The PRD contains a polymorphic residue, residue number 72, which is found to be either proline or arginine. The frequency depends on ethnic group, but a strong trend exists between cold winter temperatures and arginine at position 72 \parencite{shi2009winter}. As with the question regarding how the PRD influences DNA interactions, results on what influence P/R72 has on the function of p53 remains unclear and contradictory. One study showed that polymorphism of residue 72 does not effect the apoptotic function of p53 \parencite{antoun2018different}, though others have shown that p53\textsuperscript{R72} has significantly enhanced apoptotic abilities \parencite{sullivan2004polymorphism, dumont2003codon}.
 
-For more, see \parencite{zhangMultifunctionalProlinerichDomain2025}. Overall, it seems that the exact impact of mutations, deletions, and regulatory domains depends strongly on the the nature of the alteration, the experimental design (\textit{in vivo} or \textit{in vitro}, yeast vs human vs mouse cells), the promoter DNA sequence being tested, and even DNA supercoiling (chromatin modifications, etc). This will be a recurring theme.
+Overall, it seems that the exact impact of mutations, deletions, and regulatory domains depends strongly on the the nature of the alteration, the experimental design (\textit{in vivo} or \textit{in vitro}, yeast vs human vs mouse cells), the promoter DNA sequence being tested, and even DNA supercoiling (chromatin modifications, etc). This will be a recurring theme.
 
 \subsubsection{DNA Binding Domain}
 
-The DNA binding domain (DBD), defined from roughly residues \numrange{96}{289}, is the only structured subset of p53, and is one of the only regions of p53 for which the crystal structure has been solved. The DBD contains the surface that interacts with the DNA. The vast majority of tumorous mutations to p53 occur in the DNA binding domain, and though the exact mechanism is unknown, it seems that these are favored for their gain of function abilities.
+\begin{figure}
+\centering
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{p53-DBD-DNA}
+\caption{The p53 DBD bound to DNA.}
+\label{fig:p53-DBD}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{p53_DBD_struct.png}
+\caption{The secondary structure topology of the p53 DBD.}
+\label{fig:p53-dbd-ss}
+\end{subfigure}
+\caption[p53 Bound to DNA]{Left: a structural diagram of the p53 DBD bound to DNA.  Yellow, red, blue, and pink indicates conserved elements. Right: The secondary structure of the p53 DNA binding domain. The residues at the N- and C-terminal ends of this subset of p53 are indicated. The two sides of the \(\beta\)-sandwich are indicated with shaded regions. Colors are the same as Left. Images source: \parencite{choCrystalStructureP531994}}
+\label{fig:dbd-DNA}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{p53-dbd-hbonds}
+\caption[p53 DBD-DNA Interactions]{Several specific interactions between p53 and the DNA have been identified. Residues K120, S241, R248, R273, A276, C277, R289, and R283 have been identified as interacting with the DNA, and residues K120, C277, and R280 have been identified as interacting specifically with the nitrogenous bases of the DNA. Image source: \parencite{choCrystalStructureP531994}}
+\label{fig:p53-dbd-hbonds}
+\end{figure}
+
+The DNA binding domain (DBD), defined from roughly residues \numrange{96}{289}, is the only structured subset of p53, and is one of the only regions of p53 for which the crystal structure has been solved. The DBD is classified as a \(\beta\)-sandwich, with two large beta sheets, with one \(\beta\)-sheet made up from strands S1, S3, S8, and S5, and the other from strands S6, S7, S4, S9, and S10, respectively. The DBD contains a \ce{Zn}\textsuperscript{2+} ion, coordinated by one residue in the H1 helix and three additional residues. The H2 helix on the terminal end of p53 interacts with the DNA. \figurepageref{fig:dbd-DNA} shows a structural diagram of the p53 DBD bound to DNA, and the secondary structure topology of the same region.
+
+The vast majority of tumorous mutations to p53 occur in the DNA binding domain, and though the exact mechanism is unknown, it seems that these are favored for their gain of function abilities.
+
+The DNA binding domain is where many sequence-specific interactions happen with DNA. \figurepageref{fig:p53-dbd-hbonds} shows the different interactions identified. Residues K120, S241, R248, R273, A276, C277, R289, and R283 have been specifically identified as making interactions with the DNA, and of those, K120, C277, and R280 stand out for interacting directly with the nitrogenous bases of the DNA.
 
 \subsubsection{Nuclear Localization Signal}
 
@@ -1000,20 +1050,33 @@ In order for p53 to engage in transactivation, it must be present in the nucleus
 
 \subsubsection{Tetramerization Domain}
 
-Tetramerization of p53 is essential for efficient DNA binding. Tetrameric p53 has a \num{1000} time greater affinity for DNA compared to the monomer \parencite{weinberg2004cooperative}. Four copies of p53 will interact via the tetramerization domain, located between residues \numrange{326}{356}, as a dimer of dimers.
+Tetramerization of p53 is essential for efficient DNA binding. Tetrameric p53 has a \num{1000}-time greater affinity for DNA compared to the monomer \parencite{weinberg2004cooperative}. Four copies of p53 will interact via the tetramerization domain, located between residues \numrange{326}{356}, as a dimer of dimers.
 
 p53 exists in the cell in a monomeric, dimeric, and tetrameric form, with approximately 59\% of the cellular concentration as a dimer, 28\% as a monomer, and 13\% in the tetrameric form \parencite{gaglia2013activation}. This suggests that tetramerization is a slow process, perhaps influenced by external factors \parencite{natan2009ultraslow}. After DNA damage, 93\% of cellular p53 is in its tetrameric form \parencite{gaglia2013activation}, which is consistent with the idea that p53 tetramerization is required for efficient transactivation.
 
 \subsubsection{Nuclear Export Sequence}
 
-In unstressed cells, it is important to maintain low concentrations of p53 to ensure it does not accidentally trigger apoptosis or halt the cell cycle. p53 is exported from the nucleus to the cytoplasm where Mdm2 binds to p53. Both are ubiquitinated and sequestered to the proteasome where they are degraded \parencite{sparksDegradationP53Its2014}.
+In unstressed cells, it is important to maintain low concentrations of p53 to ensure it does not accidentally trigger apoptosis or halt the cell cycle. p53 is exported from the nucleus to the cytoplasm where MDM2 binds to p53. Both are ubiquitinated and sequestered to the proteasome where they are degraded \parencite{sparksDegradationP53Its2014}.
 
-In stressed cells, p53 undergoes post-translational modifications in the first transactivation domain, which prevents mdm2 from interacting with p53, stabilizing it from degradation \parencite{ashcroftStressSignalsUtilize2000}.
+In stressed cells, p53 undergoes post-translational modifications in the first transactivation domain, which prevents MDM2 from interacting with p53, stabilizing it from degradation \parencite{ashcroftStressSignalsUtilize2000}.
+
+\subsection{Experimental vs Computational Analyses of p53}
+
+The first crystal structure of p53 bound to DNA was solved in 1994 \parencite{choCrystalStructureP531994}. A following crystal structure solved the tetramerization domain \parencite{jeffreyCrystalStructureTetramerization1995}. In more recent years, cryo-EM structures have been reported, but have struggled greatly to provide atomic level precision. \parencite{okorokovStructureP53Tumour2006} was the first to report a cryo-EM structure of the full-length p53, but with a resolution of \qty{13.7}{\angstrom}. \parencite{aramayoQuaternaryStructureSpecific2011} reported a cryo-EM structure of the tetrameric murine p53 bound to DNA, but with a resolution of \qty{21}{\angstrom}. \parencite{solaresHighResolutionImagingHuman2022} reported a cryo-EM structure of the full-length p53 in its dimeric form, but was later retracted due to poor agreement between the density and the proposed model.
+
+Molecular dynamics simulations of p53 have been a great tool in studying its dynamics in full, atomic-level precision. \parencite{luMolecularDynamicsSimulations2007} produced one of the first molecular dynamics simulations of the p53 DBD, studying its dynamics in a DNA-bound and DNA-free state. \parencite{chenBindingInducedFolding2007} simulated p53 bound to MDM2 and apo-MDM2 to study folding and unfolding in relation to binding. \parencite{hanInsightsRationalDesign2022} studied how the Y220C mutation alters p53 dynamics and how PK11000 can restore them; \parencite{stetsonRestorationY220CP532025} extended this to the full-length p53.
 
 \subsection{p53's Role as a Transcription Factor}
 
-p53 is a transcription factor, meaning it binds to DNA sequences (response elements, REs) upstream of an open reading frame and promotes the recruitment of RNA polymerase, etc. to induce transcription of the gene. While many proteins have a well-defined binding sequence, p53 does not. In its place, it has a “consensus sequence” defined as two half-site consensus pentamers 5'-PuPuPuC(A/T)(T/A)GPyPyPy orientated \(\rightarrow \leftarrow\) X \(\rightarrow \leftarrow\), where X is a variable region up to 13 bases long \parencite{el-deiryDefinitionConsensusBinding1992}.
-p53 promotes the transcription of a variety of genes in several pathways, including apoptosis, DNA repair, and cell-cycle arrest.
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{sualization-of-the-p53-signaling-network-modified-from-the-KEGG-pathway-Included-in-this}
+\caption[The p53 Signaling Network]{In times of cellular stress, p53 is activated. When it binds to DNA, it can trigger a wide variety of downstream signaling cascades, ending in a halting of the cell cycle, apoptosis, and more. Image source: \parencite{passowContrastingPatternsRapid2019}}
+\label{fig:p53-signaling-network}
+\end{figure}
+
+p53 is a transcription factor, meaning it binds to DNA sequences (response elements, REs) upstream of an open reading frame and promotes the recruitment of RNA polymerase, etc. to induce transcription of the gene. While many proteins have a well-defined binding sequence, p53 does not. In its place, it has a “consensus sequence” defined as two half-site consensus pentamers 5'-PuPuPuC(A/T)(T/A)GPyPyPy orientated \(\rightarrow \leftarrow\) X \(\rightarrow \leftarrow\), where X is a variable region up to 13 bases long, Pu represents purines (A/G), and Py represents pyrimidines (C/T) \parencite{el-deiryDefinitionConsensusBinding1992}.
+p53 promotes the transcription of a variety of genes in several pathways, including apoptosis, DNA repair, and cell-cycle arrest. \figurepageref{fig:p53-signaling-network} shows some of the proteins involved in the p53 signaling network.
 
 \subsubsection{BAX}
 
@@ -1029,11 +1092,11 @@ p53 upregulated modulator of apoptosis gene (PUMA) encodes two proteins, PUMA-\(
 
 \subsubsection{14-3-3\(\sigma\)}
 
-The 14-3-3 family of proteins play an important role in cell transduction pathways and cell cycle pathways. Within mammalian cells, the 14-3-3 family is comprised of seven proteins, of which the 14-3-3\(\sigma\) protein is one \parencite{fu1433ProteinsStructure2000, yaffeStructuralBasis14331997, aitken1433ProteinsMAP1995}. 14-3-3\(\sigma\) negatively regulates the cell cycle by interacting with cyclin-dependent kinases (CDKs) \parencite{larongaAssociationCyclindependentKinases2000a}. 14-3-3\(\sigma\) induction by DNA-damaging events, including \(\gamma\) irradiation, is modulated by a p53 response element 1.8 kb upstream from the ORF, and leads to G2 arrest \parencite{hermeking1433sP53RegulatedInhibitor1997, larongaAssociationCyclindependentKinases2000a, chan1433SigmaRequiredPrevent1999}. For more, see \parencite{leeRegulationP53MDM2Pathway2006}.
+The 14-3-3 family of proteins play an important role in cell transduction pathways and cell cycle pathways. Within mammalian cells, the 14-3-3 family is comprised of seven proteins, of which the 14-3-3\(\sigma\) protein is one \parencite{fu1433ProteinsStructure2000, yaffeStructuralBasis14331997, aitken1433ProteinsMAP1995}. 14-3-3\(\sigma\) negatively regulates the cell cycle by interacting with cyclin-dependent kinases (CDKs) \parencite{larongaAssociationCyclindependentKinases2000a}. 14-3-3\(\sigma\) induction by DNA-damaging events, including \(\gamma\) irradiation, is modulated by a p53 response element 1.8 kb upstream from the ORF, and leads to G2 arrest \parencite{hermeking1433sP53RegulatedInhibitor1997, larongaAssociationCyclindependentKinases2000a, chan1433SigmaRequiredPrevent1999, leeRegulationP53MDM2Pathway2006}.
 
 \subsubsection{p53AIP1}
 
-Expression of p53-regulated Apoptosis Inducing Protein 1 (p53AIP1) leads to loss of mitochondrial electrical potential difference, leading to apoptosis. Upon severe DNA damage, p53 S46 is phosphorylated and apoptosis is introduced; S46 mutants selectively inhibit p53AIP1 production \parencite{bibidodaP53AIP1PotentialMediator2000}.
+Expression of p53-regulated Apoptosis Inducing Protein 1 (p53AIP1) leads to loss of mitochondrial electrical potential difference, leading to apoptosis. Upon severe DNA damage, p53 S46 is phosphorylated and apoptosis is introduced; S46 mutants selectively inhibit p53AIP1 production \parencite{odaP53AIP1PotentialMediator2000}.
 
 \subsubsection{GADD45}
 
@@ -1045,7 +1108,7 @@ p53R2 is a p53-inducible gene with high similarity to the ribonucleotide reducta
 
 \subsubsection{PTEN}
 
-PTEN is another highly mutated protein in across human cancers. It was initially discovered as a tumor suppressor tyrosine phosphatase \parencite{liPTENPutativeProtein1997, steckIdentificationCandidateTumour1997, liTEP1EncodedCandidate1997}, but is now widely recognized for its lipid phosphatase function \parencite{maehamaTumorSuppressorPTEN1998}. There exists a p53 binding site upstream of the PTEN gene; PTEN protects p53 from MDM2’s inhibition of p53. This feedback loop provides greater sensitivity of cancer cells to additional p53 function and chemotherapy \parencite{stambolicRegulationPTENTranscription2001, mayoPTENProtectsP532002}. For more, see \parencite{leeFunctionsRegulationPTEN2018}.
+PTEN is another highly mutated protein in across human cancers. It was initially discovered as a tumor suppressor tyrosine phosphatase \parencite{liPTENPutativeProtein1997, steckIdentificationCandidateTumour1997, liTEP1EncodedCandidate1997}, but is now widely recognized for its lipid phosphatase function \parencite{maehamaTumorSuppressorPTEN1998}. There exists a p53 binding site upstream of the PTEN gene; PTEN protects p53 from MDM2’s inhibition of p53. This feedback loop provides greater sensitivity of cancer cells to additional p53 function and chemotherapy \parencite{stambolicRegulationPTENTranscription2001, mayoPTENProtectsP532002, leeFunctionsRegulationPTEN2018}.
 
 \subsubsection{p21}
 
@@ -1059,11 +1122,9 @@ The RGC32 protein localizes to the centromeres during meiosis and when overexpre
 
 Mutations to p53 are broadly cast into two classes: DNA-contact mutations and conformational mutations. DNA contact mutations are point mutations to residues that directly contact the DNA, while conformational mutations are mutations that destabilize the protein, reducing DNA recognition.
 
-Mutations to p53 are associated with over 50\% of human cancers \parencite{hamzehloieRoleTumorProtein2012}, which can be rationalized with its great importance in modulating safe and healthy cell growth and division. While diseases affecting other transcription factors are typically associated with nonsense mutations, frameshifts, or truncations, the majority of the p53 mutations associated with cancer are missense mutations\parencite{hamzehloieRoleTumorProtein2012, baughWhyAreThere2018}. When one tabulates the frequency at which mutations occur in human cancers, it can be seen that although mutations are equally likely anywhere in the coding region of p53, the vast majority of cancerous mutations occur in the DNA binding domain \parencite{hainautSomaticTP53Mutations2016}. Further, there is a strong preference for specific point mutations: R175H, R248Q, R273H, R248W, R273C, R282W, G245S, R249S, Y220C, and V157F make up 30.55\% of all mutations in the IARC R18 database (listed in decreasing frequency, ranging between 5.6\% and 0.98\% of all cases) \parencite{hainautSomaticTP53Mutations2016}. R248(Q/H) \parencite{ngR248QMutationBeyondP53DNA2015, alvarado-ortizMutantP53GainofFunction2021, asherP53HotspotMutants2003} and R273(H/C) \parencite{tanMutantP53R273HMediates2015, gargVariableMutationsP53R2732020} are DNA contact mutations while R175H56, R282W57, G245S58, R249S59, Y220C60, and V157F are classified as conformational mutants. In fact, one case was reported in which a glioblastoma tumor began with a relatively rare mutation to p53, and the mutant allele was replaced by another more frequently occurring allele \parencite{leeSpatiotemporalGenomicArchitecture2017}.
+Mutations to p53 are associated with over 50\% of human cancers \parencite{hamzehloieRoleTumorProtein2012}, which can be rationalized with its great importance in modulating safe and healthy cell growth and division. While diseases affecting other transcription factors are typically associated with nonsense mutations, frameshifts, or truncations, the majority of the p53 mutations associated with cancer are missense mutations \parencite{hamzehloieRoleTumorProtein2012, baughWhyAreThere2018}. The IARC database has tabulated the frequency at which mutations occur in human cancers; although mutations are equally likely anywhere in the coding region of p53, the vast majority of cancerous mutations occur in the DNA binding domain \parencite{hainautSomaticTP53Mutations2016}. Further, there is a strong preference for specific point mutations: R175H, R248Q, R273H, R248W, R273C, R282W, G245S, R249S, Y220C, and V157F make up 30.55\% of all mutations in the IARC R18 database (listed in decreasing frequency, ranging between 5.6\% and 0.98\% of all cases) \parencite{hainautSomaticTP53Mutations2016}. R248(Q/H) \parencite{ngR248QMutationBeyondP53DNA2015, alvarado-ortizMutantP53GainofFunction2021, asherP53HotspotMutants2003} and R273(H/C) \parencite{tanMutantP53R273HMediates2015, gargVariableMutationsP53R2732020} are DNA contact mutations while R175H56, R282W57, G245S58, R249S59, Y220C60, and V157F are classified as conformational mutants. A case has been reported in which a glioblastoma tumor had a certain mutant version of p53, was treated, and reoccurred with a different mutation to p53 throughout the entire tumor, suggesting some sort of selective pressure for one mutation over another \parencite{leeSpatiotemporalGenomicArchitecture2017}.
 
-Given the variety and variation between response elements p53 interacts with and the large number of ways mutations may modulate p53 activity, it is unsurprising that some mutations preferentially disrupt binding to certain response elements. Inga et. al. used random mutagenesis applied to the DNA binding domain of p53 to identify several mutations, such as D184G, which show a knockdown of p53 binding to the PIG3 response element, an equivalent amount of binding to P21 and BAX, and greater binding than the WT to 3xRGC \parencite{ingaP53MutantsExhibiting2001b}. Resnick and Inga follow up in another study and identify, through random mutagenesis\textcolor{red}{(?)}, that the mutation 277R has approximately WT binding to several REs including PCNA, near-zero binding to the 14-3-3\(\sigma\) RE, and a 16-fold increase in binding to the MDM2-P2 RE \parencite{resnickFunctionalMutantsSequencespecific2003}.
-
-The selection of certain alleles of p53 in cancer can likely be explained by the additional properties mutant p53 gains over the wild type. Mutant p53 plays a large role in cancer cell proliferation, especially R249S which promotes the proliferation of hepatocellular carcinoma cells after a phosphorylation event at S249 \parencite{wangItTakesTeam2019, liaoMutantP53Gains2017} and R273H which binds to the mini-RNA miR-27a promoter region which activates EGFR/ERK signaling, promoting cell growth65. R172H and R273H mutant p53 have been shown to develop more metastatic tumors than p53-/- in mice \parencite{langGainFunctionP532004, oliveMutantP53Gain2004}.
+The selection of certain alleles of p53 in cancer can likely be explained by the additional properties mutant p53 gains over the wild type. Mutant p53 plays a large role in cancer cell proliferation, especially R249S which promotes the proliferation of hepatocellular carcinoma cells after a phosphorylation event at S249 \parencite{wangItTakesTeam2019, liaoMutantP53Gains2017} and R273H which binds to the mini-RNA miR-27a promoter region which activates EGFR/ERK signaling, promoting cell growth \parencite{wangMutantP53R273HGains2013}. R172H and R273H mutant p53 have been shown to develop more metastatic tumors than p53-/- in mice \parencite{langGainFunctionP532004, oliveMutantP53Gain2004}.
 
 \subsection{p53 Splice Variants}
 
@@ -1074,9 +1135,11 @@ The selection of certain alleles of p53 in cancer can likely be explained by the
 \label{fig:p53splicevariants}
 \end{figure}
 
-The TP53 gene expresses at least \num{9} different mRNAs encoding \num{12} different proteins. There are four different translation start sites, resulting in N-terminal truncations relative to the full length p53. Additionally, there are three different alternative C-terminal splicings, giving the total of \num{12} possible proteins. These proteins are referred to as splice variants or isoforms of p53.
+The TP53 gene expresses at least \num{9} different mRNAs encoding \num{12} different proteins. There are four different translation start sites, resulting in N-terminal truncations relative to the full length p53. Additionally, there are three different alternative C-terminal splicings, giving the total of \(4\times3=12\) possible proteins. These proteins are referred to as splice variants or isoforms of p53. A schematic of the p53 isoforms is shown in \figurepageref{fig:p53splicevariants}.
 
-N-terminal truncations are indicated by prefixing `p53' with the number of residues lost relative to the wild type, with the four options being no prefix which indicates that translation begins at codon 1, \(\Delta 40\) meaning translation begins at codon \num{40}, \(\Delta 133\), and \(\Delta 160\). C-terminal alternate splicings are indicated with \(\alpha\), \(\beta\), and \(\gamma\).
+During mRNA processing of the \textit{TP53} gene, alternate splicing at the 3' end creates three different C-terminal isoforms. In the \(\alpha\) isoform, exons \num{10} and \num{11} are retained following exon \num{9}, producing the full-length p53 C-terminal domain. In the \(\beta\) and \(\gamma\) isoforms, alternative splicing after exon \num{9} incorporates alternative terminal exons \(9\beta\) or \(9\gamma\), giving the \(\beta\) and \(\gamma\) C-terminal tails. 
+
+mRNA translation may begin at one of four sites: codon \num{1}, codon \num{40}, codon \num{133}, or codon \num{160}. This results in a truncation of \num{0}, \num{39}, \num{132}, or \num{160} residues from the N-terminal end, respectively, and is denoted by prefixing p53 with the appropriate deletion, \(\Delta1\), \(\Delta40\), \(\Delta133\),  or \(\Delta 160\) (usually, the \(\Delta1\) is dropped and assumed).
 
 Importantly, N-terminal truncations lose important regulatory domains: \(\Delta 40\)p53 lacks the first transactivation domain, \(\Delta 133\)p53 lacks both transactivation domains, the proline-rich domain, and a small amount of the DNA binding domain, and \(\Delta 160\)p53 lacks even more of the DNA binding domain. Alternative C-terminal splicings occur after the nuclear localization sequence so all splice variants contain it, though the \(\beta\) and \(\gamma\) alternate spliced tails only contain the fist seven residues of the tetramerization domain, lacking the remaining \num{25} residues \parencite{joruizP53IsoformsKey2016}.
 
@@ -1086,7 +1149,7 @@ Despite the discovery of p53 splice variants in the mid 1980s, the exact role th
 
 \subsection{PK11000}
 
-PK11000, a small 2-sulfonylpyrimidine molecule, was one of the first compounds discovered to reactivate the Y220C mutant p53. The Y220C mutation is a destabilizing mutation, with a lower melting temperature than the WT. Covalent binding of PK11000 was shown to increase the melting temperature of p53 by \(>\)\qty{1.2}{\kelvin}. Though designed to non-covalently interact in a crevasse opened by the Y220C mutation, it instead covalently binds to a cysteine on the protein surface. Cancer cells treated with PK11007, a derivative of PK11000, were shown to have lower viability, indicating that PK11007 can act as a drug to restore the mutant p53 \parencite{bauer2SulfonylpyrimidinesMildAlkylating2016}.
+PK11000, a small 2-sulfonylpyrimidine molecule, was one of the first compounds discovered to reactivate the Y220C mutant p53. The Y220C mutation is a destabilizing hotspot mutation, the \num{8}th most common, with a lower melting temperature than the WT. Covalent binding of PK11000 was shown to increase the melting temperature of p53 by \(>\)\qty{1.2}{\kelvin}. Though designed to non-covalently interact in a crevasse opened by the Y220C mutation, it instead covalently binds to a cysteine on the protein surface. Cancer cells treated with PK11007, a derivative of PK11000, were shown to have lower viability, indicating that PK11007 can act as a drug to restore the mutant p53 \parencite{bauer2SulfonylpyrimidinesMildAlkylating2016}.
 
 \subsection{Rezatapopt}
 
@@ -1095,5 +1158,7 @@ In contrast to PK11000, which was intended to bind to the pocket created by the 
 Further testing \textit{in vitro} and \textit{in vivo} has shown that Rezatapopt is highly specific for Y220C p53, and that treatment of tumor cells with Rezatapopt increases markers for cell-cycle arrest, though interestingly, not apoptosis. From the Y220C p53 melting temperature (\(T_{m}\)) of \qty{34}{\degreeCelsius}, treatment with Rezatapopt increased the \(T_{m}\) to \qty{42.6}{\degreeCelsius}, slightly higher than even the wild type p53, which has a \(T_{m}\) of \qty{42}{\degreeCelsius} \parencite{puzio-kuterRestorationTumorSuppressor2025}. Rezatapopt is currently in a Phase II clinical trial.
 
 \section{p53 as a Transcription Factor in Yeast}
+
+Given the variety and variation between response elements p53 interacts with and the large number of ways mutations may modulate p53 activity, it is unsurprising that some mutations preferentially disrupt binding to certain response elements. Inga et. al. used random mutagenesis applied to the DNA binding domain of p53 to identify several mutations, such as D184G, which show, relative to the WT p53, a reduction of binding to the PIG3 response element, an equivalent amount of binding to P21 and BAX elements, and greater amount of binding to the 3xRGC element \parencite{ingaP53MutantsExhibiting2001b}. Resnick and Inga follow up in another study and show the 277R mutation has approximately WT binding to several REs including PCNA, near-zero binding to the 14-3-3\(\sigma\) RE, and a 16-fold increase in binding to the MDM2-P2 RE \parencite{resnickFunctionalMutantsSequencespecific2003}.
 
 \textcolor{red}{COMPLETE}
