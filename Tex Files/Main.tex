@@ -3,7 +3,7 @@
 \usepackage{graphicx}
 \usepackage[left=1.5in, right=1.5in, top=1in, bottom=1in, footskip=0.5in, headheight=15pt, headsep=20pt]{geometry}
 \usepackage{fancyhdr}
-\usepackage[style=authoryear,sorting=none,backend=biber]{biblatex}
+\usepackage[style=authoryear,sorting=nyt,backend=biber]{biblatex}
 \usepackage{etoolbox}
 \usepackage{indentfirst}
 \usepackage[english]{babel}
@@ -213,9 +213,8 @@
 
 \cleardoublepage
 
-\chapter{References}
 {\setstretch{1.5}
-\printbibliography
+\printbibliography[title={References}]
 }
 
 \end{document}
