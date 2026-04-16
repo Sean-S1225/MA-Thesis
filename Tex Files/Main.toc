@@ -38,7 +38,7 @@
 \contentsline {subsection}{\numberline {2.3.6}Restriction Digestion}{32}{subsection.2.3.6}%
 \contentsline {subsection}{\numberline {2.3.7}Gap Repair}{33}{subsection.2.3.7}%
 \contentsline {subsection}{\numberline {2.3.8}Site-Directed Mutagenesis}{35}{subsection.2.3.8}%
-\contentsline {subsection}{\numberline {2.3.9}LacZ Transcription Reporter Assay}{35}{subsection.2.3.9}%
+\contentsline {subsection}{\numberline {2.3.9}The \(\beta \)-Galactosidase Protein}{35}{subsection.2.3.9}%
 \contentsline {section}{\numberline {2.4}Molecular Dynamics Simulations}{36}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Theory}{37}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Practical Steps}{40}{subsection.2.4.2}%
@@ -117,10 +117,14 @@
 \contentsline {part}{II\hspace {1em}Experimental Approaches to Test p53 Function}{169}{part.2}%
 \contentsline {chapter}{\numberline {7}Development of a \(\beta \)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}{170}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Motivation}{170}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Results}{170}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Discussion}{170}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Methods}{170}{section.7.4}%
-\contentsline {chapter}{\numberline {8}Discussion}{171}{chapter.8}%
-\contentsline {chapter}{\numberline {9}Conclusion}{172}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Methods}{173}{chapter.10}%
-\contentsline {chapter}{Appendix}{174}{appendix*.116}%
+\contentsline {section}{\numberline {7.2}Results}{171}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Designing an Assay to Measure p53-Dependent Transcription with \textit {lacZ}}{171}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Building the p53 Expression Plasmid}{173}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Building the p53-Dependent Transcription Reporter Plasmid}{173}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}Conducting the Assay}{173}{subsection.7.2.4}%
+\contentsline {section}{\numberline {7.3}Discussion}{173}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Methods}{173}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Discussion}{175}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Conclusion}{176}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Methods}{177}{chapter.10}%
+\contentsline {chapter}{Appendix}{178}{appendix*.118}%

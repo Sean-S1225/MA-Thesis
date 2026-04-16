@@ -1,6 +1,60 @@
 \section{Motivation}
 
+The previous Part has shown that molecular dynamics can be very powerful in making predictions about p53-DNA dynamics. We have seen that the presence of PK11000 rescues many of the hydrogen bonding metrics of the Y220C isoforms, that p53 dynamics may be correlated with its bound DNA's similarity to the consensus binding sequence, we have seen that PK11000 may be able to rescue not just the Y220C mutant p53, and we have seen that Rezatapopt does not clearly restore WT dynamics to the Y220C protein. While these are valuable insights, to give them more credibility, they need to be tested.
+
+In this chapter, we will set out to design an assay capable of measuring p53-dependent transcription of a downstream gene when bound to a response element. Having shown the assay works, it will be a straightforward process to experimentally verify these computational claims regarding p53 function, and to test many more.
+
 \section{Results}
+
+\subsection{Designing an Assay to Measure p53-Dependent Transcription with \textit{lacZ}}
+
+Recall the \(\beta\)-galactosidase protein, which in \textit{E. coli} hydrolyzes lactose into galactose and glucose, but can also hydrolyze \textit{ortho}-nitrophenyl-\(\beta\)-galactoside (ONPG) intro galactose and the yellow \textit{ortho}-nitrophenol, as shown in \figurepageref{fig:betagal}. We will take advantage of this fact to design an assay that will allow us to measure p53-dependent transcription when bound to a target response element.
+
+We would like to have two plasmids, a p53 expression plasmid and a transcription reporter plasmid. The p53 expression plasmid should have the gene for p53 under an inducible promoter. Research has shown that constitutive expression of p53 stresses yeast cells, and therefore slows their growth \parencite{ingaNovelHumanP532001}. For this reason, and for the sake of consistency between experiments, we would like to turn on the p53 gene only when we are ready to begin the experiment. For this experiment, we will use the inducible \textit{GAL} promoter, which is induced with galactose, repressed with glucose, and neither expressed not repressed with raffinose. For the transcription reporter plasmid, we would like the \textit{lacZ} gene downstream of our p53 binding sequence of interest. Both of these plasmids will have different nutrient markers, and will therefore be easy to select for in double-dropout media.
+
+We will build these plasmids using gap repair, which is a technique that allows us to build new DNA sequences from existing components. Once they have been prepared, they will both be transformed into yeast. The P5 three will be turned on, and the cells will begin to produce P 53, which will bind to its target sequence in the transcription reporter plasmid, inducing the transcription of \textit{lacZ} and therefore of the production of the \(\beta\)-galactosidase protein. After a sufficiently long incubation period, we will lyse the cells in media containing the ONPG sugar. \(\beta\)-galactosidase will hydrolyze the ONPG, resulting in a yellow solution which we will measure. The amount of yellow color measured will be directly proportional with the amount of transcription p53 induced.
+
+Yeast is our organism of choice for several reasons. For one, it has a high proclivity for homologous recombination, which is essential for gap repair. Secondly, it retains the simplicity in manipulation of other single cellular organisms while also having relatively complex transcriptional and translational machinery. Finally, unlike \textit{E. coli}, it has no endogenous \(\beta\)-galactosidase activity, making results clearer in interpretation.
+
+\subsection{Building the p53 Expression Plasmid}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{BetaGal/ExpressionBefore}
+\caption{The starting p53 expression plasmid}
+\label{fig:beta-gal:expression-before}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{BetaGal/ExpressionAfter}
+\caption{The final p53 expression plasmid}
+\label{fig:beta-gal:expression-after}
+\end{subfigure}
+\caption[The p53 Expression Plasmid]{The p53 expression plasmid. Starting with the plasmid on the left, we linearized it near the \textit{GAL} promoter, and using an amplified p53 gene with custom 5' ends, we used gap repair to insert the p53 gene downstream of the \textit{GAL} promoter. The p53 expression plasmid carries the \textit{LEU2} nutrient marker.}
+\label{fig:beta-gal:expression}
+\end{figure}
+
+\subsection{Building the p53-Dependent Transcription Reporter Plasmid}
+
+\begin{figure}
+\centering
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{BetaGal/TranscriptionBefore}
+\caption{The starting transcription reporter plasmid}
+\label{fig:beta-gal:reporter-before}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.49\textwidth}
+\includegraphics[width=0.95\textwidth]{BetaGal/TranscriptionAfter}
+\caption{The final transcription reporter plasmid}
+\label{fig:beta-gal:reporter-after}
+\end{subfigure}
+\caption[The p53 Transcription Reporter Plasmid]{The p53-dependent transcription reporter plasmid. Starting with the plasmid on the left, we linearized the plasmid on either end of the \textit{GAL} promoter to remove it, then using an amplified region of the CYC1 minimal promoter with custom 5' ends containing the p53 response element, we used gap repair to insert the promoter upstream of the \textit{lacZ} gene. The transcription reporter plasmid contains the \textit{URA3} nutrient marker.}
+\label{fig:beta-gal:reporter}
+\end{figure}
+
+\subsection{Conducting the Assay}
 
 \section{Discussion}
 

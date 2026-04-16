@@ -462,18 +462,20 @@ Given a plasmid containing a gene of interest, one of the best ways to introduce
 
 The DNA can be transformed into \textit{E. coli} and sequenced to confirm the incorporation of the mutation. Alternatively, if the template DNA is from \textit{E. coli}, then GATC sites will be methylated, and the enzyme DpnI can be used to degrade the unmutated template plasmids at these methylated sites, ensuring that transformed plasmids will carry the desired mutation.
 
-\subsection{LacZ Transcription Reporter Assay}
+\subsection{The \(\beta\)-Galactosidase Protein}
 
 \begin{figure}[h!]
 \centering
 \includesvg[width=\textwidth,inkscapelatex=false]{beta_gal_ONPG}
-\caption[\(\beta\)-galactosidase Function]{\(\beta\)-galactosidase hydrolyses its natural substrate, lactose, but can also hydrolyse ONPG, producing the yellow \textit{ortho}-Nitrophenol.}
+\caption[\(\beta\)-Galactosidase Function]{\(\beta\)-galactosidase hydrolyses its natural substrate, lactose into galactose and glucose, but can also hydrolyze \textit{ortho}-nitrophenyl-\(\beta\)-galactoside (ONPG), producing galactose and the yellow \textit{ortho}-nitrophenol.}
 \label{fig:betagal}
 \end{figure}
 
-To measure the amount of transactivation a protein initiates, one could measure the amount of mRNA or protein of the target gene is observed. There is, however, a simpler approach.
+%To measure the amount of transactivation a protein initiates, one could measure the amount of mRNA or protein of the target gene is observed. There is, however, a simpler approach.
 
-Using gap repair, replace the gene downstream of the transcription factor's binding sequence with the lacZ gene, which encodes the protein \(\beta\)-galactosidase. As the transcription factor binds to the promoter region, it will initiate the transcription and translation of \textit{lacZ} into \(\beta\)-galactosidase. After a sufficient amount of time passes, lyse the cells in a solution containing a sugar called \textit{ortho}-Nitrophenyl-\(\beta\)-galactoside (ONPG), an analog for the natural substrate of \(\beta\)-galactosidase, lactose. \(\beta\)-galactosidase will hydrolyze the ONPG, producing \(\beta\)-D-galactose and ortho-nitrophenol. Ortho-nitrophenol has a yellow color, and can be measured with a spectrometer observing at \qty{420}{\nano\meter}. ONPG hydrolysis is directly proportional to the concentration of \(\beta\)-galactosidase, so the amount of transactivation of the transcription factor can be easily measured relative to a control.
+\(\beta\)-galactosidase is encoded by the \textit{lacZ} gene. Its main function in \textit{E. coli} is to hydrolyze lactose into galactose and glucose, which the cell can use as energy \parencite{juersLacZVgalactosidaseStructure2012}. In many labs, it has a different purpose, however. An analog of lactose, \textit{ortho}-nitrophenyl-\(\beta\)-galactoside (ONPG), can also be hydrolyzed by \(\beta\)-galactosidase into galactose and \textit{ortho}-nitrophenol. \textit{ortho}-nitrophenol is yellow, and can be measured in solution using visible light spectroscopy. \figurepageref{fig:betagal} shows the catalytic activity of the \(\beta\)-galactosidase protein.
+
+%Using gap repair, replace the gene downstream of the transcription factor's binding sequence with the lacZ gene, which encodes the protein \(\beta\)-galactosidase. As the transcription factor binds to the promoter region, it will initiate the transcription and translation of \textit{lacZ} into \(\beta\)-galactosidase. After a sufficient amount of time passes, lyse the cells in a solution containing a sugar called \textit{ortho}-Nitrophenyl-\(\beta\)-galactoside (ONPG), an analog for the natural substrate of \(\beta\)-galactosidase, lactose. \(\beta\)-galactosidase will hydrolyze the ONPG, producing \(\beta\)-D-galactose and ortho-nitrophenol. Ortho-nitrophenol has a yellow color, and can be measured with a spectrometer observing at \qty{420}{\nano\meter}. ONPG hydrolysis is directly proportional to the concentration of \(\beta\)-galactosidase, so the amount of transactivation of the transcription factor can be easily measured relative to a control.
 
 \section{Molecular Dynamics Simulations}
 
@@ -1159,6 +1161,6 @@ Further testing \textit{in vitro} and \textit{in vivo} has shown that Rezatapopt
 
 \section{p53 as a Transcription Factor in Yeast}
 
-Given the variety and variation between response elements p53 interacts with and the large number of ways mutations may modulate p53 activity, it is unsurprising that some mutations preferentially disrupt binding to certain response elements. Inga et. al. used random mutagenesis applied to the DNA binding domain of p53 to identify several mutations, such as D184G, which show, relative to the WT p53, a reduction of binding to the PIG3 response element, an equivalent amount of binding to P21 and BAX elements, and greater amount of binding to the 3xRGC element \parencite{ingaP53MutantsExhibiting2001b}. Resnick and Inga follow up in another study and show the 277R mutation has approximately WT binding to several REs including PCNA, near-zero binding to the 14-3-3\(\sigma\) RE, and a 16-fold increase in binding to the MDM2-P2 RE \parencite{resnickFunctionalMutantsSequencespecific2003}.
+Yeast has no homolog for p53, which makes it a convenient model organism to test the transcriptional activity of human p53. Additionally, it maintains the ease of working with a single cellular organism, while also having relatively complex transcriptional and translational machinery, compared to another organism such as \textit{E. coli}.
 
-\textcolor{red}{COMPLETE}
+Given the variety and variation between response elements p53 interacts with and the large number of ways mutations may modulate p53 activity, it is unsurprising that some mutations preferentially disrupt binding to certain response elements. Inga et. al. used random mutagenesis applied to the DNA binding domain of p53 to identify several mutations, such as D184G, which show, relative to the WT p53, a reduction of binding to the PIG3 response element, an equivalent amount of binding to P21 and BAX elements, and greater amount of binding to the 3xRGC element \parencite{ingaP53MutantsExhibiting2001b}. Resnick and Inga follow up in another study and show the 277R mutation has approximately WT binding to several REs including PCNA, near-zero binding to the 14-3-3\(\sigma\) RE, and a 16-fold increase in binding to the MDM2-P2 RE \parencite{resnickFunctionalMutantsSequencespecific2003}.

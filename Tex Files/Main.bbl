@@ -3584,7 +3584,7 @@
       \endverb
     \endentry
     \entry{ingaP53MutantsExhibiting2001b}{article}{}
-      \name{author}{5}{}{%
+      \name{author}{5}{ul=2}{%
         {{un=2,uniquepart=given,hash=0a90b3595f8a74dfbc3beea7f8541b48}{%
            family={Inga},
            familyi={I\bibinitperiod},
@@ -3616,11 +3616,11 @@
            giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
            givenun=0}}%
       }
-      \strng{namehash}{c6fbbe31e4c3e69f71397a1b9f4a309b}
+      \strng{namehash}{71e49d580421715ed3da456b701b03b2}
       \strng{fullhash}{428ebea12efd4e45be8f67e1a9634deb}
-      \strng{bibnamehash}{c6fbbe31e4c3e69f71397a1b9f4a309b}
-      \strng{authorbibnamehash}{c6fbbe31e4c3e69f71397a1b9f4a309b}
-      \strng{authornamehash}{c6fbbe31e4c3e69f71397a1b9f4a309b}
+      \strng{bibnamehash}{71e49d580421715ed3da456b701b03b2}
+      \strng{authorbibnamehash}{71e49d580421715ed3da456b701b03b2}
+      \strng{authornamehash}{71e49d580421715ed3da456b701b03b2}
       \strng{authorfullhash}{428ebea12efd4e45be8f67e1a9634deb}
       \field{sortinit}{I}
       \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
@@ -3650,6 +3650,56 @@
       \verb 11313981
       \endverb
       \keyw{Alleles,Humans,Models Genetic,Models Molecular,Mutation,Response Elements,Saccharomyces cerevisiae,Transcriptional Activation,Tumor Suppressor Protein p53}
+    \endentry
+    \entry{ingaNovelHumanP532001}{article}{}
+      \name{author}{2}{}{%
+        {{un=2,uniquepart=given,hash=0a90b3595f8a74dfbc3beea7f8541b48}{%
+           family={Inga},
+           familyi={I\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=2}}%
+        {{un=2,uniquepart=given,hash=5ff9ef7c5bb98eb530368c2955747037}{%
+           family={Resnick},
+           familyi={R\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{3ba1a841d3868755955dafd2526837bd}
+      \strng{fullhash}{3ba1a841d3868755955dafd2526837bd}
+      \strng{bibnamehash}{3ba1a841d3868755955dafd2526837bd}
+      \strng{authorbibnamehash}{3ba1a841d3868755955dafd2526837bd}
+      \strng{authornamehash}{3ba1a841d3868755955dafd2526837bd}
+      \strng{authorfullhash}{3ba1a841d3868755955dafd2526837bd}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Since highly expressed human p53 can inhibit human and yeast cell growth, we predicted that p53 mutants could be generated with increased growth inhibition of the yeast Saccharomyces cerevisiae and that these would be useful for characterizing p53 functions and tumor p53 mutants. A random mutagenesis screen led to the isolation of mutations in the DNA binding domain that result in p53 being lethal even at moderate expression levels in yeast. Three independent mutants had an alanine change at the evolutionary invariant V122 in the L1 loop. The other toxic mutations affected codons 277 (C277R, C277W) and 279 (G279R). This latter amino acid change was also reported in tumors, while all the other mutations are novel. A recently developed rheostatable GALI promoter system that provides graded increases in expression of p53 was used to examine the transactivation function of the toxic mutations when expression was greatly reduced and cells were viable. At low expression levels the toxic mutants lacked transactivation from a 3xRGC responsive element (RE). Surprisingly some exhibited enhanced transactivation with p21 and bax REs. The V122A mutant was able to re-activate transactivation of various p53 tumor mutants and retained growth inhibition when co-expressed with dominant-negative tumor mutations. Upon expression in human Saos-2 cells the V122A p53 mutant caused growth suppression, was capable of transactivation and exhibited higher than wild type activity with the bax promoter in luciferase assays. A non-functional p53 tumor mutant was partially reactivated by V122A for both transactivation and growth suppression. Thus, the screen for toxic p53 mutants in yeast can identify novel p53 variants that may be useful in dissecting p53 regulated cellular responses and in developing p53-based cancer therapies.}
+      \field{day}{7}
+      \field{eprinttype}{pubmed}
+      \field{issn}{0950-9232}
+      \field{journaltitle}{Oncogene}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{26}
+      \field{shortjournal}{Oncogene}
+      \field{title}{Novel Human P53 Mutations That Are Toxic to Yeast Can Enhance Transactivation of Specific Promoters and Reactivate Tumor P53 Mutants}
+      \field{volume}{20}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{pages}{3409\bibrangedash 3419}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1038/sj.onc.1204457
+      \endverb
+      \verb{eprint}
+      \verb 11423991
+      \endverb
+      \keyw{Amino Acid Substitution,bcl-2-Associated X Protein,Binding Sites,Bone Neoplasms,DNA,DNA Fungal,Fungal Proteins,Gene Expression Regulation Fungal,Genes Dominant,Genes Lethal,Genes p53,Genetic Complementation Test,Humans,Mutagenesis,Mutation Missense,Neoplasm Proteins,Neoplasms,Osteosarcoma,Promoter Regions Genetic,Protein Structure Tertiary,Proto-Oncogene Proteins,Proto-Oncogene Proteins c-bcl-2,Recombinant Fusion Proteins,Regulatory Sequences Nucleic Acid,Saccharomyces cerevisiae,Transcriptional Activation,Transformation Genetic,Tumor Cells Cultured,Tumor Suppressor Protein p53}
     \endentry
     \entry{IonicBondDefinition2026}{online}{}
       \field{sortinit}{I}
@@ -4082,6 +4132,73 @@
       \endverb
       \verb{url}
       \verb http://perspectivesinmedicine.cshlp.org/content/6/8/a026039
+      \endverb
+    \endentry
+    \entry{juersLacZVgalactosidaseStructure2012}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6c5df896a283559cb266ad6d03e6b71a}{%
+           family={Juers},
+           familyi={J\bibinitperiod},
+           given={Douglas\bibnamedelima H},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86906ac91fc5368a75f7c357ac7595d5}{%
+           family={Matthews},
+           familyi={M\bibinitperiod},
+           given={Brian\bibnamedelima W},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50283a99cea8bf956edb5401884d3558}{%
+           family={Huber},
+           familyi={H\bibinitperiod},
+           given={Reuben\bibnamedelima E},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f3357bbd066e0a79dd009749e5c8634c}
+      \strng{fullhash}{f3357bbd066e0a79dd009749e5c8634c}
+      \strng{bibnamehash}{f3357bbd066e0a79dd009749e5c8634c}
+      \strng{authorbibnamehash}{f3357bbd066e0a79dd009749e5c8634c}
+      \strng{authornamehash}{f3357bbd066e0a79dd009749e5c8634c}
+      \strng{authorfullhash}{f3357bbd066e0a79dd009749e5c8634c}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This review provides an overview of the structure, function, and catalytic mechanism of lacZ \(\beta\)-galactosidase. The protein played a central role in Jacob and Monod's development of the operon model for the regulation of gene expression. Determination of the crystal structure made it possible to understand why deletion of certain residues toward the amino-terminus not only caused the full enzyme tetramer to dissociate into dimers but also abolished activity. It was also possible to rationalize \(\alpha\)-complementation, in which addition to the inactive dimers of peptides containing the “missing” N-terminal residues restored catalytic activity. The enzyme is well known to signal its presence by hydrolyzing X-gal to produce a blue product. That this reaction takes place in crystals of the protein confirms that the X-ray structure represents an active conformation. Individual tetramers of \(\beta\)-galactosidase have been measured to catalyze 38,500 ± 900 reactions per minute. Extensive kinetic, biochemical, mutagenic, and crystallographic analyses have made it possible to develop a presumed mechanism of action. Substrate initially binds near the top of the active site but then moves deeper for reaction. The first catalytic step (called galactosylation) is a nucleophilic displacement by Glu537 to form a covalent bond with galactose. This is initiated by proton donation by Glu461. The second displacement (degalactosylation) by water or an acceptor is initiated by proton abstraction by Glu461. Both of these displacements occur via planar oxocarbenium ion-like transition states. The acceptor reaction with glucose is important for the formation of allolactose, the natural inducer of the lac operon.}
+      \field{eprinttype}{pubmed}
+      \field{issn}{0961-8368}
+      \field{journaltitle}{Protein Science : A Publication of the Protein Society}
+      \field{month}{12}
+      \field{number}{12}
+      \field{shortjournal}{Protein Sci}
+      \field{shorttitle}{{{LacZ}} \(\beta\)-Galactosidase}
+      \field{title}{{{LacZ}} \(\beta\)-Galactosidase: {{Structure}} and Function of an Enzyme of Historical and Molecular Biological Importance}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{21}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1792\bibrangedash 1807}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1002/pro.2165
+      \endverb
+      \verb{eprint}
+      \verb 23011886
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/FZFG3TPK/Juers et al. - 2012 - LacZ \(\beta\)-galactosidase Structure and function of an enzyme of historical and molecular biological imp.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC3575911/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC3575911/
       \endverb
     \endentry
     \entry{kastanMammalianCellCycle1992}{article}{}
@@ -7792,12 +7909,12 @@
     \endentry
     \entry{resnickFunctionalMutantsSequencespecific2003}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=175eed6e0a953990a5a6ee9047cd3d83}{%
+        {{un=2,uniquepart=given,hash=175eed6e0a953990a5a6ee9047cd3d83}{%
            family={Resnick},
            familyi={R\bibinitperiod},
            given={Michael\bibnamedelima A.},
            giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0}}%
+           givenun=2}}%
         {{un=2,uniquepart=given,hash=3e1568e900dba641f6657a1c496ebdb1}{%
            family={Inga},
            familyi={I\bibinitperiod},
