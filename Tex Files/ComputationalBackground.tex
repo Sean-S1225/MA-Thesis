@@ -1,0 +1,506 @@
+\section{Molecular Dynamics Simulations}
+
+As powerful as \textit{in vivo} and \textit{in vitro} experiments are at examining biological processes, there are places where they fall short. For instance, to get detailed structural information about a protein, the best option is crystallization, which requires optimizing conditions and waiting days to months for crystals to grow. The fact that this can be done at all is nothing short of remarkable, but in cases where we want to know about how a protein's conformation changes during catalytic activity, for instance, the best we can do is cleverly engineer crystal structures and infer the rest. However, if we could simulate that protein undergoing the exact same catalytic function on a computer, we would have the complete atomic-level information for how the reaction proceeds. This is the goal of molecular dynamics simulations.
+
+\subsection{Theory}
+
+The theory of molecular dynamics (MD) simulations is relatively straightforward. Given the positions and velocities of all atoms in a system, use physics to predict the new positions and velocities of all the atoms after some small period of time (\(\Delta t\)), which is typically \qtyrange{1}{4}{\femto\second} (\qtyrange{1}{4}{\times10^{-14} \second}). The two commonly used packages for simulating biomolecules are Amber and Gromacs. In the Thayer Lab, we use Amber over Gromacs for its greater accuracy, at the expense of simulation speed.
+
+The algorithm that governs updating the positions and velocities of each atom is as follows:
+
+\begin{enumerate}
+\item Use the following potential energy formula to determine the force felt by each atom in the system:
+
+\begin{align}
+    U &= \sum_{\text{bonds}} k_{r}(r-r_{0})^{2} \tag{\text{Bond length}} \\
+    &+ \sum_{\text{angles}} k_{\theta}(\theta - \theta_0)^{2} \tag{\text{Angle deformation}} \\
+    & + \sum_{\text{dihedrals}} k_{\phi}[1+\cos(n\phi+\phi_0)] \tag{\text{Dihedral movement}} \\
+    &+ \sum_{\text{atom }i}\sum_{\text{atom} j\neq i} 4\varepsilon_{i,j}\left[\left(\frac{\sigma_{i,j}}{r_{i,j}}\right)^{12} - \left(\frac{\sigma_{i,j}}{r_{i,j}}\right)^{6}\right] \tag{\text{van der Waals}} \\
+	&+ \sum_{\text{atom }i}\sum_{\text{atom} j\neq i} \frac{q_{i}q_{j}}{\varepsilon_{0}r_{i,j}} \tag{\text{Electrostatic}}
+\end{align}
+
+This equation encompasses all bonds and their deviations from their equilibrium, all bond angle and dihedral angle deviations from their equilibrium, and all pairwise van der Waals and electrostatic interactions. Bond length and angle deformation are modeled as springs with the a given equilibrium length, as the bond length or angle deviates from the equilibrium it increasingly wants to ``spring'' back, and can be represented mathematically through Hooke's law. Dihedral angles are modeled as a (co-)sinusoidal wave in which energy wells representing favorable conformations are separated by energy barriers representing energetically unfavorable conformations between them. Van der Waals interactions are approximated using their so-called ``12-6'' potential, and electrostatic interactions are given by Coulomb's law.
+
+\item Newton's first law says that \(F=ma\), that is, force is mass times acceleration. Rearranging, we get \(\frac{F}{m} = a\). To get the acceleration of each atom, we divide the force felt by each atom by its mass. We can also use the fact that acceleration is the derivative of velocity to derive the updated velocities of all the atoms, \(\int a = \int\frac{F}{m}\), the anti-derivative of the acceleration.
+
+\item Using the velocities of all the atoms, we can update their positions after \(\Delta t\) time: \(x_{f} = x_{i} + v\Delta t\), the updated position is equal to the initial position, moved in the direction of the velocity for \(\Delta t\) time.
+
+\item We recalculate the forces felt by each atom using the potential energy equation.
+
+\item Finally, we update the velocities of each atom once again to ensure the positions and velocities stay synchronized.
+
+\end{enumerate}
+
+The above procedure will calculate the new positions and velocities of all the atoms after \(\Delta t\) time. If \(\Delta t \) is a reasonable \qty{2}{\femto\second}, it would take \num{500000000} iterations to simulate \qty{1}{\micro\second} (\qty{1}{\times 10^{-6}\second}), the standard length simulation in the present year.
+
+This algorithm is extremely computationally expensive, which is why it is only within the past decade or so that computers have become powerful enough to make simulating biomolecules on relevant timescales feasible. The main bottleneck is the potential energy equation. The bond length, angle deformation, and dihedral angle terms all grow linearly with the number of atoms in the simulation, \(O(n)\), but the van der Waals and electrostatic terms growth parabolically, \(O(n^{2})\). Standard practice is to model these non-bonded terms explicitly up to a cutoff in distance from each atom (usually \qtyrange{8}{12}{\angstrom}), at which point they are only approximated, but this still remains very expensive as simulations grow from tens to hundreds of thousands of atoms.
+
+The integration of GPU parallelization into the computation of the non-bonded terms finally made it possible to conduct MD simulations of large-scale systems on biologically relevant timescales. After the cutoff is reached, a Particle Mesh Ewald (PME) process is used to approximate the rest using a Fast Fourier Transformation \parencite{salomon2013routine}.
+
+\subsection{Practical Steps}
+
+The process of conducting a MD simulation a molecular dynamics simulation requires several steps of set-up before the data collection can begin.
+
+\subsubsection{tLEaP}
+
+tLEaP, a terminal-based version of the Load Edit and Prepare script, is the first step of setting up a simulation, and its goal is to take a PDB file, a file containing the atomic coordinates of all the atoms from a protein crystal structure, cryoEM structure, etc., and turn it into a format suitable to begin simulation.
+
+The biomolecule is surrounded in a box of water molecules with some amount of padding, typically \qty{12}{\angstrom}. Ions are added to ensure neutrality of the solution, which is necessary to ensure non-physical interactions are felt across the periodic boundaries. The edges of the water box are treated in such a way that rather than being a hard edge water molecules or the protein might bump into, passing outside the box on one side causes the atom to appear on the other side, in a Pac-Man sort of way. The same is true for forces, atoms on one side of the box feel atoms on the opposite. This ensures that although our water box is finite and of a relatively small size, the physics engine treats it as as infinitely repeating. Water molecules make up the bulk of the atoms in a simulation; to cut down on this slightly, an octahedral water box is often chosen, which has the effect of just slicing off the corners from a cubic water box.
+
+tLEaP requires the specification of the force fields for which to use in the simulation. Force fields are important files that specify the physical constants used in the potential energy function for all of the atoms, pairs of atoms (bond parameters), triplets of atoms (bond angle parameters) and all quadruplets of atoms (dihedral parameters) found in the system. They may also modify the potential energy function to improve speed or precision of certain molecules, such as water. Force fields may be mixed and matched as needed, depending on the contents of the simulation (protein, DNA, lipids, etc)\footnote{Although one should be careful as many force fields are parameterized with specific partner models in mind (e.g., particular water or protein force fields)}. For instance, there are many different force fields that parameterize water, each of them at a slightly different performance, speed, support for water-DNA, water-lipid interactions, etc.
+
+tLEaP will generate a single parameter file and coordinate file, the combination of which encodes everything the simulation needs to run.
+
+tLEaP, in combination with the General Amber Force Filed is capable of parameterizing most small organic molecules, though highly complex compound or non-standard amino acids would likely require a zeroth step of preparing a force field file (which contains all of the atom, bond, angle, and dihedral parameters) for the molecule which the force field can then use to build the simulation.
+
+\subsubsection{Energy Minimization}
+
+During the process of protein crystallization, sometimes atoms move into positions that would not be energetically favorable at biological conditions. When the data is collected, noise in the data may place atoms closer to one another than is realistic. Hydrogen atoms need especially high quality data to resolve, and if this is not possible, tLEaP will guess as to where they should be, but it is only a guess. In a cryo-EM structure, not all atoms may be resolved, meaning they need to be filled in somehow. These are only some of the ways in which an input structure may have non-physical interactions.
+
+If the simulation were allowed to proceed, those atoms which were too close would fly apart with a large amount of kinetic speed. They would certainly collide with other atoms, transferring some of their energy to the atoms they hit, before snapping back as they attempted to return to their equilibrium positions. The transference of kinetic energy would continue throughout the system, blowing up the protein in an error known as a ``bombs away'' error.
+
+To prevent this from happening, the next step after tLEaP is energy minimization. The interactions with the highest energy are allowed to move while freezing the rest of the atoms, then the threshold is slowly lowered until all the atoms are able to freely move, and no non-physical interactions remain.
+
+\subsubsection{Heating}
+
+By this point, the system has been relaxed, but there is no kinetic energy: the temperature of the system is \qty{0}{\kelvin}. In this stage, the temperature, which is to say the average kinetic energy of the system is brought up to \qty{300}{\kelvin}. This, again, is done slowly to ensure physicality, with velocities populated from a distribution.
+
+\subsubsection{Equilibration}
+
+Now that the system has had kinetic energy added to it, it can relax from its perhaps unnatural crystal packing conformation to a more relaxed conformation, natural to a protein surrounded by water. This is distinct from energy minimization, in which unfavorable atomic interactions were resolved, here, the whole protein conformation relaxes. This is done by simulating the system using the previously described protocol for around \qty{30}{\nano\second} and disregarding the data. Small restraints may be applied, and lowered to zero before the end of the equilibration.
+
+\subsubsection{Neutral Dynamics}
+
+Finally, the system is ready to be simulated. In normal simulations, all restraints are turned off, and the protein is free to dance around its water box. If the protein drifts through a wall, it will reappear on the other side due to the periodic boundaries.
+
+The standard practice for simulations is to run the simulation for \qty{1}{\micro\second} and running the entire simulation in triplicate (restarting with heating where velocities are assigned stochastically), but this depends greatly on the phenomenon being studied. For instance, to simulate the behavior of a ligand in a binding pocket, several hundred nanoseconds could be sufficient, whereas to study the dynamics of an intrinsically disordered protein, dozens of microseconds might be needed\footnote{in this case, a more sophisticated simulation protocol may be needed}.
+
+\subsubsection{Analytics}
+
+Saving the state of the system at every frame would result in an enormous quantity of data, several terabytes at least depending on the size and duration of the simulation. This is more than would ever be necessary, and would also slow down the simulation significantly. For this reason, we must chose a frequency at which to save our data. The standard protocol in the Thayer Lab is to write to the disk the state of the system \num{1000} times per nanosecond, which is once every \num{500} steps (more or less, depending on the \(\Delta t\)).
+
+Data analytics are typically conducted in CPPTRAJ, the default analytics program that comes with Amber. Often, CPPTRAJ used as an interface to get certain data from the simulation, such as electrostatic interactions, to be used in additional and more sophisticated data analyses.
+
+\section{The Wesleyan High Performance Computing Cluster}
+
+As mentioned in the previous section, molecular dynamics simulations are as powerful as they are computationally expensive. It is for this reason we are very lucky Wesleyan has a such a powerful supercomputer.
+
+The architecture of the Wesleyan supercomputer (also known as the HPC or the cluster) is as follows. When one connect to the cluster, they interact with it via the head node. The head node is meant to be a ``landing page'' that facilitates interactions with the rest of the cluster. Files live on a drive known as ``zfshomes'', and the head node allows reading and writing to and from zfshomes. Jobs, computationally intense tasks you want to use the cluster's compute power on, are run on compute nodes. There are many different types of compute nodes, akin to different computers with different specs, depending on the resources needed for each jobs.
+
+\begin{figure}[htbp]
+\centering
+\begin{tabularx}{\textwidth}{|c|c|X|X|X|}
+\hline
+Queue & \# Nodes & GB Mem per Node & GPU & Remark \\
+\hline
+exx96 & 12 & 96 & RTX2080S & Fastest, used for running simulations \\
+\hline
+amber128 & 1 & 128 & GeForce GTX 1080 Ti & Designed for Amber but not the fastest anymore \\
+\hline
+mwgpu & 5 & 256 & Tesla K20m & Greatest memory, very slow compared to exx96, amber128 \\
+\hline
+\end{tabularx}
+\caption[A Summary of Compute Resources]{A summary of Amber-capable compute resources available on the Wesleyan high-performance computing cluster}
+\label{HPC nodes}
+\end{figure}
+
+Despite the quality of the Wesleyan HPC, simulations still take a long time to run. A \qty{1}{\micro\second} simulation of the full-length p53 has around \num{120000} atoms and takes about \num{20} days to run. A smaller subset of the protein, the DNA binding domain, takes about \num{10} days to run. It is important to remember, though, that in the not too-distant past, it would have been remarkable to run even \qty{200}{\nano\second} of a much smaller system. In 2004, a state-of-the-art MD paper studying the effects of ion motions on DNA simulated roughly \num{5000} atoms, and took \num{6} months on a national supercomputer \parencite{ponomarevIonMotionsMolecular2004}. As the speed of GPUs increases, the capabilities of MD simulations will only grow.
+
+\section{Graph Theoretical Approaches to Protein Analysis}
+
+The move into the era of big data has had profound effects in science. For the first time, enormous datasets can be collected and analyzed on reasonable timescales. Molecular biology is no exception, with whole-genome sequencing leading to countless discoveries and innovations.
+
+A still-developing direction is in analyzing molecular dynamics simulations. Can we use simulations with allosteric effects to uncover its secret mechanism? The only way to know is to look, to develop more sophisticated analyses, and to continue looking. One promising approach to analyzing molecular dynamics simulations is by leveraging graph theory.
+
+\subsection{A Graph Theory Primer}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{Bridges_of_Konigsberg.png}
+\caption[The Seven Bridges of Königsberg]{The Seven Bridges of Königsberg. Leonhard Euler proved in 1736 that it was impossible to cross each bridge (highlighted in pink) only once. Image source: \parencite{sevenbridges}}
+\label{fig:sevenbridges}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{graph.png}
+\caption[An Example of a Graph]{An example of a graph, as defined in Graph Theory. Nodes are abstract representations of features, and edges connect features. Image source: \parencite{GirlsTalkMath}}
+\label{fig:example-graph}
+\end{figure}
+
+Graph theory is a branch of math that studies abstract connections between objects. The first problem that was solved using techniques that resemble what we know today to be graph theory was in 1736 by Leonhard Euler, who answered the long-standing question of if it were possible to cross the seven bridges of the city of Königsberg, each only once.
+
+A simple graph \(G = (V, E)\) is defined as a tuple containing a set of vertices and a set of edges connecting two vertices. Edges \(e = \{v_{i}, v_{j}\} \in E\) are unordered tuples of vertices; edges have no direction in a simple graph. \figurepageref{fig:example-graph} shows an example of a graph as defined in graph theory, with \num{5} nodes and \num{8} edges. 
+
+The degree of a vertex, denoted \(\deg(v)\) for \(v \in V\), indicates the number of vertices connected to \(v\) (equivalently, the number of edges incident to \(v\)).
+
+A graph is connected if there exists a sequence of edges to get from any one node to any other node, and a graph is complete if every vertex is connected to every other vertex.
+
+Let \(G = (V, E)\) be a graph. How can we represent \(G\) on a computer? Define \(M_{G}\) to be an \(n \times n\) matrix where \(n = |V|\) is the number of vertices in \(G\). Number each of the \(n\) vertices 1 to \(n\) in any arbitrary fashion. Then, for the \(i\)th row and \(j\)th column of our matrix, we define the matrix entry to be
+
+
+\begin{equation}
+	m_{i, j} = \begin{cases}
+1 & \{v_{i}, v_{j}\} \in E\\
+0 & \{v_{i}, v_{j}\} \not\in E
+\end{cases},\label{eq:simplematrix}
+\end{equation}
+
+\noindent that is, \(m_{i, j}\) is \(1\) if there exists an edge between vertices \(v_{i}\) and \(v_{j}\), and \(0\) otherwise. Representing graphs as a matrix is convenient computationally, but it also allows us to leverage the rich field of linear algebra, as will be seen in Section \ref{sec:spectralgraphtheory}.
+
+A weighted graph \(G = (V, E, w)\) is a graph \((V, E)\), with the addition of a weight function, \(w: E \rightarrow \mathbb{R}\) that maps each edge in the graph to a real number. Weighted graphs are useful modeling, for example, the probability of transitioning from one state to another.
+
+We can represent weighted graphs computationally by changing the definition of \(m_{i, j}\) in Equation \ref{eq:simplematrix}:
+
+\begin{equation}
+	m_{i, j} = \begin{cases}
+w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
+0 & \{v_{i}, v_{j}\} \not\in E
+\end{cases},\label{eq:weightedmatrix}
+\end{equation}
+
+\noindent that is, rather than using a binary 1 or 0 if there is an edge between the two vertices, we use the weight of the edge between them.
+
+Directed graphs are graphs in which edges have a directionality to them. Rather than just generically saying \(v_{i}\) and \(v_{j}\) are connected, we can say that there is a connection staring at \(v_{i}\) and ending at \(v_{j}\). For a simple graph, if \(\{v_{i}, v_{j}\}\) is in the set of edges, then we say that \(v_{i}\) is connected to \(v_{j}\) and \(v_{j}\) is connected to \(v_{i}\), but in a directed graph, if \((v_{i}, v_{j})\) is in the set of edges (notice that edges are composed using tuples in directed graphs rather than sets), then we say that \(v_{i}\) is connected to \(v_{j}\), but \(v_{j}\) is \textit{not} connected to \(v_{i}\) (unless \((v_{j}, v_{i})\) is also in the set of edges). If a graph is being used to represent the connections allowable between states in a system, using a directed graph allows for a more nuanced description the state transitions; just because the system arrived to state B from state A may not necessarily mean it can return to state A directly.
+
+Encoding a directed graph in a matrix follows the same process as seen in Equation \ref{eq:simplematrix},
+
+\begin{equation}
+	m_{i, j} = \begin{cases}
+1 & (v_{i}, v_{j}) \in E\\
+0 & (v_{i}, v_{j}) \not\in E
+\end{cases},\label{eq:directedmatrix}
+\end{equation}
+
+\noindent except that the resulting may not be symmetric, i.e., in general is not guaranteed that \(m_{i, j} = m_{j, i}\), as was the case with simple graphs.
+
+A weighted directed graph is as it sounds, edges specify directionality and are also given a weight by the weight function \(w\). Encoding as a matrix combines the ideas seen previously in Equations \ref{eq:directedmatrix} and \ref{eq:weightedmatrix}, namely,
+
+\begin{equation}
+	m_{i, j} = \begin{cases}
+w((v_{i}, v_{j})) & (v_{i}, v_{j}) \in E\\
+0 & (v_{i}, v_{j}) \not\in E
+\end{cases}.
+\end{equation}
+
+\subsection{Graph Representations of Proteins}
+
+How can one use a graph theoretic framework to study proteins? A way to encode information about a protein of interest in the language of graphs is required. There are a countless number of ways to do this. One valid approach, though one with limited applications, is to let vertices represent amino acids, connecting nodes according to adjacent amino acids in the protein's backbone.
+
+A promising way to capture long-range allosteric signals is by using edges to encode information about non-bonded interactions.
+
+First, vertices are defined to represent amino acids, with one vertex for each amino acid of the protein's sequence. Next, all possible edges are added to the graph, connecting every residue to every other residue, and are weighted by the strength of the non-bonded interaction between the two. If allosteric signals are conferred by a domino effect of energetic interactions, a time series history of these networks should reveal it.
+
+Observe that this creates a simple weighted (symmetric) graph: the non-bonded interaction strength between amino acids \(i\) and \(j\) is the same as the interaction strength between \(j\) and \(i\), so the for weighted edge matrix \(M_{G}\), \(m_{i, j} = m_{j, i}\).
+
+More densely packed regions of the protein will naturally have greater local energetic interactions, which must be normalized. We can do this with the following procedure.
+
+For the sake of notation, we will write \(v_{i}v_{j}\) to mean specifically the edge from vertex \(v_{i}\) to \(v_{j}\). In this next step, we will be creating a directed graph, so it will be important to differentiate the edge from \(v_{i}\) to \(v_{j}\) from the edge from \(v_{j}\) to \(v_{i}\).
+
+Define
+\begin{equation}
+	\text{Norm}(v_{i}v_{j}) = \frac{w(v_{i}v_{j})}{\sum\limits_{z\in V}w(v_{i}z)}
+\end{equation}
+
+This normalizes the graph by dividing the edge weight of \(v_{i}v_{j}\) by the sum of all edge weights incident to \(v_{i}\). Observe that this graph is no longer symmetric; that is, \(\text{Norm}(v_{i}v_{j}) \neq \text{Norm}(v_{j}v_{i})\), because \(v_{i}\) and \(v_{j}\) have different edges incident to them.
+
+When this process is applied to all of the edges in \(G\), it creates a weighted directed graph. Recall that the goal is to represent the non-bonded interaction network of the protein, which intuitively should be symmetric: the force felt between amino acids \(i\) and \(j\) should be the same force felt between amino acids \(j\) and \(i\). To restore the symmetric nature of our graph, we modify our normalizing algorithm:
+
+\begin{equation}
+	\text{NormSymmetric}(v_{i}v_{j}) = \max(\text{Norm}(v_{i}v_{j}), \text{Norm}(v_{j}v_{i})).
+\end{equation}
+
+Now if we define our normalized graph \(G' = (V, E, w')\) where \(w'(v_{i}v_{j}) = \text{NormSymmetric}(v_{i}v_{j})\), we maintain the symmetric nature of \(G\).
+
+Finally, a threshold is applied based on the distribution of edge weights to isolate the signal from the noise; all values below the threshold are set to zero.
+
+\subsection{Spectral Graph Theory}
+\label{sec:spectralgraphtheory}
+
+We begin with some definitions. Let \(\mathbb{F}\) be a field of (real) scalars (i.e. a set of numbers in which addition and multiplication work as we expect them to, such as the real numbers). Let \(\vec{V}\) be a set of vectors of dimension \(n\) generated over \(\mathbb{F}\) (i.e. values of vectors in the set \(\vec{V}\) are only allowed to come from \(\mathbb{F}\)).
+
+Eigenvalues (\(\lambda\)) and eigenvectors (\(\vec{v}\)) of a matrix \(A\) are defined as those scalars \(\lambda \in \mathbb{F}\) and vectors \(\vec{v} \in \vec{V}\) such that \(A\vec{v} = \lambda\vec{v}\), that is, the linear transformation \(A\) applied to \(\vec{v}\) results in a scalar multiplication of \(\vec{v}\). For an \(n \times n\) matrix \(A\) there are exactly \(n\) eigenvectors, typically labeled such that \(\lambda_{1} \leq \lambda_{2} \leq \cdots \leq \lambda_{n}\).
+
+A normalized vector is a vector with length \num{1}. For a vector \(\begin{bsmallmatrix}
+a_{1} & a_{2} & \cdots & a_{n}
+\end{bsmallmatrix}\tran\), the length is given by \(\sqrt{a_{1}^{2} + a_{2}^{2} + \cdots + a_{n}^{n}}\).
+
+Next, a set of vectors is orthonormal if the length of each vector is \num{1} and any two vectors from the set are perpendicular to one another. For example, over \(\mathbb{R}\), the set of vectors pointing one unit up and one unit right, \(\left\{\begin{bsmallmatrix}
+1 \\ 0
+\end{bsmallmatrix}, \begin{bsmallmatrix}
+0 \\ 1
+\end{bsmallmatrix}\right\}\), is orthonormal, because the vectors are perpendicular.
+
+A set of vectors \(B = \{b_{1}, b_{2}, \cdots b_{n}\}\) is known as a basis set of \(\vec{V}\) if for all vectors \(\vec{v} \in \vec{V}\), \(\vec{v}\) can be expressed as a linear combination of vectors in \(B\), \(\vec{v} = a_{1}b_{1} + a_{2}b_{2} + \cdots a_{n}b_{n}\), for scalars \(a_{1},~a_{2},~\cdots a_{n} \in \mathbb{F}\). The same set of vectors, \(\left\{\begin{bsmallmatrix}
+1 \\ 0
+\end{bsmallmatrix}, \begin{bsmallmatrix}
+0 \\ 1
+\end{bsmallmatrix}\right\}\), is also a basis, since for any \(\begin{bsmallmatrix}
+a \\ b
+\end{bsmallmatrix} \in \vec{V} = \mathbb{R}^{2}\), it can be expressed as \(a\begin{bsmallmatrix}
+1 \\ 0
+\end{bsmallmatrix} + b\begin{bsmallmatrix}
+0 \\ 1
+\end{bsmallmatrix}\). A set of vectors is referred to as an orthonormal basis if they are orthonormal and form a basis for the vector space. Thus \(\left\{\begin{bsmallmatrix}
+1 \\ 0
+\end{bsmallmatrix}, \begin{bsmallmatrix}
+0 \\ 1
+\end{bsmallmatrix}\right\}\) is an orthonormal basis.
+
+The Spectral Theorem states that all symmetric matrices have an orthonormal eigenbasis. That is, for all symmetric matrices (a matrix in which for all entries \(m_{i, j}\), \(m_{i, j} = m_{j, i}\)), the set of eigenvectors of that matrix is both orthonormal and is a basis for the vector space. As will be seen in Section \ref{sec:heatkernel}, this theorem is very important, because it makes difficult or even impossible computations much easier.
+
+Let \(Q\) be a matrix such that the columns of \(Q\) are the orthonormal eigenvectors of \(A\) as given by the spectral theorem. This matrix has an important property that the inverse of \(Q\), \(Q^{-1}\), is equal to the transpose of \(Q\), \(Q\tran\). Now let \(\Lambda\) be a diagonal matrix where \(\lambda_{i, i}\) is the \(i\)th eigenvalue of \(A\). The spectral theorem tells us that for a diagonal matrix \(A\), \(A = Q\Lambda Q\tran\).
+
+\subsection{The Normalized Laplacian Matrix}
+
+One more tool is needed to derive the heat kernel on graphs: the normalized Laplacian matrix, a more sophisticated way to encode a graph as a matrix than the ways seen previously.
+
+Begin with the adjacency matrix \(A\). As defined in Equation \ref{eq:weightedmatrix}, the entry at row \(i\) and column \(j\) takes the following value:
+
+\begin{equation}
+	a_{i, j} = \begin{cases}
+w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
+0 & \{v_{i}, v_{j}\} \not\in E
+\end{cases}.
+\end{equation}
+
+\noindent Next, consider the degree matrix. In the case of a undirected graph, the degree matrix encodes the degree of each vertex (the number of edges incident to it) along the diagonal and is 0 in all other entries. For the diagonal degree matrix \(D\), entries are defined as follows:
+
+\begin{equation}
+	d_{i, j} = \begin{cases}
+\deg(v_{i}) & i = j\\
+0 & i \neq j
+\end{cases}.
+\end{equation}
+
+\noindent The pseudo-inverse of \(D\), \(D^{-\frac{1}{2}}\), has entries given by
+
+\begin{equation}
+	D^{-\frac{1}{2}}(i, j) = \begin{cases}
+\frac{1}{\sqrt{\deg(v_{i})}} & i = j\\
+0 & i \neq j
+\end{cases}.
+\end{equation}
+
+\noindent The Laplacian matrix is defined as \(L = D - A\), with entries given by
+
+\begin{equation}
+	L(i, j) = \begin{cases}
+\deg(v_{i}) & i = j\\
+-w(\{v_{i}, v_{j}\}) & \{v_{i}, v_{j}\} \in E\\
+0 & \text{otherwise}
+\end{cases}.
+\end{equation}
+
+\noindent This definition of \(L\) comes from the fact that the diagonal of \(A\) is zero, since vertices are not allowed to connect to themselves, so the diagonal of \(L\) is the same as \(D\). All non-diagonal entries of \(D\) are zero, which gives the \(-w(\{v_{i}, v_{j}\})\) for adjacent vertices. All other entries are zero.
+
+Finally, we consider the normalized Laplacian, which is given by \(\hat{L} = D^{-\frac{1}{2}}LD^{-\frac{1}{2}}\), with entries as follows:
+
+\begin{equation}
+	\hat{L}(i, j) = \begin{cases}
+1 & i = j \text{ and } \deg(v_{i}) \neq 0\\
+\frac{-w(\{i, j\})}{\sqrt{\deg(v_{i})\deg(v_{j})}} & i \neq j \text{ and } \{v_{i}, v_{j}\} \in E\\
+0 & \text{otherwise}
+\end{cases}.
+\end{equation}
+
+\subsection{The Heat Kernel}
+\label{sec:heatkernel}
+
+The heat kernel is a function taken from physics; namely, it is the fundamental solution to the heat equation. In essence, it simulates how heat diffuses through a system. When applied in the context of graph theory, it can tell us how information diffuses through a network. Intuitively, highly connected regions of the graph should diffuse heat quickly while less connected regions will diffuse heat more slowly.
+
+The heat equation is given as:
+
+\begin{equation}
+	\frac{\partial h_{t}}{\partial t} = -\hat{L}h_{t},
+\end{equation}
+
+\noindent for the normalized Laplacian matrix \(\hat{L}\). The heat equation has the solution
+
+\begin{equation}
+	h_{t} = e^{-t\hat{L}}.
+\end{equation}
+
+Observe that this solution involved exponentiating the matrix \(\hat{L}\). How does one raise \(e\) to the power of a matrix? The results from the previous sections will help.
+
+Because the normalized Laplacian matrix is symmetric, the spectral theorem says it can decompose \(\hat{L}\) into \(U\Lambda U\tran\) (where \(U\) is the matrix of eigenvectors and \(\Lambda\) is the diagonal matrix of eigenvalues). Further, the Taylor expansion of \(e\),
+
+\begin{equation}
+	e^{x} = 1 + x + \frac{x^{2}}{2!} + \cdots = \sum_{i=0}^{\infty} \frac{x^{i}}{i!},
+\end{equation}
+
+\noindent allows us to get
+
+\begin{equation}
+	e^{-t\hat{L}} = 1 + (-t\hat{L}) + \frac{(-t\hat{L})^{2}}{2!} + \cdots = \sum_{i=0}^{\infty} \frac{(-t\hat{L})^{i}}{i!}.
+\end{equation}
+
+
+\noindent Two more lemmas will be needed to continue:
+
+\begin{lemma}
+For a symmetric matrix \(\hat{L} = U\Lambda U\tran\), \(\hat{L}^{n} = U\Lambda^{n} U\tran\).\label{lemma:exp}
+\end{lemma}
+
+\begin{proof}
+To compute \(\hat{L}^{n}\), observe the following. Recall \(\hat{L}^{n} = U\Lambda U\tran\) and that \(U\tran = U^{-1}\), i.e., the transpose of \(U\) is equal to its inverse.
+
+\noindent Then,
+
+\begin{align*}
+\hat{L}^{n} & = \underbrace{\hat{L}\hat{L}\cdots \hat{L}}_{n}\\
+& = (U\Lambda U\tran)(U\Lambda U\tran)\cdots (U\Lambda U\tran)\\
+& = (U\Lambda U^{-1})(U\Lambda U^{-1}) \cdots (U\Lambda U^{-1})\\
+& = U\Lambda(U^{-1}U)\Lambda(U^{-1}U) \cdots \Lambda U^{-1}\\
+& = U\Lambda^{n} U^{-1}\refstepcounter{equation}\tag{\theequation}.
+\end{align*}
+\end{proof}
+
+\begin{lemma}
+Powers of a diagonal matrix stay diagonal and follow a formula.\label{lemma:diagpowers}
+\end{lemma}
+
+\begin{proof}
+Let
+
+\begin{equation*}
+	A = \text{diag}(a_{1,1}, a_{2,2}, \cdots, a_{n,n}) = {\setstretch{1.5}\begin{bmatrix}
+a_{1, 1} & 0 & \cdots & 0\\
+0 & a_{2, 2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}
+\end{bmatrix}}
+\end{equation*}
+
+\noindent Then
+
+\begin{equation}
+	A^{2} = {\setstretch{1.5}\begin{bmatrix}
+a_{1, 1} & 0 & \cdots & 0\\
+0 & a_{2, 2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}
+\end{bmatrix}\begin{bmatrix}
+a_{1, 1} & 0 & \cdots & 0\\
+0 & a_{2, 2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}
+\end{bmatrix} = \begin{bmatrix}
+a_{1, 1}^{2} & 0 & \cdots & 0\\
+0 & a_{2, 2}^{2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}^{2}
+\end{bmatrix}}
+\end{equation}
+
+So \(A^{2}\) is also a diagonal matrix. By induction, we can see that this pattern must extend, so all \(A^{n}\) for \(m \in \mathbb{N}\) are diagonal, and follow the form
+
+\begin{equation}
+	A^{m} = {\setstretch{1.5}\begin{bmatrix}
+a_{1, 1}^{m} & 0 & \cdots & 0\\
+0 & a_{2, 2}^{m} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_{n,n}^{m}
+\end{bmatrix}}
+\end{equation}
+
+\end{proof}
+
+Now, a closed-form equation for the heat kernel simulated on our weighted, undirected graph can be derived.
+
+\begin{proposition}
+Let \(G=(V,E,w)\) be a weighted, undirected graph. In this case, \(G\) represents the protein non-bonded interaction graph. Let \(\hat{L}\) be the (symmetric) normalized Laplacian matrix with decomposition \(\hat{L} = U\Lambda U\tran\).
+
+\noindent The heat kernel, given by
+\begin{equation*}
+	h_t = e^{-t\hat{L}},
+\end{equation*}
+has solution
+\begin{equation}
+	\operatorname{diag}(e^{-t\lambda_1}, \dots, e^{-t\lambda_n}).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Beginning with the solution to the heat equation, we have
+\begin{equation*}
+	h_t = e^{-t\hat{L}}.
+\end{equation*}
+We can use the definition of the Taylor series for \(e^{x}\) to obtain
+\begin{equation*}
+	\sum_{i=0}^{\infty} \frac{(-t\hat{L})^{i}}{i!} = \sum_{i=0}^{\infty} \frac{\hat{L}^{i}}{i!}(-t)^{i}.
+\end{equation*}
+By the spectral theorem, we can decompose \(\hat{L} = U\Lambda U\tran\):
+\begin{equation*}
+	\sum_{i=0}^{\infty} \frac{(U\Lambda U^{-1})^{i}}{i!}(-t)^{i}.
+\end{equation*}
+By Lemma \ref{lemma:exp}, \((U\Lambda U^{-1})^{n} = U\Lambda^{n} U^{-1}\),
+\begin{equation*}
+	\sum_{i=0}^{\infty} \frac{U\Lambda^{i} U^{-1}}{i!}(-t)^{i} = U\left(\sum_{i=0}^{\infty}\frac{\Lambda^{i}}{i!}(-t)^{i}\right)U\tran
+\end{equation*}
+Recall \(\Lambda\) is a diagonal matrix where the \(i\)th entry is the \(i\)th eigenvalue. By Lemma \ref{lemma:diagpowers}, raising \(\Lambda^{i}\) raises each entry to the \(i\).
+\begin{equation*}
+	U\left(\sum_{i=0}^{\infty}\frac{(-t)^{i}}{i!}{\setstretch{1}\begin{bmatrix}
+\lambda_{1}^{i} & 0 & \cdots & 0\\
+0 & \lambda_{2}^{i} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \lambda_{n}^{i}
+\end{bmatrix}}\right)U\tran
+\end{equation*}
+The factor \(\sum_{i=0}^{\infty}\frac{(-t)^{i}}{i!}\) can be brought into the matrix:
+\begin{equation*}
+	U\left({\setstretch{1}{\setlength{\arraycolsep}{1pt}\begin{bmatrix}
+\sum_{i=0}^{\infty}\frac{(-t\lambda_{1})^{i}}{i!} & 0 & \hdots & 0\\
+0 & \sum_{i=0}^{\infty}\frac{(-t\lambda_{2})^{i}}{i!} & \hdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \hdots & \sum_{i=0}^{\infty}\frac{(-t\lambda_{n})^{i}}{i!}\\
+\end{bmatrix}}}\right)U\tran
+\end{equation*}
+Finally, we recognize that each \(\sum_{i=0}^{\infty}\frac{(-t\lambda_{k})^{i}}{i!}\) is the Taylor series formula for \(e^{-t\lambda_{k}}\). Thus, we can arrive at the final formula:
+\begin{equation}
+	h_{t} = U\left({\setstretch{1}\begin{bmatrix}
+e^{-t\lambda_{1}} & 0 & \hdots & 0\\
+0 & e^{-t\lambda_{2}} & \hdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \hdots & e^{-t\lambda_{n}}\\
+\end{bmatrix}}\right)U\tran\label{eq:heatkernelmatrix}
+\end{equation}
+\end{proof}
+
+\parencite{axioms4030275, BenUndergrad, BenMasters, abramsonColorsProtein2021}.
+
+\subsection{The Wasserstein Distance Metric}
+
+The Wasserstein distance, also referred to as the Earth Mover's Distance, is a metric that measures the distance or difference between probability distributions. 
+
+Suppose there have several piles of dirt on a lawn and several holes, too. If the piles of dirt represent one probability distribution and the holes represent another, then the Wasserstein distance gives the minimum amount of ``work'' needed to transport the dirt across the potentially hilly lawn from the piles to the holes.
+
+Thus, rather than measuring pointwise differences between the two distributions, the Wasserstein distance measures the minimum cost to transform one distribution into another, where cost is defined as the amount of mass moved multiplied by the distance transported.
+
+In the context of protein analysis, it is very useful. Consider the wild type (WT) and mutant forms of a protein. For each frame of the simulation, the non-bonded interaction network of the two systems can be computed. From there, the heat kernel simulates heat flow over each of the networks, giving a measure of how an allosteric signal might flow across each residue in the protein, comparing between the WT and the mutant. Compiling the data for each frame of the simulations, it can be used to approximate a probability distribution, then the Wasserstein distance metric compares quantitatively the difference between each residue in its ability to transmit energetic perturbations through the protein between the WT and mutant protein. This might say, for example, that the non-bonded interaction network of the mutant p53 is highly different than the WT, despite only a single point mutation change.
+
+\section{Computational Analyses of Hydrogen Bonding}
+
+The primary job of p53 within the cell is to activate cell-fate related signaling pathways by binding to DNA as a transcription factor. For this reason, studying p53-DNA interactions is very important to understand how mutations might disrupt them and how restorative compounds might rescue them.
+
+There are two primary metrics we consider when analyzing how p53 interacts with its bound DNA partner. The Total Residence Time (TRT), is a measure of the average number of hydrogen bonds between p53 and the DNA per frame. The Exhaustive Hydrogen Bond Sum (EHBS) is a count of the number of different hydrogen bonds made between p53 and the DNA.
+
+Computationally, we represent hydrogen bonding over the simulation as a matrix, with columns corresponding to each of the hydrogen bonds made during the simulation, rows representing each frame, and for each frame and each hydrogen bond, a \num{1} if that hydrogen bond is present for that frame and a \num{0} otherwise.
+
+Hydrogen bonds, of course, occur between atoms, but it is often useful to distinguish between ``atomic-level'' hydrogen bonds, that is, hydrogen bonds made between atoms, and ``residue-nucleotide-level'' hydrogen bonds. There are multiple ways in which a hydrogen bond may form between a protein residue and a nucleotide; we define ``residue-nucleotide'' hydrogen bonds to be a \num{1} if there is a hydrogen bond between any of the atoms of that residue and that nucleotide, and a \num{0} otherwise. Similarly, we can define ``residue-level'' hydrogen bonds, which, for each residue of the protein and each frame, a value of \num{1} indicates that residue is interacting with any other atom in the DNA, and ``nucleotide-level'' hydrogen bonds, which indicate if that nucleotide is bonding with any residue of the protein.
+
+As depicted in \figurepageref{fig:p53-dbd-hbonds}, there are several hydrogen bonds that are known to be present between the p53 DNA binding domain and the DNA. These residues are K120, S241, R248, R273, A276, C277, R289, and R283. Rather than looking at any hydrogen bond between the protein and the DNA, we may restrict our attention to these interactions, which we know should be there. We denote this collection of residues as making ``specific'' interactions with the DNA. Of the specifically interacting residues, K120, C277, and R280 are unique in their interactions with the nitrogenous base of the nucleotide, rather than the sugar backbone. We say interactions between these residues and the DNA are ``nitrogenous-base interacting''.
+
+Mixing and matching the above lenses in our analyses of p53-DNA interactions, we may the Specific TRT (the average number of hydrogen bonds between the DNA and residues K120, S241, R248, R273, A276, C277, R289, and R283) or the total number of hydrogen bonds made between the C-terminal domain of p53, counting only those residues which are present for at least \qty{10}{\percent} of the total number of frames.
+
+\section{Defining a ``Rescue Score''}
+
+For an arbitrary metric, for example RMSD or RMSF, computed between the WT, Y220C, and drug-bound Y220C, we may wish to quantify how much the presence of the drug restored the WT dynamics to the mutant p53.
+
+We can define the amount of rescue using the following formula:
+
+\begin{equation*}
+\text{rescue} = \frac{\text{Y220C\_Drug} - \text{Y220C}}{\text{WT} - \text{Y220}}
+\end{equation*}
+
+A rescue score of zero means no rescue, and when the rescue score is one, the wild type dynamics have been perfectly restored. This means when the rescue score is between zero and one, there is a partial rescue. If the rescue score is greater than one, the presence of the drug has overshot the restoration of the wild type. If the value of the Y220C system was greater than the WT, then a rescue score greater than one indicates that the value of the Y220C\_Drug is now less than that of the WT. If the rescue score is less than zero, then the presence of the drug has had the opposite effect of rescue: the value is now further away from the wild than the mutant. If the Y220C value is greater than the WT, then a rescue score less than zero indicates that the value of Y220C\_Drug is even greater than the Y220C.

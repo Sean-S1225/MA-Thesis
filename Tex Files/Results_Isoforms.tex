@@ -54,15 +54,6 @@ For the full protein, we can see that with the exception of p53\(\beta\), for is
 \label{fig:isoforms:rmsd-rescue-score}
 \end{figure}
 
-Observing whether or not the presence of the drug PK11000 moves, in this case, the median RMSD value, motivates the notion of the rescue score. For any given metric, we can define the amount of rescue using the following formula.
-
-\begin{equation*}
-\text{rescue} = \frac{\text{Y220C\_PK11000} - \text{Y220C}}{\text{WT} - \text{Y220}}
-\end{equation*}
-
-\textcolor{red}{maybe move this to the intro}
-A rescue score of zero means no rescue, and when the rescue score is one, the wild type dynamics have been perfectly restored. This means when the rescue score is between zero and one, there is a partial rescue. If the rescue score is greater than one, the presence of PK11000 has overshot the restoration of the wild type. If the value of the Y220C system was greater than the WT, then a rescue score greater than one indicates that the value of the Y220C\_PK11000 is now less than that of the WT. If the rescue score is less than zero, then the presence of PK11000 has had the opposite effect of rescue: the value is now further away from the wild than the mutant. If the Y220C value is greater than the WT, then a rescue score less than zero indicates that the value of Y220C\_PK11000 is even greater than the Y220C.
-
 \figurepageref{fig:isoforms:rmsd-rescue-score} shows the PK11000 rescue score using the metric of RMSD applied to the full protein and the DBD' and DBD'' subsets. When considering the full length protein, all isoforms, except for isoform \num{2} and \num{9}, show either partial rescue or that the presence of PK11000 has ``overshot'' the rescue of the Y220C mutant. The majority of the protein dynamics are attributable to the disordered tails, so for isoforms \numrange{1}{9}, the median RMSD value between the DBD' and the DBD'' is nearly identical, which gives the same apparent rescue pattern. For isoforms \numrange{1}{6}, the median RMSD value is very similar between WT, Y220C, and Y220C\_PK11000, so the negative rescue is somewhat misleading \textcolor{red}{DBD' violin plots - supplementary}. For the isoforms with the \(\Delta 133\) deletion, PK11000 can be seen to improve the structural stability of the DBD' of the protein, albeit slightly too much. However, there does not seem to be a clear rescue pattern in isoforms with the \(\Delta 160\) deletion.
 
 \textcolor{red}{ADD OTHER PLOTS IN SUPPLEMENTARY}

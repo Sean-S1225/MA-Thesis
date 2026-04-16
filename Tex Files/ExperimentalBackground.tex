@@ -1,0 +1,112 @@
+\section{DNA Plasmids}
+
+In humans, DNA is stored in chromosomes. A chromosome is a long string of DNA, with various proteins that keep it organized, such as histones, which act as a spindle which the DNA wraps around.
+
+In single-cellular organisms, such as \textit{E. coli} and yeast, DNA can also be found in plasmids. Plasmids, in contrast to chromosomes, are circular rather than linear. They are also much smaller than chromosomes, on the order of thousands to tens of thousands of bases, whereas chromosomes can range between hundreds of thousands of bases to tens of millions of bases.
+
+Plasmids are (usually) the vehicles of choice when it comes to integrating custom genes into an organism, as it is relatively easy to open the cell membrane enough for the DNA pass through it. In addition to carrying a gene of choice, plasmids will often carry a nutrition marker or antibody marker. Nutrition markers are simply genes that encode for an essential nutrient that the organism cannot naturally produce on its own, for instance, uracil. By growing the cells in media that lacks uracil, we can be sure that any \textit{E. coli} or yeast that grows contains our plasmid. Antibody markers are similar, except that they encode resistance for an antibiotic. By growing the cells in media that contains an antibody, all cells that are not resistant to it will die, ensuring that those cells that do grow have had the plasmid inserted.
+
+\section{\textit{E. coli}}
+
+\textit{Escherichia coli} (\textit{E. coli}) is one of the most widely-used strains of single-cellular organisms in molecular biology. \textit{E. coli} is Gram-negative, meaning they have two layers of outer membranes. It is also prokaryotic, meaning it lacks membrane-separated cellular organelles. The strains used for molecular biology are non-pathogenic, which means they are not associated with any diseases known in healthy adults.
+
+\textit{E. coli} makes for a good model organism because it replicates very quickly, duplicating roughly once every \num{40} minutes at \qty{37}{\degreeCelsius}. Additionally, it is relatively easy to insert (transform) DNA plasmids into \textit{E. coli}, and they will usually synthesize proteins of interest without much trouble.
+
+These features make \textit{E. coli} a good choice for long-term storage of DNA plasmids. To preserve a plasmid, one can simply transform it into \textit{E. coli}, allow them to grow overnight, then the stock can be frozen and stored indefinitely at \qty{-80}{\kelvin}. If the frozen stock starts running low, it is trivial to simply defrost the remaining cells, incubate them overnight, and freeze a fresh stock.
+
+The breakthrough that solidified the place of \textit{E. coli} in molecular biology was with insulin. This \num{51} amino acid protein is an essential peptide hormone produced by the pancreas, but for those with diabetes, their body does not produce enough insulin. The first medicinal insulin had to be extracted from animals. In 1982, for the first time, insulin in \textit{E. coli} became commercially available, drastically reducing the price of treatment.
+
+\section{\textit{Saccharomyces cerevisiae}}
+
+The model organism of the MacQueen lab is \textit{Saccharomyces cerevisiae} (\textit{S. cerevisiae}), also known as baker's yeast. \textit{S. cerevisiae} is a step up in biological complexity from \textit{E. coli}, containing both chromosomes and plasmids and possessing a more robust DNA replication path. Additionally, though it is a single-cellular organism, it is eukaryotic, meaning it has membrane-defined cellular organelles. Despite these developmental complexities compared to \textit{E. coli}, it is still far simpler than mammalian cells.
+
+The experimental portion of this thesis used \textit{S. cerevisiae} as its model organism for its replication speed (about \num{1.5} hours at \qty{30}{\degreeCelsius}), DNA repair capabilities and propensity, and its interactions with chemical protein activators and repressors, such as galactose and glucose. 
+
+\section{DNA Gel Electrophoresis}
+
+One of the most widely used techniques in molecular biology is DNA gel electrophoresis. This is a procedure in which DNA samples are separated by their size, and when compared against a cocktail of DNA fragments with known sizes (referred to as the ladder), allows for a semi-quantitative way to measure the size of a portion of DNA.
+
+First, a ``gel'' is prepared: a thin sheet of agarose, which forms a network of microscopic fibers, with wells in the agarose made at the top. The gel is submerged in a pH buffer, and the DNA, mixed with a loading dye to make it denser and visible, is loaded into the wells. An electric current is applied to the buffer. DNA is negatively charged, and will therefore be pushed through the gel by the electrical current. Smaller DNA fragments are able to pass through the network of agarose fibers more easily than larger ones, so the longer the current passes through the gel, the greater the separation between smaller and larger DNA fragments will become. When the DNA reaches the bottom of the gel, it is brought to a UV transilluminator where ethidium bromide within the gel, bound to the DNA, fluoresces and can be recorded (photographed).
+
+\section{PCR}
+
+Perhaps the most revolutionary item in this list is the polymerase chain reaction (PCR). This is a method to generate millions to billions of copies of a desired DNA sequence. Before PCR was invented – in only 1983! – gathering large amounts of a DNA sequence was a long and arduous process.
+
+There are several essential components to carrying out a PCR reaction:
+\begin{enumerate}
+\item The DNA template:  the sequence of DNA to duplicate
+\item DNA polymerase: the enzyme responsible for adding bases to an existing DNA chain
+\item DNA primers: short DNA sequences complementary to the ends of a target region that serve as starting points for DNA polymerase
+\item dNTPs: deoxynucleoside triphosphates, the DNA bases that DNA polymerase will use to extend the growing chain
+\item A buffer solution: a solution with the optimal pH for the DNA polymerase, metal ions for the polymerase, etc
+\end{enumerate} 
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{Polymerase_chain_reaction-en.png}
+\caption[PCR]{One cycle of PCR entails DNA denaturation, primer annealing, and primer extension. Image source: \parencite{PCRQPCR}}
+\label{fig:PCR}
+\end{figure}
+
+Shown visually in \figurepageref{fig:PCR}, one cycle of PCR is made up of three steps:
+
+\begin{enumerate}
+\item DNA denaturation:
+
+The first step in replicating DNA is by denaturing it. This is done by raising the temperature to nearly boiling, around \qty{95}{\degreeCelsius} for \qtyrange{20}{30}{\second}. This causes the hydrogen bonds between the two strands of DNA to come apart.
+
+\item Primer annealing:
+
+The next step is to encourage the binding of the primers to the denatured templates by lowering the temperature to around \qty{60}{\degreeCelsius}. The primers are designed to bind to the 3' end of the DNA, and since there are two 3' ends of the DNA, one on each strand of the original template DNA, two different primers are needed. These are known as the forward and reverse primers, and are typically between \numrange{20}{40} bases long.
+
+\item Extension:
+
+The final step is the extension of the primers. DNA polymerase binds to the primers and uses the dNTPs in solution to extend the primer in the 5' to 3' direction. In this step, the temperature is increased again to around \qty{78}{\degreeCelsius}, and the duration of the step depends on the length of the desired product. Typically, one would allow \num{1} minute per thousand bases, plus an extra \num{30} seconds.
+
+\end{enumerate}
+
+If there were one DNA molecule to begin with, after one iteration of this process, there would be two molecules. The PCR process is typically repeated \num{30} times, at which point the DNA polymerase starts losing its efficacy and accuracy.
+
+The maximum number of copies of the template that could be produced from just one starting DNA sequence is thus \(2^{30}\), which is about \num{1} billion copies.
+
+\section{Restriction Digestion}
+
+Restriction enzymes are proteins that recognize specific DNA sequences and cut the DNA at that site. Typically restriction enzymes exist as dimers, and therefore recognize palindromic sequences.
+
+A restriction digest is a reaction where one chooses a restriction enzyme to cut a target DNA sequence at a specific location. There are several ways in which they are used.
+
+One way is as a diagnostic, where after extracting and purifying a plasmid, for example, from a culture of \textit{E. coli} cells, one performs a restriction digest, either with two different enzymes that cut the DNA once each or one enzyme that cuts the DNA twice. If the digest is then run on a gel, the expected product sizes can be compared with the observed product sizes to ensure it is consistent with expectations (and the wrong plasmid was not incorrectly expressed and purified).
+
+\section{Gap Repair}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{Basic-gap-repair-cloning-procedure-DNA-fragments-from-a-linearized-plasmid-vector-are.png}
+\caption[Gap Repair]{A schematic of using homologous recombination to build new DNA plasmids, called gap repair. Modified from: \parencite{chinoPlasmidConstructionUsing2010}}
+\label{fig:GapRepair}
+\end{figure}
+
+An extremely powerful tool in assembling custom plasmids \textit{in vivo} using existing DNA fragments is gap repair. It may be used, for example, to precisely replace gene X, under promoter P, with gene Y. \figurepageref{fig:GapRepair} shows a schematic of gap repair.
+
+To do this, the target plasmid must first be linearized, often via a restriction enzyme, near or in the region to replace. Next, the target gene is amplified using PCR, with custom terminal sequences that have sequence homology with the plasmid on either end of the break. When the linearized plasmid and the PCR product is transformed into yeast, homologous recombination machinery recognizes the sequence homology, and re-circularizes the plasmid, using the PCR product to ``bridge the gap'' and incorporating the new gene into the plasmid, removing the old one. This process takes advantage of the strong affinity of \textit{S. cerevisiae} for homologous recombination.
+
+\section{Site-Directed Mutagenesis}
+
+Given a plasmid containing a gene of interest, one of the best ways to introduce specific mutations is with site-directed mutagenesis. It is a variation of PCR, where two homologous primers are designed to bind to the DNA at the site to be mutated, with the desired mutation encoded. As PCR is carried out using these primers and the plasmid as a template, DNA polymerase will synthesize the entire plasmid, incorporating the primer with the desired mutation in the gene of interest.
+
+The DNA can be transformed into \textit{E. coli} and sequenced to confirm the incorporation of the mutation. Alternatively, if the template DNA is from \textit{E. coli}, then GATC sites will be methylated, and the enzyme DpnI can be used to degrade the unmutated template plasmids at these methylated sites, ensuring that transformed plasmids will carry the desired mutation.
+
+\section{The \(\beta\)-Galactosidase Protein}
+
+\begin{figure}[h!]
+\centering
+\includesvg[width=\textwidth,inkscapelatex=false]{beta_gal_ONPG}
+\caption[\(\beta\)-Galactosidase Function]{\(\beta\)-galactosidase hydrolyses its natural substrate, lactose into galactose and glucose, but can also hydrolyze \textit{ortho}-nitrophenyl-\(\beta\)-galactoside (ONPG), producing galactose and the yellow \textit{ortho}-nitrophenol.}
+\label{fig:betagal}
+\end{figure}
+
+%To measure the amount of transactivation a protein initiates, one could measure the amount of mRNA or protein of the target gene is observed. There is, however, a simpler approach.
+
+\(\beta\)-galactosidase is encoded by the \textit{lacZ} gene. Its main function in \textit{E. coli} is to hydrolyze lactose into galactose and glucose, which the cell can use as energy \parencite{juersLacZVgalactosidaseStructure2012}. In many labs, it has a different purpose, however. An analog of lactose, \textit{ortho}-nitrophenyl-\(\beta\)-galactoside (ONPG), can also be hydrolyzed by \(\beta\)-galactosidase into galactose and \textit{ortho}-nitrophenol. \textit{ortho}-nitrophenol is yellow, and can be measured in solution using visible light spectroscopy. \figurepageref{fig:betagal} shows the catalytic activity of the \(\beta\)-galactosidase protein.
+
+%Using gap repair, replace the gene downstream of the transcription factor's binding sequence with the lacZ gene, which encodes the protein \(\beta\)-galactosidase. As the transcription factor binds to the promoter region, it will initiate the transcription and translation of \textit{lacZ} into \(\beta\)-galactosidase. After a sufficient amount of time passes, lyse the cells in a solution containing a sugar called \textit{ortho}-Nitrophenyl-\(\beta\)-galactoside (ONPG), an analog for the natural substrate of \(\beta\)-galactosidase, lactose. \(\beta\)-galactosidase will hydrolyze the ONPG, producing \(\beta\)-D-galactose and ortho-nitrophenol. Ortho-nitrophenol has a yellow color, and can be measured with a spectrometer observing at \qty{420}{\nano\meter}. ONPG hydrolysis is directly proportional to the concentration of \(\beta\)-galactosidase, so the amount of transactivation of the transcription factor can be easily measured relative to a control.
