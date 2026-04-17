@@ -1663,12 +1663,12 @@
     \endentry
     \entry{BenUndergrad}{thesis}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e930dac227dbad7915f48def5609208e}{%
+        {{un=1,uniquepart=given,hash=e930dac227dbad7915f48def5609208e}{%
            family={Cowan},
            familyi={C\bibinitperiod},
            given={Benjamin},
            giveni={B\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{institution}{1}{%
         {Wesleyan University}%
@@ -1693,12 +1693,12 @@
     \endentry
     \entry{BenMasters}{thesis}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e930dac227dbad7915f48def5609208e}{%
+        {{un=1,uniquepart=given,hash=e930dac227dbad7915f48def5609208e}{%
            family={Cowan},
            familyi={C\bibinitperiod},
            given={Benjamin},
            giveni={B\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{institution}{1}{%
         {Wesleyan University}%
@@ -1720,6 +1720,219 @@
       \field{type}{Master's Thesis}
       \field{year}{2023}
       \field{dateera}{ce}
+    \endentry
+    \entry{cowanNetworkTheoryAnalysis2025}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=df0c2f568dfc0bd791f56396147f005b}{%
+           family={Cowan},
+           familyi={C\bibinitperiod},
+           given={Benjamin\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+           family={Thayer},
+           familyi={T\bibinitperiod},
+           given={Kelly\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{ca747118cab9fc5379acc1a034debfd4}
+      \strng{fullhash}{ca747118cab9fc5379acc1a034debfd4}
+      \strng{bibnamehash}{ca747118cab9fc5379acc1a034debfd4}
+      \strng{authorbibnamehash}{ca747118cab9fc5379acc1a034debfd4}
+      \strng{authornamehash}{ca747118cab9fc5379acc1a034debfd4}
+      \strng{authorfullhash}{ca747118cab9fc5379acc1a034debfd4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Network theory analysis has emerged as a powerful approach for investigating the complex behavior of dynamic and interactive systems, including proteomic systems. One key application of these methods is the study of long-range signaling dynamics in proteins, a phenomenon known as allostery. In this study, we applied computational models using network theory analysis to explore long-range electrostatic interactions and allosteric drug rescue mechanisms in the DNA-binding domain (DBD) of the p53 protein, a critical tumor suppressor whose dysfunction, often caused by missense mutations, is implicated in over 50\% of human cancers. Using heat kernel and Wasserstein distance-based analyses, we explored the allosteric behavior of p53-DBD constructs with the Y220C mutation in the presence or absence of allosteric effector drugs. Our results demonstrated that these network theory-based protocols effectively detected the differential efficacies of small molecule allosteric effector drug compounds in restoring long-range electrostatic dynamics in the Y220C mutant. Furthermore, our approach identified key long-range electrostatic interactions critical to both the nominal and drug-rescued functionality of the p53-DBD, providing valuable insights into allosteric modulation and its therapeutic potential.}
+      \field{issn}{1422-0067}
+      \field{journaltitle}{International Journal of Molecular Sciences}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{14}
+      \field{title}{Network {{Theory Analysis}} of {{Allosteric Drug-Rescue Mechanisms}} in the {{Tumor Suppressor Protein}} P53 {{Y220C Mutant}}}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{26}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{6884}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/ijms26146884
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/386IPKXG/Cowan and Thayer - 2025 - Network Theory Analysis of Allosteric Drug-Rescue Mechanisms in the Tumor Suppressor Protein p53 Y22.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/1422-0067/26/14/6884
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/1422-0067/26/14/6884
+      \endverb
+      \keyw{allostery,distance,electrostatics,kernel,metrics,networks,p53,protein,simulation,transformations}
+    \endentry
+    \entry{deandradeTP53DatabaseTransition2022}{article}{}
+      \name{author}{17}{}{%
+        {{un=0,uniquepart=base,useprefix=true,hash=64134c8e30e4067e5fe44725caffb919}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={Kelvin\bibnamedelima César},
+           giveni={K\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=6fd1c204e36222857e19aa60158b329a}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Elaine\bibnamedelima E.},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddb13bec653cf9416e9f3a693d0eacbf}{%
+           family={Tookmanian},
+           familyi={T\bibinitperiod},
+           given={Elise\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3897c6c11056f5c2450e7156453fdff}{%
+           family={Kesserwan},
+           familyi={K\bibinitperiod},
+           given={Chimene\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a1c06015fcd11bc087a2c2e824a64e67}{%
+           family={Manfredi},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eeb9cb50b818cc103e5d311b476bb609}{%
+           family={Hatton},
+           familyi={H\bibinitperiod},
+           given={Jessica\bibnamedelima N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c29ab2adbf2a158a6100c0333ed55f0}{%
+           family={Loukissas},
+           familyi={L\bibinitperiod},
+           given={Jennifer\bibnamedelima K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3fd0b4f1a6f8b6cdfdcb81c461169d06}{%
+           family={Zavadil},
+           familyi={Z\bibinitperiod},
+           given={Jiri},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b37b3016aa8f759b5f3c3f37dedec23}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7194910d45740f5f40bd987d9e04c9a}{%
+           family={Olivier},
+           familyi={O\bibinitperiod},
+           given={Magali},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e9a25504d1d943935e095ff437baa1b2}{%
+           family={Frone},
+           familyi={F\bibinitperiod},
+           given={Megan\bibnamedelima N.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=833af4dfdca50476eb0d44f537c20e79}{%
+           family={Shahzada},
+           familyi={S\bibinitperiod},
+           given={Owais},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a75d931ab9119ebe9144eac42dc7fea6}{%
+           family={Longabaugh},
+           familyi={L\bibinitperiod},
+           given={William\bibnamedelimb J.\bibnamedelimi R.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=04274e5aac48c5cdbeb57507770f62f2}{%
+           family={Kratz},
+           familyi={K\bibinitperiod},
+           given={Christian\bibnamedelima P.},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c55e220e0a7d4322ee400799cb592181}{%
+           family={Malkin},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=247cd1b1f95faff5d69eb436c96a871a}{%
+           family={Hainaut},
+           familyi={H\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3a70fd4e5d061db5eb2561cc985c253}{%
+           family={Savage},
+           familyi={S\bibinitperiod},
+           given={Sharon\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{e27cea70c336c490f3a7d8859c809f40}
+      \strng{fullhash}{40619e317ac65262ec2e1e14e137fbac}
+      \strng{bibnamehash}{e27cea70c336c490f3a7d8859c809f40}
+      \strng{authorbibnamehash}{e27cea70c336c490f3a7d8859c809f40}
+      \strng{authornamehash}{e27cea70c336c490f3a7d8859c809f40}
+      \strng{authorfullhash}{40619e317ac65262ec2e1e14e137fbac}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{1476-5403}
+      \field{journaltitle}{Cell Death \& Differentiation}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{5}
+      \field{shortjournal}{Cell Death Differ}
+      \field{shorttitle}{The {{TP53 Database}}}
+      \field{title}{The {{TP53 Database}}: Transition from the {{International Agency}} for {{Research}} on {{Cancer}} to the {{US National Cancer Institute}}}
+      \field{urlday}{16}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{29}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1071\bibrangedash 1073}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1038/s41418-022-00976-3
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/NGJU5LYP/de Andrade et al. - 2022 - The TP53 Database transition from the International Agency for Research on Cancer to the US Nationa.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41418-022-00976-3
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41418-022-00976-3
+      \endverb
+      \keyw{Cancer genetics}
     \endentry
     \entry{dumont2003codon}{article}{}
       \true{moreauthor}
@@ -2896,6 +3109,55 @@
       \verb{url}
       \verb https://www.ijbs.com/v08p0672.htm
       \endverb
+    \endentry
+    \entry{guarenteHemeRegulatesTranscription1983}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=6461dd43089735749191f792ee82cfee}{%
+           family={Guarente},
+           familyi={G\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b8e3ee02dae64fd8f5abaff7aca35441}{%
+           family={Mason},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{48a52fb50d6849db290119c6113072a0}
+      \strng{fullhash}{48a52fb50d6849db290119c6113072a0}
+      \strng{bibnamehash}{48a52fb50d6849db290119c6113072a0}
+      \strng{authorbibnamehash}{48a52fb50d6849db290119c6113072a0}
+      \strng{authornamehash}{48a52fb50d6849db290119c6113072a0}
+      \strng{authorfullhash}{48a52fb50d6849db290119c6113072a0}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show that expression of the iso-1-cytochrome c gene of Saccharomyces cerevisiae, CYC1, is tightly regulated by levels of intracellular heme. Expression is reduced at least 200-fold in cells grown under conditions of heme deficiency. Studies on the regulation of a CYC1-lacZ fused gene and direct determination of mRNA levels indicate that this control is transcriptional. Furthermore, we show that the heme regulatory site in the CYC1 promoter region is an upstream activation site (UASc) centered about 275 bp upstream from the region of transcriptional initiation. The latter region is required for optimal transcription and contains three TATA box sequences and six prominent mRNA initiation sites that span 34 bp. Substitution of the UASc with the UAS of the yeast GAL10 gene results in activation of the normal set of CYC1 transcripts. In this case, however, transcription is independent of regulation by heme, suggesting that in the wildtype, heme controls initiation per se and not translation or mRNA stability.}
+      \field{eprinttype}{pubmed}
+      \field{issn}{0092-8674}
+      \field{journaltitle}{Cell}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shortjournal}{Cell}
+      \field{title}{Heme Regulates Transcription of the {{CYC1}} Gene of {{S}}. Cerevisiae via an Upstream Activation Site}
+      \field{volume}{32}
+      \field{year}{1983}
+      \field{dateera}{ce}
+      \field{pages}{1279\bibrangedash 1286}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/0092-8674(83)90309-4
+      \endverb
+      \verb{eprint}
+      \verb 6301690
+      \endverb
+      \keyw{Cytochrome c Group,DNA Recombinant,Gene Expression Regulation,Genes Regulator,Heme,Operon,RNA Fungal,RNA Messenger,Saccharomyces cerevisiae,Transcription Genetic}
     \endentry
     \entry{gunasekaranAllosteryIntrinsicProperty2004}{article}{}
       \name{author}{3}{}{%

@@ -35,6 +35,16 @@ Yeast is our organism of choice for several reasons. For one, it has a high proc
 \label{fig:beta-gal:expression}
 \end{figure}
 
+To create the p53 expression plasmid, we began with the purified BAM627 plasmid (shown in \figurepageref{fig:beta-gal:expression-before}). BAM627 contains the \textit{LEU2} nutrient marker; cells containing the plasmid BAM627 can be selected for by growing them in media lacking leucine. It additionally contains a gene encoding ampicillin resistance.
+
+BAM627 was linearized with the SalI enzyme, and plasmid gel extraction was used to excise the linearized plasmid from the gel and purify it, isolating it from other other copies of the plasmid which may not have been cut in the restriction digest.
+
+BAM621 contains a p53::GFP fusion; using primers AJM3594 and AJM3596, the p53 gene was amplified. AJM3594 contains homology with the \textit{GAL} promoter, and AJM3596 contains homology downstream of the SalI cut site.
+
+The linearized and purified plasmid was co-transformed with the amplified p53 PCR product into YAM7010. The cells were plated and allowed to grow in SC\textminus Leu. After several days, colonies appeared, indicating that the gap repair was successful; the yeast successfully used homologous recombination to bridge the gap created by the SalI digest by incorporating the p53 gene with its custom homologous ends.
+
+To rescue the plasmid from the yeast, they were grown overnight for a genomic DNA extraction. A small amount of this DNA was transformed into \textit{E. coli}. The \textit{E. coli} would be unable to take up large fragments of the yeast genome, and growing the cells in media containing ampicillin ensured only the cells that grew contained the p53 expression plasmid (which encodes ampicillin resistance). Finally, the plasmid was extracted and purified, then sequenced to confirm the correct integration of the p53 gene downstream of the \textit{GAL} promoter. The final plasmid was named BAM637.
+
 \subsection{Building the p53-Dependent Transcription Reporter Plasmid}
 
 \begin{figure}
@@ -50,11 +60,104 @@ Yeast is our organism of choice for several reasons. For one, it has a high proc
 \caption{The final transcription reporter plasmid}
 \label{fig:beta-gal:reporter-after}
 \end{subfigure}
-\caption[The p53 Transcription Reporter Plasmid]{The p53-dependent transcription reporter plasmid. Starting with the plasmid on the left, we linearized the plasmid on either end of the \textit{GAL} promoter to remove it, then using an amplified region of the CYC1 minimal promoter with custom 5' ends containing the p53 response element, we used gap repair to insert the promoter upstream of the \textit{lacZ} gene. The transcription reporter plasmid contains the \textit{URA3} nutrient marker.}
+\caption[The p53 Transcription Reporter Plasmid]{The p53-dependent transcription reporter plasmid. Starting with the plasmid on the left, we linearized the plasmid between the divergent \textit{GAL} promoter, then using an amplified region of the CYC1 minimal promoter with custom 5' ends containing the p53 response element, we used gap repair to insert the promoter upstream of the \textit{lacZ} gene. The transcription reporter plasmid contains the \textit{URA3} nutrient marker.}
 \label{fig:beta-gal:reporter}
 \end{figure}
 
-\subsection{Conducting the Assay}
+Creating the p53-dependent transcription reporter plasmid was very similar to creating the p53-expression plasmid. We began with BAM636, which contains the divergent \textit{GAL1,10} promoter upstream of the \textit{lacZ} gene. Additionally, it contains the \textit{URA3} gene and a gene encoding ampicillin resistance.
+
+BAM636 was cut with SalI between the \textit{GAL} promoter and the \textit{URA3} gene, and gel plasmid extraction was used to isolate the linearized plasmid.
+
+The p53 gene cannot immediately precede the \textit{lacZ} gene, there must be some room for transcriptional machinery such as RNA polymerase to bind. Therefore, we amplified a region upstream of the \textit{CYC1} gene, known as the CYC1 minimal promoter, to use as our spacer region \parencite{guarenteHemeRegulatesTranscription1983}, with primers AJM3596 and AJM3597. AJM3596 has a custom 5' end with homology downstream of the \textit{URA3} gene; AJM3597 has 5' homology upstream of the \textit{lacZ} gene.
+
+Co-transforming the linearized plasmid and the CYC1 minimal promoter amplified DNA into yeast, we grew them on SC\textminus Ura. After several days, colonies appeared, indicating that the yeast had successfully used homologous recombination to repair the gap with the CYC1 minimal promoter DNA.
+
+The cells were allowed to grow overnight and the following day their genomic DNA was extracted and transferred into \textit{E. coli}. Extracting the DNA from the \textit{E. coli} and confirming the sequence yielded BAM638, which contains the CYC1 minimal promoter upstream of the \textit{lacZ} gene.
+
+To insert the p53 response element upstream of the CYC1 minimal promoter, we performed a double digest of BAM638 with SphI and SalI-HF, both of which cut in the CYC1 minimal promoter. The linearized plasmid was isolated using a gel extraction.
+
+For our first test of the assay, we wanted to add three different response elements in to the plasmid: the DNA sequence found in the 1TUP crystal structure \parencite{choCrystalStructureP531994} (referred to here as 1TUP), one copy of the p53 binding sequence in the RGC gene (referred to here as 1xRGC), and three copies of the p53 biding sequence in the RGC gene (referred to here as 3xRGC; research has shown that p53 has approximately a \num{6} times greater affinity fot 3xRGC than 1xRGC in yeast \parencite{scharerMammalianP53Can1992}). Using the same reverse primer to amplify the CYC1 minimal promoter, AJM3597, but different forward primers containing not just the sequence homology for the region downstream of the \textit{URA3} gene in BAM638 but also the sequence for the p53 binding site, AJM3635, AJM3636, and AJM3637, containing the 1TUP, 1xRGC, and 3xRGC REs respectively, we were able to amplify the CYC1 minimal promoter and be left with fragments containing our binding site of interest.
+
+Co-transforming the linearized BAM638 with each of the three CYC1 minimal promoters in three separate transformations and allowing the yeast to grow in SC\textminus Ura ensured that any cells that grew had had BAM638 repaired with the intact CYC1 minimal promoter and the p53 binding site.
+
+The same process of extracting the genomic DNA, transforming it into \textit{E. coli}, purifying it and sequencing it was used. In the end, plasmids BAM639, BAM640, and BAM641 contain the 1TUP, 1xRGC, and 3xRGC binding sequences upstream of the CYC1 minimal promoter and the \textit{lacZ} gene, respectively.
+
+\subsection{Studying Yeast Doubling Time to Optimize Experiment}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{BetaGal/YeastGrowth_vs_Time}
+\caption[Yeast Growth vs Time]{The yeast growth vs time, for the strains YAM805, YAM7010, YAM7011, YAM7012, and YAM7013. Each strain was tested for growth speed in a roller drum (solid line) and a shaker (dotted line), and the absorbance was measured with yeast diluted with water (circle) and media (triangle). YAM805 and YAM7010 were tested when grown in rich media (YPADU) and SC+Raff; YAM7011, and YAM7013 were grown in SC+Raff-Ura, and YAM7012 was grown in SC+Raff-Leu.}
+\label{fig:beta-gal:yeast-growth-time}
+\end{figure}
+
+Now that the two necessary plasmids have been created, we are almost ready to run the \(\beta\)-galactosidase assay. First, we need to understand the doubling time of the yeast under various conditions to guide the experimental parameters.
+
+We will test the doubling time of five different strains: YAM805 (the most commonly used yeast strain in the MacQueen Lab), YAM7010 (YSH474, the yeast used in this study for its inducibility/repressibility with galactose and glucose respectively), YAM7011 (YAM7010 containing the BAM636 plasmid), YAM7012 (YAM7010 containing the BAM637 plasmid), and YAM7013 (YAM7010 containing the BAM638 plasmid). We will also test whether incubating the yeast in a rolling drum or shaker has an effect on its doubling time. To measure the yeast concentration with a visible light spectrophotometer, the yeast is diluted 10:1, and we will test if diluting with water gives the same result as diluting with the growth media. Additionally, we will compare between growing YAM805 and YAM7010 in rich media (YPADU) vs SC+Raffinose.
+
+Figure \figurepageref{fig:beta-gal:yeast-growth-time} shows the growth of yeast, measured as the average OD\textsubscript{\num{600}} of three measurements, over time. Starting with YAM805, we can see that yeast growth in YPADU is much faster than yeast grown in SC+Raff. For yeast grown in YPADU, cells measured after having been diluted in water appear to have a slightly higher concentration than yeast measured after having been diluted in media, with reference to a water or media blank as appropriate. No difference is observed between YAM805 cells grown in the roller drum and the shaker.
+
+YAM7010 displays an even clearer distinction between cells grown in YPADU vs SC+Raff. However, no difference is seen in the observed yeast concentrations after diluting in water or media, and no pattern is seen between the roller drum or shaker.
+
+The measurements for YAM7012 and YAM7013 tell a similar story, the yeast grows at the same rate whether in the roller drum or in the shaker, and no difference is seen when diluting cells in water vs in media. There was some sort of error in the experiment measuring YAM7011 growth over time.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{BetaGal/YeastDoublingTime}
+\caption[Yeast Doubling Time]{The doubling time for the strains YAM805, YAM7010, YAM7011, YAM7012, and YAM7013, derived from their growth over time. For each yeast strain and growth media, the observed doubling time is presented when cells were incubated in the roller drum and the shaker, and the observed doubling time when the cells were diluted to measure in water vs media.}
+\label{fig:beta-gal:yeast-double-time}
+\end{figure}
+
+Using a weighted nonlinear least-squares fit, where points are weighted according to their error bars, we are able to choose parameters that best match the data, assuming yeast growth is exponential \[\text{OD}(t) = Ae^{kt}.\] The doubling time is then defined as \[t_{d} = \frac{\ln{2}}{k}.\] Figure \figurepageref{fig:beta-gal:yeast-double-time} displays the doubling time for each of the conditions tested.
+
+We only collected four data points for each condition over \num{8} hours, ideally, we would have wanted more data for a clearer extraction of doubling time, but nonetheless, our results can still be insightful. We observe that, on average, YAM805 grows at approximately the same rate in YPADU and SC+Raff. For the cells grown in YPADU, we see the cells grow slightly faster when in the shaker than compared to the roller drum, and no real difference in observed yeast concentration when measuring after a water or media dilution (which is as we would expect). In YAM805 cells grown in SC+Raff, we see that measuring the cell concentration after a water dilution, regardless of its growth conditions, gives a much slower doubling time than when measured after diluting in media.
+
+We see that YAM7010 cells grown in YPADU grow slower than those grown in SC+Raff. There may be a slight preference for the shaker in YAM7010 cells, but none is seen in YAM7010 cells grown in SC+Raff. Cells measured diluted in water appear to have the same density as those diluted in media.
+
+YAM7012 and YAM7013 are very similar. They both have a doubling time of approximately \num{2} hours, no preference between being grown in the roller drum vs the shaker, and report the same doubling time regardless of dilution in water or media. Due to the inconsistent YAM7011 measurements, the doubling time of this strain cannot be trusted.
+
+\subsection{A Proof of Concept Shows the Assay Works}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{BetaGal/BetaGalActivity_Controls}
+\caption[\(\beta\)-Galactosidase Assay Conducted on Control Strains]{A test of the \(\beta\)-galactosidase assay with control strains. YSH474 (YAM7010) is the empty strain, YAM7011 contains the \textit{lacZ} strain under the \textit{GAL} promoter, YAM7012 contains the p53 gene under the \textit{GAL} promoter, YAM7013 contains the CYC1 minimal promoter upstream of the \textit{lacZ} gene, and YAM7014 contains both both the p53 gene under the \textit{GAL} promoter and the CYC1 minimal promoter upstream of the \textit{lacZ} gene (but is lacking a p53 binding site). All strains are tested with the inducer galactose added or the repressor glucose added. The \(\beta\)-galactosidase activity is reported on the Y-axis.}
+\label{fig:beta-gal:controls}
+\end{figure}
+
+The first test of the \(\beta\)-galactosidase assay was testing control strains:
+
+\begin{enumerate}
+\item YAM7010 (YSH474): the empty, base strain
+\item YAM7011: contains the BAM636 plasmid, encoding the \textit{lacZ} gene under the inducible \textit{GAL} promoter
+\item YAM7012: contains the BAM637 plasmid, encoding the p53 gene downstream of the \textit{GAL} promoter
+\item YAM7013: contains the BAM638 plasmid, encoding the \textit{lacZ} gene downstream of the CYC1 minimal promoter
+\item YAM7014: contains both the BAM637 and BAM638 plasmids
+\end{enumerate}
+
+The \(\beta\)-galactosidase activity of each of the strains was measured after having been induced by galactose or repressed by glucose. We did not expect to see and \(\beta\)-galactosidase activity in the YAM7010 or YAM7012 strains as these did not contain the \textit{lacZ} gene, nor did we expect to observe \(\beta\)-galactosidase activity in YAM7013 or YAM7014, which had no way to induce the \textit{lacZ} gene. In the YAM7011 strain, containing the \textit{lacZ} gene downstream of the \textit{GAL} promoter, we did not expect to see any \(\beta\)-galactosidase activity when the promoter was repressed by the addition of glucose, but we did expect to see \(\beta\)-galactosidase activity when the promoter was induced by galactose. The results of the experiment, presented in \figurepageref{fig:beta-gal:controls}, show our hypotheses were correct, the only \(\beta\)-galactosidase activity was observed when the YAM7011 strain was induced with galactose, and that our base strain, YAM7010, will only produce the \textit{lacZ} gene when we expect.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{BetaGal/FirstExperiment}
+\caption[\(\beta\)-Galactosidase Assay: Proof of Concept]{A proof of concept test of the \(\beta\)-galactosidase assay. For each of the three transcription reporter plasmids containing the 1TUP, 1xRGC, or 3xRGC response element, the \(\beta\)-galactosidase assay was performed using either the empty or intact p53 expression plasmid under both inductive and repressive conditions.}
+\label{fig:beta-gal:proof-of-concept}
+\end{figure}
+
+Feeling confident our assay was working, we moved on to testing p53-dependent transcription of the \textit{lacZ} gene. We tested six strains of yeast, each with a p53 binding site upstream the \textit{lacZ} gene and either an intact p53 expression plasmid or an empty expression plasmid:
+
+\begin{enumerate}
+\item YAM7217: Contains the transcription reporter plasmid with the 1TUP binding element and the empty p53 expression plasmid
+\item YAM7125: Contains the transcription reporter plasmid with the 1TUP binding element and the intact p53 expression plasmid
+\item YAM7218: Contains the transcription reporter plasmid with the 1xRGC binding element and the empty p53 expression plasmid
+\item YAM7126: Contains the transcription reporter plasmid with the 1xRGC binding element and the intact p53 expression plasmid
+\item YAM7219: Contains the transcription reporter plasmid with the 3xRGC binding element and the empty p53 expression plasmid
+\item YAM7127: Contains the transcription reporter plasmid with the 3xRGC binding element and the intact p53 expression plasmid
+\end{enumerate}
+
+We expected to see no \(\beta\)-galactosidase activity in any of the strains with an empty p53 expression plasmid, neither did we expect to see \(\beta\)-galactosidase activity when strains with the intact expression plasmid and the transcription reporter plasmid was treated with glucose. We did expect to see \(\beta\)-galactosidase activity in strains containing the intact expression plasmid and transcription reporter plasmid were treated with galactose.
+
+\figurepageref{fig:beta-gal:proof-of-concept} shows the results of this experiment. No \(\beta\)-galactosidase activity was observed in any strains containing the empty p53 expression plasmid. We did not see any \(\beta\)-galactosidase activity in strains containing the intact expression plasmid and the transcription reporter plasmid after being treated with glucose, either. However, we did not observe any \(\beta\)-galactosidase activity in the strains containing the 1TUP and 1xRGC binding sequences even when treated galactose. YAM7127, the strain containing the intact p53 expression plasmid and the transcription reporter plasmid with \num{3} copies of the RGC binding sequence, was the only strain to report any \(\beta\)-galactosidase activity after a galactose treatment. This is strong evidence that our assay was able to reporter p53-dependent transcription. 
 
 \section{Discussion}
 

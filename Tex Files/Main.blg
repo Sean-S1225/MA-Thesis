@@ -1,15 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Main.blg'
-[57] biber-darwin:340> INFO - === Thu Apr 16, 2026, 00:23:46
-[72] Biber.pm:419> INFO - Reading 'Main.bcf'
-[173] Biber.pm:979> INFO - Found 150 citekeys in bib section 0
-[185] Biber.pm:4419> INFO - Processing section 0
-[194] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
-[212] bibtex.pm:1713> INFO - LaTeX decoding ...
-[438] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[1503] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1504] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1504] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[1504] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1653] bbl.pm:660> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[1857] bbl.pm:763> INFO - Output to Main.bbl
+[55] biber-darwin:340> INFO - === Thu Apr 16, 2026, 23:48:46
+[73] Biber.pm:419> INFO - Reading 'Main.bcf'
+[179] Biber.pm:979> INFO - Found 153 citekeys in bib section 0
+[192] Biber.pm:4419> INFO - Processing section 0
+[203] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
+[238] bibtex.pm:1713> INFO - LaTeX decoding ...
+[482] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[1644] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1644] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1644] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1644] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1801] bbl.pm:660> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[1997] bbl.pm:763> INFO - Output to Main.bbl
+[1998] Biber.pm:131> WARN - Duplicate entry key: 'scharerMammalianP53Can1992' in file 'references.bib', skipping ...
+[1998] Biber.pm:133> INFO - WARNINGS: 1

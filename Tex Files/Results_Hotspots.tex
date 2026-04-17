@@ -1,6 +1,14 @@
 \section{Motivation}
 
+Mutations to the p53 gene, \textit{TP53}, are associated with over \qty{50}{\percent} of human cancers \textcolor{red}{cite}. Figure X shows the percentage of cases associated with each of the top 10 most common point mutations to p53 associated with cancer.
+
+These most common mutations can be split into two categories, DNA contact mutations, mutations in which residues that interact directly with the DNA at the DNA binding interface are mutated, and conformational mutations, which are mutations made elsewhere in the DNA domain (as opposed to the DNA-binding interface) that destabilize the protein. \figurepageref{fig:p53-common-mutants} shows the frequency of the ten most common mutations to p53, R175H, R248Q, R273H, R248W, R273C, R282W, G245S, Y220C, R249S, and V157F.
+
+There has been extensive computational research on the Y220C mutation to p53 in the Thayer Lab \parencite{hanInsightsRationalDesign2022, stetsonRestorationY220CP532025, cowanNetworkTheoryAnalysis2025} and \textcolor{red}{finish}, but there has not yet been a comprehensive computational study of the dynamics of the different p53 mutants bound to DNA. In addition, there has been little research on the effects of PK11000 on the different p53 mutants. PK11000 was initially designed to bind to a crevasse opened by the Y220C mutation, but instead, it covalently binds to the surface of the protein and increases the melting temperature of the destabilized Y220C mutant p53 \parencite{bauer2SulfonylpyrimidinesMildAlkylating2016}. This could, in theory, be used to treat other destabilizing mutants of p53.
+
 \section{Results}
+
+To investigate the altered dynamics of the ten most common p53 mutants and whether they can be rescued by PK11000, we have simulated the full-length (FL) p53 protein bound to a DNA sequence with each mutation, both with and without the restorative compound PK11000.
 
 \begin{figure}
 \centering
