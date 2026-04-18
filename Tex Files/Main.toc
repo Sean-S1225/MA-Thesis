@@ -1,134 +1,138 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{\numberline {I}Acknowledgments}{i}{chapter.1}%
-\contentsline {chapter}{\numberline {II}Abstract}{ii}{chapter.2}%
+\contentsline {chapter}{\numberline {II}Abstract}{iv}{chapter.2}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}On the Intersection Between\\Computational and Experimental Biology}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Project Aims}{1}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Thesis Aims}{1}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Background}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Atoms and Atomic Interactions}{3}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Atomic Structure}{3}{subsection.2.1.1}%
-\contentsline {subsubsection}{Protons, Neutrons, Electrons}{3}{section*.3}%
-\contentsline {subsection}{\numberline {2.1.2}Chemical Bonding}{5}{subsection.2.1.2}%
-\contentsline {subsubsection}{Ionic Bonding}{6}{section*.6}%
-\contentsline {subsubsection}{Covalent Bonding}{7}{section*.7}%
-\contentsline {subsection}{\numberline {2.1.3}Noncovalent Interactions}{8}{subsection.2.1.3}%
-\contentsline {subsubsection}{Electrostatic Interactions}{8}{section*.8}%
-\contentsline {subsubsection}{Electronegativity and Bond Polarity}{8}{section*.9}%
-\contentsline {subsubsection}{Partial Charges}{9}{section*.10}%
-\contentsline {subsubsection}{Hydrogen Bonding}{10}{section*.12}%
-\contentsline {subsubsection}{Van der Waals Forces}{11}{section*.14}%
-\contentsline {section}{\numberline {2.2}Proteins}{12}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Primary Sequence}{14}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Backbone Dihedral Angles}{17}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Secondary Structure}{18}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Tertiary Structure}{20}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Quaternary Structure}{22}{subsection.2.2.5}%
-\contentsline {subsection}{\numberline {2.2.6}Protein Expression}{22}{subsection.2.2.6}%
-\contentsline {subsubsection}{Transcription}{22}{section*.23}%
-\contentsline {subsubsection}{Translation}{24}{section*.24}%
-\contentsline {subsection}{\numberline {2.2.7}Transcription Factors}{25}{subsection.2.2.7}%
-\contentsline {subsection}{\numberline {2.2.8}Splice Variants}{25}{subsection.2.2.8}%
-\contentsline {section}{\numberline {2.3}Protein Energetic Landscapes}{26}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Allostery}{28}{section.2.4}%
-\contentsline {section}{\numberline {2.5}p53}{30}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Functional Regions}{32}{subsection.2.5.1}%
-\contentsline {subsubsection}{Transactivation Domain}{32}{section*.28}%
-\contentsline {subsubsection}{Proline-Rich Domain}{33}{section*.29}%
-\contentsline {subsubsection}{DNA Binding Domain}{34}{section*.30}%
-\contentsline {subsubsection}{Nuclear Localization Signal}{36}{section*.33}%
-\contentsline {subsubsection}{Tetramerization Domain}{37}{section*.34}%
-\contentsline {subsubsection}{Nuclear Export Sequence}{37}{section*.35}%
-\contentsline {subsection}{\numberline {2.5.2}Experimental vs Computational Analyses of p53}{38}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}p53's Role as a Transcription Factor}{39}{subsection.2.5.3}%
-\contentsline {subsubsection}{BAX}{39}{section*.37}%
-\contentsline {subsubsection}{NOXA}{40}{section*.38}%
-\contentsline {subsubsection}{PUMA}{41}{section*.39}%
-\contentsline {subsubsection}{14-3-3\(\sigma \)}{41}{section*.40}%
-\contentsline {subsubsection}{p53AIP1}{41}{section*.41}%
-\contentsline {subsubsection}{GADD45}{42}{section*.42}%
-\contentsline {subsubsection}{p53R2}{42}{section*.43}%
-\contentsline {subsubsection}{PTEN}{42}{section*.44}%
-\contentsline {subsubsection}{p21}{43}{section*.45}%
-\contentsline {subsubsection}{RGC}{43}{section*.46}%
-\contentsline {subsection}{\numberline {2.5.4}Mutations to p53}{44}{subsection.2.5.4}%
-\contentsline {subsection}{\numberline {2.5.5}p53 Splice Variants}{46}{subsection.2.5.5}%
-\contentsline {subsection}{\numberline {2.5.6}PK11000}{48}{subsection.2.5.6}%
-\contentsline {subsection}{\numberline {2.5.7}Rezatapopt}{49}{subsection.2.5.7}%
-\contentsline {subsection}{\numberline {2.5.8}p53 as a Transcription Factor in Yeast}{50}{subsection.2.5.8}%
-\contentsline {part}{I\hspace {1em}Computational Studies of p53 Function}{51}{part.1}%
-\contentsline {chapter}{\numberline {3}Background on Computational Techniques}{52}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Molecular Dynamics Simulations}{52}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Theory}{53}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Practical Steps}{56}{subsection.3.1.2}%
-\contentsline {subsubsection}{tLEaP}{56}{section*.59}%
-\contentsline {subsubsection}{Energy Minimization}{58}{section*.60}%
-\contentsline {subsubsection}{Heating}{59}{section*.61}%
-\contentsline {subsubsection}{Equilibration}{59}{section*.62}%
-\contentsline {subsubsection}{Neutral Dynamics}{60}{section*.63}%
-\contentsline {subsubsection}{Analytics}{60}{section*.64}%
-\contentsline {section}{\numberline {3.2}The Wesleyan High Performance Computing Cluster}{61}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Graph Theoretical Approaches to Protein Analysis}{63}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}A Graph Theory Primer}{63}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Graph Representations of Proteins}{67}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Spectral Graph Theory}{69}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}The Normalized Laplacian Matrix}{71}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}The Heat Kernel}{72}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}The Wasserstein Distance Metric}{77}{subsection.3.3.6}%
-\contentsline {section}{\numberline {3.4}Computational Analyses of Hydrogen Bonding}{79}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Defining a ``Rescue Score''}{81}{section.3.5}%
-\contentsline {chapter}{\numberline {4}The Effects of the Y220C Mutation and PK11000 on p53 Isoforms}{82}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Motivation}{82}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Results}{84}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Protein RMSD Depends on Isoform and System}{84}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Radius of Gyration Depends on Isoform and System}{94}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}RMSF Reveals Protein Core is Stable Across Isoforms}{97}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Hydrogen Bonding Reveals PK11000-Dependent Restoration of WT Dynamics}{101}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Discussion}{108}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Methods}{109}{section.4.4}%
-\contentsline {chapter}{\numberline {5}The Coupled Dynamics of p53 and DNA Across Binding Sequences}{110}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Motivation}{110}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Results}{112}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Global DNA Dynamics are Altered Upon p53 Binding}{112}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}p53 Alters Local DNA Dynamics}{115}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}p53 Dynamics are Modulated by its Bound DNA Molecule}{121}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Discussion}{128}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Methods}{128}{section.5.4}%
-\contentsline {chapter}{\numberline {6}The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics}{129}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Motivation}{129}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Results}{130}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Discussion}{138}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Methods}{138}{section.6.4}%
-\contentsline {chapter}{\numberline {7}The Effects of Rezatapopt on Y220C p53}{139}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Motivation}{139}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Results}{140}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Global Dynamics are Not Clearly Rescued by Rezatapopt}{140}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Rezatapopt Rescues Some Local Dynamics of p53}{148}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Rezatapopt Makes Different Hydrogen Bonds with the DNA Compared to WT, Y220C}{155}{subsection.7.2.3}%
-\contentsline {section}{\numberline {7.3}Discussion}{166}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Methods}{166}{section.7.4}%
-\contentsline {part}{II\hspace {1em}Experimental Approaches to Test p53 Function}{167}{part.2}%
-\contentsline {chapter}{\numberline {8}Background on Experimental Techniques}{168}{chapter.8}%
-\contentsline {section}{\numberline {8.1}DNA Plasmids}{168}{section.8.1}%
-\contentsline {section}{\numberline {8.2}\textit {E. coli}}{169}{section.8.2}%
-\contentsline {section}{\numberline {8.3}\textit {Saccharomyces cerevisiae}}{170}{section.8.3}%
-\contentsline {section}{\numberline {8.4}DNA Gel Electrophoresis}{171}{section.8.4}%
-\contentsline {section}{\numberline {8.5}PCR}{172}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Restriction Digestion}{174}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Gap Repair}{175}{section.8.7}%
-\contentsline {section}{\numberline {8.8}Site-Directed Mutagenesis}{175}{section.8.8}%
-\contentsline {section}{\numberline {8.9}The \(\beta \)-Galactosidase Protein}{177}{section.8.9}%
-\contentsline {chapter}{\numberline {9}Development of a \(\beta \)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}{179}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Motivation}{179}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Results}{180}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Designing an Assay to Measure p53-Dependent Transcription with \textit {lacZ}}{180}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Building the p53 Expression Plasmid}{182}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Building the p53-Dependent Transcription Reporter Plasmid}{184}{subsection.9.2.3}%
-\contentsline {subsection}{\numberline {9.2.4}Studying Yeast Doubling Time to Optimize Experiment}{187}{subsection.9.2.4}%
-\contentsline {subsection}{\numberline {9.2.5}A Proof of Concept Shows the Assay Works}{192}{subsection.9.2.5}%
-\contentsline {section}{\numberline {9.3}Discussion}{197}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Methods}{197}{section.9.4}%
-\contentsline {chapter}{\numberline {10}Discussion}{198}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Conclusion}{199}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Methods}{200}{chapter.12}%
-\contentsline {chapter}{Appendix}{201}{appendix*.124}%
+\contentsline {section}{\numberline {1.1}On the Intersection Between Computational and Experimental Biology}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Thesis Aims}{3}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Background}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Atoms and Atomic Interactions}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Atomic Structure}{6}{subsection.2.1.1}%
+\contentsline {subsubsection}{Protons, Neutrons, Electrons}{6}{section*.3}%
+\contentsline {subsection}{\numberline {2.1.2}Chemical Bonding}{8}{subsection.2.1.2}%
+\contentsline {subsubsection}{Ionic Bonding}{9}{section*.6}%
+\contentsline {subsubsection}{Covalent Bonding}{10}{section*.7}%
+\contentsline {subsection}{\numberline {2.1.3}Noncovalent Interactions}{11}{subsection.2.1.3}%
+\contentsline {subsubsection}{Electrostatic Interactions}{11}{section*.8}%
+\contentsline {subsubsection}{Electronegativity and Bond Polarity}{11}{section*.9}%
+\contentsline {subsubsection}{Partial Charges}{12}{section*.10}%
+\contentsline {subsubsection}{Hydrogen Bonding}{13}{section*.12}%
+\contentsline {subsubsection}{Van der Waals Forces}{14}{section*.14}%
+\contentsline {section}{\numberline {2.2}Proteins}{15}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Primary Sequence}{17}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Backbone Dihedral Angles}{20}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Secondary Structure}{21}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Tertiary Structure}{23}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Quaternary Structure}{25}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}Protein Expression}{25}{subsection.2.2.6}%
+\contentsline {subsubsection}{Transcription}{25}{section*.23}%
+\contentsline {subsubsection}{Translation}{27}{section*.24}%
+\contentsline {subsection}{\numberline {2.2.7}Transcription Factors}{28}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.8}Splice Variants}{28}{subsection.2.2.8}%
+\contentsline {section}{\numberline {2.3}Protein Energetic Landscapes}{29}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Allostery}{31}{section.2.4}%
+\contentsline {section}{\numberline {2.5}p53}{33}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Functional Regions}{35}{subsection.2.5.1}%
+\contentsline {subsubsection}{Transactivation Domain}{35}{section*.28}%
+\contentsline {subsubsection}{Proline-Rich Domain}{36}{section*.29}%
+\contentsline {subsubsection}{DNA Binding Domain}{37}{section*.30}%
+\contentsline {subsubsection}{Nuclear Localization Signal}{39}{section*.33}%
+\contentsline {subsubsection}{Tetramerization Domain}{40}{section*.34}%
+\contentsline {subsubsection}{Nuclear Export Sequence}{40}{section*.35}%
+\contentsline {subsection}{\numberline {2.5.2}Experimental vs Computational Analyses of p53}{41}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}p53's Role as a Transcription Factor}{42}{subsection.2.5.3}%
+\contentsline {subsubsection}{BAX}{42}{section*.37}%
+\contentsline {subsubsection}{NOXA}{43}{section*.38}%
+\contentsline {subsubsection}{PUMA}{44}{section*.39}%
+\contentsline {subsubsection}{14-3-3\(\sigma \)}{44}{section*.40}%
+\contentsline {subsubsection}{p53AIP1}{44}{section*.41}%
+\contentsline {subsubsection}{GADD45}{45}{section*.42}%
+\contentsline {subsubsection}{p53R2}{45}{section*.43}%
+\contentsline {subsubsection}{PTEN}{45}{section*.44}%
+\contentsline {subsubsection}{p21}{46}{section*.45}%
+\contentsline {subsubsection}{RGC}{46}{section*.46}%
+\contentsline {subsection}{\numberline {2.5.4}Mutations to p53}{47}{subsection.2.5.4}%
+\contentsline {subsection}{\numberline {2.5.5}p53 Splice Variants}{49}{subsection.2.5.5}%
+\contentsline {subsection}{\numberline {2.5.6}PK11000}{51}{subsection.2.5.6}%
+\contentsline {subsection}{\numberline {2.5.7}Rezatapopt}{52}{subsection.2.5.7}%
+\contentsline {subsection}{\numberline {2.5.8}p53 as a Transcription Factor in Yeast}{53}{subsection.2.5.8}%
+\contentsline {part}{I\hspace {1em}Computational Studies of p53 Function}{54}{part.1}%
+\contentsline {chapter}{\numberline {3}Background on Computational Techniques}{55}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Molecular Dynamics Simulations}{55}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Theory}{56}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Practical Steps}{59}{subsection.3.1.2}%
+\contentsline {subsubsection}{tLEaP}{59}{section*.59}%
+\contentsline {subsubsection}{Energy Minimization}{61}{section*.60}%
+\contentsline {subsubsection}{Heating}{62}{section*.61}%
+\contentsline {subsubsection}{Equilibration}{62}{section*.62}%
+\contentsline {subsubsection}{Neutral Dynamics}{63}{section*.63}%
+\contentsline {subsubsection}{Analytics}{63}{section*.64}%
+\contentsline {section}{\numberline {3.2}The Wesleyan High Performance Computing Cluster}{64}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Standard Analyses of Molecular Dynamics Simulations}{66}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Root Mean Square Deviation (RMSD)}{66}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Root Mean Square Fluctuation (RMSF)}{67}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Radius of Gyration (RoG)}{68}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}DNA Helicoidal Parameters}{68}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Graph Theoretical Approaches to Protein Analysis}{72}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}A Graph Theory Primer}{72}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Graph Representations of Proteins}{76}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Spectral Graph Theory}{78}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}The Normalized Laplacian Matrix}{80}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}The Heat Kernel}{81}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}The Wasserstein Distance Metric}{86}{subsection.3.4.6}%
+\contentsline {section}{\numberline {3.5}Computational Analyses of Hydrogen Bonding}{88}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Defining a ``Rescue Score''}{90}{section.3.6}%
+\contentsline {chapter}{\numberline {4}The Effects of the Y220C Mutation and PK11000 on p53 Isoforms}{91}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Motivation}{91}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Results}{93}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Protein RMSD Depends on Isoform and System}{93}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Radius of Gyration Depends on Isoform and System}{103}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}RMSF Reveals Protein Core is Stable Across Isoforms}{106}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Hydrogen Bonding Reveals PK11000-Dependent Restoration of WT Dynamics}{110}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Discussion}{117}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Methods}{118}{section.4.4}%
+\contentsline {chapter}{\numberline {5}The Coupled Dynamics of p53 and DNA Across Binding Sequences}{119}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Motivation}{119}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Results}{121}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Global DNA Dynamics are Altered Upon p53 Binding}{121}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}p53 Alters Local DNA Dynamics}{124}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}p53 Dynamics are Modulated by its Bound DNA Molecule}{130}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Discussion}{137}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Methods}{137}{section.5.4}%
+\contentsline {chapter}{\numberline {6}The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics}{138}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Motivation}{138}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Results}{139}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Discussion}{147}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Methods}{147}{section.6.4}%
+\contentsline {chapter}{\numberline {7}The Effects of Rezatapopt on Y220C p53}{148}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Motivation}{148}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Results}{149}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Global Dynamics are Not Clearly Rescued by Rezatapopt}{149}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Rezatapopt Rescues Some Local Dynamics of p53}{157}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Rezatapopt Makes Different Hydrogen Bonds with the DNA Compared to WT, Y220C}{164}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Discussion}{175}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Methods}{175}{section.7.4}%
+\contentsline {part}{II\hspace {1em}Experimental Approaches to Test p53 Function}{176}{part.2}%
+\contentsline {chapter}{\numberline {8}Background on Experimental Techniques}{177}{chapter.8}%
+\contentsline {section}{\numberline {8.1}DNA Plasmids}{177}{section.8.1}%
+\contentsline {section}{\numberline {8.2}\textit {E. coli}}{178}{section.8.2}%
+\contentsline {section}{\numberline {8.3}\textit {Saccharomyces cerevisiae}}{179}{section.8.3}%
+\contentsline {section}{\numberline {8.4}DNA Gel Electrophoresis}{180}{section.8.4}%
+\contentsline {section}{\numberline {8.5}PCR}{181}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Restriction Digestion}{183}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Gap Repair}{184}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Site-Directed Mutagenesis}{184}{section.8.8}%
+\contentsline {section}{\numberline {8.9}The \(\beta \)-Galactosidase Protein}{186}{section.8.9}%
+\contentsline {chapter}{\numberline {9}Development of a \(\beta \)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}{188}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Motivation}{188}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Results}{189}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Designing an Assay to Measure p53-Dependent Transcription with \textit {lacZ}}{189}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Building the p53 Expression Plasmid}{191}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Building the p53-Dependent Transcription Reporter Plasmid}{193}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}Studying Yeast Doubling Time to Optimize Experiment}{196}{subsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.2.5}A Proof of Concept Shows the Assay Works}{201}{subsection.9.2.5}%
+\contentsline {section}{\numberline {9.3}Discussion}{206}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Methods}{206}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Discussion}{207}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Conclusion}{208}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Methods}{209}{chapter.12}%
+\contentsline {chapter}{Appendix}{210}{appendix*.125}%

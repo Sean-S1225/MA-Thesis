@@ -123,21 +123,27 @@
 
 \setcounter{page}{1}
 
-\textcolor{red}{FILL IN}
+As I come to the end of my fifth year at Wesleyan and my fourth year in the Thayer Lab, I cannot help but reflect on my time and the people that have made it so special. Wesleyan, I believe, is not a place, but a people. ``Keep Wesleyan Weird'' does not mean build more strange and confusing buildings, but to foster an environment in which people can freely express themselves and explore a wide variety of interests. While not exactly ``weird'', I still feel incredibly lucky to have had the opportunity to come to Wesleyan, earn a degree in Mathematics and Computer Science, and then still have the ability to basically become a molecular biologist, all in the span of a four-year undergraduate program and a one-year master's program. I suppose I've only ever attended one university, but I can't imagine this is a possibility in many other places.
 
-%My undergraduate academic journey has been one of incredible self-discovery, starting with Mathematics and Computer Science leading me all the way to Molecular Biology and Pharmacology. I would like to express my profound gratitude to Dr. Kelly Thayer for taking a chance on me in Freshman year and being so supportive of me at every step of this journey.
-%
-%Thank you to all my past and present lab mates, particularly Mark Han, Ben Cowan, Samvit Singhal, Chris Chiu, and Yehor Mishchyriak. A special thank you to Fernando Caballero for being a great friend and a hard-working lab partner, specifically with regard to our study of hydrogen bonding. I would like to thank all of the members of the Molecules to Medicine consortium, including but not limited to Dr. Michael Weir, Dr. David Beveridge, and Pete Hwang.
-%
-%Next, I would like to thank Dr. Eduard Neu, for further taking a chance on me and allowing me to confirm in my heart what career I want to pursue. I would like to thank him for our fruitful discussions regarding my simulations' experimental setup.
-%
-%Thank you to my thesis readers, Dr. Kelly Thayer, Dr. Victoria Manfredi, and Dr. Daniel Krizanc for their time, feedback, and support, both in my undergraduate career and in my thesis.
-%
-%Finally, I would like to thank all of my friends who have been by my side throughout my undergraduate years. Thank you for listening to me vent or giving me advice and being a never-ending source of laughter and smiles.
+A special thank you to Dr. Professor Kelly Thayer, Dr. Professor Amy MacQueen, and Dr. Professor Michael Weir for being my BA/MA thesis committee.
+
+I would first and foremost like to thank Dr. Professor Kelly Thayer, for taking a chance on me during my freshman year and allowing me to join her lab. Thank you for supporting me on each step of my journey, and giving me the freedom to spread my wings and learn how to discover and to do research. Who would've known where that ``simple, six-month project'' would take us. Thank you to all the people that have supported my development in the lab: Mark Han, Ben Cowan, Fernando Caballero, Chris Chiu, Yehor Mishchyriak, Finn Hartigan-O'Connor, Samvit Singhal, Jeremy Zay, and Chloe Bayle. I would also like to extend my warm thanks to Dr. Professor Michael Weir and to the members of the Weir Lab for their attendance and support at our weekly Molecules to Medicine meetings: Pete Hwang, Mitsu Raval, Luis Perez, Dalton Soper, and Marc Iradukunda.
+
+I would next like to thank Dr. Professor Amy MacQueen for our collaboration over the course of my fifth year. Thank you for your support and guidance over the years as I branch out from computational to experimental biology. I am constantly amazed by your enthusiasm for science, which is certainly contagious. Thank you to Karen Voelkel-Meiman for your constant presence in the lab. Thank you for pushing me on a day-to-day basis to continually make small improvements to the way I conduct myself in the lab. Finally, I would like to thank the members of the MacQueen Lab who have supported me this past year: Sabrina Sharmin, Mohamed Basal, and Jahlani Ustanny.
+
+To the friends I've made at in my class Wesleyan, thank you for making my college experience unforgettable: Othmane El Houssi, Cristina Gonzalez, Yun Huynh, Chris Diaz, Idenya Bala-Mehta, and David Jusin. Though many of us have gone our own ways since graduating in the class of 2025, I trust the bonds we formed will stay strong throughout the years. A special thanks to Fiona Carroll, my close friend, fellow BA/MA student, and roommate this past year. Though my sanity is slightly questionable as I juggle the writing of this thesis, many research presentations, and much more, I am certain my descent into madness would've happened much sooner without someone to go through this with.
+
+To my parents, Mark and Vrege Stetson, thank you for your never-ending love and support for me on this insane five-year journey. Finally, to Wajiha Ali, who has been by my side through thick and thin for these past eight years, thank you for being the anchor that has held me together in one piece.
+
+Finally, to you, the reader: thank you for reading my thesis. I hope it not only informs you, but also inspires you, whether to ask new questions, imagine new experiments, or pursue your own work with greater confidence and curiosity. Set your mind to them, and you can achieve great things.
 
 \chapter{Abstract}
 \begin{abstract}
-	\textcolor{red}{UPDATE}
+
+p53 is often referred to as the ``guardian of the genome'' for its essential role in regulating cell fate under conditions of cellular stress. Mutations in p53 are found in over \qty{50}{\percent} of human cancers because they impair its tumor-suppressive regulatory functions. Previous work in the Thayer Lab examined the Y220C mutant and the ability of PK11000 to restore wild-type-like dynamics in both full-length p53 and its DNA-binding domain when bound to a single DNA sequence. However, important questions remain regarding the effects of mutations and PK11000 across p53 isoforms, the dependence of p53 behavior on DNA sequence when bound, the generality of PK11000 rescue across common p53 mutations aside from Y220C, the effects of other restorative compounds, and the experimental validation of computational predictions.
+
+In this thesis, I expand this framework by examining the effects of the Y220C mutation across all twelve p53 isoforms, characterizing p53-DNA dynamics across a variety of DNA response elements, the effects of the most common point mutations and PK11000's restorative capabilities, investigating the effects of Rezatapopt on Y220C p53, and developing an experimental assay to test the functional consequences of p53-DNA dynamics. Broadly, the results show that PK11000 restores the WT-like dynamics of the Y220C mutant p53; that both p53 dynamics and DNA dynamics depend on binding context; that \textcolor{red}{UPDATE WITH HOTSPOTS RESTLTS}; that Rezatapopt did not restore WT-like dynamics of the Y220C mutant by the metrics examined; and that we now have an experimental assay capable of testing these hypotheses. Together, these results significantly broaden our understanding of p53 behavior across a wide variety of mutations, DNA binding sequences, isoforms, and restorative compounds. It is made it increasingly clear that p53 dynamics are extremely context-dependent, from which its highly precise and nuanced function derives.
+
 \end{abstract}
 
 {\setstretch{1.5}
@@ -177,18 +183,22 @@
 \input{ComputationalBackground}
 
 \chapter{The Effects of the Y220C Mutation and PK11000 on p53 Isoforms}
+\label{chap:isoforms}
 \chaptermark{Y220C and PK11000 Across p53 Isoforms}
 \input{Results_Isoforms}
 
 \chapter{The Coupled Dynamics of p53 and DNA Across Binding Sequences}
+\label{chap:res}
 \chaptermark{p53 and DNA Dynamics Across Binding Sequences}
 \input{Results_ResponseElements}
 
 \chapter{The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics}
+\label{chap:mutants}
 \chaptermark{Effects of the p53 Hotspot Mutations}
 \input{Results_Hotspots}
 
 \chapter{The Effects of Rezatapopt on Y220C p53}
+\label{chap:rezatapopt}
 \input{Results_Rezatapopt}
 
 \part{Experimental Approaches to Test p53 Function}
@@ -197,6 +207,7 @@
 \input{ExperimentalBackground}
 
 \chapter{Development of a \(\beta\)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}
+\label{chap:beta-gal}
 \chaptermark{Measuring p53-Induced Transcription}
 \input{Results_BetaGal}
 

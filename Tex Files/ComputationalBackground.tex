@@ -106,6 +106,173 @@ mwgpu & 5 & 256 & Tesla K20m & Greatest memory, very slow compared to exx96, amb
 
 Despite the quality of the Wesleyan HPC, simulations still take a long time to run. A \qty{1}{\micro\second} simulation of the full-length p53 has around \num{120000} atoms and takes about \num{20} days to run. A smaller subset of the protein, the DNA binding domain, takes about \num{10} days to run. It is important to remember, though, that in the not too-distant past, it would have been remarkable to run even \qty{200}{\nano\second} of a much smaller system. In 2004, a state-of-the-art MD paper studying the effects of ion motions on DNA simulated roughly \num{5000} atoms, and took \num{6} months on a national supercomputer \parencite{ponomarevIonMotionsMolecular2004}. As the speed of GPUs increases, the capabilities of MD simulations will only grow.
 
+\section{Standard Analyses of Molecular Dynamics Simulations}
+
+The following are some of the most common analyses used in studying molecular dynamics simulations. They tell us about global and local behavior of our system.
+
+\subsection{Root Mean Square Deviation (RMSD)}
+
+Root Mean Squared Deviation (RMSD) is used to measure the difference between two proteins. When applied to an MD simulation, RMSD is typically used to measure the deviation from each frame to a reference structure. If the reference structure is chosen to be the first frame, as is done here, then RMSD measures the deviation over time from the starting frame. Other common choices of the reference structure include the average structure over all frames or the final frame of the simulation.
+
+Given two structures of a protein with \(n\) atoms, let \(\vec{v}\) represent the current frame and \(\vec{w}\) represent the reference structure, both an \(n\)-dimensional vector such that each \(v_{i}\) contains the \(x\), \(y\), and \(z\) coordinates of atom \(i\) of the current frame, given by \(v_{ix}\), \(v_{iy}\), and \(v_{iz}\), and likewise for \(\vec{w}\).
+
+\noindent Then, the RMSD is computed as \[\text{RMSD}(\vec{v}, \vec{w}) = \sqrt{\frac{1}{n}\sum\limits_{i=1}^{n}((v_{ix} - w_{ix})^{2} + (v_{iy} - w_{iy})^{2} + (v_{iz} - w_{iz})^{2})},\] that is, we average the distance for each atom \(i\) the distance between \(v_{i}\) and \(w_{i}\).
+
+\subsection{Root Mean Square Fluctuation (RMSF)}
+
+The Root Mean Square Fluctuation (RMSF), reports the average atomic positional fluctuation for each atom in the protein over all frames. Contrast this with RMSD, which measures for a single frame, the global deviation between the protein and its reference structure.
+
+\noindent For atom \(i\), RMSF is computed as \[\text{RMSF}_{i} = \sqrt{\langle(x_{i}- \langle x_{i}\rangle)^{2}\rangle},\] that is, the average deviation from the average position over all frames. Written another way, for a simulation with \(N\) frames, \[
+\mathrm{RMSF}_i
+=
+\sqrt{
+\frac{1}{N}
+\sum_{t=1}^{N}
+\left(x_i(t)-\frac{1}{N}\sum_{t'=1}^{N} x_i(t')\right)^2
+}.\]
+
+To get the RMSF as a function of residue rather than average, we take the weighted average of RMSF values for each atom in the residue multiplied by its atomic mass.
+
+\subsection{Radius of Gyration (RoG)}
+
+The Radius of Gyration (RoG) of a set of points tells you how spread out they are from the geometric center of the data. If we let our points be the positions of atoms of our protein in 3D space, then the RoG will tell us about the compaction of the protein. A compact protein will have most atoms close to the geometric center of data, whereas a less compact protein will have fewer atoms close to the center of the data.
+
+\noindent We can compute this via the following formula: \[
+\text{RoG} = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\left\lVert \vec{r}_i - \vec{r}_{\mathrm{geom}} \right\rVert^2},
+\] where \[
+\vec{r}_{\vec{geom}} = \frac{1}{N}\sum_{i=1}^{N}\vec{r}_i
+\] and \(\left\lVert \vec{r}_i - \vec{r}_{\mathrm{geom}} \right\rVert^2\) is the distance between each atom and the geometric center of the data.
+
+\subsection{DNA Helicoidal Parameters}
+
+\begin{figure}[htbp]
+\centering
+
+% Row 1
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-shear.png}
+    \caption{DNA Shear (Sx)}
+    \label{fig:hc-shear}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-stretch.png}
+    \caption{DNA Stretch (Sy)}
+    \label{fig:hc-stretch}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-stagger.png}
+    \caption{DNA Stagger (Sz)}
+    \label{fig:hc-stagger}
+\end{subfigure}
+
+\vspace{0.5em}
+
+% Row 2
+\makebox[\textwidth][c]{%
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-buckle.png}
+    \caption{DNA Buckle}
+    \label{fig:hc-buckle}
+\end{subfigure}
+\hspace{0.04\textwidth}
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-propeller.png}
+    \caption{DNA Propeller}
+    \label{fig:hc-propeller}
+\end{subfigure}%
+}
+
+\vspace{0.5em}
+
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-rise.png}
+    \caption{DNA Rise}
+    \label{fig:hc-rise}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-twist.png}
+    \caption{DNA Twist}
+    \label{fig:hc-twist}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-roll.png}
+    \caption{DNA Roll}
+    \label{fig:hc-roll}
+\end{subfigure}
+
+\vspace{0.5em}
+
+\makebox[\textwidth][c]{%
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-inclination.png}
+    \caption{DNA Inclination}
+    \label{fig:hc-inclination}
+\end{subfigure}
+\hspace{0.04\textwidth}
+\begin{subfigure}{0.32\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{HelicoidalParameters/x3dna-tip.png}
+    \caption{DNA Tip}
+    \label{fig:hc-tip}%
+\end{subfigure}
+}
+
+\vspace{0.75em}
+
+\caption[DNA Helicoidal Parameters]{DNA Helicoidal Parameters. Shear, stretch, and stagger describe nucleotide displacement along the \(x\), \(y\), and \(z\) axes, respectively. Rise, twist, and roll measure the vertical distance and rotational displacement along the base-pair plane and short axis respectively. Inclination and tip describe the rotation of a base pair relative to the helix axis around the long and short axis respectively. Plots from \parencite{lu3DNASoftwarePackage2003, lu3DNAVersatileIntegrated2008}}
+\label{fig:helicoidal-parameters}
+\end{figure}
+
+DNA helicoidal parameters are values that describe how nucleotides are arranged in a DNA molecule. They are broadly broken into three categories:
+
+\begin{enumerate}
+\item intra-base-pair parameters, which describe how two bases within a single nucleotide base pair sit relative to one another,
+\item iter-base-pair parameters, which describe how base pairs sit relative to the next, and
+\item base-pair / helical-axis parameters, which describe how a base pair is oriented relative to the helix axis.
+\end{enumerate}
+
+\figurepageref{fig:helicoidal-parameters} shows the different helicoidal parameters that are defined over a DNA molecule.
+
+The following are the intra-base-pair helicoidal parameters one might consider when analyzing a DNA molecule:
+
+\begin{enumerate}
+\item Shear: sideways displacement of one base relative to its partner within the base-pair plane (Figure \ref{fig:hc-shear})
+\item Stretch: a separation or compression of a base pair relative to its partner in the base-pair plane, in the direction of hydrogen bonding (Figure \ref{fig:hc-stretch})
+\item Stagger: the displacement of one base out of the base-pair plane relative to its partner (Figure \ref{fig:hc-stagger})
+\item Buckle: the bending of two bases relative to one another like a hinge across the pair (Figure \ref{fig:hc-buckle})
+\item Propeller: the twisting of two bases relative to one another between the pair
+\end{enumerate}
+
+For inter-base pair parameters, there are:
+
+\begin{enumerate}
+\item Rise: a measure of how far stacked base pairs are separated vertically (Figure \ref{fig:hc-rise})
+\item Twist: the rotation of one base pair relative to another (Figure \ref{fig:hc-twist})
+\item Roll: the rotation along the short axis of the base pair relative to one another (Figure \ref{fig:hc-roll})
+\end{enumerate}
+
+And finally, the base-pair / helical-axis parameters are:
+
+\begin{enumerate}
+\item Inclination: the rotation of a base pair around its long axis relative to the helix axis (Figure \ref{fig:hc-inclination})
+\item Tip: the rotation of a base pair around its short axis relative to the helix axis (Figure \ref{fig:hc-tip})
+\end{enumerate}
+
+The usefulness in defining such parameters is that they give a standard geometric framework with which to precisely describe nucleic-acid structure. Decomposing a trajectory into these local rotational and translational degrees of freedom allows us to compare consistently between frames and across simulations. For instance, this allows us to say exactly how p53 is deforming the DNA upon binding, rather than just the DNA is being deformed. \parencite{lu3DNASoftwarePackage2003, lu3DNAVersatileIntegrated2008, passowContrastingPatternsRapid2019}
+
 \section{Graph Theoretical Approaches to Protein Analysis}
 
 The move into the era of big data has had profound effects in science. For the first time, enormous datasets can be collected and analyzed on reasonable timescales. Molecular biology is no exception, with whole-genome sequencing leading to countless discoveries and innovations.

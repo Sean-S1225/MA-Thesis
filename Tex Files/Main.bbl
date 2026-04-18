@@ -6213,6 +6213,114 @@
       \endverb
       \keyw{Computer Simulation,Crystallography X-Ray,DNA,DNA-Binding Proteins,Models Molecular,Mutation,Protein Conformation,Static Electricity,Tumor Suppressor Protein p53}
     \endentry
+    \entry{lu3DNAVersatileIntegrated2008}{article}{}
+      \name{author}{2}{}{%
+        {{un=2,uniquepart=given,hash=384ca467899b73ae6722bc7fd0e900d1}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Xiang-Jun},
+           giveni={X\bibinithyphendelim J\bibinitperiod},
+           givenun=2}}%
+        {{un=2,uniquepart=given,hash=01ee71823ae75a2fc96106950906546b}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={Wilma\bibnamedelima K},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{3bf8f742cef8837f64c97d53c3b0e12d}
+      \strng{fullhash}{3bf8f742cef8837f64c97d53c3b0e12d}
+      \strng{bibnamehash}{3bf8f742cef8837f64c97d53c3b0e12d}
+      \strng{authorbibnamehash}{3bf8f742cef8837f64c97d53c3b0e12d}
+      \strng{authornamehash}{3bf8f742cef8837f64c97d53c3b0e12d}
+      \strng{authorfullhash}{3bf8f742cef8837f64c97d53c3b0e12d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a set of protocols showing how to use the 3DNA suite of programs to analyze, rebuild and visualize three-dimensional nucleic-acid structures. The software determines a wide range of conformational parameters, including the identities and rigid-body parameters of interacting bases and base-pair steps, the nucleotides comprising helical fragments, the area of overlap of stacked bases and so on. The reconstruction of three-dimensional structure takes advantage of rigorously defined rigid-body parameters, producing rectangular block representations of the nucleic-acid bases and base pairs and all-atom models with approximate sugar–phosphate backbones. The visualization components create vector-based drawings and scenes that can be rendered as raster-graphics images, allowing for easy generation of publication-quality figures. The utility programs use geometric variables to control the view and scale of an object, for comparison of related structures. The commands run in seconds even for large structures. The software and related information are available at http://3dna.rutgers.edu/.}
+      \field{day}{1}
+      \field{issn}{1750-2799}
+      \field{journaltitle}{Nature Protocols}
+      \field{month}{7}
+      \field{number}{7}
+      \field{shortjournal}{Nature Protocols}
+      \field{title}{{{3DNA}}: A Versatile, Integrated Software System for the Analysis, Rebuilding and Visualization of Three-Dimensional Nucleic-Acid Structures}
+      \field{volume}{3}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{pages}{1213\bibrangedash 1227}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1038/nprot.2008.104
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/nprot.2008.104
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/nprot.2008.104
+      \endverb
+    \endentry
+    \entry{lu3DNASoftwarePackage2003}{article}{}
+      \name{author}{2}{}{%
+        {{un=2,uniquepart=given,hash=8ff2493b0db586b1fe13d7a92be8423c}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Xiang‐Jun},
+           giveni={X\bibinithyphendelim J\bibinitperiod},
+           givenun=2}}%
+        {{un=2,uniquepart=given,hash=01ee71823ae75a2fc96106950906546b}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={Wilma\bibnamedelima K.},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{db80670ced3a7e8034b2ee7dc17ff27f}
+      \strng{fullhash}{db80670ced3a7e8034b2ee7dc17ff27f}
+      \strng{bibnamehash}{db80670ced3a7e8034b2ee7dc17ff27f}
+      \strng{authorbibnamehash}{db80670ced3a7e8034b2ee7dc17ff27f}
+      \strng{authornamehash}{db80670ced3a7e8034b2ee7dc17ff27f}
+      \strng{authorfullhash}{db80670ced3a7e8034b2ee7dc17ff27f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present a comprehensive software package, 3DNA, for the analysis, reconstruction and visualization of three‐dimensional nucleic acid structures. Starting from a coordinate file in Protein Data Bank (PDB) format, 3DNA can handle antiparallel and parallel double helices, single‐stranded structures, triplexes, quadruplexes and other complex tertiary folding motifs found in both DNA and RNA structures. The analysis routines identify and categorize all base interactions and classify the double helical character of appropriate base pair steps. The program makes use of a recently recommended reference frame for the description of nucleic acid base pair geometry and a rigorous matrix‐based scheme to calculate local conformational parameters and rebuild the structure from these parameters. The rebuilding routines produce rectangular block representations of nucleic acids as well as full atomic models with the sugar–phosphate backbone and publication quality ‘standardized’ base stacking diagrams. Utilities are provided to locate the base pairs and helical regions in a structure and to reorient structures for effective visualization. Regular helical models based on X‐ray diffraction measurements of various repeating sequences can also be generated within the program.}
+      \field{day}{1}
+      \field{issn}{0305-1048}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{9}
+      \field{number}{17}
+      \field{shortjournal}{Nucleic Acids Res}
+      \field{shorttitle}{{{3DNA}}}
+      \field{title}{{{3DNA}}: A Software Package for the Analysis, Rebuilding and Visualization of Three‐dimensional Nucleic Acid Structures}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{31}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{5108\bibrangedash 5121}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1093/nar/gkg680
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/D3QPW5UZ/Lu and Olson - 2003 - 3DNA a software package for the analysis, rebuilding and visualization of three‐dimensional nucleic.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/nar/gkg680
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/nar/gkg680
+      \endverb
+    \endentry
     \entry{maehamaTumorSuppressorPTEN1998}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=4c8da8c5d90e6a268b8df2a091909a05}{%

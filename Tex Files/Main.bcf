@@ -2539,43 +2539,50 @@
     <bcf:citekey order="131" intorder="1">resnickFunctionalMutantsSequencespecific2003</bcf:citekey>
     <bcf:citekey order="132" intorder="1">salomon2013routine</bcf:citekey>
     <bcf:citekey order="133" intorder="1">ponomarevIonMotionsMolecular2004</bcf:citekey>
-    <bcf:citekey order="134" intorder="1">sevenbridges</bcf:citekey>
-    <bcf:citekey order="135" intorder="1">sevenbridges</bcf:citekey>
-    <bcf:citekey order="136" intorder="1">GirlsTalkMath</bcf:citekey>
-    <bcf:citekey order="137" intorder="1">GirlsTalkMath</bcf:citekey>
-    <bcf:citekey order="138" intorder="1">axioms4030275</bcf:citekey>
-    <bcf:citekey order="138" intorder="2">BenUndergrad</bcf:citekey>
-    <bcf:citekey order="138" intorder="3">BenMasters</bcf:citekey>
-    <bcf:citekey order="138" intorder="4">abramsonColorsProtein2021</bcf:citekey>
-    <bcf:citekey order="139" intorder="1">bauer2SulfonylpyrimidinesMildAlkylating2016</bcf:citekey>
-    <bcf:citekey order="140" intorder="1">hanInsightsRationalDesign2022</bcf:citekey>
-    <bcf:citekey order="141" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
-    <bcf:citekey order="142" intorder="1">choCrystalStructureP531994</bcf:citekey>
-    <bcf:citekey order="143" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
+    <bcf:citekey order="134" intorder="1">lu3DNASoftwarePackage2003</bcf:citekey>
+    <bcf:citekey order="134" intorder="2">lu3DNAVersatileIntegrated2008</bcf:citekey>
+    <bcf:citekey order="135" intorder="1">lu3DNASoftwarePackage2003</bcf:citekey>
+    <bcf:citekey order="135" intorder="2">lu3DNAVersatileIntegrated2008</bcf:citekey>
+    <bcf:citekey order="136" intorder="1">lu3DNASoftwarePackage2003</bcf:citekey>
+    <bcf:citekey order="136" intorder="2">lu3DNAVersatileIntegrated2008</bcf:citekey>
+    <bcf:citekey order="136" intorder="3">passowContrastingPatternsRapid2019</bcf:citekey>
+    <bcf:citekey order="137" intorder="1">sevenbridges</bcf:citekey>
+    <bcf:citekey order="138" intorder="1">sevenbridges</bcf:citekey>
+    <bcf:citekey order="139" intorder="1">GirlsTalkMath</bcf:citekey>
+    <bcf:citekey order="140" intorder="1">GirlsTalkMath</bcf:citekey>
+    <bcf:citekey order="141" intorder="1">axioms4030275</bcf:citekey>
+    <bcf:citekey order="141" intorder="2">BenUndergrad</bcf:citekey>
+    <bcf:citekey order="141" intorder="3">BenMasters</bcf:citekey>
+    <bcf:citekey order="141" intorder="4">abramsonColorsProtein2021</bcf:citekey>
+    <bcf:citekey order="142" intorder="1">bauer2SulfonylpyrimidinesMildAlkylating2016</bcf:citekey>
+    <bcf:citekey order="143" intorder="1">hanInsightsRationalDesign2022</bcf:citekey>
     <bcf:citekey order="144" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
-    <bcf:citekey order="145" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
-    <bcf:citekey order="146" intorder="1">el-deiryDefinitionConsensusBinding1992</bcf:citekey>
-    <bcf:citekey order="147" intorder="1">choCrystalStructureP531994</bcf:citekey>
-    <bcf:citekey order="148" intorder="1">hanInsightsRationalDesign2022</bcf:citekey>
-    <bcf:citekey order="148" intorder="2">stetsonRestorationY220CP532025</bcf:citekey>
-    <bcf:citekey order="148" intorder="3">cowanNetworkTheoryAnalysis2025</bcf:citekey>
-    <bcf:citekey order="149" intorder="1">bauer2SulfonylpyrimidinesMildAlkylating2016</bcf:citekey>
-    <bcf:citekey order="150" intorder="1">boecklerTargetedRescueDestabilized2008</bcf:citekey>
-    <bcf:citekey order="150" intorder="2">bauer2SulfonylpyrimidinesMildAlkylating2016</bcf:citekey>
-    <bcf:citekey order="150" intorder="3">puzio-kuterRestorationTumorSuppressor2025</bcf:citekey>
+    <bcf:citekey order="145" intorder="1">choCrystalStructureP531994</bcf:citekey>
+    <bcf:citekey order="146" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
+    <bcf:citekey order="147" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
+    <bcf:citekey order="148" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
+    <bcf:citekey order="149" intorder="1">el-deiryDefinitionConsensusBinding1992</bcf:citekey>
+    <bcf:citekey order="150" intorder="1">choCrystalStructureP531994</bcf:citekey>
     <bcf:citekey order="151" intorder="1">hanInsightsRationalDesign2022</bcf:citekey>
     <bcf:citekey order="151" intorder="2">stetsonRestorationY220CP532025</bcf:citekey>
-    <bcf:citekey order="152" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
-    <bcf:citekey order="153" intorder="1">choCrystalStructureP531994</bcf:citekey>
-    <bcf:citekey order="154" intorder="1">PCRQPCR</bcf:citekey>
-    <bcf:citekey order="155" intorder="1">PCRQPCR</bcf:citekey>
-    <bcf:citekey order="156" intorder="1">chinoPlasmidConstructionUsing2010</bcf:citekey>
-    <bcf:citekey order="157" intorder="1">chinoPlasmidConstructionUsing2010</bcf:citekey>
-    <bcf:citekey order="158" intorder="1">juersLacZVgalactosidaseStructure2012</bcf:citekey>
-    <bcf:citekey order="159" intorder="1">ingaNovelHumanP532001</bcf:citekey>
-    <bcf:citekey order="160" intorder="1">guarenteHemeRegulatesTranscription1983</bcf:citekey>
-    <bcf:citekey order="161" intorder="1">choCrystalStructureP531994</bcf:citekey>
-    <bcf:citekey order="162" intorder="1">scharerMammalianP53Can1992</bcf:citekey>
+    <bcf:citekey order="151" intorder="3">cowanNetworkTheoryAnalysis2025</bcf:citekey>
+    <bcf:citekey order="152" intorder="1">bauer2SulfonylpyrimidinesMildAlkylating2016</bcf:citekey>
+    <bcf:citekey order="153" intorder="1">boecklerTargetedRescueDestabilized2008</bcf:citekey>
+    <bcf:citekey order="153" intorder="2">bauer2SulfonylpyrimidinesMildAlkylating2016</bcf:citekey>
+    <bcf:citekey order="153" intorder="3">puzio-kuterRestorationTumorSuppressor2025</bcf:citekey>
+    <bcf:citekey order="154" intorder="1">hanInsightsRationalDesign2022</bcf:citekey>
+    <bcf:citekey order="154" intorder="2">stetsonRestorationY220CP532025</bcf:citekey>
+    <bcf:citekey order="155" intorder="1">stetsonRestorationY220CP532025</bcf:citekey>
+    <bcf:citekey order="156" intorder="1">choCrystalStructureP531994</bcf:citekey>
+    <bcf:citekey order="157" intorder="1">PCRQPCR</bcf:citekey>
+    <bcf:citekey order="158" intorder="1">PCRQPCR</bcf:citekey>
+    <bcf:citekey order="159" intorder="1">chinoPlasmidConstructionUsing2010</bcf:citekey>
+    <bcf:citekey order="160" intorder="1">chinoPlasmidConstructionUsing2010</bcf:citekey>
+    <bcf:citekey order="161" intorder="1">juersLacZVgalactosidaseStructure2012</bcf:citekey>
+    <bcf:citekey order="162" intorder="1">ingaNovelHumanP532001</bcf:citekey>
+    <bcf:citekey order="163" intorder="1">guarenteHemeRegulatesTranscription1983</bcf:citekey>
+    <bcf:citekey order="164" intorder="1">choCrystalStructureP531994</bcf:citekey>
+    <bcf:citekey order="165" intorder="1">scharerMammalianP53Can1992</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
