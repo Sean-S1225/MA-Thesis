@@ -1,18 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Main.blg'
-[56] biber-darwin:340> INFO - === Sat Apr 18, 2026, 19:42:21
-[70] Biber.pm:419> INFO - Reading 'Main.bcf'
-[178] Biber.pm:979> INFO - Found 155 citekeys in bib section 0
-[190] Biber.pm:4419> INFO - Processing section 0
+[57] biber-darwin:340> INFO - === Sun Apr 19, 2026, 01:17:12
+[71] Biber.pm:419> INFO - Reading 'Main.bcf'
+[181] Biber.pm:979> INFO - Found 165 citekeys in bib section 0
+[193] Biber.pm:4419> INFO - Processing section 0
 [201] Biber.pm:4610> INFO - Looking for bibtex file 'references.bib' for section 0
 [220] bibtex.pm:1713> INFO - LaTeX decoding ...
-[456] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[1506] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1506] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1506] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[1506] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1662] bbl.pm:660> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
-[1854] bbl.pm:763> INFO - Output to Main.bbl
-[1855] Biber.pm:131> WARN - Duplicate entry key: 'scharerMammalianP53Can1992' in file 'references.bib', skipping ...
-[1855] Biber.pm:131> WARN - Duplicate entry key: 'passowContrastingPatternsRapid2019' in file 'references.bib', skipping ...
-[1855] Biber.pm:133> INFO - WARNINGS: 2
+[466] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[1646] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1646] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1646] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[1646] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1815] bbl.pm:660> INFO - Writing 'Main.bbl' with encoding 'UTF-8'
+[2045] bbl.pm:763> INFO - Output to Main.bbl
+[2046] Biber.pm:131> WARN - Duplicate entry key: 'scharerMammalianP53Can1992' in file 'references.bib', skipping ...
+[2046] Biber.pm:131> WARN - Duplicate entry key: 'passowContrastingPatternsRapid2019' in file 'references.bib', skipping ...
+[2046] Biber.pm:131> WARN - legacy month field 'April' in entry 'STON1998' is not an integer - this will probably not sort properly.
+[2046] Biber.pm:133> INFO - WARNINGS: 3

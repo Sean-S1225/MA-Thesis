@@ -1132,6 +1132,345 @@
       \field{pages}{807\bibrangedash 816}
       \range{pages}{10}
     \endentry
+    \entry{amber18}{book}{}
+      \name{author}{53}{}{%
+        {{un=0,uniquepart=base,hash=dd1a485aaa482b88e5996bfcefccd082}{%
+           family={Case},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cacaece16e88e1639e6398cb9e61456b}{%
+           family={Ben-Shalom},
+           familyi={B\bibinithyphendelim S\bibinitperiod},
+           given={Ido\bibnamedelima Y.},
+           giveni={I\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08ac9e0677a9ce5374c99ad5e10feb4e}{%
+           family={Brozell},
+           familyi={B\bibinitperiod},
+           given={Scott\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=198617e1c97887722ceb25a4e4a85d78}{%
+           family={Cerutti},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afc0a3fc813644f58c762f15892c8d85}{%
+           family={Cheatham},
+           familyi={C\bibinitperiod},
+           given={Thomas\bibnamedelimb E.\bibnamedelimi III},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a690af0fa54e989f6babd2501ccbee6c}{%
+           family={Cruzeiro},
+           familyi={C\bibinitperiod},
+           given={Vinicius\bibnamedelimb W.\bibnamedelimi D.},
+           giveni={V\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06ded5545a8ca4f225f44c5f0f55b1e5}{%
+           family={Darden},
+           familyi={D\bibinitperiod},
+           given={Thomas\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87d1fa2b567c30888f35675a9d842b74}{%
+           family={Duke},
+           familyi={D\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a3a804229e8a67ad1be4940089aa2cfe}{%
+           family={Ghoreishi},
+           familyi={G\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1de9005a388d81fa14034876b6ebd801}{%
+           family={Gilson},
+           familyi={G\bibinitperiod},
+           given={Michael\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=613a79af33fca84d8ab6bb7fb8539dcf}{%
+           family={Gohlke},
+           familyi={G\bibinitperiod},
+           given={Holger},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1766a8e138af00fec8b058a82a050765}{%
+           family={Goetz},
+           familyi={G\bibinitperiod},
+           given={Andreas\bibnamedelima W.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e6d764db875baddb30514feac134bbe}{%
+           family={Greene},
+           familyi={G\bibinitperiod},
+           given={D'Artagnan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9be2f1b0681595174ed2e942f177c2d4}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Romelia},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89446cb662940ad91f89730b31e9fe39}{%
+           family={Homeyer},
+           familyi={H\bibinitperiod},
+           given={Nadine},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1644220f4f67f4b07bd4123ae69a18e6}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Yandong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ab0f2d4957ee565e99ad5f526bcc9b4b}{%
+           family={Izadi},
+           familyi={I\bibinitperiod},
+           given={Saeed},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f56fff71b645cca5fa8bc64a16ac371f}{%
+           family={Kovalenko},
+           familyi={K\bibinitperiod},
+           given={Andriy},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d41dccd2560f5bedf998696a71261468}{%
+           family={Kurtzman},
+           familyi={K\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7821dec381c687cde3ffcce65658106}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Tai-Sung},
+           giveni={T\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1d665005ec507f61818b9c7ce8a34d81}{%
+           family={LeGrand},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d65091e16e5b9faf16b05cf9bc5f91fc}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Pengfei},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d70357467f84b80c820f566dea885694}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Chengwen},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd903bc507de58459375d974764ab4ea}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd84fe9d0d5f69b1f9d7de2715a7a33e}{%
+           family={Luchko},
+           familyi={L\bibinitperiod},
+           given={Tyler},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d96a327b7d5ad8c230f636591e1df1d}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Ray},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d99e0fbde8d27968888b2e4aea93443}{%
+           family={Mermelstein},
+           familyi={M\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dbd0e7851832a03af71f150989f41a38}{%
+           family={Merz},
+           familyi={M\bibinitperiod},
+           given={Kenneth\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14ea80d99896c52fdc0512838c9f77c4}{%
+           family={Miao},
+           familyi={M\bibinitperiod},
+           given={Yinglong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e4c25c08ab3bca99945f539bc479720}{%
+           family={Monard},
+           familyi={M\bibinitperiod},
+           given={Gerald},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02f6deb4b58745e6ea092d23964373fb}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Crystal},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=01d75ec74cde28c61f185a823aa9b5e6}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Hai},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7b08066394e0575ae857389dd9c9ade}{%
+           family={Omelyan},
+           familyi={O\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e9792be1583bb6f05c72df4415b3658f}{%
+           family={Onufriev},
+           familyi={O\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bacbbbe66d531fc28af37fab0097a611}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Feng},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=54b9ad02cc71caffc0db2fcdca748a3e}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98026ef5d06ecd2023f34de8a62fa971}{%
+           family={Roe},
+           familyi={R\bibinitperiod},
+           given={Daniel\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d946502a548ca42a33aea79957b7fd64}{%
+           family={Roitberg},
+           familyi={R\bibinitperiod},
+           given={Adrian},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=591277aa139fd79c1fba4a995578ec02}{%
+           family={Sagui},
+           familyi={S\bibinitperiod},
+           given={Celeste},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ca5e10143421060d4fbf361c094f0f6}{%
+           family={Schott-Verdugo},
+           familyi={S\bibinithyphendelim V\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5da1e39396647446f07d8681d02e375}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Junmei},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2a520fe67ca6897327b1ff59b955a93b}{%
+           family={Simmerling},
+           familyi={S\bibinitperiod},
+           given={Carlos\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=30ab23fc62764e27ffc480db6280af40}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=794ec595e192901d2c89bf97c97be519}{%
+           family={Salomon-Ferrer},
+           familyi={S\bibinithyphendelim F\bibinitperiod},
+           given={Romelia\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a825e9aa9df87bde7a4f1133684bce84}{%
+           family={Swails},
+           familyi={S\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd6ed720166358f1457f2d3706935ea3}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Ross\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f99f606c0bc041834fd666b726b8c26}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Junmei},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5583899b5194b3c5d2c2a196fc570f35}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Haixin},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5a80ac5541df8a9ce6a168fbf43d3231}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Romain\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7ba37112dff298a9f6456cbaae86f38}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Xiongwu},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=047c3f96dd534550e148d9947507b71b}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Li},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5637d742841d32955ef9e3dce208db6c}{%
+           family={York},
+           familyi={Y\bibinitperiod},
+           given={Darrin\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5378f73a32901c9677174ecedc9fda65}{%
+           family={Kollman},
+           familyi={K\bibinitperiod},
+           given={Peter\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {University of California, San Francisco}%
+      }
+      \strng{namehash}{ac5d6d29456974996fb76aee2aa7d5c6}
+      \strng{fullhash}{1b98fbcfa93116ebe60ecf2015fc276e}
+      \strng{bibnamehash}{ac5d6d29456974996fb76aee2aa7d5c6}
+      \strng{authorbibnamehash}{ac5d6d29456974996fb76aee2aa7d5c6}
+      \strng{authornamehash}{ac5d6d29456974996fb76aee2aa7d5c6}
+      \strng{authorfullhash}{1b98fbcfa93116ebe60ecf2015fc276e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{AMBER 2018}
+      \field{year}{2018}
+    \endentry
     \entry{chan1433SigmaRequiredPrevent1999}{article}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=8a5b0eef179abcbbd19782bec22a4665}{%
@@ -3845,6 +4184,46 @@
       \verb https://www.sciencedirect.com/science/article/pii/S1097276500800027
       \endverb
     \endentry
+    \entry{HUMP96}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=dd9615d145decb960931ee1efefdb20a}{%
+           family={Humphrey},
+           familyi={H\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7a4d6701ae045cc8da0d5693bbe5196}{%
+           family={Dalke},
+           familyi={D\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd251781d5b08598251387a7a775e009}{%
+           family={Schulten},
+           familyi={S\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{976d1ed0327061c7ba148a0cdc2184ed}
+      \strng{fullhash}{976d1ed0327061c7ba148a0cdc2184ed}
+      \strng{bibnamehash}{976d1ed0327061c7ba148a0cdc2184ed}
+      \strng{authorbibnamehash}{976d1ed0327061c7ba148a0cdc2184ed}
+      \strng{authornamehash}{976d1ed0327061c7ba148a0cdc2184ed}
+      \strng{authorfullhash}{976d1ed0327061c7ba148a0cdc2184ed}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Molecular Graphics}
+      \field{title}{{VMD} -- {V}isual {M}olecular {D}ynamics}
+      \field{volume}{14}
+      \field{year}{1996}
+      \field{pages}{33\bibrangedash 38}
+      \range{pages}{6}
+    \endentry
     \entry{ingaP53MutantsExhibiting2001b}{article}{}
       \name{author}{5}{ul=2}{%
         {{un=2,uniquepart=given,hash=0a90b3595f8a74dfbc3beea7f8541b48}{%
@@ -4076,6 +4455,170 @@
       \verb https://www.nature.com/articles/ng1093-124
       \endverb
       \keyw{Agriculture,Animal Genetics and Genomics,Biomedicine,Cancer Research,Gene Function,general,Human Genetics}
+    \endentry
+    \entry{ivaniParmbsc1RefinedForce2016}{article}{}
+      \name{author}{19}{}{%
+        {{un=0,uniquepart=base,hash=dfc47dc69b14d55d327452d37d4ae118}{%
+           family={Ivani},
+           familyi={I\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f61cf429624d9e6b5fcf843e8b692756}{%
+           family={Dans},
+           familyi={D\bibinitperiod},
+           given={Pablo\bibnamedelima D.},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=232e6e36ae44a724524241cddf3b1fc4}{%
+           family={Noy},
+           familyi={N\bibinitperiod},
+           given={Agnes},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e91b2fd3d95247f10187549c8f3ac51}{%
+           family={Pérez},
+           familyi={P\bibinitperiod},
+           given={Alberto},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bd1d2641a349dd553612c33142af31a}{%
+           family={Faustino},
+           familyi={F\bibinitperiod},
+           given={Ignacio},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d72578b76499cb690f6e1c8c20946fde}{%
+           family={Hospital},
+           familyi={H\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ec5f92d0649c086caf05c97b42eba02}{%
+           family={Walther},
+           familyi={W\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2075ba793d1abdecd2795765f8737d21}{%
+           family={Andrio},
+           familyi={A\bibinitperiod},
+           given={Pau},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59beeb7b1d6a3367bf676dde041306de}{%
+           family={Goñi},
+           familyi={G\bibinitperiod},
+           given={Ramon},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=da1d5813810301f2f3a2ecc60bf63499}{%
+           family={Balaceanu},
+           familyi={B\bibinitperiod},
+           given={Alexandra},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2f3d8b6bddf69b3090955a1e5ba5ab2e}{%
+           family={Portella},
+           familyi={P\bibinitperiod},
+           given={Guillem},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06177b2fd210221741ef726542f89701}{%
+           family={Battistini},
+           familyi={B\bibinitperiod},
+           given={Federica},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26919d3dee3273a86cb0dd8f59636038}{%
+           family={Gelpí},
+           familyi={G\bibinitperiod},
+           given={Josep\bibnamedelima Lluis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=335b5dc614b2b348533c38270473e463}{%
+           family={González},
+           familyi={G\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5eea10d4c1e10ca3a4f14710497d67e}{%
+           family={Vendruscolo},
+           familyi={V\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ea46ff152c0e7f8caa73562aa802b9b7}{%
+           family={Laughton},
+           familyi={L\bibinitperiod},
+           given={Charles\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e69824d1739e0878933da19590978c78}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Sarah\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dd1a485aaa482b88e5996bfcefccd082}{%
+           family={Case},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=058b87602bbb28e03e8baec4f7910d0a}{%
+           family={Orozco},
+           familyi={O\bibinitperiod},
+           given={Modesto},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{b966018e2c0f6dcc379390b0c83a8334}
+      \strng{fullhash}{2d03bac59784ba83b31c495eb9f7f541}
+      \strng{bibnamehash}{b966018e2c0f6dcc379390b0c83a8334}
+      \strng{authorbibnamehash}{b966018e2c0f6dcc379390b0c83a8334}
+      \strng{authornamehash}{b966018e2c0f6dcc379390b0c83a8334}
+      \strng{authorfullhash}{2d03bac59784ba83b31c495eb9f7f541}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Parmbsc1, a new force field for DNA simulations, was broadly tested on nearly 100 DNA systems and overcame simulation artifacts that affected previous force fields.}
+      \field{issn}{1548-7105}
+      \field{journaltitle}{Nature Methods}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shortjournal}{Nat Methods}
+      \field{shorttitle}{Parmbsc1}
+      \field{title}{Parmbsc1: A Refined Force Field for {{DNA}} Simulations}
+      \field{urlday}{13}
+      \field{urlmonth}{1}
+      \field{urlyear}{2025}
+      \field{volume}{13}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{55\bibrangedash 58}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/nmeth.3658
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/C6JXPJLN/Ivani et al. - 2016 - Parmbsc1 a refined force field for DNA simulations.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/nmeth.3658
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/nmeth.3658
+      \endverb
+      \keyw{Computational biophysics,Computational models,DNA}
     \endentry
     \entry{jeffrey1995crystal}{article}{}
       \name{author}{3}{}{%
@@ -4329,6 +4872,81 @@
       \verb https://www.mdpi.com/1422-0067/24/2/1267
       \endverb
       \keyw{brain,metastasis,p53 isoform,receptor recycling,time to metastasis,\(Delta\)133p53\(\beta\)}
+    \endentry
+    \entry{jorgensenComparisonSimplePotential1983}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e91f3bdfe94a92873668d128e00e1ef3}{%
+           family={Jorgensen},
+           familyi={J\bibinitperiod},
+           given={William\bibnamedelima L.},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e80a98f143064a61fd1ba5f61536e15}{%
+           family={Chandrasekhar},
+           familyi={C\bibinitperiod},
+           given={Jayaraman},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c73081bac3818907f55b9cd93369baa}{%
+           family={Madura},
+           familyi={M\bibinitperiod},
+           given={Jeffry\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4a7f865b81fc9661d3a74e6f65cf20ff}{%
+           family={Impey},
+           familyi={I\bibinitperiod},
+           given={Roger\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ddfb6cd6b1bf46ff6dde39720df09ff}{%
+           family={Klein},
+           familyi={K\bibinitperiod},
+           given={Michael\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{62d7e8dbc4763e1111cfd90567b20700}
+      \strng{fullhash}{00a0c66e5187b0bbc102bbc912efbbe5}
+      \strng{bibnamehash}{62d7e8dbc4763e1111cfd90567b20700}
+      \strng{authorbibnamehash}{62d7e8dbc4763e1111cfd90567b20700}
+      \strng{authornamehash}{62d7e8dbc4763e1111cfd90567b20700}
+      \strng{authorfullhash}{00a0c66e5187b0bbc102bbc912efbbe5}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Classical Monte Carlo simulations have been carried out for liquid water in the NPT ensemble at 25\,°C and 1 atm using six of the simpler intermolecular potential functions for the water dimer: Bernal–Fowler (BF), SPC, ST2, TIPS2, TIP3P, and TIP4P. Comparisons are made with experimental thermodynamic and structural data including the recent neutron diffraction results of Thiessen and Narten. The computed densities and potential energies are in reasonable accord with experiment except for the original BF model, which yields an 18\% overestimate of the density and poor structural results. The TIPS2 and TIP4P potentials yield oxygen–oxygen partial structure functions in good agreement with the neutron diffraction results. The accord with the experimental OH and HH partial structure functions is poorer; however, the computed results for these functions are similar for all the potential functions. Consequently, the discrepancy may be due to the correction terms needed in processing the neutron data or to an effect uniformly neglected in the computations. Comparisons are also made for self‐diffusion coefficients obtained from molecular dynamics simulations. Overall, the SPC, ST2, TIPS2, and TIP4P models give reasonable structural and thermodynamic descriptions of liquid water and they should be useful in simulations of aqueous solutions. The simplicity of the SPC, TIPS2, and TIP4P functions is also attractive from a computational standpoint.}
+      \field{day}{15}
+      \field{issn}{0021-9606}
+      \field{journaltitle}{The Journal of Chemical Physics}
+      \field{month}{7}
+      \field{number}{2}
+      \field{shortjournal}{J. Chem. Phys.}
+      \field{title}{Comparison of Simple Potential Functions for Simulating Liquid Water}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{79}
+      \field{year}{1983}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{926\bibrangedash 935}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1063/1.445869
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/E64M3HKW/Jorgensen et al. - 1983 - Comparison of simple potential functions for simulating liquid water.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1063/1.445869
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1063/1.445869
+      \endverb
     \endentry
     \entry{joruizP53IsoformsKey2016}{article}{}
       \name{author}{2}{}{%
@@ -6374,6 +6992,91 @@
       \endverb
       \keyw{Cell Line,Genes Tumor Suppressor,Humans,Insulin,Phosphatidylinositol 3-Kinases,Phosphatidylinositol Phosphates,Phosphoric Monoester Hydrolases,Phosphorylation,Protein Tyrosine Phosphatases,PTEN Phosphohydrolase,Second Messenger Systems,Substrate Specificity,Tumor Suppressor Proteins}
     \endentry
+    \entry{maierFf14SBImprovingAccuracy2015}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=64ef159581a64b8a7de4eaffc56a3ebd}{%
+           family={Maier},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=75c000c60456845d43025b56aae3d927}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={Carmenza},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a2517c82bc4d261ed69dd502f08d3167}{%
+           family={Kasavajhala},
+           familyi={K\bibinitperiod},
+           given={Koushik},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98d99fa25d11835b2108dbccd15df825}{%
+           family={Wickstrom},
+           familyi={W\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27ffce587694551076fdec4eaf0a9cf8}{%
+           family={Hauser},
+           familyi={H\bibinitperiod},
+           given={Kevin\bibnamedelima E.},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=912a6ddaee5bd77606df9d7181863b31}{%
+           family={Simmerling},
+           familyi={S\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{7f58011623a2199bd8ec9676dfed95e7}
+      \strng{fullhash}{5f66263a22f6c4b75a06329aeb2fe7b3}
+      \strng{bibnamehash}{7f58011623a2199bd8ec9676dfed95e7}
+      \strng{authorbibnamehash}{7f58011623a2199bd8ec9676dfed95e7}
+      \strng{authornamehash}{7f58011623a2199bd8ec9676dfed95e7}
+      \strng{authorfullhash}{5f66263a22f6c4b75a06329aeb2fe7b3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Molecular mechanics is powerful for its speed in atomistic simulations, but an accurate force field is required. The Amber ff99SB force field improved protein secondary structure balance and dynamics from earlier force fields like ff99, but weaknesses in side chain rotamer and backbone secondary structure preferences have been identified. Here, we performed a complete refit of all amino acid side chain dihedral parameters, which had been carried over from ff94. The training set of conformations included multidimensional dihedral scans designed to improve transferability of the parameters. Improvement in all amino acids was obtained as compared to ff99SB. Parameters were also generated for alternate protonation states of ionizable side chains. Average errors in relative energies of pairs of conformations were under 1.0 kcal/mol as compared to QM, reduced 35\% from ff99SB. We also took the opportunity to make empirical adjustments to the protein backbone dihedral parameters as compared to ff99SB. Multiple small adjustments of φ and ψ parameters were tested against NMR scalar coupling data and secondary structure content for short peptides. The best results were obtained from a physically motivated adjustment to the φ rotational profile that compensates for lack of ff99SB QM training data in the β-ppII transition region. Together, these backbone and side chain modifications (hereafter called ff14SB) not only better reproduced their benchmarks, but also improved secondary structure content in small peptides and reproduction of NMR χ1 scalar coupling measurements for proteins in solution. We also discuss the Amber ff12SB parameter set, a preliminary version of ff14SB that includes most of its improvements.}
+      \field{day}{11}
+      \field{issn}{1549-9618}
+      \field{journaltitle}{Journal of Chemical Theory and Computation}
+      \field{month}{8}
+      \field{number}{8}
+      \field{shortjournal}{J. Chem. Theory Comput.}
+      \field{shorttitle}{{{ff14SB}}}
+      \field{title}{{{ff14SB}}: {{Improving}} the {{Accuracy}} of {{Protein Side Chain}} and {{Backbone Parameters}} from {{ff99SB}}}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{11}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3696\bibrangedash 3713}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1021/acs.jctc.5b00255
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/G6KS4QX2/Maier et al. - 2015 - ff14SB Improving the Accuracy of Protein Side Chain and Backbone Parameters from ff99SB.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/acs.jctc.5b00255
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/acs.jctc.5b00255
+      \endverb
+    \endentry
     \entry{mayoPTENProtectsP532002}{article}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=ddedc2c15029273e7249fa80e3dd1339}{%
@@ -7787,6 +8490,90 @@
       \verb https://www.biomol.com/resources/applications/pcr-and-qpcr/
       \endverb
     \endentry
+    \entry{petersStructuralSurveyZincContaining2010}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=6525dbf55835e4374c0e8a6797263a98}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Martin\bibnamedelima B.},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b2a5d8854745b05e99cd277be3ef323}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4415d300e602e561d9c3cd44126a6091}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dcfb592f69cda9bee94807ffd4ad0c9c}{%
+           family={Füsti-Molnár},
+           familyi={F\bibinithyphendelim M\bibinitperiod},
+           given={László},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=27a720cea378ea424aa71c4e325952bb}{%
+           family={Weaver},
+           familyi={W\bibinitperiod},
+           given={Michael\bibnamedelima N.},
+           giveni={M\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d663be67a34bc7e959942d286bb135b5}{%
+           family={Merz},
+           familyi={M\bibinitperiod},
+           given={Kenneth\bibnamedelimb M.\bibnamedelimi Jr.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{0240805f4c35f837422cc2d080a3d55e}
+      \strng{fullhash}{e8b76f13a070cf07a17723051f3268b0}
+      \strng{bibnamehash}{0240805f4c35f837422cc2d080a3d55e}
+      \strng{authorbibnamehash}{0240805f4c35f837422cc2d080a3d55e}
+      \strng{authornamehash}{0240805f4c35f837422cc2d080a3d55e}
+      \strng{authorfullhash}{e8b76f13a070cf07a17723051f3268b0}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Currently the Protein Data Bank (PDB) contains over 25\,000 structures that contain a metal ion including Na, Mg, K, Ca, V, Cr, Mn, Fe, Co, Ni, Cu, Zn, Pd, Ag, Cd, Ir, Pt, Au, and Hg. In general, carrying out classical molecular dynamics (MD) simulations of metalloproteins is a convoluted and time-consuming process. Herein, we describe MCPB (Metal Center Parameter Builder), which allows one to conveniently and rapidly incorporate metal ions using the bonded plus electrostatics model (Hoops et al. J. Am. Chem. Soc. 1991, 113, 8262−8270) into the AMBER force field (FF). MCPB was used to develop a zinc FF, ZAFF, which is compatible with the existing AMBER FFs. The PDB was mined for all Zn-containing structures with most being tetrahedrally bound. The most abundant primary shell ligand combinations were extracted, and FFs were created. These include Zn bound to CCCC, CCCH, CCHH, CHHH, HHHH, HHHO, HHOO, HOOO, HHHD, and HHDD (O = water and the remaining are 1-letter amino acid codes). Bond and angle force constants and RESP charges were obtained from B3LYP/6-31G* calculations of model structures from the various primary shell combinations. MCPB and ZAFF can be used to create FFs for MD simulations of metalloproteins to study enzyme catalysis, drug design, and metalloprotein crystal refinement.}
+      \field{day}{14}
+      \field{issn}{1549-9618}
+      \field{journaltitle}{Journal of Chemical Theory and Computation}
+      \field{month}{9}
+      \field{number}{9}
+      \field{shortjournal}{J. Chem. Theory Comput.}
+      \field{title}{Structural {{Survey}} of {{Zinc-Containing Proteins}} and {{Development}} of the {{Zinc AMBER Force Field}} ({{ZAFF}})}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{6}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2935\bibrangedash 2947}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1021/ct1002626
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/NVVC2ACX/Peters et al. - 2010 - Structural Survey of Zinc-Containing Proteins and Development of the Zinc AMBER Force Field (ZAFF).pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/ct1002626
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/ct1002626
+      \endverb
+    \endentry
     \entry{ponomarevIonMotionsMolecular2004}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=7abdb2419b83fa0ae3e970393406bd9e}{%
@@ -8466,6 +9253,56 @@
       \endverb
       \keyw{Amino acid analysis,Coevolution,Eigenvalues,Multiple alignment calculation,Protein sequencing,Protein structure,Protein structure comparison,Sequence alignment}
     \endentry
+    \entry{roePTRAJCPPTRAJSoftware2013}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=98026ef5d06ecd2023f34de8a62fa971}{%
+           family={Roe},
+           familyi={R\bibinitperiod},
+           given={Daniel\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7671bb48ddb2a24509510f37204e8614}{%
+           family={Cheatham},
+           familyi={C\bibinitperiod},
+           given={Thomas\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9ebfd9594c013862e6fbbe6c3642682b}
+      \strng{fullhash}{9ebfd9594c013862e6fbbe6c3642682b}
+      \strng{bibnamehash}{9ebfd9594c013862e6fbbe6c3642682b}
+      \strng{authorbibnamehash}{9ebfd9594c013862e6fbbe6c3642682b}
+      \strng{authornamehash}{9ebfd9594c013862e6fbbe6c3642682b}
+      \strng{authorfullhash}{9ebfd9594c013862e6fbbe6c3642682b}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We describe PTRAJ and its successor CPPTRAJ, two complementary, portable, and freely available computer programs for the analysis and processing of time series of three-dimensional atomic positions (i.e., coordinate trajectories) and the data therein derived. Common tools include the ability to manipulate the data to convert among trajectory formats, process groups of trajectories generated with ensemble methods (e.g., replica exchange molecular dynamics), image with periodic boundary conditions, create average structures, strip subsets of the system, and perform calculations such as RMS fitting, measuring distances, B-factors, radii of gyration, radial distribution functions, and time correlations, among other actions and analyses. Both the PTRAJ and CPPTRAJ programs and source code are freely available under the GNU General Public License version 3 and are currently distributed within the AmberTools 12 suite of support programs that make up part of the Amber package of computer programs (see http://ambermd.org ). This overview describes the general design, features, and history of these two programs, as well as algorithmic improvements and new features available in CPPTRAJ.}
+      \field{day}{9}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1549-9618}
+      \field{journaltitle}{Journal of Chemical Theory and Computation}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{7}
+      \field{shortjournal}{J Chem Theory Comput}
+      \field{shorttitle}{{{PTRAJ}} and {{CPPTRAJ}}}
+      \field{title}{{{PTRAJ}} and {{CPPTRAJ}}: {{Software}} for {{Processing}} and {{Analysis}} of {{Molecular Dynamics Trajectory Data}}}
+      \field{volume}{9}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{3084\bibrangedash 3095}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1021/ct400341p
+      \endverb
+      \verb{eprint}
+      \verb 26583988
+      \endverb
+    \endentry
     \entry{roth2000tumor}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=942e666a328eb986d0a47b4b7b7e4887}{%
@@ -8517,7 +9354,7 @@
       \range{pages}{9}
     \endentry
     \entry{salomon2013routine}{article}{}
-      \name{author}{5}{}{%
+      \name{author}{5}{ul=2}{%
         {{un=0,uniquepart=base,hash=364798c240c0c7ef3f34a7af049e59fc}{%
            family={Salomon-Ferrer},
            familyi={S\bibinithyphendelim F\bibinitperiod},
@@ -8552,11 +9389,11 @@
       \list{publisher}{1}{%
         {ACS Publications}%
       }
-      \strng{namehash}{b4ad86409d7504fde52c44ec36db04a4}
+      \strng{namehash}{964fd09dde74bb7c643101b7739189dd}
       \strng{fullhash}{c1c02021b63263c6520f3e82012560b1}
-      \strng{bibnamehash}{b4ad86409d7504fde52c44ec36db04a4}
-      \strng{authorbibnamehash}{b4ad86409d7504fde52c44ec36db04a4}
-      \strng{authornamehash}{b4ad86409d7504fde52c44ec36db04a4}
+      \strng{bibnamehash}{964fd09dde74bb7c643101b7739189dd}
+      \strng{authorbibnamehash}{964fd09dde74bb7c643101b7739189dd}
+      \strng{authornamehash}{964fd09dde74bb7c643101b7739189dd}
       \strng{authorfullhash}{c1c02021b63263c6520f3e82012560b1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
@@ -8571,6 +9408,73 @@
       \field{year}{2013}
       \field{pages}{3878\bibrangedash 3888}
       \range{pages}{11}
+    \endentry
+    \entry{salomon-ferrerRoutineMicrosecondMolecular2013}{article}{}
+      \name{author}{5}{ul=2}{%
+        {{un=0,uniquepart=base,hash=364798c240c0c7ef3f34a7af049e59fc}{%
+           family={Salomon-Ferrer},
+           familyi={S\bibinithyphendelim F\bibinitperiod},
+           given={Romelia},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=818ee1df326a4c63e348886af818aa7b}{%
+           family={Götz},
+           familyi={G\bibinitperiod},
+           given={Andreas\bibnamedelima W.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c65e541f4f09c359599aae8b2ef90089}{%
+           family={Poole},
+           familyi={P\bibinitperiod},
+           given={Duncan},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5300c671ae9096102884bc8c44ada9b2}{%
+           family={Le\bibnamedelima Grand},
+           familyi={L\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd6ed720166358f1457f2d3706935ea3}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Ross\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6ccf3610b0de3dce9f928777afc19f84}
+      \strng{fullhash}{555a43cef3e03e4a9cd2cd1947ae519a}
+      \strng{bibnamehash}{6ccf3610b0de3dce9f928777afc19f84}
+      \strng{authorbibnamehash}{6ccf3610b0de3dce9f928777afc19f84}
+      \strng{authornamehash}{6ccf3610b0de3dce9f928777afc19f84}
+      \strng{authorfullhash}{555a43cef3e03e4a9cd2cd1947ae519a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present an implementation of explicit solvent all atom classical molecular dynamics (MD) within the AMBER program package that runs entirely on CUDA-enabled GPUs. First released publicly in April 2010 as part of version 11 of the AMBER MD package and further improved and optimized over the last two years, this implementation supports the three most widely used statistical mechanical ensembles (NVE, NVT, and NPT), uses particle mesh Ewald (PME) for the long-range electrostatics, and runs entirely on CUDA-enabled NVIDIA graphics processing units (GPUs), providing results that are statistically indistinguishable from the traditional CPU version of the software and with performance that exceeds that achievable by the CPU version of AMBER software running on all conventional CPU-based clusters and supercomputers. We briefly discuss three different precision models developed specifically for this work (SPDP, SPFP, and DPDP) and highlight the technical details of the approach as it extends beyond previously reported work [Götz et al., J. Chem. Theory Comput. 2012, DOI: 10.1021/ct200909j; Le Grand et al., Comp. Phys. Comm. 2013, DOI: 10.1016/j.cpc.2012.09.022].We highlight the substantial improvements in performance that are seen over traditional CPU-only machines and provide validation of our implementation and precision models. We also provide evidence supporting our decision to deprecate the previously described fully single precision (SPSP) model from the latest release of the AMBER software package.}
+      \field{day}{10}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1549-9618}
+      \field{journaltitle}{Journal of Chemical Theory and Computation}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{9}
+      \field{shortjournal}{J Chem Theory Comput}
+      \field{title}{Routine {{Microsecond Molecular Dynamics Simulations}} with {{AMBER}} on {{GPUs}}. 2. {{Explicit Solvent Particle Mesh Ewald}}}
+      \field{volume}{9}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{pages}{3878\bibrangedash 3888}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1021/ct400314y
+      \endverb
+      \verb{eprint}
+      \verb 26592383
+      \endverb
     \endentry
     \entry{scharerMammalianP53Can1992}{article}{}
       \name{author}{2}{}{%
@@ -8624,6 +9528,29 @@
       \verb /Users/Sean/Zotero/storage/6R8WG82B/Schärer and Iggo - 1992 - Mammalian p53 can function as a transcription factor in yeast.pdf
       \endverb
       \keyw{Animals,Base Sequence,beta-Galactosidase,Binding Sites,Gene Expression Regulation Fungal,Genes p53,Humans,Immunoblotting,Mice,Molecular Sequence Data,Mutagenicity Tests,Plasmids,Polymerase Chain Reaction,Promoter Regions Genetic,Recombinant Fusion Proteins,Saccharomyces cerevisiae,Transcription Factors,Tumor Suppressor Protein p53}
+    \endentry
+    \entry{PyMOL}{unpublished}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b8d23d6b5736f9ce79034237d8745d43}{%
+           family={{Schrödinger, LLC}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b8d23d6b5736f9ce79034237d8745d43}
+      \strng{fullhash}{b8d23d6b5736f9ce79034237d8745d43}
+      \strng{bibnamehash}{b8d23d6b5736f9ce79034237d8745d43}
+      \strng{authorbibnamehash}{b8d23d6b5736f9ce79034237d8745d43}
+      \strng{authornamehash}{b8d23d6b5736f9ce79034237d8745d43}
+      \strng{authorfullhash}{b8d23d6b5736f9ce79034237d8745d43}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{The {{PyMOL}} Molecular Graphics System, Version 1.8}
+      \field{year}{2015}
+      \field{dateera}{ce}
     \endentry
     \entry{sharpAllosteryLacOperon2011}{article}{}
       \name{author}{1}{}{%
@@ -9298,6 +10225,35 @@
       \verb{url}
       \verb https://doi.org/10.1021/acsomega.5c05639
       \endverb
+    \endentry
+    \entry{STON1998}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=348541fdcab05ab02b39ae68a3c75dc2}{%
+           family={Stone},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Computer Science Department, University of Missouri-Rolla}%
+      }
+      \strng{namehash}{348541fdcab05ab02b39ae68a3c75dc2}
+      \strng{fullhash}{348541fdcab05ab02b39ae68a3c75dc2}
+      \strng{bibnamehash}{348541fdcab05ab02b39ae68a3c75dc2}
+      \strng{authorbibnamehash}{348541fdcab05ab02b39ae68a3c75dc2}
+      \strng{authornamehash}{348541fdcab05ab02b39ae68a3c75dc2}
+      \strng{authorfullhash}{348541fdcab05ab02b39ae68a3c75dc2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{{\em An Efficient Library for Parallel Ray Tracing and Animation}}
+      \field{type}{mathesis}
+      \field{year}{1998}
     \endentry
     \entry{suelEvolutionarilyConservedNetworks2003}{article}{}
       \name{author}{4}{}{%
