@@ -110,10 +110,33 @@ From this, we asked if there was any correlation between the strength or specifi
 
 \section{Discussion}
 
+In this chapter, we set out to understand the two parts of the p53-DNA interactions. Specifically, how p53 binding alters DNA dynamics, and how DNA binding alters p53 dynamics. We did this by simulating nine different DNA sequences without p53 bound and with p53 bound, then comparing how the dynamics change both between the bound/unbound states, but also across the bound states.
+
+First and foremost, we saw that DNA dynamics are modulated by p53 binding. In most DNA sequences tested, the average DNA RMSD increased, the average bend decreased, and the average end-to-end distance drastically decreased. The binding of p53 to DNA increases the number of energetically favorable DNA conformations, ones with a greater bend around the protein. \textcolor{red}{talk about e2e dist}.
+
+We can see that the binding of p53 has local effects on DNA dynamics, too. Interestingly, the way in which p53 alters DNA sequences varies from one DNA molecule to another. The 1433S response element is almost wholly made more stable, GADD45 is almost wholly made less stable, and p53AIP1 has regions which are stabilized upon p53 binding and regions destabilized.
+
+Analyzing the DNA-DNA hydrogen bonding, we can see that in some cases, the biding of p53 increases the number of transient interactions, but in general, DNA stability as observed via hydrogen bonding, is not affected by p53 binding.
+
+Turning our attention to how p53 itself is altered depending on its bound DNA sequence, we can see that there are significant differences. p53 bound to the BAX and 1433S binding sequences has a low RMSD to its binding structure compared to p53 bound to the PTEN or p53AIP1 sequences. The local dynamics of p53 are mostly unchanged across DNA biding partners, though there are regions such as the helix at residue \num{120} and the turn between residues \num{180} and \num{190}.
+
+The hydrogen bonding character of p53 is significantly altered depending on its bound DNA. The average number of hydrogen bonds per frame, the total number of different hydrogen bonds made between the protein and the DNA, and the subset of those bonds that are present for at least \qty{10}{\percent} of frames, all depend on the DNA sequence. Noxa and PUMA make strong interactions with p53, p53AIP1 and GADD45 make weak interactions.
+
+We asked if there was any correlation between the hydrogen bond metrics analyzed and the similarity of each DNA sequence with the p53 consensus sequence, as defined by \parencite{el-deiryDefinitionConsensusBinding1992}. We saw that there is a slight negative correlation between the total number of hydrogen bonds made for at least \qty{10}{\percent} of frames and the distance to the consensus sequence.
+
+These results tell a complex story of p53-DNA dynamics. DNA is not uniformly stabilized or destabilized upon p53 biding, neither is p53 modulated in one way or another by sheer virtue of being bound to the DNA. Rather, p53 and the DNA act together in a sequence-dependent way. The relation between DNA similarity to the consensus and how p53 interacts with it is intriguing and should be investigated further. Inga \textit{et al.} have shown that a single point mutation to p53 can cause increased affinity for some response elements and decreased affinity for others \parencite{ingaP53MutantsExhibiting2001b}. It is possible that this is somehow related to these DNA sequences' similarity to the consensus sequence, or that when a mutation, either destabilizing or DNA-contact, occurs to p53, it loses binding affinity for those sequences it already made weaker interactions with, such as p53AIP1 or GADD45.
+
 \section{Methods}
 
 \subsection{Building Starting Structure}
 
-\subsection{Simulation Protocol}
+The DNA sequences are as follows: 1433S: 5'-AGGCATGTGCCACCATGCCC-3', BAX: 5'-AGACAAGCCTGGGCGTGGGC-3', GADD45: 5'-CAGCATGCTTAGACATGTTC-3', Noxa: 5'-AGGCTTGCCCCGGCAAGTTG-3', p21: 5'-GAACATGTCCCAACATGTTG-3', p53AIP1: 5'-TCTCTTGCCCGGGCTTGTCG-3', p53R2: 5'-TGACATGCCCAGGCATGTCT-3', PTEN: 5'-GCGTGGTCACCTGGTCCTTT-3', PUMA: 5'-GGACAAGTCAGGACTTGCAG-3' \parencite{katoUnderstandingFunctionStructure2003a, teresiCowdenSyndromeAffected2007, maSequenceAnalysisP532007}. 
 
-\subsection{title}
+DNA sequences were generated using Nucgen. Using \textcolor{red}{MARKS ALIGNMENT PROGRAM}, optimal p53 binding locations were identified using sequence similarity with the consensus sequence, as defined in \parencite{el-deiryDefinitionConsensusBinding1992}. Using PyMol, p53 was placed according to the strongest predicted interactions \parencite{PyMOL}.
+
+\subsection{Simulation and Analysis Protocol}
+\label{chap:short-sim-prep}
+
+For each system, that is, for each response element studied both with and without p53 bound, three \qty{1}{\micro\second} simulations were run.
+
+The simulation protocol is largely as described in Chapter \ref{chap:sim-protocol} on page \pageref{chap:sim-protocol}, though there were some differences in simulation setup. Three rounds of energy minimization were used. In the first round, a restraint weight of \qty{25}{\kilo\calorie\per\mol\per\angstrom^{2}} was applied to all non-hydrogen atoms involved in non-water molecules. In the second round, a restraint weight of \qty{25}{\kilo\calorie\per\mol\per\angstrom^{2}} was applied to all heavy atoms. Finally, in the third round, no restraints were used. Heating is as described in Chapter \ref{chap:sim-protocol}; only \qty{9}{\nano\second} were used as equilibration. A timestep of \qty{2}{\femto\second} was used.

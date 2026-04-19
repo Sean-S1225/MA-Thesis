@@ -5180,6 +5180,97 @@
       \verb https://www.sciencedirect.com/science/article/pii/0092867492905932
       \endverb
     \endentry
+    \entry{katoUnderstandingFunctionStructure2003a}{article}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=622b9c8b24796f09c541d8b9b751d567}{%
+           family={Kato},
+           familyi={K\bibinitperiod},
+           given={Shunsuke},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fc915104437324a4060397e020b3cdd4}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Shuang-Yin},
+           giveni={S\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d7b40882a0f3cad65155854ac2add23}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Wen},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e7ab450d33e8b52392d38f0b94d1584b}{%
+           family={Otsuka},
+           familyi={O\bibinitperiod},
+           given={Kazunori},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2bd63ef079c5b5d1d80e4a00e18e448b}{%
+           family={Shibata},
+           familyi={S\bibinitperiod},
+           given={Hiroyuki},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=191ad02476cd49e024a8078e20901225}{%
+           family={Kanamaru},
+           familyi={K\bibinitperiod},
+           given={Ryunosuke},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=867c08a36b4df81833ed0213e331ad00}{%
+           family={Ishioka},
+           familyi={I\bibinitperiod},
+           given={Chikashi},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eac8ce618d8b990356752d07d2d4d6ed}
+      \strng{fullhash}{0fbd04d32e1a5fb8abf56dd813a3255b}
+      \strng{bibnamehash}{eac8ce618d8b990356752d07d2d4d6ed}
+      \strng{authorbibnamehash}{eac8ce618d8b990356752d07d2d4d6ed}
+      \strng{authornamehash}{eac8ce618d8b990356752d07d2d4d6ed}
+      \strng{authorfullhash}{0fbd04d32e1a5fb8abf56dd813a3255b}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Inactivation of the tumor suppressor p53 by missense mutations is the most frequent genetic alteration in human cancers. The common missense mutations in the TP53 gene disrupt the ability of p53 to bind to DNA and consequently to transactivate downstream genes. However, it is still not fully understood how a large number of the remaining mutations affect p53 structure and function. Here, we used a comprehensive site-directed mutagenesis technique and a yeast-based functional assay to construct, express, and evaluate 2,314 p53 mutants representing all possible amino acid substitutions caused by a point mutation throughout the protein (5.9 substitutions per residue), and correlated p53 function with structure- and tumor-derived mutations. This high-resolution mutation analysis allows evaluation of previous predictions and hypotheses through interrelation of function, structure and mutation.}
+      \field{day}{8}
+      \field{eprinttype}{pubmed}
+      \field{issn}{0027-8424}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences of the United States of America}
+      \field{month}{7}
+      \field{number}{14}
+      \field{shortjournal}{Proc Natl Acad Sci U S A}
+      \field{title}{Understanding the Function–Structure and Function–Mutation Relationships of P53 Tumor Suppressor Protein by High-Resolution Missense Mutation Analysis}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{100}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{8424\bibrangedash 8429}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.1431692100
+      \endverb
+      \verb{eprint}
+      \verb 12826609
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/5ZQ7Q9H8/Kato et al. - 2003 - Understanding the function–structure and function–mutation relationships of p53 tumor suppressor pro.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC166245/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC166245/
+      \endverb
+    \endentry
     \entry{kernIdentificationP53SequenceSpecific1991}{article}{}
       \name{author}{7}{}{%
         {{un=2,uniquepart=given,hash=23cd688af2869280de9f518be56e24d1}{%
@@ -6939,6 +7030,84 @@
       \verb https://doi.org/10.1093/nar/gkg680
       \endverb
     \endentry
+    \entry{maSequenceAnalysisP532007}{article}{}
+      \name{author}{5}{}{%
+        {{un=1,uniquepart=given,hash=cdbd829290aac4452bad6ad432b8f3b7}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Buyong},
+           giveni={B\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=d8e62dc2efe89c6106c45b6e6e43425b}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Yongping},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ffb97d2db5a68752cd441b0c6741f3e9}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7cff54519aaf69cd3a95abd91fc0a1b2}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Arnold\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5df4f003753b6d9cfad61f047a6dab01}{%
+           family={Nussinov},
+           familyi={N\bibinitperiod},
+           given={Ruth},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{305706773835f47aca04bcfde0824ada}
+      \strng{fullhash}{08fea54c9f5c1ca3aa2f707792e4b9c2}
+      \strng{bibnamehash}{305706773835f47aca04bcfde0824ada}
+      \strng{authorbibnamehash}{305706773835f47aca04bcfde0824ada}
+      \strng{authornamehash}{305706773835f47aca04bcfde0824ada}
+      \strng{authorfullhash}{08fea54c9f5c1ca3aa2f707792e4b9c2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The p53 tetramer recognizes specifically a 20-bp DNA element. Here, we examined symmetries encoded in p53 response elements (p53REs). We analyzed base inversion correlations within the half-site, as well as in the full-site palindrome. We found that p53REs are not only direct repeats of half-sites; rather, two p53 half-sites couple to form a higher order 20\,bp palindrome. The palindrome couplings between the half-sites are stronger for the human than for the mouse genome. The full-site palindrome and half-site palindrome are controlled by insertions between the two half-sites. The most notable feature is that the full-site palindrome with coupling between quarter-sites one and four (H14 coupling) dominates the p53REs without insertions. The most frequently observed insertion in human p53REs of 3\,bp enhances the half-site palindrome. The statistical frequencies of the coupling between the half-sites in the human genome correlate with grouped experimental p53 affinities with p53REs. Examination of known p53REs indicates the H14 couplings are stronger for positive regulation than for negatively regulated p53REs, with repressors having the lowest H14 couplings. We propose that the palindromic sequence couplings may encode such potential preferred multiple binding modes of the p53 tetramer to DNA.}
+      \field{eprinttype}{pubmed}
+      \field{issn}{0305-1048}
+      \field{journaltitle}{Nucleic Acids Research}
+      \field{month}{5}
+      \field{number}{9}
+      \field{shortjournal}{Nucleic Acids Res}
+      \field{title}{Sequence Analysis of P53 Response-Elements Suggests Multiple Binding Modes of the P53 Tetramer to {{DNA}} Targets}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{35}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2986\bibrangedash 3001}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1093/nar/gkm192
+      \endverb
+      \verb{eprint}
+      \verb 17439973
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/HLVH7F4Z/Ma et al. - 2007 - Sequence analysis of p53 response-elements suggests multiple binding modes of the p53 tetramer to DN.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC1888811/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC1888811/
+      \endverb
+    \endentry
     \entry{maehamaTumorSuppressorPTEN1998}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=4c8da8c5d90e6a268b8df2a091909a05}{%
@@ -7076,6 +7245,110 @@
       \verb{url}
       \verb https://doi.org/10.1021/acs.jctc.5b00255
       \endverb
+    \endentry
+    \entry{mavridiTargetingP53Cancer2026}{article}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=a6cd60917332ba4393b59b0fb79e17d6}{%
+           family={Mavridi},
+           familyi={M\bibinitperiod},
+           given={Danai},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9bf6b20ab26121d920930bd1b718c42f}{%
+           family={Funk},
+           familyi={F\bibinitperiod},
+           given={Julianne\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a8ed65a4608795632e4fdbfb88c37dac}{%
+           family={Balourdas},
+           familyi={B\bibinitperiod},
+           given={Dimitrios-Ilias},
+           giveni={D\bibinithyphendelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ee8632f808c67a02d44143851e814ca}{%
+           family={Krämer},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73ade809b43d0598d3c132c8f17154a4}{%
+           family={Khan\bibnamedelima Tareque},
+           familyi={K\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Raysa},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c34e40d18fb69946ed9ee4d5bd774436}{%
+           family={Timofeev},
+           familyi={T\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4f4ebbd9eef3a27ae8d7e8c27e448cc}{%
+           family={Spencer},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=513c8daf08fb1ea462a03e1ef2f6e60f}{%
+           family={Stiewe},
+           familyi={S\bibinitperiod},
+           given={Thorsten},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40687eadba62bf90716f8de342d91355}{%
+           family={Joerger},
+           familyi={J\bibinitperiod},
+           given={Andreas\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{beeae5e026497317f40e0c4432fa23cf}
+      \strng{fullhash}{6539088b888fd8b350736a628b8f27aa}
+      \strng{bibnamehash}{beeae5e026497317f40e0c4432fa23cf}
+      \strng{authorbibnamehash}{beeae5e026497317f40e0c4432fa23cf}
+      \strng{authornamehash}{beeae5e026497317f40e0c4432fa23cf}
+      \strng{authorfullhash}{6539088b888fd8b350736a628b8f27aa}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The cavity-creating p53 cancer mutation Y220C, which accounts for an estimated 125,000 new cancer cases per year, serves as an excellent paradigm for the development of mutant p53 reactivators. Several molecules that reactivate this thermolabile cancer mutant by targeting the mutation-induced crevice have been developed, and one of them, rezatapopt, is currently in clinical trials. The less frequently occurring Y220N and Y220S mutations are even more destabilizing than Y220C but create a similar surface crevice, raising the question of whether cancer patients with these mutations might also benefit from rezatapopt treatment. Here, we show that rezatapopt also binds to the Y220N and Y220S mutants, with nanomolar affinity, resulting in a full recovery of wild-type-like stability for the latter. High-resolution crystal structures of all three mutants bound to rezatapopt revealed a conserved binding mode, highlighting key interactions, including multipolar interactions of a fluorine substituent at a chiral center with the protein backbone. Consistent with the biophysical and structural data, rezatapopt reactivated p53 signaling in both Y220C and Y220S mutant cells by restoring the folded conformation and transcriptional activity, leading to anti-proliferative effects and apoptosis, albeit requiring higher compound concentrations in Y220S cells. The Y220N mutant, despite exhibiting high-nanomolar affinity for rezatapopt and substantial stabilization, did not show noticeable effects in cells at the concentrations tested, as rezatapopt binding resulted in only partial compensation for the mutation-induced loss of stability, for which we provide a structural explanation. Our data suggest that the development of clinical pan-Y220C/N/S reactivators, which could benefit an additional 10,000 patients per year, is challenging but not impossible.}
+      \field{day}{26}
+      \field{issn}{2041-4889}
+      \field{journaltitle}{Cell Death \& Disease}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{number}{1}
+      \field{shortjournal}{Cell Death Dis}
+      \field{title}{Targeting the P53 Cancer Mutants {{Y220C}}, {{Y220N}}, and {{Y220S}} with the Small-Molecule Stabilizer Rezatapopt}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{17}
+      \field{year}{2026}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{268}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41419-026-08492-9
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/RNCUTJ2P/Mavridi et al. - 2026 - Targeting the p53 cancer mutants Y220C, Y220N, and Y220S with the small-molecule stabilizer rezatapo.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41419-026-08492-9
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41419-026-08492-9
+      \endverb
+      \keyw{Target validation,Tumour-suppressor proteins,X-ray crystallography}
     \endentry
     \entry{mayoPTENProtectsP532002}{article}{}
       \name{author}{5}{}{%
@@ -10805,6 +11078,84 @@
       \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC5882331/
       \endverb
     \endentry
+    \entry{teresiCowdenSyndromeAffected2007}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=04fdd70f34e5395b81d2c629e6a9403c}{%
+           family={Teresi},
+           familyi={T\bibinitperiod},
+           given={Rosemary\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1327b8fe195fc1de1d6aa76d9c38d060}{%
+           family={Zbuk},
+           familyi={Z\bibinitperiod},
+           given={Kevin\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8226b251fc9252ed41693d1f5e04b730}{%
+           family={Pezzolesi},
+           familyi={P\bibinitperiod},
+           given={Marcus\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=23182b1b537c8f44dda5141654c1f36d}{%
+           family={Waite},
+           familyi={W\bibinitperiod},
+           given={Kristin\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9748765a63503ed127fc3cfb1e78e919}{%
+           family={Eng},
+           familyi={E\bibinitperiod},
+           given={Charis},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{acb96ea820600e78d1e739a210f56afb}
+      \strng{fullhash}{a4358a0b9ceb5fa51d64c4a3c3e12b32}
+      \strng{bibnamehash}{acb96ea820600e78d1e739a210f56afb}
+      \strng{authorbibnamehash}{acb96ea820600e78d1e739a210f56afb}
+      \strng{authornamehash}{acb96ea820600e78d1e739a210f56afb}
+      \strng{authorfullhash}{a4358a0b9ceb5fa51d64c4a3c3e12b32}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Germline mutations of PTEN (phosphatase and tensin homolog deleted on chromosome 10) are associated with the multihamartomatous disorder Cowden syndrome (CS). Moreover, patients with CS with germline PTEN promoter mutations have aberrant PTEN protein expression and an increased frequency of breast cancer. Here, we examined the downstream effect of five PTEN promoter variants (−861G/T, −853C/G, −834C/T, −798G/C, and −764G/A) that are not within any known cis-acting regulatory elements. Clinically, all five of these patients have been given diagnoses of breast, thyroid, and/or endometrial cancer. We demonstrated that protein binding to the PTEN promoter (−893 to −755) was not altered in the five variants when compared with the wild-type (WT) promoter. However, reporter assays indicated that three of the variants (−861G/T, −853C/G, and −764G/A) demonstrated an ∼50\% decrease in luciferase activity compared with the WT construct. PTEN messenger RNA (mRNA) levels were not altered in these variants, whereas secondary structure predictions indicated that different PTEN 5′ untranslated region transcript-folding patterns exist in three variants, suggesting an inhibition of protein translation. This was confirmed by PTEN protein analysis. These data indicate that variants causing large mRNA secondary structure alterations result in an inhibition of protein translation and a decrease in PTEN protein expression. These data emphasize the importance of PTEN promoter nucleotide variations and their ability to lead to CS progression by a novel regulatory mechanism. Importantly, these patients have a high prevalence of breast, thyroid, and endometrial malignancies; thus, understanding of the mechanism of PTEN dysfunction in these patients will lead to more-sensitive molecular diagnostic and predictive testing and, ultimately, to rational targeted therapies to treat or prevent malignancy.}
+      \field{eprinttype}{pubmed}
+      \field{issn}{0002-9297}
+      \field{journaltitle}{American Journal of Human Genetics}
+      \field{month}{10}
+      \field{number}{4}
+      \field{shortjournal}{Am J Hum Genet}
+      \field{title}{Cowden {{Syndrome}}–{{Affected Patients}} with {{PTEN Promoter Mutations Demonstrate Abnormal Protein Translation}}}
+      \field{urlday}{19}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{81}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{756\bibrangedash 767}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1086/521051
+      \endverb
+      \verb{eprint}
+      \verb 17847000
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/AVYIK9K7/Teresi et al. - 2007 - Cowden Syndrome–Affected Patients with PTEN Promoter Mutations Demonstrate Abnormal Protein Translat.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC2227925/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC2227925/
+      \endverb
+    \endentry
     \entry{TertiaryStructureOverview}{online}{}
       \field{sortinit}{T}
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
@@ -11276,6 +11627,67 @@
       \verb{url}
       \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC6487778/
       \endverb
+    \endentry
+    \entry{wangAutomaticAtomType2006}{article}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=7f99f606c0bc041834fd666b726b8c26}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Junmei},
+           giveni={J\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=f27ec46ccd272a021fd78bdac92dd490}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5378f73a32901c9677174ecedc9fda65}{%
+           family={Kollman},
+           familyi={K\bibinitperiod},
+           given={Peter\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dd1a485aaa482b88e5996bfcefccd082}{%
+           family={Case},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5094bb82370c54c7c7bef0d6af0372bd}
+      \strng{fullhash}{6df7ded54ce32a18805393642c33178e}
+      \strng{bibnamehash}{5094bb82370c54c7c7bef0d6af0372bd}
+      \strng{authorbibnamehash}{5094bb82370c54c7c7bef0d6af0372bd}
+      \strng{authornamehash}{5094bb82370c54c7c7bef0d6af0372bd}
+      \strng{authorfullhash}{6df7ded54ce32a18805393642c33178e}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In molecular mechanics (MM) studies, atom types and/or bond types of molecules are needed to determine prior to energy calculations. We present here an automatic algorithm of perceiving atom types that are defined in a description table, and an automatic algorithm of assigning bond types just based on atomic connectivity. The algorithms have been implemented in a new module of the AMBER packages. This auxiliary module, antechamber (roughly meaning "before AMBER"), can be applied to generate necessary inputs of leap-the AMBER program to generate topologies for minimization, molecular dynamics, etc., for most organic molecules. The algorithms behind the manipulations may be useful for other molecular mechanical packages as well as applications that need to designate atom types and bond types.}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1093-3263}
+      \field{journaltitle}{Journal of Molecular Graphics \& Modelling}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{2}
+      \field{shortjournal}{J Mol Graph Model}
+      \field{title}{Automatic Atom Type and Bond Type Perception in Molecular Mechanical Calculations}
+      \field{volume}{25}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{pages}{247\bibrangedash 260}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.jmgm.2005.12.005
+      \endverb
+      \verb{eprint}
+      \verb 16458552
+      \endverb
+      \keyw{Algorithms,Hydrogen Bonding,Models Molecular,Molecular Conformation,Molecular Structure,Organic Chemicals}
     \endentry
     \entry{wangMutantP53R273HGains2013}{article}{}
       \name{author}{5}{}{%
