@@ -161,4 +161,153 @@ We expected to see no \(\beta\)-galactosidase activity in any of the strains wit
 
 \section{Discussion}
 
+In this chapter, we set out to design an experimental assay to quantitatively measure p53-induced transcription. We did this by using gap repair to build a modular system in which p53, whose expression is induced with the \textit{GAL} promoter, is able to bind to a p53-binding site and promote the transcription of the downstream \textit{lacZ} gene. The amount of \(\beta\)-galactosidase produced in the cell is easy to measure using a colorimetric assay and is directly proportional to p53-induced transcription.
+
+Studying the growth of our yeast strains allowed us to optimize the protocol, a doubling time of two hours suggests that after a four hour incubation with either galactose or glucose, the cells will have divided twice.
+
+A control experiment showed that our cells were sensitive to galactose induction of a gene (\textit{lacZ}) and that \(\beta\)-galactosidase expression could be measured.
+
+We tested the assay by measuring the amount of \(\beta\)-galactosidase activity in cells containing the wild-type p53 expression plasmid and a transcription reporter plasmid containing either the 1TUP, 1xRGC, or 3cRGC binding sequence. Compared to  control experiments in which the p53 expression plasmid lacked the \textit{p53} gene and the intact p53 expression plasmid was repressed using glucose rather than galactose, we observed strong p53-induced transcription of the 3xRGC binding sequence.
+
+Interestingly, we observed very little \(\beta\)-galactosidase activity in the experiments where the transcription reporter plasmid contained the 1TUP and 1xRGC binding sequence. Previous work has shown that there is an approximate \num{6}-fold increase in p53 binding to the 3xRGC compared to the 1xRGC element \parencite{scharerMammalianP53Can1992}, and this is is approximately what we observed, though it is difficult to distinguish this result from the negative controls. I believe that further optimization of the experimental conditions, for instance, a longer incubation time, may more strongly show p53 binding to the other response elements.
+
+In the end, the construction and validation of this assay represents a large leap forward in the capabilities of our lab to study p53 and experimentally verify computational predictions.
+
+\section{Materials}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+{\setstretch{1.2}
+\begin{tabularx}{\textwidth}{|p{1.8cm}|Y|p{4.5cm}|}
+\hline
+Primer & Sequence & Usage \\
+\hline
+AJM3594 & TTATTAAACT TCTTTGCGTC CATCCAAAAA AAAAGTAAGA ATTTTTGAAA ATTCAATATA Aatggaggag ccgcagtcag atcc & Amplify p53 gene from BAM621 (forward) \\
+\hline
+AJM3595 & TACTGGGCTG CTTCCTAATG CAGGAGTCGC ATAAGGGAGA GCGTTATTAg tctgagtcag gcccttctgt cttg & Amplify p53 gene from BAM621 (reverse) \\
+\hline
+AJM3596 & aggcctcgag gcctcgaggt cgacTCGAGC AGATCCGCCA GGCG & Amplify CYC1 minimal promoter from yeast genomic DNA (forward) \\
+\hline
+AJM3597 & aattgaactc aggtacaatc acttcttctg aatgagattt agtcattata TATTAATTTA GTGTGTGTAT TTGTGTTTGT & Amplify CYC1 minimal promoter from yeast genomic DNA (reverse) \\
+\hline
+AJM3635 & tcgaggcctc gaggtcgacT TTCCTAGACT TGCCCAATTA TCGAGCAGAT CCGCCAGGCG & Amplify CYC1 minimal promoter from BAM638, encodes 1TUP response element in primer (forward) \\
+\hline
+AJM3636 & tcgaggcctc gaggtcgacG GACTTGCCTG GcCTTGCCTT CGAGCAGATC CGCCAGGCG & Amplify CYC1 minimal promoter from BAM638, encodes 1xRGC response element in primer (forward) \\
+\hline
+AJM3637 & tcgaggcctc gaggtcgacG GACTTGCCTG GcCTTGCCTG GACTTGCCTG GcCTTGCCTG GACTTGCCTG GcCTTGCCTT CGAGCAGATC CGCCAGG & Amplify CYC1 minimal promoter from BAM638, encodes 3xRGC response element in primer (forward) \\
+\hline
+\end{tabularx}
+}
+\caption{Primers used in this study.}
+\label{tab:primers}
+\end{table}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+{\setstretch{1.5}
+\begin{tabularx}{\textwidth}{|>{\hsize=.25\hsize}X|>{\hsize=.75\hsize}X|}
+\hline
+Strain & Description \\
+\hline
+BAM621 & GFP-p53 plasmid with kan-resistance. Addgene \#12091\\
+\hline
+BAM627 & 2\(\mu\) with \textit{GAL} promoter. Contains \textit{LEU2}, \textit{AmpR}. YEp51 / V18 from Holmes Lab. \\
+\hline
+BAM636 & 2\(\mu\) \textit{P\textsubscript{GAL1}} \textminus{} \textit{lacZ}, Contains \textit{URA3}, \textit{AmpR}. pRY131 / BSH82 from Holmes Lab. \\
+\hline
+BAM637 & BAM627-based with \textit{P\textsubscript{GAL1}} \textminus{} \textit{p53}. \\
+\hline
+BAM638 & BAM636-based with CYC1 minimal promoter replacing \textit{P\textsubscript{GAL1}}; contains \textit{P\textsubscript{min, CYC1}} \textminus{} \textit{lacZ}. \\
+\hline
+BAM639 & BAM638-based with the 1TUP response element upstream of \textit{P\textsubscript{min, CYC1}} \\
+\hline
+BAM640 & BAM638-based with the 1xRGC response element upstream of \textit{P\textsubscript{min, CYC1}} \\
+\hline
+BAM641 & BAM638-based with the 3xRGC response element upstream of \textit{P\textsubscript{min, CYC1}} \\
+\hline
+\end{tabularx}
+}
+\caption{Bacterial strains used in this study.}
+\label{tab:bacterial-strains}
+\end{table}
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.2}
+{\setstretch{1.5}
+\begin{tabularx}{\textwidth}{|>{\hsize=.25\hsize}X|>{\hsize=.75\hsize}X|}
+\hline
+Strain & Description \\
+\hline
+YAM7010 & Base strain which supports galactose/glucose gene induction/repression. YSH474 from Holmes Lab. \\
+\hline
+YAM7011 & YAM7010 with BAM636 (\textit{P\textsubscript{GAL1}} \textminus{} \textit{lacZ}) \\
+\hline
+YAM7012 & YAM7010 with BAM637 (\textit{P\textsubscript{GAL1}} \textminus{} \textit{p53}) \\
+\hline
+YAM7013 & YAM7010 with BAM638 (\textit{P\textsubscript{min, CYC1}} \textminus{} \textit{lacZ})\\
+\hline
+YAM7014 & YAM7010 with BAM637 and BAM638 \\
+\hline
+YAM7125 & YAM7010 with BAM637 and BAM639 (1TUP \textminus{} \textit{P\textsubscript{min, CYC1}} \textminus{} \textit{lacZ}) \\
+\hline
+YAM7126 & YAM7010 with BAM637 and BAM640 (1xRGC \textminus{} \textit{P\textsubscript{min, CYC1}} \textminus{} \textit{lacZ})\\
+\hline
+YAM7127 & YAM7010 with BAM637 and BAM641 (3xRGC \textminus{} \textit{P\textsubscript{min, CYC1}} \textminus{} \textit{lacZ}) \\
+\hline
+YAM7217 & YAM7010 with BAM627 and BAM639 \\
+\hline
+YAM7218 & YAM7010 with BAM627 and BAM640 \\
+\hline
+YAM7219 & YAM7010 with BAM627 and BAM641 \\
+\hline
+\end{tabularx}
+}
+\caption{Yeast strains used in this study.}
+\label{tab:yeast-strains}
+\end{table}
+
+\FloatBarrier
+
 \section{Methods}
+
+\subsection{Standard Lab Protocols}
+
+Lab protocols, such as PCR, restriction digests, DNA gel extraction, plasmid purification, and yeast and bacterial transformations were done according to the standard lab protocol.
+
+\subsection{\(\beta\)-Galactosidase Assay}
+
+To conduct the \(\beta\)-galactosidase assay, we used the following procedure:
+
+\begin{enumerate}
+\item Ensure a patch of cells is prepared
+\item The night before conducting the assay, add a small amount of cells into three glass test tubes and grow the yeast to saturation in \qty{2}{\milli\liter} +raffinose selection media (this will give three replicates, increase as needed)
+\item The following morning, use \qty{0.1}{\milli\liter} in \qty{0.9}{\milli\liter} of the same selection media to measure the OD\textsubscript{\num{660}}, a value greater than one means the culture is saturated; measure against a media blank
+\item Dilute each culture to \qty{2}{\milli\liter} with an OD\textsubscript{\num{660}} of approximately \num{0.15} by combining \(V_{\text{culture}}\) amount of cell culture and \(V_{\text{media}}\) amount of media. With any one of the replicates, make a second dilution to use later to measure the OD\textsubscript{\num{660}} to assess mid-log growth.
+
+\[V_{\text{culture}} = \frac{0.15 \times 2 \times 1000}{10 \times \text{OD}_{\text{diluted}}}\mu\text{L}\]
+
+\[V_{\text{media}} = 2000\mu\text{L} - V_{\text{culture}}\]
+
+\item Incubate at \qty{30}{\degreeCelsius} in the roller drum for \numrange{4}{6} hours
+\item Use \qty{0.5}{\milli\liter} from the tube reserved for measuring, take the OD\textsubscript{\num{660}}, a value of approximately \num{0.5} indicates mid-log growth
+\item Add \qty{100}{\micro\liter} \qty{20}{\percent} glucose or \qty{20}{\percent} galactose stock per \unit{\milli\liter} of culture to aliquots 1-3 (\qty{200}{\micro\liter} total each)
+\item Incubate \num{2} hours in roller drum
+\item Use \qty{1}{\milli\liter} to measure the OD\textsubscript{\num{660}} for each sample, record the value
+\item Thaw \num{2}X beta-galactosidase assay buffer on ice
+\item Each sample (along with a control containing \qty{350}{\micro\liter} media) will require \qty{350}{\micro\liter} working solution (WS), made from equal volumes assay buffer and Y-PER Reagent
+\item Add \qty{300}{\micro\liter} \(\beta\)-Galactosidase Assay Stop Solution to the control microcentrifuge tube
+\item Transfer \qty{350}{\micro\liter} of each test culture to a microcentrifuge tube
+\item Apply \qty{350}{\micro\liter} working solution to each test culture and begin a timer
+\item Incubate (minutes) at room temperature or \qty{37}{\degreeCelsius} (preferred) until a color change is observed
+\item When the yellow color appears, add \qty{300}{\micro\liter} of the \(\beta\)-Galactosidase Assay Stop Solution to the reaction tube and vortex for \num{15} seconds. Stop the timer and record the reaction time
+\item Centrifuge \num{13000}g for \num{30} seconds to remove cell debris
+\item Transfer supernatant to a cuvette and measure absorbance at \qty{420}{\nano\meter} against the blank tube
+
+\item Finally, use the following formula to calculate \(\beta\)-galactosidase activity:
+
+\[\frac{1000 \times A_{420}}{t\times V \times\text{OD}_{600}},\] where \(t\) is the reaction time in minutes, and \(V\) is the volume of cells (in \unit{\milli\liter}) used in the assay.
+
+\end{enumerate}

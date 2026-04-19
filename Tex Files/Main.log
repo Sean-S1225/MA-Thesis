@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.19)  18 APR 2026 12:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.19)  18 APR 2026 20:00
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
-**Main
+**Main.tex
 (./Main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1163,13 +1163,30 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+runsystem(uname -s > "Main.w18")...executed.
+
+ (./Main.w18)
+runsystem(rm -- "Main.w18")...executed.
+
 )
 \c@svg@param@lastpage=\count486
 \svg@box=\box82
 \c@svg@param@currpage=\count487
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent.sty
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent.sty
 Package: transparent 2022-10-27 v1.5 Transparency with color stacks
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent-nometadat
@@ -1179,8 +1196,33 @@ Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color
  (/usr/local/texlive/2024/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/xltabular/xltabular.sty
+Package: xltabular 2020/11/04 v0.2e `xltabular' package (hv,RN)
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/ltablex/ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip105
+\LTright=\skip106
+\LTpre=\skip107
+\LTpost=\skip108
+\LTchunksize=\count488
+\LTcapwidth=\dimen329
+\LT@head=\box83
+\LT@firsthead=\box84
+\LT@foot=\box85
+\LT@lastfoot=\box86
+\LT@gbox=\box87
+\LT@cols=\count489
+\LT@rows=\count490
+\c@LT@tables=\count491
+\c@LT@chunks=\count492
+\LT@p@ftn=\toks60
+)))
    defining Unicode char U+03B2 (decimal 946)
-\c@theorem=\count488
+\c@theorem=\count493
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
@@ -1204,11 +1246,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count489
+\c@section@level=\count494
 )
-\@linkdim=\dimen329
-\Hy@linkcounter=\count490
-\Hy@pagecounter=\count491
+\@linkdim=\dimen330
+\Hy@linkcounter=\count495
+\Hy@pagecounter=\count496
  (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -1217,7 +1259,7 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count492
+\Hy@SavedSpaceFactor=\count497
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
@@ -1231,9 +1273,9 @@ Package hyperref Info: Plain pages OFF on input line 4194.
 Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4446.
-\c@Hy@tempcnt=\count493
+\c@Hy@tempcnt=\count498
 LaTeX Info: Redefining \url on input line 4784.
-\XeTeXLinkMargin=\dimen330
+\XeTeXLinkMargin=\dimen331
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1242,9 +1284,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count494
-\Field@Width=\dimen331
-\Fld@charsize=\dimen332
+\Fld@menulength=\count499
+\Field@Width=\dimen332
+\Fld@charsize=\dimen333
 Package hyperref Info: Hyper figures OFF on input line 6063.
 Package hyperref Info: Link nesting OFF on input line 6068.
 Package hyperref Info: Hyper index ON on input line 6071.
@@ -1257,9 +1299,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6093.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count495
-\c@Item=\count496
-\c@Hfootnote=\count497
+\Hy@abspage=\count500
+\c@Item=\count501
+\c@Hfootnote=\count502
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -1271,8 +1313,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count498
-\c@bookmark@seq@number=\count499
+\Fld@listcount=\count503
+\c@bookmark@seq@number=\count504
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -1283,49 +1325,49 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip105
+\Hy@SectionHShift=\skip109
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count500
-\@quotereset=\count501
+\@quotelevel=\count505
+\@quotereset=\count506
 (./Main.aux)
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 104.
-LaTeX Font Info:    ... okay on input line 104.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 108.
+LaTeX Font Info:    ... okay on input line 108.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count502
-\scratchdimen=\dimen333
-\scratchbox=\box83
-\nofMPsegments=\count503
-\nofMParguments=\count504
-\everyMPshowfont=\toks60
-\MPscratchCnt=\count505
-\MPscratchDim=\dimen334
-\MPnumerator=\count506
-\makeMPintoPDFobject=\count507
-\everyMPtoPDFconversion=\toks61
+\scratchcounter=\count507
+\scratchdimen=\dimen334
+\scratchbox=\box88
+\nofMPsegments=\count508
+\nofMParguments=\count509
+\everyMPshowfont=\toks61
+\MPscratchCnt=\count510
+\MPscratchDim=\dimen335
+\MPnumerator=\count511
+\makeMPintoPDFobject=\count512
+\everyMPtoPDFconversion=\toks62
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1383,8 +1425,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Main.bbl' found.
 
 (./Main.bbl)
-Package biblatex Info: Reference section=0 on input line 104.
-Package biblatex Info: Reference segment=0 on input line 104.
+Package biblatex Info: Reference section=0 on input line 108.
+Package biblatex Info: Reference segment=0 on input line 108.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-d
 ictionary-english.trsl
@@ -1392,17 +1434,22 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 104.
-\c@lstlisting=\count508
+or `english'. on input line 108.
+\c@lstlisting=\count513
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
 Package caption Info: End \AtBeginDocument code.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 104.
+ on input line 108.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1417,18 +1464,18 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 
-Package chemgreek Info: Activating mapping `default' on line 104.
+Package chemgreek Info: Activating mapping `default' on line 108.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen335
-\pgfarrowlength=\dimen336
-\pgfarrowwidth=\dimen337
-\pgfarrowlinewidth=\dimen338
+\pgfarrowinset=\dimen336
+\pgfarrowlength=\dimen337
+\pgfarrowwidth=\dimen338
+\pgfarrowlinewidth=\dimen339
 )
-Package hyperref Info: Link coloring OFF on input line 104.
+Package hyperref Info: Link coloring OFF on input line 108.
  (./Main.out) (./Main.out)
 \@outlinefile=\write5
 \openout5 = `Main.out'.
@@ -1444,24 +1491,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.130 I
+l.134 I
         would first and foremost like to thank Dr. Professor Kelly Thayer, f...
 [1
 
 ]
-Underfull \hbox (badness 1406) in paragraph at lines 132--133
+Underfull \hbox (badness 1406) in paragraph at lines 136--137
 \OT1/cmr/m/n/12 and guid-ance over the years as I branch out from com-pu-ta-tio
 nal to
  []
 
 [2] [3]
 Chapter II.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 143
+LaTeX Font Info:    Trying to load font information for U+msa on input line 147
 .
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 143
+LaTeX Font Info:    Trying to load font information for U+msb on input line 147
 .
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1511,7 +1558,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.171 \chapter{Introduction}
+l.175 \chapter{Introduction}
                             
 Chapter 1.
 (./Introduction.tex
@@ -1527,7 +1574,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{chapter.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.177 \chapter{Background}
+l.181 \chapter{Background}
                           
 Chapter 2.
 (./Background.tex
@@ -1539,13 +1586,13 @@ f In-te-gra-tive
 [5
 
 ]
-<../Images/AtomDiagram.jpg, id=796, 1606.0pt x 1055.945pt>
+<../Images/AtomDiagram.jpg, id=806, 1606.0pt x 1055.945pt>
 File: ../Images/AtomDiagram.jpg Graphic file (type jpg)
 <use ../Images/AtomDiagram.jpg>
 Package pdftex.def Info: ../Images/AtomDiagram.jpg  used on input line 91.
 (pdftex.def)             Requested size: 317.98921pt x 209.07452pt.
  [6] [7 <../Images/AtomDiagram.jpg>]
-<../Images/bonding-sodium-chloride-atom-one-chlorine-electrons.jpg, id=815, 160
+<../Images/bonding-sodium-chloride-atom-one-chlorine-electrons.jpg, id=825, 160
 6.0pt x 1362.08875pt>
 File: ../Images/bonding-sodium-chloride-atom-one-chlorine-electrons.jpg Graphic
  file (type jpg)
@@ -1573,7 +1620,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--116
 \OT1/cmr/m/it/10.95 Prop-er-ties, Ex-am-ples, & Facts |
  []
 
-<../Images/atoms-bond-bonds-electrons-hydrogen-oxygen-atom.jpg, id=820, 1606.0p
+<../Images/atoms-bond-bonds-electrons-hydrogen-oxygen-atom.jpg, id=830, 1606.0p
 t x 1072.005pt>
 File: ../Images/atoms-bond-bonds-electrons-hydrogen-oxygen-atom.jpg Graphic fil
 e (type jpg)
@@ -1604,7 +1651,7 @@ e same
 
 [8] [9 <../Images/bonding-sodium-chloride-atom-one-chlorine-electrons.jpg> <../
 Images/atoms-bond-bonds-electrons-hydrogen-oxygen-atom.jpg>] [10] [11]
-<../Images/Hydrogen-fluoride-elpot-transparent-3D-balls.png, id=859, 1104.125pt
+<../Images/Hydrogen-fluoride-elpot-transparent-3D-balls.png, id=869, 1104.125pt
  x 886.31125pt>
 File: ../Images/Hydrogen-fluoride-elpot-transparent-3D-balls.png Graphic file (
 type png)
@@ -1613,7 +1660,7 @@ Package pdftex.def Info: ../Images/Hydrogen-fluoride-elpot-transparent-3D-balls
 .png  used on input line 162.
 (pdftex.def)             Requested size: 238.49342pt x 191.44579pt.
  [12]
-<../Images/Hydrogen-bonding-in-water-2D.png, id=872, 1104.125pt x 673.51625pt>
+<../Images/Hydrogen-bonding-in-water-2D.png, id=882, 1104.125pt x 673.51625pt>
 File: ../Images/Hydrogen-bonding-in-water-2D.png Graphic file (type png)
 <use ../Images/Hydrogen-bonding-in-water-2D.png>
 Package pdftex.def Info: ../Images/Hydrogen-bonding-in-water-2D.png  used on in
@@ -1621,26 +1668,26 @@ put line 175.
 (pdftex.def)             Requested size: 238.49342pt x 145.48145pt.
 
 [13 <../Images/Hydrogen-fluoride-elpot-transparent-3D-balls.png>]
-<../Images/waals.jpg, id=885, 224.037pt x 115.632pt>
+<../Images/waals.jpg, id=895, 224.037pt x 115.632pt>
 File: ../Images/waals.jpg Graphic file (type jpg)
 <use ../Images/waals.jpg>
 Package pdftex.def Info: ../Images/waals.jpg  used on input line 188.
 (pdftex.def)             Requested size: 317.98921pt x 164.12624pt.
  [14 <../Images/Hydrogen-bonding-in-water-2D.png>]
-<../Images/Protein-Structure-1.png, id=900, 1204.5pt x 1703.36375pt>
+<../Images/Protein-Structure-1.png, id=910, 1204.5pt x 1703.36375pt>
 File: ../Images/Protein-Structure-1.png Graphic file (type png)
 <use ../Images/Protein-Structure-1.png>
 Package pdftex.def Info: ../Images/Protein-Structure-1.png  used on input line 
 205.
 (pdftex.def)             Requested size: 317.98921pt x 449.69981pt.
  [15 <../Images/waals.jpg>] [16 <../Images/Protein-Structure-1.png>]
-<../Images/Amino-Acid-Structure-1.png, id=920, 1204.5pt x 752.8125pt>
+<../Images/Amino-Acid-Structure-1.png, id=930, 1204.5pt x 752.8125pt>
 File: ../Images/Amino-Acid-Structure-1.png Graphic file (type png)
 <use ../Images/Amino-Acid-Structure-1.png>
 Package pdftex.def Info: ../Images/Amino-Acid-Structure-1.png  used on input li
 ne 216.
 (pdftex.def)             Requested size: 238.49342pt x 149.05504pt.
-<../Images/ProteinogenicAminoAcids.svg.png, id=925, 3854.4pt x 3082.51625pt>
+<../Images/ProteinogenicAminoAcids.svg.png, id=935, 3854.4pt x 3082.51625pt>
 File: ../Images/ProteinogenicAminoAcids.svg.png Graphic file (type png)
 <use ../Images/ProteinogenicAminoAcids.svg.png>
 Package pdftex.def Info: ../Images/ProteinogenicAminoAcids.svg.png  used on inp
@@ -1648,12 +1695,12 @@ ut line 223.
 (pdftex.def)             Requested size: 397.485pt x 317.8649pt.
  [17] [18 <../Images/Amino-Acid-Structure-1.png> <../Images/ProteinogenicAminoA
 cids.svg.png>]
-<../Images/DihedralPlanes.png, id=950, 1120.185pt x 698.61pt>
+<../Images/DihedralPlanes.png, id=960, 1120.185pt x 698.61pt>
 File: ../Images/DihedralPlanes.png Graphic file (type png)
 <use ../Images/DihedralPlanes.png>
 Package pdftex.def Info: ../Images/DihedralPlanes.png  used on input line 245.
 (pdftex.def)             Requested size: 185.03073pt x 115.39359pt.
-<../Images/Ramachandran_plot_general_100K.jpg, id=953, 373.81035pt x 333.93724p
+<../Images/Ramachandran_plot_general_100K.jpg, id=963, 373.81035pt x 333.93724p
 t>
 File: ../Images/Ramachandran_plot_general_100K.jpg Graphic file (type jpg)
 <use ../Images/Ramachandran_plot_general_100K.jpg>
@@ -1662,7 +1709,7 @@ input line 251.
 (pdftex.def)             Requested size: 185.03073pt x 165.29689pt.
  [19] [20 <../Images/DihedralPlanes.png> <../Images/Ramachandran_plot_general_1
 00K.jpg>]
-<../Images/Secondary-Structure-of-Protein.png, id=976, 602.25pt x 635.37375pt>
+<../Images/Secondary-Structure-of-Protein.png, id=987, 602.25pt x 635.37375pt>
 File: ../Images/Secondary-Structure-of-Protein.png Graphic file (type png)
 <use ../Images/Secondary-Structure-of-Protein.png>
 Package pdftex.def Info: ../Images/Secondary-Structure-of-Protein.png  used on 
@@ -1673,14 +1720,14 @@ input line 269.
 LaTeX Warning: Command \r invalid in math mode on input line 276.
 
 [21]
-<../Images/TertiaryStructure.jpg, id=987, 341.45544pt x 193.05835pt>
+<../Images/TertiaryStructure.jpg, id=997, 341.45544pt x 193.05835pt>
 File: ../Images/TertiaryStructure.jpg Graphic file (type jpg)
 <use ../Images/TertiaryStructure.jpg>
 Package pdftex.def Info: ../Images/TertiaryStructure.jpg  used on input line 28
 4.
 (pdftex.def)             Requested size: 317.98921pt x 179.79868pt.
  [22 <../Images/Secondary-Structure-of-Protein.png>] [23]
-<../Images/QuaternaryStructure.jpg, id=1011, 241.81541pt x 229.24043pt>
+<../Images/QuaternaryStructure.jpg, id=1021, 241.81541pt x 229.24043pt>
 File: ../Images/QuaternaryStructure.jpg Graphic file (type jpg)
 <use ../Images/QuaternaryStructure.jpg>
 Package pdftex.def Info: ../Images/QuaternaryStructure.jpg  used on input line 
@@ -1695,7 +1742,7 @@ d-ing by
 
 [28]
 <../Images/Energy-landscape-of-protein-folding-and-misfolding-From-the-unfolded
--state-toward-the.png, id=1040, 626.34pt x 583.17876pt>
+-state-toward-the.png, id=1050, 626.34pt x 583.17876pt>
 File: ../Images/Energy-landscape-of-protein-folding-and-misfolding-From-the-unf
 olded-state-toward-the.png Graphic file (type png)
 <use ../Images/Energy-landscape-of-protein-folding-and-misfolding-From-the-unfo
@@ -1711,7 +1758,7 @@ ac-te-rial pro-moter
  []
 
 [31] [32]
-<../Images/p53_Y220C_PK11000_Hero3.dat.png, id=1105, 1109.5854pt x 1133.6754pt>
+<../Images/p53_Y220C_PK11000_Hero3.dat.png, id=1115, 1109.5854pt x 1133.6754pt>
 
 File: ../Images/p53_Y220C_PK11000_Hero3.dat.png Graphic file (type png)
 <use ../Images/p53_Y220C_PK11000_Hero3.dat.png>
@@ -1719,7 +1766,7 @@ Package pdftex.def Info: ../Images/p53_Y220C_PK11000_Hero3.dat.png  used on inp
 ut line 414.
 (pdftex.def)             Requested size: 357.73407pt x 365.4994pt.
  [33] [34 <../Images/p53_Y220C_PK11000_Hero3.dat.png>]
-<../Images/p53_domains.png, id=1142, 110.51288pt x 34.02713pt>
+<../Images/p53_domains.png, id=1152, 110.51288pt x 34.02713pt>
 File: ../Images/p53_domains.png Graphic file (type png)
 <use ../Images/p53_domains.png>
 Package pdftex.def Info: ../Images/p53_domains.png  used on input line 425.
@@ -1737,17 +1784,17 @@ Underfull \hbox (badness 1331) in paragraph at lines 434--435
  []
 
 [35 <../Images/p53_domains.png>] [36]
-<../Images/p53-DBD-DNA.png, id=1195, 258.0039pt x 182.8431pt>
+<../Images/p53-DBD-DNA.png, id=1205, 258.0039pt x 182.8431pt>
 File: ../Images/p53-DBD-DNA.png Graphic file (type png)
 <use ../Images/p53-DBD-DNA.png>
 Package pdftex.def Info: ../Images/p53-DBD-DNA.png  used on input line 451.
 (pdftex.def)             Requested size: 185.03073pt x 131.12798pt.
-<../Images/p53_DBD_struct.png, id=1196, 301.00455pt x 207.77625pt>
+<../Images/p53_DBD_struct.png, id=1206, 301.00455pt x 207.77625pt>
 File: ../Images/p53_DBD_struct.png Graphic file (type png)
 <use ../Images/p53_DBD_struct.png>
 Package pdftex.def Info: ../Images/p53_DBD_struct.png  used on input line 457.
 (pdftex.def)             Requested size: 185.03073pt x 127.72296pt.
-<../Images/p53-dbd-hbonds.png, id=1199, 1809.76125pt x 1401.235pt>
+<../Images/p53-dbd-hbonds.png, id=1209, 1809.76125pt x 1401.235pt>
 File: ../Images/p53-dbd-hbonds.png Graphic file (type png)
 <use ../Images/p53-dbd-hbonds.png>
 Package pdftex.def Info: ../Images/p53-dbd-hbonds.png  used on input line 467.
@@ -1762,7 +1809,7 @@ LaTeX Warning: Command \r invalid in math mode on input line 496.
 
 [41]
 <../Images/sualization-of-the-p53-signaling-network-modified-from-the-KEGG-path
-way-Included-in-this.png, id=1270, 853.1875pt x 640.3925pt>
+way-Included-in-this.png, id=1280, 853.1875pt x 640.3925pt>
 File: ../Images/sualization-of-the-p53-signaling-network-modified-from-the-KEGG
 -pathway-Included-in-this.png Graphic file (type png)
 <use ../Images/sualization-of-the-p53-signaling-network-modified-from-the-KEGG-
@@ -1778,7 +1825,7 @@ Underfull \hbox (badness 1112) in paragraph at lines 509--511
 
 [42] [43 <../Images/sualization-of-the-p53-signaling-network-modified-from-the-
 KEGG-pathway-Included-in-this.png>] [44] [45]
-<../Images/p53_Mutation_Frequency.png, id=1359, 586.3506pt x 369.5406pt>
+<../Images/p53_Mutation_Frequency.png, id=1369, 586.3506pt x 369.5406pt>
 File: ../Images/p53_Mutation_Frequency.png Graphic file (type png)
 <use ../Images/p53_Mutation_Frequency.png>
 Package pdftex.def Info: ../Images/p53_Mutation_Frequency.png  used on input li
@@ -1791,7 +1838,7 @@ n can-cers
  []
 
 [47 <../Images/p53_Mutation_Frequency.png>] [48]
-<../Images/p53_isoforms.jpg, id=1422, 263.3037pt x 308.352pt>
+<../Images/p53_isoforms.jpg, id=1432, 263.3037pt x 308.352pt>
 File: ../Images/p53_isoforms.jpg Graphic file (type jpg)
 <use ../Images/p53_isoforms.jpg>
 Package pdftex.def Info: ../Images/p53_isoforms.jpg  used on input line 571.
@@ -1904,35 +1951,35 @@ Overfull \hbox (0.10887pt too wide) in paragraph at lines 109--109
  []
 
 [65] [66] [67]
-<../Images/HelicoidalParameters/x3dna-shear.png, id=1555, 183.68625pt x 141.528
+<../Images/HelicoidalParameters/x3dna-shear.png, id=1565, 183.68625pt x 141.528
 75pt>
 File: ../Images/HelicoidalParameters/x3dna-shear.png Graphic file (type png)
 <use ../Images/HelicoidalParameters/x3dna-shear.png>
 Package pdftex.def Info: ../Images/HelicoidalParameters/x3dna-shear.png  used o
 n input line 154.
 (pdftex.def)             Requested size: 127.1981pt x 98.00694pt.
-<../Images/HelicoidalParameters/x3dna-stretch.png, id=1556, 183.68625pt x 141.5
+<../Images/HelicoidalParameters/x3dna-stretch.png, id=1566, 183.68625pt x 141.5
 2875pt>
 File: ../Images/HelicoidalParameters/x3dna-stretch.png Graphic file (type png)
 <use ../Images/HelicoidalParameters/x3dna-stretch.png>
 Package pdftex.def Info: ../Images/HelicoidalParameters/x3dna-stretch.png  used
  on input line 161.
 (pdftex.def)             Requested size: 127.1981pt x 98.00694pt.
-<../Images/HelicoidalParameters/x3dna-stagger.png, id=1557, 183.68625pt x 141.5
+<../Images/HelicoidalParameters/x3dna-stagger.png, id=1567, 183.68625pt x 141.5
 2875pt>
 File: ../Images/HelicoidalParameters/x3dna-stagger.png Graphic file (type png)
 <use ../Images/HelicoidalParameters/x3dna-stagger.png>
 Package pdftex.def Info: ../Images/HelicoidalParameters/x3dna-stagger.png  used
  on input line 168.
 (pdftex.def)             Requested size: 127.1981pt x 98.00694pt.
-<../Images/HelicoidalParameters/x3dna-buckle.png, id=1558, 183.68625pt x 141.52
+<../Images/HelicoidalParameters/x3dna-buckle.png, id=1568, 183.68625pt x 141.52
 875pt>
 File: ../Images/HelicoidalParameters/x3dna-buckle.png Graphic file (type png)
 <use ../Images/HelicoidalParameters/x3dna-buckle.png>
 Package pdftex.def Info: ../Images/HelicoidalParameters/x3dna-buckle.png  used 
 on input line 190.
 (pdftex.def)             Requested size: 127.1981pt x 98.00694pt.
-<../Images/HelicoidalParameters/x3dna-propeller.png, id=1559, 183.68625pt x 141
+<../Images/HelicoidalParameters/x3dna-propeller.png, id=1569, 183.68625pt x 141
 .52875pt>
 File: ../Images/HelicoidalParameters/x3dna-propeller.png Graphic file (type png
 )
@@ -1940,28 +1987,28 @@ File: ../Images/HelicoidalParameters/x3dna-propeller.png Graphic file (type png
 Package pdftex.def Info: ../Images/HelicoidalParameters/x3dna-propeller.png  us
 ed on input line 190.
 (pdftex.def)             Requested size: 127.1981pt x 98.00694pt.
-<../Images/HelicoidalParameters/x3dna-rise.png, id=1560, 183.68625pt x 141.5287
+<../Images/HelicoidalParameters/x3dna-rise.png, id=1570, 183.68625pt x 141.5287
 5pt>
 File: ../Images/HelicoidalParameters/x3dna-rise.png Graphic file (type png)
 <use ../Images/HelicoidalParameters/x3dna-rise.png>
 Package pdftex.def Info: ../Images/HelicoidalParameters/x3dna-rise.png  used on
  input line 196.
 (pdftex.def)             Requested size: 127.1981pt x 98.00694pt.
-<../Images/HelicoidalParameters/x3dna-twist.png, id=1561, 183.68625pt x 141.528
+<../Images/HelicoidalParameters/x3dna-twist.png, id=1571, 183.68625pt x 141.528
 75pt>
 File: ../Images/HelicoidalParameters/x3dna-twist.png Graphic file (type png)
 <use ../Images/HelicoidalParameters/x3dna-twist.png>
 Package pdftex.def Info: ../Images/HelicoidalParameters/x3dna-twist.png  used o
 n input line 203.
 (pdftex.def)             Requested size: 127.1981pt x 98.00694pt.
-<../Images/HelicoidalParameters/x3dna-roll.png, id=1562, 183.68625pt x 141.5287
+<../Images/HelicoidalParameters/x3dna-roll.png, id=1572, 183.68625pt x 141.5287
 5pt>
 File: ../Images/HelicoidalParameters/x3dna-roll.png Graphic file (type png)
 <use ../Images/HelicoidalParameters/x3dna-roll.png>
 Package pdftex.def Info: ../Images/HelicoidalParameters/x3dna-roll.png  used on
  input line 210.
 (pdftex.def)             Requested size: 127.1981pt x 98.00694pt.
-<../Images/HelicoidalParameters/x3dna-inclination.png, id=1563, 183.68625pt x 1
+<../Images/HelicoidalParameters/x3dna-inclination.png, id=1573, 183.68625pt x 1
 41.52875pt>
 File: ../Images/HelicoidalParameters/x3dna-inclination.png Graphic file (type p
 ng)
@@ -1969,7 +2016,7 @@ ng)
 Package pdftex.def Info: ../Images/HelicoidalParameters/x3dna-inclination.png  
 used on input line 231.
 (pdftex.def)             Requested size: 127.1981pt x 98.00694pt.
-<../Images/HelicoidalParameters/x3dna-tip.png, id=1564, 183.68625pt x 141.52875
+<../Images/HelicoidalParameters/x3dna-tip.png, id=1574, 183.68625pt x 141.52875
 pt>
 File: ../Images/HelicoidalParameters/x3dna-tip.png Graphic file (type png)
 <use ../Images/HelicoidalParameters/x3dna-tip.png>
@@ -1983,13 +2030,13 @@ eters/x3dna-propeller.png> <../Images/HelicoidalParameters/x3dna-rise.png> <../
 Images/HelicoidalParameters/x3dna-twist.png> <../Images/HelicoidalParameters/x3
 dna-roll.png> <../Images/HelicoidalParameters/x3dna-inclination.png> <../Images
 /HelicoidalParameters/x3dna-tip.png>] [70] [71]
-<../Images/Bridges_of_Konigsberg.png, id=1616, 453.8556pt x 315.8199pt>
+<../Images/Bridges_of_Konigsberg.png, id=1626, 453.8556pt x 315.8199pt>
 File: ../Images/Bridges_of_Konigsberg.png Graphic file (type png)
 <use ../Images/Bridges_of_Konigsberg.png>
 Package pdftex.def Info: ../Images/Bridges_of_Konigsberg.png  used on input lin
 e 286.
 (pdftex.def)             Requested size: 317.98921pt x 221.27963pt.
-<../Images/graph.png, id=1619, 342.27875pt x 481.8pt>
+<../Images/graph.png, id=1629, 342.27875pt x 481.8pt>
 File: ../Images/graph.png Graphic file (type png)
 <use ../Images/graph.png>
 Package pdftex.def Info: ../Images/graph.png  used on input line 293.
@@ -2058,7 +2105,7 @@ lat-ing many
 [91
 
 ] [92]
-<../Images/Isoforms/p53_Isoforms_FL_RMSD_vs_Time.png, id=1772, 731.01105pt x 60
+<../Images/Isoforms/p53_Isoforms_FL_RMSD_vs_Time.png, id=1782, 731.01105pt x 60
 6.88733pt>
 File: ../Images/Isoforms/p53_Isoforms_FL_RMSD_vs_Time.png Graphic file (type pn
 g)
@@ -2080,7 +2127,7 @@ LaTeX Warning: Command \r invalid in math mode on input line 34.
 
 LaTeX Warning: Command \r invalid in math mode on input line 34.
 
-<../Images/Isoforms/p53_Isoforms_RMSD_Violin.png, id=1784, 586.3506pt x 730.890
+<../Images/Isoforms/p53_Isoforms_RMSD_Violin.png, id=1794, 586.3506pt x 730.890
 6pt>
 File: ../Images/Isoforms/p53_Isoforms_RMSD_Violin.png Graphic file (type png)
 <use ../Images/Isoforms/p53_Isoforms_RMSD_Violin.png>
@@ -2088,7 +2135,7 @@ Package pdftex.def Info: ../Images/Isoforms/p53_Isoforms_RMSD_Violin.png  used
 on input line 40.
 (pdftex.def)             Requested size: 397.485pt x 495.47115pt.
 [95] [96 <../Images/Isoforms/p53_Isoforms_RMSD_Violin.png>]
-<../Images/Isoforms/p53_Isoforms_RMSD_Diff.png, id=1797, 441.93105pt x 369.6610
+<../Images/Isoforms/p53_Isoforms_RMSD_Diff.png, id=1807, 441.93105pt x 369.6610
 6pt>
 File: ../Images/Isoforms/p53_Isoforms_RMSD_Diff.png Graphic file (type png)
 <use ../Images/Isoforms/p53_Isoforms_RMSD_Diff.png>
@@ -2096,7 +2143,7 @@ Package pdftex.def Info: ../Images/Isoforms/p53_Isoforms_RMSD_Diff.png  used on
  input line 51.
 (pdftex.def)             Requested size: 311.02869pt x 260.16803pt.
  [97] [98 <../Images/Isoforms/p53_Isoforms_RMSD_Diff.png>]
-<../Images/Isoforms/p53_RMSD_RescueScore.png, id=1810, 441.0879pt x 369.5406pt>
+<../Images/Isoforms/p53_RMSD_RescueScore.png, id=1821, 441.0879pt x 369.5406pt>
 
 File: ../Images/Isoforms/p53_RMSD_RescueScore.png Graphic file (type png)
 <use ../Images/Isoforms/p53_RMSD_RescueScore.png>
@@ -2104,7 +2151,7 @@ Package pdftex.def Info: ../Images/Isoforms/p53_RMSD_RescueScore.png  used on i
 nput line 66.
 (pdftex.def)             Requested size: 310.54298pt x 260.16803pt.
  [99] [100 <../Images/Isoforms/p53_RMSD_RescueScore.png>]
-<../Images/Isoforms/p53_Isoforms_Growing_RMSD.png, id=1823, 586.47105pt x 751.4
+<../Images/Isoforms/p53_Isoforms_Growing_RMSD.png, id=1833, 586.47105pt x 751.4
 2732pt>
 File: ../Images/Isoforms/p53_Isoforms_Growing_RMSD.png Graphic file (type png)
 <use ../Images/Isoforms/p53_Isoforms_Growing_RMSD.png>
@@ -2119,7 +2166,7 @@ LaTeX Warning: Command \r invalid in math mode on input line 88.
 LaTeX Warning: Command \r invalid in math mode on input line 88.
 
 [101] [102 <../Images/Isoforms/p53_Isoforms_Growing_RMSD.png>]
-<../Images/Isoforms/p53_Isoforms_RoG_Violin.png, id=1836, 586.3506pt x 730.8906
+<../Images/Isoforms/p53_Isoforms_RoG_Violin.png, id=1846, 586.3506pt x 730.8906
 pt>
 File: ../Images/Isoforms/p53_Isoforms_RoG_Violin.png Graphic file (type png)
 <use ../Images/Isoforms/p53_Isoforms_RoG_Violin.png>
@@ -2127,13 +2174,13 @@ Package pdftex.def Info: ../Images/Isoforms/p53_Isoforms_RoG_Violin.png  used o
 n input line 98.
 (pdftex.def)             Requested size: 397.485pt x 495.47115pt.
  [103] [104 <../Images/Isoforms/p53_Isoforms_RoG_Violin.png>]
-<../Images/Isoforms/p53_Isoforms_RMSF.png, id=1848, 586.47105pt x 390.07733pt>
+<../Images/Isoforms/p53_Isoforms_RMSF.png, id=1858, 586.47105pt x 390.07733pt>
 File: ../Images/Isoforms/p53_Isoforms_RMSF.png Graphic file (type png)
 <use ../Images/Isoforms/p53_Isoforms_RMSF.png>
 Package pdftex.def Info: ../Images/Isoforms/p53_Isoforms_RMSF.png  used on inpu
 t line 111.
 (pdftex.def)             Requested size: 377.60953pt x 251.15453pt.
-<../Images/Isoforms/p53_Isoforms_RMSF_Diff.png, id=1849, 585.387pt x 514.20105p
+<../Images/Isoforms/p53_Isoforms_RMSF_Diff.png, id=1859, 585.387pt x 514.20105p
 t>
 File: ../Images/Isoforms/p53_Isoforms_RMSF_Diff.png Graphic file (type png)
 <use ../Images/Isoforms/p53_Isoforms_RMSF_Diff.png>
@@ -2143,7 +2190,7 @@ Package pdftex.def Info: ../Images/Isoforms/p53_Isoforms_RMSF_Diff.png  used on
  [105] [106 <../Images/Isoforms/p53_Isoforms_RMSF.png>] [107 <../Images/Isoform
 s/p53_Isoforms_RMSF_Diff.png>]
 [108]
-<../Images/Isoforms/p53_Isoforms_RMSF_RescueScore.png, id=1873, 585.387pt x 369
+<../Images/Isoforms/p53_Isoforms_RMSF_RescueScore.png, id=1883, 585.387pt x 369
 .66106pt>
 File: ../Images/Isoforms/p53_Isoforms_RMSF_RescueScore.png Graphic file (type p
 ng)
@@ -2152,7 +2199,7 @@ Package pdftex.def Info: ../Images/Isoforms/p53_Isoforms_RMSF_RescueScore.png
 used on input line 133.
 (pdftex.def)             Requested size: 377.60953pt x 238.45494pt.
  [109]
-<../Images/Isoforms/p53_Isoforms_HBonding_Metrics.png, id=1880, 586.29037pt x 5
+<../Images/Isoforms/p53_Isoforms_HBonding_Metrics.png, id=1890, 586.29037pt x 5
 14.20105pt>
 File: ../Images/Isoforms/p53_Isoforms_HBonding_Metrics.png Graphic file (type p
 ng)
@@ -2162,7 +2209,7 @@ used on input line 144.
 (pdftex.def)             Requested size: 397.485pt x 348.60855pt.
  [110 <../Images/Isoforms/p53_Isoforms_RMSF_RescueScore.png>]
 [111 <../Images/Isoforms/p53_Isoforms_HBonding_Metrics.png>]
-<../Images/Isoforms/p53_Isoforms_HBonding_Metrics_Diff.png, id=1893, 541.12163p
+<../Images/Isoforms/p53_Isoforms_HBonding_Metrics_Diff.png, id=1903, 541.12163p
 t x 514.20105pt>
 File: ../Images/Isoforms/p53_Isoforms_HBonding_Metrics_Diff.png Graphic file (t
 ype png)
@@ -2170,7 +2217,7 @@ ype png)
 Package pdftex.def Info: ../Images/Isoforms/p53_Isoforms_HBonding_Metrics_Diff.
 png  used on input line 161.
 (pdftex.def)             Requested size: 397.485pt x 377.7253pt.
-<../Images/Isoforms/p53_Isoforms_HBonding_Metrics_RescueScore.png, id=1898, 585
+<../Images/Isoforms/p53_Isoforms_HBonding_Metrics_RescueScore.png, id=1908, 585
 .74835pt x 514.20105pt>
 File: ../Images/Isoforms/p53_Isoforms_HBonding_Metrics_RescueScore.png Graphic 
 file (type png)
@@ -2185,7 +2232,7 @@ Chapter 5.
 (./Results_ResponseElements.tex [119
 
 ]
-<../Images/Promoters/DNA_RMSD_compare_p53.png, id=1951, 586.3506pt x 534.798pt>
+<../Images/Promoters/DNA_RMSD_compare_p53.png, id=1961, 586.3506pt x 534.798pt>
 
 File: ../Images/Promoters/DNA_RMSD_compare_p53.png Graphic file (type png)
 <use ../Images/Promoters/DNA_RMSD_compare_p53.png>
@@ -2193,7 +2240,7 @@ Package pdftex.def Info: ../Images/Promoters/DNA_RMSD_compare_p53.png  used on
 input line 22.
 (pdftex.def)             Requested size: 397.485pt x 362.53986pt.
  [120]
-<../Images/Promoters/DNA_Bend_compare_p53.png, id=1962, 586.3506pt x 534.798pt>
+<../Images/Promoters/DNA_Bend_compare_p53.png, id=1972, 586.3506pt x 534.798pt>
 
 File: ../Images/Promoters/DNA_Bend_compare_p53.png Graphic file (type png)
 <use ../Images/Promoters/DNA_Bend_compare_p53.png>
@@ -2202,7 +2249,7 @@ input line 31.
 (pdftex.def)             Requested size: 397.485pt x 362.53986pt.
  [121] [122 <../Images/Promoters/DNA_RMSD_compare_p53.png>] [123 <../Images/Pro
 moters/DNA_Bend_compare_p53.png>]
-<../Images/Promoters/DNA_end_to_end_compare_p53.png, id=1979, 586.3506pt x 534.
+<../Images/Promoters/DNA_end_to_end_compare_p53.png, id=1989, 586.3506pt x 534.
 798pt>
 File: ../Images/Promoters/DNA_end_to_end_compare_p53.png Graphic file (type png
 )
@@ -2217,7 +2264,7 @@ LaTeX Warning: Command \r invalid in math mode on input line 45.
 
 LaTeX Warning: Command \r invalid in math mode on input line 45.
 
-<../Images/Promoters/p53_RE_RMSF_Heatmap_compare.png, id=1982, 730.8906pt x 109
+<../Images/Promoters/p53_RE_RMSF_Heatmap_compare.png, id=1992, 730.8906pt x 109
 2.2406pt>
 File: ../Images/Promoters/p53_RE_RMSF_Heatmap_compare.png Graphic file (type pn
 g)
@@ -2230,7 +2277,7 @@ LaTeX Warning: Float too large for page by 26.07101pt on input line 54.
 
 [124] [125 <../Images/Promoters/DNA_end_to_end_compare_p53.png>] [126 <../Image
 s/Promoters/p53_RE_RMSF_Heatmap_compare.png>]
-<../Images/Promoters/DNA_DNA_HBonds.png, id=2000, 803.1606pt x 462.528pt>
+<../Images/Promoters/DNA_DNA_HBonds.png, id=2010, 803.1606pt x 462.528pt>
 File: ../Images/Promoters/DNA_DNA_HBonds.png Graphic file (type png)
 <use ../Images/Promoters/DNA_DNA_HBonds.png>
 Package pdftex.def Info: ../Images/Promoters/DNA_DNA_HBonds.png  used on input 
@@ -2243,7 +2290,7 @@ f unique
  []
 
 [129]
-<../Images/Promoters/p53_RMSD.png, id=2019, 470.7186pt x 375.804pt>
+<../Images/Promoters/p53_RMSD.png, id=2029, 470.7186pt x 375.804pt>
 File: ../Images/Promoters/p53_RMSD.png Graphic file (type png)
 <use ../Images/Promoters/p53_RMSD.png>
 Package pdftex.def Info: ../Images/Promoters/p53_RMSD.png  used on input line 7
@@ -2265,7 +2312,7 @@ LaTeX Warning: Command \r invalid in math mode on input line 80.
 
 LaTeX Warning: Command \r invalid in math mode on input line 80.
 
-<../Images/Promoters/p53_RMSF_Heatmap.png, id=2022, 731.01105pt x 514.02037pt>
+<../Images/Promoters/p53_RMSF_Heatmap.png, id=2032, 731.01105pt x 514.02037pt>
 File: ../Images/Promoters/p53_RMSF_Heatmap.png Graphic file (type png)
 <use ../Images/Promoters/p53_RMSF_Heatmap.png>
 Package pdftex.def Info: ../Images/Promoters/p53_RMSF_Heatmap.png  used on inpu
@@ -2273,13 +2320,13 @@ t line 84.
 (pdftex.def)             Requested size: 397.485pt x 279.49632pt.
 [130] [131 <../Images/Promoters/p53_RMSD.png>] [132 <../Images/Promoters/p53_RM
 SF_Heatmap.png>]
-<../Images/Promoters/DNA_p53_HBonds.png, id=2038, 803.1606pt x 441.8106pt>
+<../Images/Promoters/DNA_p53_HBonds.png, id=2048, 803.1606pt x 441.8106pt>
 File: ../Images/Promoters/DNA_p53_HBonds.png Graphic file (type png)
 <use ../Images/Promoters/DNA_p53_HBonds.png>
 Package pdftex.def Info: ../Images/Promoters/DNA_p53_HBonds.png  used on input 
 line 93.
 (pdftex.def)             Requested size: 397.485pt x 218.65309pt.
-<../Images/Promoters/DNA_p53_HBonds_scatter_consensus.png, id=2043, 667.7748pt 
+<../Images/Promoters/DNA_p53_HBonds_scatter_consensus.png, id=2053, 667.7748pt 
 x 512.1534pt>
 File: ../Images/Promoters/DNA_p53_HBonds_scatter_consensus.png Graphic file (ty
 pe png)
@@ -2293,39 +2340,39 @@ Chapter 6.
 (./Results_Hotspots.tex [138
 
 ]
-<../Images/Hotspots/p53_Hotspots_RMSD_vs_Time.png, id=2090, 586.3506pt x 514.08
+<../Images/Hotspots/p53_Hotspots_RMSD_vs_Time.png, id=2100, 586.3506pt x 514.08
 06pt>
 File: ../Images/Hotspots/p53_Hotspots_RMSD_vs_Time.png Graphic file (type png)
 <use ../Images/Hotspots/p53_Hotspots_RMSD_vs_Time.png>
 Package pdftex.def Info: ../Images/Hotspots/p53_Hotspots_RMSD_vs_Time.png  used
  on input line 15.
 (pdftex.def)             Requested size: 397.485pt x 348.49553pt.
-<../Images/Hotspots/p53_Hotspots_RMSD.png, id=2091, 586.3506pt x 514.0806pt>
+<../Images/Hotspots/p53_Hotspots_RMSD.png, id=2101, 586.3506pt x 514.0806pt>
 File: ../Images/Hotspots/p53_Hotspots_RMSD.png Graphic file (type png)
 <use ../Images/Hotspots/p53_Hotspots_RMSD.png>
 Package pdftex.def Info: ../Images/Hotspots/p53_Hotspots_RMSD.png  used on inpu
 t line 22.
 (pdftex.def)             Requested size: 397.485pt x 348.49553pt.
-<../Images/Hotspots/p53_Hotspots_RoG_vs_Time.png, id=2092, 586.3506pt x 514.080
+<../Images/Hotspots/p53_Hotspots_RoG_vs_Time.png, id=2102, 586.3506pt x 514.080
 6pt>
 File: ../Images/Hotspots/p53_Hotspots_RoG_vs_Time.png Graphic file (type png)
 <use ../Images/Hotspots/p53_Hotspots_RoG_vs_Time.png>
 Package pdftex.def Info: ../Images/Hotspots/p53_Hotspots_RoG_vs_Time.png  used 
 on input line 29.
 (pdftex.def)             Requested size: 397.485pt x 348.49553pt.
-<../Images/Hotspots/p53_Hotspots_RoG.png, id=2093, 586.3506pt x 514.0806pt>
+<../Images/Hotspots/p53_Hotspots_RoG.png, id=2103, 586.3506pt x 514.0806pt>
 File: ../Images/Hotspots/p53_Hotspots_RoG.png Graphic file (type png)
 <use ../Images/Hotspots/p53_Hotspots_RoG.png>
 Package pdftex.def Info: ../Images/Hotspots/p53_Hotspots_RoG.png  used on input
  line 36.
 (pdftex.def)             Requested size: 397.485pt x 348.49553pt.
-<../Images/Hotspots/p53_Hotspots_RMSF.png, id=2094, 586.3506pt x 514.0806pt>
+<../Images/Hotspots/p53_Hotspots_RMSF.png, id=2104, 586.3506pt x 514.0806pt>
 File: ../Images/Hotspots/p53_Hotspots_RMSF.png Graphic file (type png)
 <use ../Images/Hotspots/p53_Hotspots_RMSF.png>
 Package pdftex.def Info: ../Images/Hotspots/p53_Hotspots_RMSF.png  used on inpu
 t line 43.
 (pdftex.def)             Requested size: 397.485pt x 348.49553pt.
-<../Images/Hotspots/p53_Hotspots_RMSF_RescueScore.png, id=2095, 729.4452pt x 58
+<../Images/Hotspots/p53_Hotspots_RMSF_RescueScore.png, id=2105, 729.4452pt x 58
 6.3506pt>
 File: ../Images/Hotspots/p53_Hotspots_RMSF_RescueScore.png Graphic file (type p
 ng)
@@ -2333,13 +2380,13 @@ ng)
 Package pdftex.def Info: ../Images/Hotspots/p53_Hotspots_RMSF_RescueScore.png  
 used on input line 50.
 (pdftex.def)             Requested size: 397.485pt x 319.50554pt.
-<../Images/Hotspots/p53_HBond_Metrics.png, id=2096, 730.6497pt x 369.5406pt>
+<../Images/Hotspots/p53_HBond_Metrics.png, id=2106, 730.6497pt x 369.5406pt>
 File: ../Images/Hotspots/p53_HBond_Metrics.png Graphic file (type png)
 <use ../Images/Hotspots/p53_HBond_Metrics.png>
 Package pdftex.def Info: ../Images/Hotspots/p53_HBond_Metrics.png  used on inpu
 t line 57.
 (pdftex.def)             Requested size: 397.485pt x 201.03757pt.
-<../Images/Hotspots/p53_HBond_Metrics_Rescue_Score.png, id=2097, 729.4452pt x 3
+<../Images/Hotspots/p53_HBond_Metrics_Rescue_Score.png, id=2107, 729.4452pt x 3
 69.5406pt>
 File: ../Images/Hotspots/p53_HBond_Metrics_Rescue_Score.png Graphic file (type 
 png)
@@ -2357,14 +2404,14 @@ Chapter 7.
 (./Results_Rezatapopt.tex [148
 
 ]
-<../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD.png, id=2159, 586.47105pt x 462.52
+<../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD.png, id=2169, 586.47105pt x 462.52
 8pt>
 File: ../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD.png Graphic file (type png)
 <use ../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD.png>
 Package pdftex.def Info: ../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD.png  used 
 on input line 15.
 (pdftex.def)             Requested size: 397.485pt x 313.4774pt.
-<../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSD.png, id=2160, 586.47105pt x 317.9
+<../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSD.png, id=2170, 586.47105pt x 317.9
 88pt>
 File: ../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSD.png Graphic file (type png)
 <use ../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSD.png>
@@ -2394,7 +2441,7 @@ LaTeX Warning: Command \r invalid in math mode on input line 31.
 
 LaTeX Warning: Command \r invalid in math mode on input line 31.
 
-<../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD_Violin.png, id=2180, 586.47105pt x
+<../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD_Violin.png, id=2190, 586.47105pt x
  514.20105pt>
 File: ../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD_Violin.png Graphic file (type
  png)
@@ -2406,14 +2453,14 @@ Package pdftex.def Info: ../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD_Violin.png
 LaTeX Warning: Command \r invalid in math mode on input line 40.
 
 [152] [153 <../Images/Rezatapopt/p53_FL_Rezatapopt_RMSD_Violin.png>]
-<../Images/Rezatapopt/p53_FL_Rezatapopt_RoG.png, id=2192, 586.47105pt x 462.528
+<../Images/Rezatapopt/p53_FL_Rezatapopt_RoG.png, id=2202, 586.47105pt x 462.528
 pt>
 File: ../Images/Rezatapopt/p53_FL_Rezatapopt_RoG.png Graphic file (type png)
 <use ../Images/Rezatapopt/p53_FL_Rezatapopt_RoG.png>
 Package pdftex.def Info: ../Images/Rezatapopt/p53_FL_Rezatapopt_RoG.png  used o
 n input line 46.
 (pdftex.def)             Requested size: 397.485pt x 313.4774pt.
-<../Images/Rezatapopt/p53_DBD_Rezatapopt_RoG.png, id=2193, 586.47105pt x 317.98
+<../Images/Rezatapopt/p53_DBD_Rezatapopt_RoG.png, id=2203, 586.47105pt x 317.98
 8pt>
 File: ../Images/Rezatapopt/p53_DBD_Rezatapopt_RoG.png Graphic file (type png)
 <use ../Images/Rezatapopt/p53_DBD_Rezatapopt_RoG.png>
@@ -2438,7 +2485,7 @@ LaTeX Warning: Command \r invalid in math mode on input line 62.
 LaTeX Warning: Command \r invalid in math mode on input line 62.
 
 [156 <../Images/Rezatapopt/p53_DBD_Rezatapopt_RoG.png>]
-<../Images/Rezatapopt/p53_FL_DBD_Rezatapopt_RoG_Violin.png, id=2214, 586.47105p
+<../Images/Rezatapopt/p53_FL_DBD_Rezatapopt_RoG_Violin.png, id=2224, 586.47105p
 t x 514.20105pt>
 File: ../Images/Rezatapopt/p53_FL_DBD_Rezatapopt_RoG_Violin.png Graphic file (t
 ype png)
@@ -2465,7 +2512,7 @@ g of
  []
 
 [157] [158 <../Images/Rezatapopt/p53_FL_DBD_Rezatapopt_RoG_Violin.png>]
-<../Images/Rezatapopt/p53_FL_DBD_Rezatapopt_RMSF.png, id=2226, 731.01105pt x 46
+<../Images/Rezatapopt/p53_FL_DBD_Rezatapopt_RMSF.png, id=2236, 731.01105pt x 46
 2.528pt>
 File: ../Images/Rezatapopt/p53_FL_DBD_Rezatapopt_RMSF.png Graphic file (type pn
 g)
@@ -2482,7 +2529,7 @@ Underfull \hbox (badness 3724) in paragraph at lines 80--80
 
 LaTeX Warning: Command \r invalid in math mode on input line 84.
 
-<../Images/Rezatapopt/p53_FL_Rezatapopt_RMSF_Diff.png, id=2233, 585.20633pt x 3
+<../Images/Rezatapopt/p53_FL_Rezatapopt_RMSF_Diff.png, id=2243, 585.20633pt x 3
 69.66106pt>
 File: ../Images/Rezatapopt/p53_FL_Rezatapopt_RMSF_Diff.png Graphic file (type p
 ng)
@@ -2490,7 +2537,7 @@ ng)
 Package pdftex.def Info: ../Images/Rezatapopt/p53_FL_Rezatapopt_RMSF_Diff.png  
 used on input line 88.
 (pdftex.def)             Requested size: 397.485pt x 251.08417pt.
-<../Images/Rezatapopt/p53_FL_Rezatapopt_RMSF_RescueScore.png, id=2234, 729.3849
+<../Images/Rezatapopt/p53_FL_Rezatapopt_RMSF_RescueScore.png, id=2244, 729.3849
 8pt x 369.66106pt>
 File: ../Images/Rezatapopt/p53_FL_Rezatapopt_RMSF_RescueScore.png Graphic file 
 (type png)
@@ -2512,7 +2559,7 @@ Underfull \hbox (badness 2150) in paragraph at lines 100--101
 [159] [160 <../Images/Rezatapopt/p53_FL_DBD_Rezatapopt_RMSF.png> <../Images/Rez
 atapopt/p53_FL_Rezatapopt_RMSF_Diff.png>] [161 <../Images/Rezatapopt/p53_FL_Rez
 atapopt_RMSF_RescueScore.png>]
-<../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSF_Diff.png, id=2255, 585.20633pt x 
+<../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSF_Diff.png, id=2265, 585.20633pt x 
 369.66106pt>
 File: ../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSF_Diff.png Graphic file (type 
 png)
@@ -2520,7 +2567,7 @@ png)
 Package pdftex.def Info: ../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSF_Diff.png 
  used on input line 108.
 (pdftex.def)             Requested size: 397.485pt x 251.08417pt.
-<../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSF_RescueScore.png, id=2256, 729.565
+<../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSF_RescueScore.png, id=2266, 729.565
 64pt x 369.66106pt>
 File: ../Images/Rezatapopt/p53_DBD_Rezatapopt_RMSF_RescueScore.png Graphic file
  (type png)
@@ -2539,7 +2586,7 @@ Underfull \hbox (badness 1048) in paragraph at lines 126--126
 []\OT1/cmr/bx/n/14.4 Rezatapopt Makes Dif-fer-ent Hy-dro-gen Bonds
  []
 
-<../Images/Rezatapopt/p53_FL_Rezatapopt_HBond_vs_Time.png, id=2271, 803.28105pt
+<../Images/Rezatapopt/p53_FL_Rezatapopt_HBond_vs_Time.png, id=2281, 803.28105pt
  x 607.068pt>
 File: ../Images/Rezatapopt/p53_FL_Rezatapopt_HBond_vs_Time.png Graphic file (ty
 pe png)
@@ -2553,7 +2600,7 @@ Underfull \hbox (badness 1122) in paragraph at lines 141--142
 ro-gen
  []
 
-<../Images/Rezatapopt/p53_DBD_Rezatapopt_HBond_vs_Time.png, id=2284, 803.28105p
+<../Images/Rezatapopt/p53_DBD_Rezatapopt_HBond_vs_Time.png, id=2294, 803.28105p
 t x 607.068pt>
 File: ../Images/Rezatapopt/p53_DBD_Rezatapopt_HBond_vs_Time.png Graphic file (t
 ype png)
@@ -2568,7 +2615,7 @@ T,
  []
 
 <../Images/Rezatapopt/p53_FL_DBD_vs_CTD_subset_Rezatapopt_HBond_vs_Time.png, id
-=2301, 586.47105pt x 896.148pt>
+=2311, 586.47105pt x 896.148pt>
 File: ../Images/Rezatapopt/p53_FL_DBD_vs_CTD_subset_Rezatapopt_HBond_vs_Time.pn
 g Graphic file (type png)
 <use ../Images/Rezatapopt/p53_FL_DBD_vs_CTD_subset_Rezatapopt_HBond_vs_Time.png
@@ -2587,7 +2634,7 @@ u-lated FL
 
 [168] [169 <../Images/Rezatapopt/p53_FL_DBD_vs_CTD_subset_Rezatapopt_HBond_vs_T
 ime.png>]
-<../Images/Rezatapopt/p53_FL_Rezatapopt_HBond_PCA_Decimposition.png, id=2313, 8
+<../Images/Rezatapopt/p53_FL_Rezatapopt_HBond_PCA_Decimposition.png, id=2323, 8
 75.55106pt x 1092.36105pt>
 File: ../Images/Rezatapopt/p53_FL_Rezatapopt_HBond_PCA_Decimposition.png Graphi
 c file (type png)
@@ -2602,7 +2649,7 @@ Underfull \hbox (badness 1199) in paragraph at lines 186--187
 o PC1 are
  []
 
-<../Images/Rezatapopt/p53_DBD_Rezatapopt_HBond_PCA_Decimposition.png, id=2329, 
+<../Images/Rezatapopt/p53_DBD_Rezatapopt_HBond_PCA_Decimposition.png, id=2339, 
 883.8621pt x 1092.36105pt>
 File: ../Images/Rezatapopt/p53_DBD_Rezatapopt_HBond_PCA_Decimposition.png Graph
 ic file (type png)
@@ -2624,7 +2671,7 @@ chem-i-cal pro-tein
  []
 
 [179] [180]
-<../Images/Polymerase_chain_reaction-en.png, id=2370, 1447.3272pt x 621.2811pt>
+<../Images/Polymerase_chain_reaction-en.png, id=2380, 1447.3272pt x 621.2811pt>
 
 File: ../Images/Polymerase_chain_reaction-en.png Graphic file (type png)
 <use ../Images/Polymerase_chain_reaction-en.png>
@@ -2637,7 +2684,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [181] [182 <../Images/Polymerase_chain_reaction-en.png>] [183]
 <../Images/Basic-gap-repair-cloning-procedure-DNA-fragments-from-a-linearized-p
-lasmid-vector-are.png, id=2399, 853.1875pt x 1345.025pt>
+lasmid-vector-are.png, id=2409, 853.1875pt x 1345.025pt>
 File: ../Images/Basic-gap-repair-cloning-procedure-DNA-fragments-from-a-lineari
 zed-plasmid-vector-are.png Graphic file (type png)
 <use ../Images/Basic-gap-repair-cloning-procedure-DNA-fragments-from-a-lineariz
@@ -2655,7 +2702,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\beta' on input line 99.
 
-<./svg-inkscape/beta_gal_ONPG_svg-raw.pdf, id=2414, 355.07153pt x 186.13289pt>
+<./svg-inkscape/beta_gal_ONPG_svg-raw.pdf, id=2424, 355.07153pt x 186.13289pt>
 File: ./svg-inkscape/beta_gal_ONPG_svg-raw.pdf Graphic file (type pdf)
 <use ./svg-inkscape/beta_gal_ONPG_svg-raw.pdf>
 Package pdftex.def Info: ./svg-inkscape/beta_gal_ONPG_svg-raw.pdf  used on inpu
@@ -2665,11 +2712,11 @@ t line 103.
 Chapter 9.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 209.
+(hyperref)                removing `math shift' on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\beta' on input line 209.
+(hyperref)                removing `\beta' on input line 213.
 
 (./Results_BetaGal.tex [188
 
@@ -2680,13 +2727,13 @@ Underfull \hbox (badness 1946) in paragraph at lines 17--18
  []
 
 [190]
-<../Images/BetaGal/ExpressionBefore.png, id=2478, 469.755pt x 459.7175pt>
+<../Images/BetaGal/ExpressionBefore.png, id=2488, 469.755pt x 459.7175pt>
 File: ../Images/BetaGal/ExpressionBefore.png Graphic file (type png)
 <use ../Images/BetaGal/ExpressionBefore.png>
 Package pdftex.def Info: ../Images/BetaGal/ExpressionBefore.png  used on input 
 line 24.
 (pdftex.def)             Requested size: 185.03073pt x 181.07785pt.
-<../Images/BetaGal/ExpressionAfter.png, id=2479, 469.755pt x 459.7175pt>
+<../Images/BetaGal/ExpressionAfter.png, id=2489, 469.755pt x 459.7175pt>
 File: ../Images/BetaGal/ExpressionAfter.png Graphic file (type png)
 <use ../Images/BetaGal/ExpressionAfter.png>
 Package pdftex.def Info: ../Images/BetaGal/ExpressionAfter.png  used on input l
@@ -2703,13 +2750,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--48
 []\OT1/cmr/bx/n/14.4 Building the p53-Dependent Tran-scrip-tion
  []
 
-<../Images/BetaGal/TranscriptionBefore.png, id=2487, 469.755pt x 459.7175pt>
+<../Images/BetaGal/TranscriptionBefore.png, id=2497, 469.755pt x 459.7175pt>
 File: ../Images/BetaGal/TranscriptionBefore.png Graphic file (type png)
 <use ../Images/BetaGal/TranscriptionBefore.png>
 Package pdftex.def Info: ../Images/BetaGal/TranscriptionBefore.png  used on inp
 ut line 53.
 (pdftex.def)             Requested size: 185.03073pt x 181.07785pt.
-<../Images/BetaGal/TranscriptionAfter.png, id=2488, 469.755pt x 498.86375pt>
+<../Images/BetaGal/TranscriptionAfter.png, id=2498, 469.755pt x 498.86375pt>
 File: ../Images/BetaGal/TranscriptionAfter.png Graphic file (type png)
 <use ../Images/BetaGal/TranscriptionAfter.png>
 Package pdftex.def Info: ../Images/BetaGal/TranscriptionAfter.png  used on inpu
@@ -2727,7 +2774,7 @@ Underfull \hbox (badness 2310) in paragraph at lines 85--85
 []\OT1/cmr/bx/n/14.4 Studying Yeast Dou-bling Time to Op-ti-mize
  []
 
-<../Images/BetaGal/YeastGrowth_vs_Time.png, id=2513, 658.6206pt x 629.7126pt>
+<../Images/BetaGal/YeastGrowth_vs_Time.png, id=2523, 658.6206pt x 629.7126pt>
 File: ../Images/BetaGal/YeastGrowth_vs_Time.png Graphic file (type png)
 <use ../Images/BetaGal/YeastGrowth_vs_Time.png>
 Package pdftex.def Info: ../Images/BetaGal/YeastGrowth_vs_Time.png  used on inp
@@ -2740,14 +2787,14 @@ and
  []
 
 [196] [197 <../Images/BetaGal/YeastGrowth_vs_Time.png>]
-<../Images/BetaGal/YeastDoublingTime.png, id=2526, 587.3142pt x 441.8106pt>
+<../Images/BetaGal/YeastDoublingTime.png, id=2536, 587.3142pt x 441.8106pt>
 File: ../Images/BetaGal/YeastDoublingTime.png Graphic file (type png)
 <use ../Images/BetaGal/YeastDoublingTime.png>
 Package pdftex.def Info: ../Images/BetaGal/YeastDoublingTime.png  used on input
  line 106.
 (pdftex.def)             Requested size: 397.485pt x 299.00478pt.
  [198] [199 <../Images/BetaGal/YeastDoublingTime.png>] [200]
-<../Images/BetaGal/BetaGalActivity_Controls.png, id=2542, 442.00333pt x 324.925
+<../Images/BetaGal/BetaGalActivity_Controls.png, id=2552, 442.00333pt x 324.925
 92pt>
 File: ../Images/BetaGal/BetaGalActivity_Controls.png Graphic file (type png)
 <use ../Images/BetaGal/BetaGalActivity_Controls.png>
@@ -2755,7 +2802,7 @@ Package pdftex.def Info: ../Images/BetaGal/BetaGalActivity_Controls.png  used o
 n input line 123.
 (pdftex.def)             Requested size: 397.485pt x 292.1976pt.
  [201] [202 <../Images/BetaGal/BetaGalActivity_Controls.png>]
-<../Images/BetaGal/FirstExperiment.png, id=2559, 442.00333pt x 324.92592pt>
+<../Images/BetaGal/FirstExperiment.png, id=2569, 442.00333pt x 324.92592pt>
 File: ../Images/BetaGal/FirstExperiment.png Graphic file (type png)
 <use ../Images/BetaGal/FirstExperiment.png>
 Package pdftex.def Info: ../Images/BetaGal/FirstExperiment.png  used on input l
@@ -2773,22 +2820,84 @@ Underfull \hbox (badness 1072) in paragraph at lines 158--159
 t to see
  []
 
-) [205] [206]
+[205]
+Underfull \hbox (badness 1028) in paragraph at lines 172--173
+[]\OT1/cmr/m/n/12 Interestingly, we ob-served very lit-tle $\OML/cmm/m/it/12 ^^
+L$\OT1/cmr/m/n/12 -galactosidase ac-tiv-ity in the
+ []
+
+[206]
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+\OT1/cmr/m/n/12 pro-moter from yeast
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+\OT1/cmr/m/n/12 pro-moter from yeast
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+\OT1/cmr/m/n/12 el-e-ment in primer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+\OT1/cmr/m/n/12 el-e-ment in primer
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--200
+\OT1/cmr/m/n/12 el-e-ment in primer
+ []
+
+[207]
+Underfull \hbox (badness 2181) in paragraph at lines 230--230
+[]|\OT1/cmr/m/n/12 GFP-p53 plas-mid with kan-resistance. Ad-dgene
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--230
+[]|\OT1/cmr/m/n/12 BAM636-based with CYC1 min-i-mal pro-moter
+ []
+
+
+Underfull \hbox (badness 2343) in paragraph at lines 230--230
+[]|\OT1/cmr/m/n/12 BAM638-based with the 1TUP re-sponse el-e-ment
+ []
+
+[208]
+Underfull \hbox (badness 1226) in paragraph at lines 266--266
+[]|\OT1/cmr/m/n/12 YAM7010 with BAM637 and BAM639 (1TUP \TS1/cmr/m/n/12 =
+ []
+
+[209]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 280.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\beta' on input line 280.
+
+[210] [211]
+Underfull \hbox (badness 1931) in paragraph at lines 301--302
+[]\OT1/cmr/m/n/12 Add $300$$[]$ $\OML/cmm/m/it/12 ^^L$\OT1/cmr/m/n/12 -Galactos
+idase As-say Stop So-lu-tion to the con-trol
+ []
+
+[212]) [213]
 Chapter 10.
-(./DiscussionConclusion.tex) [207
+(./DiscussionConclusion.tex [214
 
-]
+]) [215]
 Chapter 11.
-(./Conclusion.tex) [208
+(./Methods.tex) [216
 
-]
-Chapter 12.
-(./Methods.tex) [209
-
-] (./Appendix.tex) [210
+] (./Appendix.tex) [217
 
 
-] [211
+] [218
 
 
 ]
@@ -2803,7 +2912,7 @@ Underfull \hbox (badness 1867) in paragraph at lines 234--234
 o-mote
  []
 
-[212]
+[219]
 Underfull \hbox (badness 1655) in paragraph at lines 234--234
 \OT1/cmr/m/n/12 Ac-ti-va-tion Do-main Is Di-rectly Re-lated to the Bind-ing Aff
 in-ity to
@@ -2821,7 +2930,7 @@ Overfull \hbox (216.07433pt too wide) in paragraph at lines 234--234
 k/ASCHEM/Unit%201/Ch3IMF/chapter[]-3[]-[]-chem-i-cal[]-bond-ing[]-andc.htm.
  []
 
-[213]
+[220]
 Underfull \hbox (badness 2384) in paragraph at lines 234--234
 [][]\OT1/cmr/m/n/12 Chino, Ayako, Kenji Watan-abe, and Hisao Moriya (Mar. 11, 2
 010).
@@ -2851,7 +2960,7 @@ Underfull \hbox (badness 1163) in paragraph at lines 234--234
 -ing p53
  []
 
-[214]
+[221]
 Underfull \hbox (badness 2809) in paragraph at lines 234--234
 [][]\OT1/cmr/m/n/12 ElGhawalby, Hewayda and Ed-win R. Han-cock (2015). ``Heat K
 er-nel
@@ -2863,19 +2972,19 @@ Underfull \hbox (badness 3199) in paragraph at lines 234--234
 s in G
  []
 
-[215]
+[222]
 Underfull \hbox (badness 1783) in paragraph at lines 234--234
 [][]\OT1/cmr/m/n/12 Fornace, A. J., I. Alamo, and M. C. Hol-lan-der (Dec. 1988)
 . ``DNA
  []
 
-[216] [217]
+[223] [224]
 Underfull \hbox (badness 1308) in paragraph at lines 234--234
 [][]\OT1/cmr/m/n/12 Halabi, Na-jeeb et al. (Aug. 21, 2009). ``Pro-tein Sec-tors
 : Evo-lu-tion-ary
  []
 
-[218] [219]
+[225] [226]
 Underfull \hbox (badness 1546) in paragraph at lines 234--234
 \OT1/cmr/m/n/12 pp. 1498{1502. \OT1/cmr/m/sc/12 doi\OT1/cmr/m/n/12 : []$\OT1/cm
 tt/m/n/12 10 . 1126 / science . 7878469$[]\OT1/cmr/m/n/12 . \OT1/cmr/m/sc/12 ur
@@ -2901,13 +3010,13 @@ Underfull \hbox (badness 2302) in paragraph at lines 234--234
  of P53 as a
  []
 
-[220]
+[227]
 Underfull \hbox (badness 3260) in paragraph at lines 234--234
 \OT1/cmr/m/n/12 Pro-tects against Radiation-Induced Car-diac In-jury''. In: \OT
 1/cmr/m/it/12 Ra-di-a-tion
  []
 
-[221]
+[228]
 Underfull \hbox (badness 1460) in paragraph at lines 234--234
 \OT1/cmr/m/n/12 In: \OT1/cmr/m/it/12 Jour-nal of Bi-o-log-i-cal Chem-istry \OT1
 /cmr/m/n/12 275.30, pp. 23106{23112. \OT1/cmr/m/sc/12 issn\OT1/cmr/m/n/12 :
@@ -2931,13 +3040,13 @@ Underfull \hbox (badness 2035) in paragraph at lines 234--234
 New
  []
 
-[222]
+[229]
 Underfull \hbox (badness 1132) in paragraph at lines 234--234
 \OT1/cmr/m/n/12 Tu-mor Sup-pres-sor Lo-cus, Is a Novel Pro-tein Ty-ro-sine Phos
 -phatase
  []
 
-[223]
+[230]
 Overfull \hbox (4.54808pt too wide) in paragraph at lines 234--234
 \OT1/cmr/m/n/12 Pack-age for the Anal-y-sis, Re-build-ing and Vi-su-al-iza-tion
  of Three-dimensional
@@ -2949,7 +3058,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--234
 ,
  []
 
-[224]
+[231]
 Underfull \hbox (badness 1033) in paragraph at lines 234--234
 \OT1/cmr/m/n/12 Iso-form, Con-tributes to Con-di-tional Re-pro-gram-ming and Lo
 ng-Term
@@ -2961,7 +3070,7 @@ Overfull \hbox (17.71977pt too wide) in paragraph at lines 234--234
 Book. Knopf. \OT1/cmr/m/sc/12 isbn\OT1/cmr/m/n/12 : 978-0-394-46615-6.
  []
 
-[225] [226]
+[232] [233]
 Underfull \hbox (badness 1389) in paragraph at lines 234--234
 [][]\OT1/cmr/m/n/12 Passow, Court-ney N et al. (Jan. 21, 2019). ``Con-trast-ing
  Pat-terns of
@@ -2973,7 +3082,7 @@ Underfull \hbox (badness 2662) in paragraph at lines 234--234
 -lar
  []
 
-[227]
+[234]
 Underfull \hbox (badness 4084) in paragraph at lines 234--234
 [][]\OT1/cmr/m/n/12 Puzio-Kuter, Anna M. et al. (June 3, 2025). ``Restora-tion 
 of the
@@ -2992,13 +3101,13 @@ Underfull \hbox (badness 1354) in paragraph at lines 234--234
 r/m/n/12 :
  []
 
-[228]
+[235]
 Underfull \hbox (badness 1122) in paragraph at lines 234--234
 \OT1/cmr/m/n/12 mesh Ewald''. In: \OT1/cmr/m/it/12 Jour-nal of chem-i-cal the-o
 ry and com-pu-ta-tion \OT1/cmr/m/n/12 9.9,
  []
 
-[229] [230]
+[236] [237]
 Underfull \hbox (badness 1406) in paragraph at lines 234--234
 [][]\OT1/cmr/m/n/12 Sun, Xun, H. Jane Dyson, and Pe-ter E. Wright (Jan. 5, 2021
 ). ``A
@@ -3010,7 +3119,7 @@ Underfull \hbox (badness 1342) in paragraph at lines 234--234
 ath & Dis-ease \OT1/cmr/m/n/12 6.7,
  []
 
-[231] [232]
+[238] [239]
 Underfull \hbox (badness 2409) in paragraph at lines 234--234
 [][]\OT1/cmr/m/n/12 Yaffe, Michael B et al. (Dec. 26, 1997). ``The Struc-tural 
 Ba-sis for
@@ -3053,25 +3162,25 @@ Underfull \hbox (badness 2229) in paragraph at lines 234--234
 ry -[] a -[]
  []
 
-[233] [234] (./Main.aux)
+[240] [241] (./Main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: DFB7E0916F4923896CDE7C58E7537723;20418.
+(rerunfilecheck)             Checksum: 6CA325116EF9EFBBAD98AF0D769B5DB3;20848.
 Package logreq Info: Writing requests to 'Main.run.xml'.
 \openout1 = `Main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52412 strings out of 474116
- 1236298 string characters out of 5743682
- 2252922 words of memory out of 5000000
- 73316 multiletter control sequences out of 15000+600000
- 576202 words of font info for 103 fonts, out of 8000000 for 9000
+ 52803 strings out of 474116
+ 1243671 string characters out of 5743682
+ 2259385 words of memory out of 5000000
+ 73643 multiletter control sequences out of 15000+600000
+ 578408 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,16n,101p,2284b,2723s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,16n,101p,2288b,2723s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
 b></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pf
@@ -3090,14 +3199,15 @@ ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive
 24/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2024/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2024/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
-4/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/
-texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Main.pdf (248 pages, 40476968 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2024/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2024/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/
+texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on Main.pdf (255 pages, 40500592 bytes).
 PDF statistics:
- 3335 PDF objects out of 3580 (max. 8388607)
- 2791 compressed objects within 28 object streams
- 709 named destinations out of 1000 (max. 500000)
- 1308 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3416 PDF objects out of 3580 (max. 8388607)
+ 2862 compressed objects within 29 object streams
+ 745 named destinations out of 1000 (max. 500000)
+ 1324 words of extra memory for PDF output out of 10000 (max. 10000000)
 

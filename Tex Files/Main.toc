@@ -131,8 +131,10 @@
 \contentsline {subsection}{\numberline {9.2.4}Studying Yeast Doubling Time to Optimize Experiment}{196}{subsection.9.2.4}%
 \contentsline {subsection}{\numberline {9.2.5}A Proof of Concept Shows the Assay Works}{201}{subsection.9.2.5}%
 \contentsline {section}{\numberline {9.3}Discussion}{206}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Methods}{206}{section.9.4}%
-\contentsline {chapter}{\numberline {10}Discussion}{207}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Conclusion}{208}{chapter.11}%
-\contentsline {chapter}{\numberline {12}Methods}{209}{chapter.12}%
-\contentsline {chapter}{Appendix}{210}{appendix*.125}%
+\contentsline {section}{\numberline {9.4}Materials}{208}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Methods}{210}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Standard Lab Protocols}{210}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}\(\beta \)-Galactosidase Assay}{211}{subsection.9.5.2}%
+\contentsline {chapter}{\numberline {10}Discussion and Conclusions}{214}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Methods}{216}{chapter.11}%
+\contentsline {chapter}{Appendix}{217}{appendix*.128}%

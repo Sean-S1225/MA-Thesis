@@ -30,6 +30,8 @@
 \usepackage{amsthm}
 \usepackage{svg}
 \usepackage[utf8]{inputenc}
+\usepackage{xltabular}
+\usepackage{array}
 \DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -100,6 +102,8 @@
 \newcommand{\atantwo}{\text{atan2}}
 
 \sisetup{list-final-separator = {, and }}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 \begin{document}
 \emergencystretch 3em
@@ -211,13 +215,9 @@ In this thesis, I expand this framework by examining the effects of the Y220C mu
 \chaptermark{Measuring p53-Induced Transcription}
 \input{Results_BetaGal}
 
-\chapter{Discussion}
+\chapter{Discussion and Conclusions}
 \label{Discussion and Conclusions}
 \input{DiscussionConclusion}
-
-\chapter{Conclusion}
-
-\input{Conclusion}
 
 \chapter{Methods}
 
