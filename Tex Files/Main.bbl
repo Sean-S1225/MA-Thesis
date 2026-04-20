@@ -1070,6 +1070,41 @@
       \verb https://doi.org/10.1021/bi026635n
       \endverb
     \endentry
+    \entry{zotero-item-488}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=dd6955b4a8a61c02fb1af6d7a089c982}{%
+           family={Caballero\bibnamedelima Mancía},
+           familyi={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05489d0914ccf245f2d84c39647d6b54}{%
+           family={Stetson},
+           familyi={S\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+           family={Thayer},
+           familyi={T\bibinitperiod},
+           given={Kelly\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{ecee92121420e145f821ea9cc472d319}
+      \strng{fullhash}{ecee92121420e145f821ea9cc472d319}
+      \strng{bibnamehash}{ecee92121420e145f821ea9cc472d319}
+      \strng{authorbibnamehash}{ecee92121420e145f821ea9cc472d319}
+      \strng{authornamehash}{ecee92121420e145f821ea9cc472d319}
+      \strng{authorfullhash}{ecee92121420e145f821ea9cc472d319}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACS Omega}
+      \field{title}{Isoform {{Context Shapes}} the {{Structural}} and {{DNA-Binding Impact}} of the P53 {{Y220C Mutation}}}
+    \endentry
     \entry{candau1997two}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=ccfbaa39e3856ddc788850f8cab6390b}{%
@@ -2068,12 +2103,12 @@
            given={Benjamin\bibnamedelima S.},
            giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod},
            givenun=1}}%
-        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+        {{un=1,uniquepart=given,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
            family={Thayer},
            familyi={T\bibinitperiod},
            given={Kelly\bibnamedelima M.},
            giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{publisher}{1}{%
         {Multidisciplinary Digital Publishing Institute}%
@@ -3812,12 +3847,12 @@
            given={Dylan},
            giveni={D\bibinitperiod},
            givenun=1}}%
-        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+        {{un=1,uniquepart=given,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
            family={Thayer},
            familyi={T\bibinitperiod},
            given={Kelly\bibnamedelima M.},
            giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{publisher}{1}{%
         {American Chemical Society}%
@@ -7640,6 +7675,50 @@
       \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC7722985/
       \endverb
     \endentry
+    \entry{Mishchyriak_SAWNERGY_A_Python}{software}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7b88a5cb83d818036a92ab6608a656cb}{%
+           family={Mishchyriak},
+           familyi={M\bibinitperiod},
+           given={Yehor},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05489d0914ccf245f2d84c39647d6b54}{%
+           family={Stetson},
+           familyi={S\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=1,uniquepart=given,hash=4edb2771feed2846513a2e92b732e870}{%
+           family={Thayer},
+           familyi={T\bibinitperiod},
+           given={Kelly},
+           giveni={K\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{5e0fd372408de0e6457a82a752c9f9a6}
+      \strng{fullhash}{5e0fd372408de0e6457a82a752c9f9a6}
+      \strng{bibnamehash}{5e0fd372408de0e6457a82a752c9f9a6}
+      \strng{authorbibnamehash}{5e0fd372408de0e6457a82a752c9f9a6}
+      \strng{authornamehash}{5e0fd372408de0e6457a82a752c9f9a6}
+      \strng{authorfullhash}{5e0fd372408de0e6457a82a752c9f9a6}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{SAWNERGY: A Python framework for dynamic residue-interaction networks and walk-based embeddings from molecular dynamics simulations}}
+      \field{version}{1.1.7}
+      \verb{doi}
+      \verb 10.5281/zenodo.18512893
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5281/zenodo.18512893
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5281/zenodo.18512893
+      \endverb
+    \endentry
     \entry{miyashitaTumorSuppressorP531995}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=8663e09ee75483ccd9b3ff75bf5de967}{%
@@ -8855,12 +8934,12 @@
            given={Sergei\bibnamedelima Y.},
            giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+        {{un=1,uniquepart=given,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
            family={Thayer},
            familyi={T\bibinitperiod},
            given={Kelly\bibnamedelima M.},
            giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=97064b4b87668c90a3a05f5f177bae83}{%
            family={Beveridge},
            familyi={B\bibinitperiod},
@@ -10451,12 +10530,12 @@
            given={Fernando},
            giveni={F\bibinitperiod},
            givenun=0}}%
-        {{un=0,uniquepart=base,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+        {{un=1,uniquepart=given,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
            family={Thayer},
            familyi={T\bibinitperiod},
            given={Kelly\bibnamedelima M.},
            giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
       }
       \list{publisher}{1}{%
         {American Chemical Society}%
