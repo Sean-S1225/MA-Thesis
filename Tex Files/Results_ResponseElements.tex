@@ -4,7 +4,7 @@ p53 is a transcription factor, meaning it binds to DNA to promote the transcript
 
 Until now, our computational studies of p53 have been limited to studying its interactions with a single DNA sequence, an engineered DNA sequence designed to have high binding affinity for the DNA binding domain of p53 to aid in crystallization \parencite{choCrystalStructureP531994}.
 
-Further, previous experiments have shown that mutations to p53 can alter its interactions with the DNA in a variety of ways. For instance, a single point mutation to the DNA binding domain of p53 may cause p53 to lose its ability to bind one sequence of DNA, but may increase affinity for binding another sequence \textcolor{red}{CITE}. To begin to uncover the molecular basis for this phenomenon, which is to say to better understand the dynamics of how p53 and DNA are related, we have simulated the wild-type (WT) DNA binding domain (DBD) subset of p53 bound to a variety of DNA sequences whose downstream genes span a variety of signal cascade categories. Some questions that motivated the study include:
+Further, previous experiments have shown that mutations to p53 can alter its interactions with the DNA in a variety of ways. For instance, a single point mutation to the DNA binding domain of p53 may cause p53 to lose its ability to bind one sequence of DNA, but may increase affinity for binding another sequence \parencite{resnickFunctionalMutantsSequencespecific2003}. To begin to uncover the molecular basis for this phenomenon, which is to say to better understand the dynamics of how p53 and DNA are related, we have simulated the wild-type (WT) DNA binding domain (DBD) subset of p53 bound to a variety of DNA sequences whose downstream genes span a variety of signal cascade categories. Some questions that motivated the study include:
 
 \begin{enumerate}
 \item How does the DNA sequence itself change upon p53 binding?
@@ -42,7 +42,7 @@ Next we considered the DNA bend, defined to be the angle between the first nucle
 \label{fig:promoters-e2e}
 \end{figure}
 
-Complementary to our analysis of the DNA bend, we also looked at the end-to-end distance of the DNA, defined as the distance from the end of one strand of the DNA double helix to the other end of the same strand. Here, in \figurepageref{fig:promoters-e2e}, we can see the presence of p53 has a large effect on the DNA end-to-end distance: in all promoter regions tested, it is lowered by between \qty{10}{\angstrom} and \qty{20}{\angstrom}. Plotting the end-to-end distance against the DNA bend, we do not see a correlation \textcolor{red}{include in appendix}, nor is there a correlation with the mean DNA roll \textcolor{red}{define}, which together suggest that the decreasing end-to-end distance of the DNA upon p53 binding is not due to the DNA as a whole becoming more bent/scrunched. \textcolor{red}{Continue investigating with contour length}
+Complementary to our analysis of the DNA bend, we also looked at the end-to-end distance of the DNA, defined as the distance from the end of one strand of the DNA double helix to the other end of the same strand. Here, in \figurepageref{fig:promoters-e2e}, we can see the presence of p53 has a large effect on the DNA end-to-end distance: in all promoter regions tested, it is lowered by between \qty{10}{\angstrom} and \qty{20}{\angstrom}. Plotting the end-to-end distance against the DNA bend, we do not see a correlation, nor is there a correlation with the mean DNA roll (Figures \ref{fig:promoters:bend-vs-e2e} and \ref{fig:promoters:roll-vs-e2e}, respectively, on page \pageref{fig:promoters:bend-vs-e2e}), which together suggest that the decreasing end-to-end distance of the DNA upon p53 binding is not due to the DNA as a whole becoming more bent/scrunched and is most likely a more local change in DNA structure.
 
 \subsection{p53 Alters Local DNA Dynamics}
 
@@ -56,6 +56,24 @@ Complementary to our analysis of the DNA bend, we also looked at the end-to-end 
 In addition to our global measures of how the presence of p53 alters the dynamics of the DNA, we also wanted to look closer at how the presence of p53 alters the individual nucleotide bases. We began by looking at how the presence of p53 alters the RMSF of each individual nucleotide. \figurepageref{fig:promoters-rmsf} shows the \(\Delta\)RMSF\textsubscript{Unbound \textminus{} p53-Bound} for each nucleotide across the different response elements. There are DNA sequences in which the binding of p53 caused the DNA to be less flexible than without (14-3-3\(\sigma\), p53R2, and PTEN), there are DNA sequences in whcih the binding of p53 caused the DNA to be more flexible than without (GADD45), and there are DNA sequences for which the binding of p53 caused some regions to become more flexible while others became less flexible (BAX, p53AIP1, p21).
 
 One pattern persists across the DNA sequences, though. When looking at regions of the DNA for which p53 made significant interactions, we can see that if the region is made more flexible upon p53 binding, the center of the p53-interaction region was even more flexible (GADD45). The opposite pattern could be seen, too. In regions of the DNA where the binding of p53 made the DNA less flexible, the center of the region in which p53 interacted was made even less flexible (Noxa, p53R2). The regions that were made less flexible had high G/C content (Noxa), whereas the regions that were made more flexible had high A/T content (GADD45), so this difference may be due to relative nucleotide-nucleotide strength via hydrogen bonding.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/DNA_Rise_compare.png}
+\caption[p53 Response Element \(\Delta\)Rise]{The \(\Delta\)Rise, computed as (p53-free DNA Rise) \textminus{} (p53-bound DNA Rise). A value greater than zero means the p53-free DNA has greater rise (vertical separation between bases) than the p53-bound. p53-interacting nucleotides are indicated with a box.}
+\label{fig:promoters-dna-rise-compare}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Promoters/DNA_Twist_compare.png}
+\caption[p53 Response Element \(\Delta\)Twist]{The \(\Delta\)Twist, computed as (p53-free DNA Twist) \textminus{} (p53-bound DNA Twist). A value greater than zero means the p53-free DNA has greater twist (rotation relative to the proceeding base pair) than the p53-bound. p53-interacting nucleotides are indicated with a box.}
+\label{fig:promoters-dna-twist-compare}
+\end{figure}
+
+We also looked to the helicoidal parameters of our DNA in the presence and absence of p53 binding. Stagger, stretch, and sheer showed little to no changes upon p53 binding (results not shown), but rise and twist showed some of the greatest changes upon p53 binding, shown in \figurepageref{fig:promoters-dna-rise-compare} and \figurepageref{fig:promoters-dna-twist-compare}. Rise is a measure of how far base pairs are separated vertically, and twist is a measure of rotation from one base pair to another. We see that a large number of base pairs have decreased incline upon p53 binding, though there are some base pairs that have significantly greater rise upon p53 binding, such as the A/T - G/C in the p53R2 response element, which has around \qty{1.5}{\angstrom} greater rise upon p53 binding. Such strong increases in rise are in p53-interacting regions of the DNA, and are likely indicative of p53 distorting the DNA geometry.
+
+A similar pattern can be seen in the DNA twist upon p53 binding. Some DNA sequences, such as BAX, has a nearly uniform decrease in twist upon p53 binding, though in other sequences, such as GADD45, the \(\Delta\)Twist alternates between decreased and unaltered. In p53R2, the same two base pairs that had a greatly increased rise upon p53 binding had a greatly increased twist upon p53 binding, too.
 
 \begin{figure}
 \centering
@@ -86,7 +104,7 @@ Having seen that the dynamics of DNA can be altered upon p53 binding, we sought 
 \label{fig:promoters-p53-rmsf}
 \end{figure}
 
-We can see that the global dynamics are people of p53 are altered when bound different DNA sequences via the RMSD value, but we also wanted to look at how the local dynamics of p53 are altered by binding the different DNA sequences. We see that there is a helix around residue \num{120} which interacts strongly with each response element. Within this helix, we observe varying degrees of flexibility across the response elements. \textcolor{red}{Find out the name of the helix - cho et al} For instance, p53 bound to GADD45 and p21 has among the greatest amount of flexibility in his alpha helix, whereas p53 bound to Noxa has the lowest flexibility. We also observe varying levels of flexibility in the \textcolor{red}{(turn? none?)} between residues \num{180} and \num{195}. p53 interacts with the Noxa and GADD45 response elements in this region, although p53 when bound to the Noxa response element has among the greatest amount of flexibility in this region and p53 when bound to GADD45 has among the lowest amount of flexibility in this region \textcolor{red}{is this related to what p53 ``wants'' to be binding in this region, governed by the consensus sequence?} Finally, the other two locations in which p53 makes the greatest number of contacts with the DNA are around residue \num{245} \textcolor{red}{whats the SS?} and the helix between residues \num{270} and \num{285}. There is a little to no difference in flexibility in these regions between bound response elements. \textcolor{red}{plot variance by residue, diff from mean, etc}
+We can see that the global dynamics are people of p53 are altered when bound different DNA sequences via the RMSD value, but we also wanted to look at how the local dynamics of p53 are altered by binding the different DNA sequences. We see that there is a helix around residue \num{120} which interacts strongly with each response element. Within this helix, we observe varying degrees of flexibility across the response elements. For instance, p53 bound to GADD45 and p21 has among the greatest amount of flexibility in his alpha helix, whereas p53 bound to Noxa has the lowest flexibility. We also observe varying levels of flexibility in the region between residues \num{180} and \num{195}. p53 interacts with the Noxa and GADD45 response elements in this region, although p53 when bound to the Noxa response element has among the greatest amount of flexibility in this region and p53 when bound to GADD45 has among the lowest amount of flexibility in this region. Finally, the other two locations in which p53 makes the greatest number of contacts with the DNA are around residue \num{245} and the helix between residues \num{270} and \num{285}. There is a little to no difference in flexibility in these regions between bound response elements.
 
 \begin{figure}
 \centering
@@ -102,7 +120,7 @@ We can see that the global dynamics are people of p53 are altered when bound dif
 \label{fig:promoters-p53-dna-hbond-vs-consensus-similarity}
 \end{figure}
 
-Next, we turned our attention to hydrogen bonding. \figurepageref{fig:promoters-p53-dna-hbond} shows the same analyses as we did in \figurepageref{fig:promoters-dna-dna-hbond}, but strictly p53-DNA interactions (rather than nucleotide-nucleotide interactions). Across replicate simulations, we can see that the average number of hydrogen bonds between P 53 and the DNA per frame is relatively constant. However, across the different response elements, we can see that the number fluctuates between \num{5} and \num{8} hydrogen bonds per frame. p53AIP1 and GADD45 have the fewest number of hydrogen bonds per frame, below \num{6}, whereas Noxa, PUMA, and 14-3-3\(\sigma\) have the greatest hydrogen bond count out of all of the response elements, at approximately seven per frame.
+Next, we turned our attention to hydrogen bonding. \figurepageref{fig:promoters-p53-dna-hbond} shows the same analyses as we did in \figurepageref{fig:promoters-dna-dna-hbond}, but strictly p53-DNA interactions (rather than nucleotide-nucleotide interactions). Across replicate simulations, we can see that the average number of hydrogen bonds between p53 and the DNA per frame is relatively constant. However, across the different response elements, we can see that the number fluctuates between \num{5} and \num{8} hydrogen bonds per frame. p53AIP1 and GADD45 have the fewest number of hydrogen bonds per frame, below \num{6}, whereas Noxa, PUMA, and 14-3-3\(\sigma\) have the greatest hydrogen bond count out of all of the response elements, at approximately seven per frame.
 
 We then looked to the number of unique atomic level hydrogen bonds made between p53 and the different response elements, shown in the bottom left of Figure \ref{fig:promoters-p53-dna-hbond}. p53 makes between \num{300} and \num{600} different hydrogen bonds with the DNA, with p53AIP1 and GADD45 making the greatest number of interactions. We can see that when we look at the number of residue-nucleotide hydrogen bonds (\num{1} if any or multiple atoms form a hydrogen bond between a residue and a nucleotide base and \num{0} otherwise), the pattern remains. That is, p53AIP1 and GADD45 still make the greatest number of interactions. This shows that these interactions are not just many different ways of making a hydrogen bond between a residue and a nucleotide base, but these are truly different interactions that are being made. Finally, when we apply a threshold to our analysis of the number of atomic hydrogen bonds made, we can see that p53AIP1 and GADD45 make the fewest, while Noxa, 14-3-3\(\sigma\), and p53R2 make the most. We conclude that p53 bound to the Noxa and 14-3-3\(\sigma\) response elements make some of the strongest and most specific interactions, while p53 bound to the Noxa and GADD45 response elements make some of the weakest and least specific interactions. Given this model, we suspect that if p53 is mutated and loses some of its binding specificity, then it would lose the ability to bind the p53AIP1 and GADD45 more readily than it would lose the ability to bind the Noxa, Puma, or 14-3-3\(\sigma\) response elements.
 
@@ -112,7 +130,7 @@ From this, we asked if there was any correlation between the strength or specifi
 
 In this chapter, we set out to understand the two parts of the p53-DNA interactions. Specifically, how p53 binding alters DNA dynamics, and how DNA binding alters p53 dynamics. We did this by simulating nine different DNA sequences without p53 bound and with p53 bound, then comparing how the dynamics change both between the bound/unbound states, but also across the bound states.
 
-First and foremost, we saw that DNA dynamics are modulated by p53 binding. In most DNA sequences tested, the average DNA RMSD increased, the average bend decreased, and the average end-to-end distance drastically decreased. The binding of p53 to DNA increases the number of energetically favorable DNA conformations, ones with a greater bend around the protein. \textcolor{red}{talk about e2e dist}.
+First and foremost, we saw that DNA dynamics are modulated by p53 binding. In most DNA sequences tested, the average DNA RMSD increased, the average bend decreased, and the average end-to-end distance drastically decreased. The binding of p53 to DNA increases the number of energetically favorable DNA conformations, ones with a greater bend around the protein. The decreased end-to-end distance upon p53 binding does not correlate with any average helicoidal parameter tested over the DNA molecule (shift, slide, rise, tilt, roll, twist, shear, stretch, stagger, buckle, propeller, or opening; data not shown). However, it can be accounted for by the local, small decreases in rise upon p53 binding. There are enough base pairs whose rise is not altered that averaging over the molecule loses the signal.
 
 We can see that the binding of p53 has local effects on DNA dynamics, too. Interestingly, the way in which p53 alters DNA sequences varies from one DNA molecule to another. The 1433S response element is almost wholly made more stable, GADD45 is almost wholly made less stable, and p53AIP1 has regions which are stabilized upon p53 binding and regions destabilized.
 
@@ -130,9 +148,39 @@ These results tell a complex story of p53-DNA dynamics. DNA is not uniformly sta
 
 \subsection{Building Starting Structure}
 
-The DNA sequences are as follows: 1433S: 5'-AGGCATGTGCCACCATGCCC-3', BAX: 5'-AGACAAGCCTGGGCGTGGGC-3', GADD45: 5'-CAGCATGCTTAGACATGTTC-3', Noxa: 5'-AGGCTTGCCCCGGCAAGTTG-3', p21: 5'-GAACATGTCCCAACATGTTG-3', p53AIP1: 5'-TCTCTTGCCCGGGCTTGTCG-3', p53R2: 5'-TGACATGCCCAGGCATGTCT-3', PTEN: 5'-GCGTGGTCACCTGGTCCTTT-3', PUMA: 5'-GGACAAGTCAGGACTTGCAG-3' \parencite{katoUnderstandingFunctionStructure2003a, teresiCowdenSyndromeAffected2007, maSequenceAnalysisP532007}. 
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.2}
+{\setstretch{1.5}
+\begin{tabularx}{\textwidth}{|>{\hsize=.25\hsize}X|>{\hsize=.75\hsize}X|}
+\hline
+Response Element & Sequence \\
+\hline
+1433S & 5'-AGGCATGTGCCACCATGCCC-3' \\
+\hline
+BAX & 5'-AGACAAGCCTGGGCGTGGGC-3' \\
+\hline
+GADD45 & 5'-CAGCATGCTTAGACATGTTC-3' \\
+\hline
+Noxa & 5'-AGGCTTGCCCCGGCAAGTTG-3' \\
+\hline
+p21 & 5'-GAACATGTCCCAACATGTTG-3' \\
+\hline
+p53AIP1 & 5'-TCTCTTGCCCGGGCTTGTCG-3' \\
+\hline
+p53R2 & 5'-TGACATGCCCAGGCATGTCT-3' \\
+\hline
+PTEN & 5'-GCGTGGTCACCTGGTCCTTT-3' \\
+\hline
+PUMA & 5'-GGACAAGTCAGGACTTGCAG-3' \\
+\hline
+\end{tabularx}
+}
+\caption{The sequences of the response elements studied \parencite{katoUnderstandingFunctionStructure2003a, teresiCowdenSyndromeAffected2007, maSequenceAnalysisP532007}.}
+\label{tab:re-sequences}
+\end{table}
 
-DNA sequences were generated using Nucgen. Using \textcolor{red}{MARKS ALIGNMENT PROGRAM}, optimal p53 binding locations were identified using sequence similarity with the consensus sequence, as defined in \parencite{el-deiryDefinitionConsensusBinding1992}. Using PyMol, p53 was placed according to the strongest predicted interactions \parencite{PyMOL}.
+DNA sequences, shown in Table \ref{tab:re-sequences}, were generated using Nucgen. Using \textcolor{red}{MARKS ALIGNMENT PROGRAM}, optimal p53 binding locations were identified using sequence similarity with the consensus sequence, as defined in \parencite{el-deiryDefinitionConsensusBinding1992}. Using PyMol, p53 was placed according to the strongest predicted interactions \parencite{PyMOL}.
 
 \subsection{Simulation and Analysis Protocol}
 \label{chap:short-sim-prep}
