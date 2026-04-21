@@ -149,8 +149,7 @@
 \contentsline {subsection}{\numberline {9.5.1}Standard Lab Protocols}{236}{subsection.9.5.1}%
 \contentsline {subsection}{\numberline {9.5.2}\(\beta \)-Galactosidase Assay}{237}{subsection.9.5.2}%
 \contentsline {chapter}{\numberline {10}Discussion and Conclusions}{240}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Methods}{242}{chapter.11}%
 \contentsline {chapter}{Appendix}{243}{appendix*.133}%
 \contentsline {section}{\numberline {.1}The Effects of the Y220C Mutation and PK11000 on p53 Isoforms}{243}{section.Alph0.1}%
-\contentsline {section}{\numberline {.2}The Coupled Dynamics of p53 and DNA Across Binding Sequences}{243}{section.Alph0.2}%
-\contentsline {section}{\numberline {.3}The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics and the Restorative Capabilities of PK11000}{243}{section.Alph0.3}%
+\contentsline {section}{\numberline {.2}The Coupled Dynamics of p53 and DNA Across Binding Sequences}{255}{section.Alph0.2}%
+\contentsline {section}{\numberline {.3}The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics and the Restorative Capabilities of PK11000}{263}{section.Alph0.3}%
