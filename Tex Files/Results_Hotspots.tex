@@ -1,71 +1,89 @@
 \section{Motivation}
 
-Mutations to the p53 gene, \textit{TP53}, are associated with over \qty{50}{\percent} of human cancers \textcolor{red}{cite}. Figure X shows the percentage of cases associated with each of the top 10 most common point mutations to p53 associated with cancer.
+Mutations to the p53 gene, \textit{TP53}, are associated with over \qty{50}{\percent} of human cancers \parencite{hamzehloieRoleTumorProtein2012}. Figure X shows the percentage of cases associated with each of the top 10 most common point mutations to p53 associated with cancer.
 
 These most common mutations can be split into two categories, DNA contact mutations, mutations in which residues that interact directly with the DNA at the DNA binding interface are mutated, and conformational mutations, which are mutations made elsewhere in the DNA domain (as opposed to the DNA-binding interface) that destabilize the protein. \figurepageref{fig:p53-common-mutants} shows the frequency of the ten most common mutations to p53, R175H, R248Q, R273H, R248W, R273C, R282W, G245S, Y220C, R249S, and V157F.
 
-There has been extensive computational research on the Y220C mutation to p53 in the Thayer Lab \parencite{hanInsightsRationalDesign2022, stetsonRestorationY220CP532025, cowanNetworkTheoryAnalysis2025} and \textcolor{red}{finish}, but there has not yet been a comprehensive computational study of the dynamics of the different p53 mutants bound to DNA. In addition, there has been little research on the effects of PK11000 on the different p53 mutants. PK11000 was initially designed to bind to a crevasse opened by the Y220C mutation, but instead, it covalently binds to the surface of the protein and increases the melting temperature of the destabilized Y220C mutant p53 \parencite{bauer2SulfonylpyrimidinesMildAlkylating2016}. This could, in theory, be used to treat other destabilizing mutants of p53.
+There has been extensive computational research on the Y220C mutation to p53 in the Thayer Lab \parencite{hanInsightsRationalDesign2022, stetsonRestorationY220CP532025, cowanNetworkTheoryAnalysis2025}, but there has not yet been a comprehensive computational study of the dynamics of the different p53 mutants bound to DNA. In addition, there has been little research on the effects of PK11000 on the different p53 mutants. PK11000 was initially designed to bind to a crevasse opened by the Y220C mutation, but instead, it covalently binds to the surface of the protein and increases the melting temperature of the destabilized Y220C mutant p53 \parencite{bauer2SulfonylpyrimidinesMildAlkylating2016}. This could, in theory, be used to treat other destabilizing mutants of p53.
 
 \section{Results}
 
-To investigate the altered dynamics of the ten most common p53 mutants and whether they can be rescued by PK11000, we have simulated the full-length (FL) p53 protein bound to a DNA sequence with each mutation, both with and without the restorative compound PK11000.
+To investigate the altered dynamics of the ten most common p53 mutants and whether they can be rescued by PK11000, we have simulated the full-length (FL) p53 protein bound to a DNA sequence with each mutation, both with and without the restorative compound PK11000. In this section, we present the preliminary results from these simulations, with the data that has been generated.
+
+\subsection{PK11000 Rescues Some Global Dynamics of the 10 Hotspot Mutations}
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RMSD_vs_Time.png}
-\caption[p53 Hotspots RMSD vs Time]{RMSD versus time for the \num{10} hotspot mutations of p53 with and without the drug PK11000. The unbound mutant is shown in red, and the drug bound mutant is shown in green. For reference, the wild type is shown as a blue ghost line.}
+\caption[p53 Hotspots RMSD vs Time]{RMSD versus time for the \num{10} hotspot mutations of p53 with and without the drug PK11000. The unbound mutant is shown in red, and the drug-bound mutant is shown in green. For reference, the wild type is shown as a blue ghost line.}
 \label{fig:hotspot:rmsd-time}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RMSD.png}
-\caption[p53 Hotspots RMSD Violin Plot]{The distribution of RMSD values for each of the hotspots with and without PK11000 shown as a violin plot. The unbound mutant is shown in red, and the drug bound mutant is shown in green. Horizontal lines with the appropriate color represent each simulation's median RMSD value. For reference, the median wild type RMSD value is shown as a blue line.}
-\label{fig:hotspot:rmsd-violin}
-\end{figure}
+\figurepageref{fig:hotspot:rmsd-time} shows RMSD vs time for each of the ten hotspot p53 mutants, with and without PK11000. Data from replicate simulations are averaged frame-wise, where it exists. In the Y220C mutant, we can see relative to the WT, that the Y220C mutant has a higher RMSD value and that Y220C\_PK11000 has a lower RMSD. We observe a similar pattern in the V157F mutant, where the V157F\_PK11000 has an RMSD value comparable to that of the WT and the apo-V157F mutant has a higher RMSD value. For approximately half of the R249S frames, the apo-mutant has a higher RMSD value than the PK11000-bound mutant. Mutants R175H, G245S, and R248Q show that mutant is more similar to the WT, and that the PK11000-bound mutant has a higher RMSD value. Mutations R248W, R273H, R273C, and R282W show little to no difference between the WT, mutant, and drug-bound mutant structures, in terms of their RMSD.
+\figurepageref{fig:hotspot:rmsd-time-no-avg} shows the RMSD data not averaged across replicates, and Figures \ref{fig:hotspot:rmsd-time-dbdp} and \ref{fig:hotspot:rmsd-time-dbdpp} on page \pageref{fig:hotspot:rmsd-time-dbdp} shows the RMSD values for the DBD' and DBD'' subsets of the FL proteins.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RoG_vs_Time.png}
-\caption[p53 Hotspots RoG vs Time]{RoG versus time for the \num{10} hotspot mutations of p53 with and without the drug PK11000. The unbound mutant is shown in red, and the drug bound mutant is shown in green. For reference, the wild type is shown as a blue ghost line.}
+\caption[p53 Hotspots RoG vs Time]{Radius of gyration versus time for the \num{10} hotspot mutations of p53 with and without the drug PK11000. The unbound mutant is shown in red, and the drug-bound mutant is shown in green. For reference, the wild type is shown as a blue ghost line.}
 \label{fig:hotspot:rog-time}
 \end{figure}
 
+\figurepageref{fig:hotspot:rog-time} shows the radius of gyration values over time for each of the hotspot mutants, with and without PK11000 bound. For Y220C, we see that PK11000 lowers the average Y220C radius of gyration to roughly that of the WT. Only in G245S and R273C is this same pattern observed; in the R248Q, R248W, R273H, and R282W, the presence of PK11000 increases the average radius of gyration. V157F and R249S seem to be unaffected by the mutation or presence of PK11000. Figure \figurepageref{fig:hotspot:rog-time-no-avg} shows the RMSD data not averaged across replicates, and Figures \ref{fig:hotspot:rog-time-dbdp} and \ref{fig:hotspot:rog-time-dbdpp} on page \pageref{fig:hotspot:rog-time-dbdp} shows the radius of gyration values for the DBD' and DBD'' subsets of the FL proteins.
+
+\figurepageref{fig:hotspot:rmsf} shows the average RMSF values across replicate simulations for each of the hotspot mutations, with and without PK11000 bound. It was moved to the supplementary data because the simulations are not sufficiently long to make conclusions regarding the data.
+
+\subsection{PK11000 Rescues Some Hydrogen Bond Interactions with the DNA}
+
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RoG.png}
-\caption[p53 Hotspots RoG Violin Plot]{The distribution of Radius of Gyration values for each of the hotspots with and without PK11000 shown as a violin plot. The unbound mutant is shown in red, and the drug bound mutant is shown in green. Horizontal lines with the appropriate color represent each simulation's median Radius of Gyration value. For reference, the median wild type Radius of Gyration value is shown as a blue line.}
-\label{fig:hotspot:rog-violin}
+\includegraphics[width=\textwidth]{Hotspots/p53_HBonds_per_Frame.png}
+\caption[p53-DNA Hydrogen Bonds vs Time]{The number of hydrogen bonds made between p53 and DNA, for each replicate of each hotspot variant, between the apo- and PK11000-bound p53. Mutant shown in red, drug-bound mutant shown in green, and the averaged WT is shown in a ghost blue. A rolling average of \num{250} frames was applied.}
+\label{fig:hotspot:hbonds-vs-time}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RMSF.png}
-\caption[p53 Hotspots RMSF]{}
-\label{fig:hotspot:rmsf}
+\includegraphics[width=\textwidth]{Hotspots/p53_Specific_HBonds_per_Frame.png}
+\caption[p53-DNA Specific Hydrogen Bonds vs Time]{The number of hydrogen bonds made between the DNA and p53 residues K120, S241, R248, R273, A276, C277, R289, and R283, for each replicate of each hotspot variant, between the apo- and PK11000-bound p53. Mutant shown in red, drug-bound mutant shown in green, and the averaged WT is shown in a ghost blue. A rolling average of \num{250} frames was applied.}
+\label{fig:hotspot:specific-hbonds-vs-time}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{Hotspots/p53_Hotspots_RMSF_RescueScore.png}
-\caption[p53 Hotspots RMSF Rescue Score]{The PK11000 rescue score using RMSF as the metric. For each mutant form of p53, for each residue, PK11000's rescue score is plotted as a heatmap. A score between \num{0} and \num{1} indicates a partial rescue of WT function, a score greater than \num{1} indicates an overshoot of WT function, and a score less than \num{0} indicates the presence of the drug worsens the effect of the mutation.}
-\label{fig:hotspot:rmsf-rescue-score}
+\includegraphics[width=\textwidth]{Hotspots/p53_Nucleotide_Interacting_HBonds_per_Frame.png}
+\caption[p53-DNA Nitrogenous-Base-Interacting Hydrogen Bonds vs Time]{The number of hydrogen bonds made between the DNA and p53 residues K120, C277, and R280, for each replicate of each hotspot variant, between the apo- and PK11000-bound p53. Mutant shown in red, drug-bound mutant shown in green, and the averaged WT is shown in a ghost blue. A rolling average of \num{250} frames was applied.}
+\label{fig:hotspot:nucleotide-interacting-hbonds-vs-time}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{Hotspots/p53_HBond_Metrics.png}
-\caption[p53 Hydrogen Bonding Metrics]{p53-DNA hydrogen bonds viewed through several metrics. The average number of hydrogen bonds per frame between p53 and the DNA (TRT), the average number of hydrogen bonds per frame between the DNA and residues K120, S241, R248, R273, A276, C277, R289, R283 (Specific TRT), the average number of hydrogen bonds made between the DNA and K120, C277, and R280 (Sugar-Interacting TRT), the total number of atom-atom hydrogen bonds made throughout the simulation (EHBS) the number of atom-atom hydrogen bonds made that persist for at least \qty{10}{\percent} of frames (EHBS; cutoff = \qty{10}{\percent}), and the number of residue-nucleotide hydrogen bonds.}
-\label{fig:hotspot:hbonding}
-\end{figure}
+\figurepageref{fig:hotspot:hbonds-vs-time} shows the average number of hydrogen bonds between p53 and the DNA for each frame. The total residence time, TRT, is the cumulative measure of the average number of hydrogen bonds over \(x\) frames, this simply reports the number of bonds between the protein and the DNA.
 
-\begin{figure}
-\centering
-\includegraphics[width=\textwidth]{Hotspots/p53_HBond_Metrics_Rescue_Score.png}
-\caption[p53 Hydrogen Bonding Rescue Score]{The PK11000 rescue score when considering different hydrogen bonding metrics, those defined in \figurepageref{fig:hotspot:hbonding}. A rescue score between \num{0} and \num{1} indicates a partial rescue, a rescue score greater than \num{1} indicates an overshoot of the wild type, and a score less than \num{0} indicates that the presence of the drug worsens the mutant behavior.}
-\label{fig:hotspot:hbonding-resuce-score}
-\end{figure}
+We can see that, for the majority of the simulated frames, that the Y220C\_PK11000 makes more interactions per frame with the DNA than the Y220C p53. We can see similar patterns emerging in the R273C and R248Q mutant p53, and potentially with the R273C mutation. The V157F and G245S mutations seem to be making more interactions with the DNA than when PK11000 is bound. A clear pattern does not exist for the rest of the mutations.
+
+When we look at the number of specific interactions with the DNA, those made with residues K120, S241, R248, R273, A276, C277, R289, and R283 as shown in \figurepageref{fig:hotspot:specific-hbonds-vs-time}, we can see many simulations behave approximately the same between the mutant and drug-bound mutant, as Y220C does. We do see the PK11000-bound forms of R248Q and R273H making more of these specific interactions with the DNA than their apo-counterparts. Interestingly, R282W\_PK11000 makes very few specific interactions with the DNA.
+
+Finally, \figurepageref{fig:hotspot:nucleotide-interacting-hbonds-vs-time} shows the interactions between the DNA and p53 residues K120, C277, and R280. The dataset is relatively noisy on account of considering so few interactions, however, we do see that R248Q\_PK11000 and R282W\_PK11000 are making a very similar quality of bonds with the DNA compared to the WT; R248Q makes more than the WT and R282W has a wider spread of values, some replicates making more than the WT and some making less.
 
 \section{Discussion}
 
+In this chapter, we presented preliminary data regarding the restorative capabilities of PK11000 on the different p53 hotspot mutations. Many simulations are still currently running, which limits the available data to analyze, and distributions of values cannot be analyzed with differing simulation lengths.
+
+With that being said, given the data we do have, we can still draw conclusions regarding the effects of the drug PK11000. First and foremost, we notice that not all of mutations caused observable global conformational changes compared to the WT p53. For instance, the G245S and R248Q have nearly identical RMSD values compared to the WT. Even more mutants have nearly identical radius of gyration values compared to the WT, namely V157F, R175H, and R248Q. However, this is not true for all the mutants tested. V157F, R249S, and R282W all saw an increase in deviation from their staring structure over the course of the simulation compared to the WT, and of these, the V157F saw a restoration by PK11000. The R273C mutant also saw an increase in its radius of gyration compared to the WT, which the PK11000 mutant brought down to the WT levels.
+
+Our ability to analyze hydrogen bonding with the DNA was also limited by simulations of differing lengths. However, looking at the average number of hydrogen bonds per frame between the protein and the DNA, we can see some signs of rescue. When considering all the bonds made between p53 and the DNA, we see that the V157F makes more interactions with the DNA than the WT, and V157F\_PK11000 lowers this number. R273H, on the other hand, makes fewer interactions with the DNA per frame, but R273H\_PK11000 makes more than R273H p53, similar to the WT.
+
+When we looked to the specific interactions and the nitrogenous-base-interacting hydrogen bonds, we see additional signs of rescue. R248Q, R273H, and R282W all show signs of rescue by these two metrics.
+
+Interestingly, though we did see signs of rescue in conformational mutations to p53, namely V157F and R249S with regards to RMSD, V157F with regards to all hydrogen bonds between p53 and the DNA per frame, and R282W with the number of nitrogenous-base-interacting hydrogen bonds per frame, we also saw signs of rescue in the DNA-contact mutants, too. Specifically, R273C in the radius of gyration, R273H in the number of hydrogen bonds between p53 and the DNA, and both R273H and R248Q in the number of specific p53-DNA hydrogen bonds per frame.
+
+PK11000, while designed to be specifically interacting with the Y220C p53, is a somewhat generic covalent binder that has the effect of stabilizing the mutant Y220C mutant. In examining its binding to a variety of the most common p53 mutations, we saw evidence suggesting the restorative capabilities of PK11000 can extend beyond just the Y220C and to other mutations. Though it may not be suitable to clinical use, proving any compound is able to restore a variety of p53 mutations would be quite significant in the currently fragmented field of drug design campaigns targeting mutant p53.
+
 \section{Methods}
+
+\subsection{Generation of Starting Structure}
+
+Starting with the Y220C\_PK11000 starting structure \parencite{stetsonRestorationY220CP532025}, each hotspot mutant was generated by reverting the Y220C mutation to the original tyrosine, then making the appropriate mutation. To generate the apo-structure, the PK11000 molecule was deleted.
+
+\subsection{Simulation Protocol and Data Analysis}
+
+WT, Y220C, and Y220C\_PK11000 data were taking from \parencite{stetsonRestorationY220CP532025}. For the rest of the mutants, the simulation protocol is largely as described in Chapter \ref{chap:sim-protocol}. A timestep of \qty{1}{\femto\second} was used.

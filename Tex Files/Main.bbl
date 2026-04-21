@@ -1841,6 +1841,91 @@
       \endverb
       \keyw{Apoptosis,Cell Biology,general,Human Genetics,Internal Medicine,Medicine/Public Health,Oncology}
     \endentry
+    \entry{chiangFunctionMutantP53R175H2021}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=5a76c4a8beb08364974d173742c456e2}{%
+           family={Chiang},
+           familyi={C\bibinitperiod},
+           given={Yen-Ting},
+           giveni={Y\bibinithyphendelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f7acb66cf6192f3c7334c9f6c9f18999}{%
+           family={Chien},
+           familyi={C\bibinitperiod},
+           given={Yi-Chung},
+           giveni={Y\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e0bc09f8d26ed109059a8db6ea6863b}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Yu-Heng},
+           giveni={Y\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3022cdf4e7959d0a5aaf0d10fc5606b0}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Hui-Hsuan},
+           giveni={H\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c6081bba97e90374f38e5eb3fb6a3132}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Dung-Fang},
+           giveni={D\bibinithyphendelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3bb8b8c464f9990861bc4f15dd03acb2}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Yung-Luen},
+           giveni={Y\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1b314bd783857e6aea0986603aabdbd9}
+      \strng{fullhash}{1879d890b1682111d43ed887eb6d1a28}
+      \strng{bibnamehash}{1b314bd783857e6aea0986603aabdbd9}
+      \strng{authorbibnamehash}{1b314bd783857e6aea0986603aabdbd9}
+      \strng{authornamehash}{1b314bd783857e6aea0986603aabdbd9}
+      \strng{authorfullhash}{1879d890b1682111d43ed887eb6d1a28}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Simple Summary TP53 is one of the most well-known and intensively studied tumor-suppressor genes. TP53 is also the most commonly mutated gene in cancer. Many TP53 mutations are missense mutations and are located in several hotspots. Increasing evidence has shown that these hotspot mutations both lose the wild-type function and gain oncogenic functions to promote cancer progression. Among these hotspot mutations, p53-R175H has the highest occurrence in diverse cancers. In this review, we summarize studies associated with p53-R175H gain of function, and outline the current situation of the development of small molecules or immunotherapies that target p53-R175H. Abstract Wild-type p53 is known as “the guardian of the genome” because of its function of inducing DNA repair, cell-cycle arrest, and apoptosis, preventing the accumulation of gene mutations. TP53 is highly mutated in cancer cells and most TP53 hotspot mutations are missense mutations. Mutant p53 proteins, encoded by these hotspot mutations, lose canonical wild-type p53 functions and gain functions that promote cancer development, including promoting cancer cell proliferation, migration, invasion, initiation, metabolic reprogramming, angiogenesis, and conferring drug resistance to cancer cells. Among these hotspot mutations, p53-R175H has the highest occurrence. Although losing the transactivating function of the wild-type p53 and prone to aggregation, p53-R175H gains oncogenic functions by interacting with many proteins. In this review, we summarize the gain of functions of p53-R175H in different cancer types, the interacting proteins of p53-R175H, and the downstream signaling pathways affected by p53-R175H to depict a comprehensive role of p53-R175H in cancer development. We also summarize treatments that target p53-R175H, including reactivating p53-R175H with small molecules that can bind to p53-R175H and alter it into a wild-type-like structure, promoting the degradation of p53-R175H by targeting heat-shock proteins that maintain the stability of p53-R175H, and developing immunotherapies that target the p53-R175H–HLA complex presented by tumor cells.}
+      \field{day}{13}
+      \field{eprinttype}{pubmed}
+      \field{issn}{2072-6694}
+      \field{journaltitle}{Cancers}
+      \field{month}{8}
+      \field{number}{16}
+      \field{shortjournal}{Cancers (Basel)}
+      \field{title}{The {{Function}} of the {{Mutant}} P53-{{R175H}} in {{Cancer}}}
+      \field{urlday}{3}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{13}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{4088}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/cancers13164088
+      \endverb
+      \verb{eprint}
+      \verb 34439241
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/DTM9A6F6/Chiang et al. - 2021 - The Function of the Mutant p53-R175H in Cancer.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC8391618/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC8391618/
+      \endverb
+    \endentry
     \entry{chinoPlasmidConstructionUsing2010}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=29c6d1db4e97dfc3126786e1d0f60161}{%
@@ -3833,14 +3918,62 @@
       \endverb
       \keyw{CHK1,CHK2,Li-Fraumeni syndrome,MDM2,TP53,tumor suppressor}
     \endentry
+    \entry{p53BindingProgram}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=a53c498b2180774fa8cddcdbbd1d9138}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={In\bibnamedelima Sub},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=1}}%
+        {{un=1,uniquepart=given,hash=3dc8f70c5c913e69db8ad7e098aff448}{%
+           family={Thayer},
+           familyi={T\bibinitperiod},
+           given={Kelly\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{ff5c17b0ddc2eae4ae9726a427ad2ea6}
+      \strng{fullhash}{ff5c17b0ddc2eae4ae9726a427ad2ea6}
+      \strng{bibnamehash}{ff5c17b0ddc2eae4ae9726a427ad2ea6}
+      \strng{authorbibnamehash}{ff5c17b0ddc2eae4ae9726a427ad2ea6}
+      \strng{authornamehash}{ff5c17b0ddc2eae4ae9726a427ad2ea6}
+      \strng{authorfullhash}{ff5c17b0ddc2eae4ae9726a427ad2ea6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The tumor suppressor protein p53 binds genomic DNA as a cell cycle regulator that ensures DNA gets repaired before replication. When excessive damage renders cells non-salvageable, the protein initiates apoptosis; however, disruption of this process may lead to tumor growth. An additive binding-energy model was developed as a means to categorize known DNA binding sequences based on their hydrogen bonding patterns and DNA bending mechanics. The model incorporates reported key discriminatory hydrogen bonding interactions and the mechanical DNA bending caused by the “TG step” that occurs in the 1TUP wild type p53 crystal structure. We have found that binding categorically occurs in five groups hypothesized also differ in binding mechanisms. The high frequency of poly(A) and poly(G) tract regions in the non-consensus p53 binding sites has prompted us to pay special attention to the DNA mechanics and its role in DNA-protein interactions specifically in the p53 binding interface. To further investigate this hypothesis, sequences representing these features taken from known biological promoters were simulated with molecular dynamics using the AMBER suite programs. The results can iteratively refine the additive binding energy model as more detailed mechanistic properties are elucidated.}
+      \field{journaltitle}{The FASEB Journal}
+      \field{number}{S1}
+      \field{title}{Molecular Dynamics of DNA Mechanical Contributions of Various Promoter Sequences in p53 Complexes Motivated by a Novel Additive Binding Energy Model}
+      \field{volume}{29}
+      \field{year}{2015}
+      \field{pages}{712.22}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb https://doi.org/10.1096/fasebj.29.1\_supplement.712.22
+      \endverb
+      \verb{eprint}
+      \verb https://faseb.onlinelibrary.wiley.com/doi/pdf/10.1096/fasebj.29.1_supplement.712.22
+      \endverb
+      \verb{urlraw}
+      \verb https://faseb.onlinelibrary.wiley.com/doi/abs/10.1096/fasebj.29.1_supplement.712.22
+      \endverb
+      \verb{url}
+      \verb https://faseb.onlinelibrary.wiley.com/doi/abs/10.1096/fasebj.29.1_supplement.712.22
+      \endverb
+    \endentry
     \entry{hanInsightsRationalDesign2022}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=ce09e144ea7e61de1d873d0eef2273f2}{%
+        {{un=1,uniquepart=given,hash=ce09e144ea7e61de1d873d0eef2273f2}{%
            family={Han},
            familyi={H\bibinitperiod},
            given={In\bibnamedelima Sub\bibnamedelima M.},
            giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=1,uniquepart=given,hash=728cf99ac8630068a50b786a77d78bd5}{%
            family={Abramson},
            familyi={A\bibinitperiod},
@@ -4907,6 +5040,70 @@
       \verb https://www.mdpi.com/1422-0067/24/2/1267
       \endverb
       \keyw{brain,metastasis,p53 isoform,receptor recycling,time to metastasis,\(Delta\)133p53\(\beta\)}
+    \endentry
+    \entry{joergerStructuralBasisUnderstanding2006}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=40687eadba62bf90716f8de342d91355}{%
+           family={Joerger},
+           familyi={J\bibinitperiod},
+           given={Andreas\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=50b4f4ec391034b907b4bc98702a2bfd}{%
+           family={Ang},
+           familyi={A\bibinitperiod},
+           given={Hwee\bibnamedelima Ching},
+           giveni={H\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=2,uniquepart=given,hash=caf0791686918062333d1c8f41d5cf0e}{%
+           family={Fersht},
+           familyi={F\bibinitperiod},
+           given={Alan\bibnamedelima R.},
+           giveni={A\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{publisher}{1}{%
+        {Proceedings of the National Academy of Sciences}%
+      }
+      \strng{namehash}{e165ac24bf2b6ca355671fe44da46a1f}
+      \strng{fullhash}{e165ac24bf2b6ca355671fe44da46a1f}
+      \strng{bibnamehash}{e165ac24bf2b6ca355671fe44da46a1f}
+      \strng{authorbibnamehash}{e165ac24bf2b6ca355671fe44da46a1f}
+      \strng{authornamehash}{e165ac24bf2b6ca355671fe44da46a1f}
+      \strng{authorfullhash}{e165ac24bf2b6ca355671fe44da46a1f}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The DNA-binding domain of the tumor suppressor p53 is inactivated by mutation in ≈50\% of human cancers. We have solved high-resolution crystal structures of several oncogenic mutants to investigate the structural basis of inactivation and provide information for designing drugs that may rescue inactivated mutants. We found a variety of structural consequences upon mutation: (i) the removal of an essential contact with DNA, (ii) creation of large, water-accessible crevices or hydrophobic internal cavities with no other structural changes but with a large loss of thermodynamic stability, (iii) distortion of the DNA-binding surface, and (iv) alterations to surfaces not directly involved in DNA binding but involved in domain–domain interactions on binding as a tetramer. These findings explain differences in functional properties and associated phenotypes (e.g., temperature sensitivity). Some mutants have the potential of being rescued by a generic stabilizing drug. In addition, a mutation-induced crevice is a potential target site for a mutant-selective stabilizing drug.}
+      \field{day}{10}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{month}{10}
+      \field{number}{41}
+      \field{title}{Structural Basis for Understanding Oncogenic P53 Mutations and Designing Rescue Drugs}
+      \field{urlday}{3}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{103}
+      \field{year}{2006}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{15056\bibrangedash 15061}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.0607286103
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/6TSCBGAK/Joerger et al. - 2006 - Structural basis for understanding oncogenic p53 mutations and designing rescue drugs.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.pnas.org/doi/10.1073/pnas.0607286103
+      \endverb
+      \verb{url}
+      \verb https://www.pnas.org/doi/10.1073/pnas.0607286103
+      \endverb
     \endentry
     \entry{jorgensenComparisonSimplePotential1983}{article}{}
       \name{author}{5}{}{%
@@ -6455,6 +6652,91 @@
       \verb https://www.nature.com/articles/s41580-018-0015-0
       \endverb
       \keyw{Mechanisms of disease,Tumour-suppressor proteins}
+    \endentry
+    \entry{lepreInsightsEffectG245S2017}{article}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=79616809095ca9efeb1700ebd2d476e4}{%
+           family={Lepre},
+           familyi={L\bibinitperiod},
+           given={Marco\bibnamedelima Gaetano},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3acb0921396e287a1c6700440c03358a}{%
+           family={Omar},
+           familyi={O\bibinitperiod},
+           given={Sara\bibnamedelima Ibrahim},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39ecf138fd30144e9133d696f837d25a}{%
+           family={Grasso},
+           familyi={G\bibinitperiod},
+           given={Gianvito},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b42965da37018141c59d96d50032051e}{%
+           family={Morbiducci},
+           familyi={M\bibinitperiod},
+           given={Umberto},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c71f06eae670941588ebfc8387bbca71}{%
+           family={Deriu},
+           familyi={D\bibinitperiod},
+           given={Marco\bibnamedelima Agostino},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9cbe8272280c7af22e1c8a475f504c8e}{%
+           family={Tuszynski},
+           familyi={T\bibinitperiod},
+           given={Jack\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0fdea107eeac87bb007a544b1681728d}
+      \strng{fullhash}{8a7624533a00adeaa896eb0734c12b34}
+      \strng{bibnamehash}{0fdea107eeac87bb007a544b1681728d}
+      \strng{authorbibnamehash}{0fdea107eeac87bb007a544b1681728d}
+      \strng{authornamehash}{0fdea107eeac87bb007a544b1681728d}
+      \strng{authorfullhash}{8a7624533a00adeaa896eb0734c12b34}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The transcription factor p53 is a potent tumor suppressor dubbed as the “guardian of the genome” because of its ability to orchestrate protective biological outputs in response to a variety of oncogenic stresses. Mutation and thus inactivation of p53 can be found in 50\% of human tumors. The majority are missense mutations located in the DNA binding region. Among them, G245S is known to be a structural hotspot mutation. To understand the behaviors and differences between the wild-type and mutant, both a dimer of the wild type p53 (wt-p53) and its G245S mutant (G245S-mp53), complexed with DNA, were simulated using molecular dynamics for more than 1 μs. wt-p53 and G245S-mp53 apo monomers were simulated for 1 μs as well. Conformational analyses and binding energy evaluations performed underline important differences and therefore provide insights to understand the G245S-mp53 loss of function. Our results indicate that the G245S mutation destabilizes several structural regions in the protein that are crucial for DNA binding when found in its apo form and highlight differences in the mutant-DNA complex structure compared to the wt protein. These findings not only provide means that can be applied to other p53 mutants but also serve as structural basis for further studies aimed at the development of cancer therapies based on restoring the function of p53.}
+      \field{day}{16}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1420-3049}
+      \field{journaltitle}{Molecules : A Journal of Synthetic Chemistry and Natural Product Chemistry}
+      \field{month}{8}
+      \field{number}{8}
+      \field{shortjournal}{Molecules}
+      \field{title}{Insights into the {{Effect}} of the {{G245S Single Point Mutation}} on the {{Structure}} of P53 and the {{Binding}} of the {{Protein}} to {{DNA}}}
+      \field{urlday}{3}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{22}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1358}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/molecules22081358
+      \endverb
+      \verb{eprint}
+      \verb 28813011
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/SKD53TJH/Lepre et al. - 2017 - Insights into the Effect of the G245S Single Point Mutation on the Structure of p53 and the Binding.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC6152093/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC6152093/
+      \endverb
     \endentry
     \entry{lewisAllosteryLacOperon2013}{article}{}
       \name{author}{1}{}{%
@@ -12023,14 +12305,87 @@
       \verb https://www.sciencedirect.com/science/article/pii/S0092867400804870
       \endverb
     \endentry
+    \entry{zhangGainFunctionMutant2016}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=1f26f664835ac6c347db22001b657f1a}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c5877ccd10e80a87ded3412b4e743c9}{%
+           family={Coillie},
+           familyi={C\bibinitperiod},
+           given={S\bibnamedelima V},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2402f9ec5da84e3c78b76ba8877047a6}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={J-Y},
+           giveni={J\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d099836f6a91712f1b8f9de548a019f}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3c1307f04a2326d8574987ac3a9ef4db}
+      \strng{fullhash}{d73895f350a0089736ada9f27c7bcf68}
+      \strng{bibnamehash}{3c1307f04a2326d8574987ac3a9ef4db}
+      \strng{authorbibnamehash}{3c1307f04a2326d8574987ac3a9ef4db}
+      \strng{authornamehash}{3c1307f04a2326d8574987ac3a9ef4db}
+      \strng{authorfullhash}{d73895f350a0089736ada9f27c7bcf68}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Mutant p53 proteins commonly lose their tumor suppression function and gain novel oncogenic functions (gain of function (GOF)). Different p53 mutations are often considered in one class in biological and clinical studies. However, recent studies have revealed that p53 mutations are biologically and clinically distinct. The R282W mutant associates with earlier onset of familial cancers and poorer outcome of cancer patients, suggesting a more prominent GOF effect of this specific mutant. Here we discuss our current understanding on the multifaceted effects of R282W mutation, including its structural features, signaling pathways and clinical implications. The destabilizing nature, aggregation proneness, altered transcriptome and interactome may collaboratively contribute to the unique phenotype of R282W mutation. The quest for mechanistic insights into the unique GOF effects of R282W mutation would further our understanding of the biology of mutant proteins in cancers, and enforce the development of more effective targeted therapies.}
+      \field{eprinttype}{pubmed}
+      \field{issn}{2157-9024}
+      \field{journaltitle}{Oncogenesis}
+      \field{month}{2}
+      \field{number}{2}
+      \field{shortjournal}{Oncogenesis}
+      \field{shorttitle}{Gain of Function of Mutant P53}
+      \field{title}{Gain of Function of Mutant P53: {{R282W}} on the Peak?}
+      \field{urlday}{3}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{e196}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1038/oncsis.2016.8
+      \endverb
+      \verb{eprint}
+      \verb 26878390
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/X3F45VTL/Zhang et al. - 2016 - Gain of function of mutant p53 R282W on the peak.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC5154345/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC5154345/
+      \endverb
+    \endentry
     \entry{zhangMultifunctionalProlinerichDomain2025}{article}{}
       \name{author}{2}{}{%
-        {{un=1,uniquepart=given,hash=289900238fadd23bffd12a3b9cce2024}{%
+        {{un=2,uniquepart=given,hash=289900238fadd23bffd12a3b9cce2024}{%
            family={Zhang},
            familyi={Z\bibinitperiod},
            given={Yuesheng},
            giveni={Y\bibinitperiod},
-           givenun=1}}%
+           givenun=2}}%
         {{un=0,uniquepart=base,hash=3bf39f5053cd8daf3bb1617774317d86}{%
            family={Dutta},
            familyi={D\bibinitperiod},

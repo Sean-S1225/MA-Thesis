@@ -105,47 +105,52 @@
 \contentsline {section}{\numberline {5.4}Methods}{152}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Building Starting Structure}{152}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Simulation and Analysis Protocol}{153}{subsection.5.4.2}%
-\contentsline {chapter}{\numberline {6}The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics}{154}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Motivation}{154}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Results}{155}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Discussion}{163}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Methods}{163}{section.6.4}%
-\contentsline {chapter}{\numberline {7}The Effects of Rezatapopt on Y220C p53}{164}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Motivation}{164}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Results}{165}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Global Dynamics are Not Clearly Rescued by Rezatapopt}{165}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Rezatapopt Rescues Some Local Dynamics of p53}{173}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Rezatapopt Makes Different Hydrogen Bonds with the DNA Compared to WT, Y220C}{180}{subsection.7.2.3}%
-\contentsline {section}{\numberline {7.3}Discussion}{191}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Methods}{194}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Generation of Starting Structures}{194}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Simulation Protocol and Data Analysis}{194}{subsection.7.4.2}%
-\contentsline {part}{II\hspace {1em}Experimental Approaches to Test p53 Function}{195}{part.2}%
-\contentsline {chapter}{\numberline {8}Background on Experimental Techniques}{196}{chapter.8}%
-\contentsline {section}{\numberline {8.1}DNA Plasmids}{196}{section.8.1}%
-\contentsline {section}{\numberline {8.2}\textit {E. coli}}{197}{section.8.2}%
-\contentsline {section}{\numberline {8.3}\textit {Saccharomyces cerevisiae}}{198}{section.8.3}%
-\contentsline {section}{\numberline {8.4}DNA Gel Electrophoresis}{199}{section.8.4}%
-\contentsline {section}{\numberline {8.5}PCR}{200}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Restriction Digestion}{202}{section.8.6}%
-\contentsline {section}{\numberline {8.7}Gap Repair}{203}{section.8.7}%
-\contentsline {section}{\numberline {8.8}Site-Directed Mutagenesis}{203}{section.8.8}%
-\contentsline {section}{\numberline {8.9}The \(\beta \)-Galactosidase Protein}{205}{section.8.9}%
-\contentsline {chapter}{\numberline {9}Development of a \(\beta \)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}{207}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Motivation}{207}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Results}{208}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Designing an Assay to Measure p53-Dependent Transcription with \textit {lacZ}}{208}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Building the p53 Expression Plasmid}{210}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Building the p53-Dependent Transcription Reporter Plasmid}{212}{subsection.9.2.3}%
-\contentsline {subsection}{\numberline {9.2.4}Studying Yeast Doubling Time to Optimize Experiment}{215}{subsection.9.2.4}%
-\contentsline {subsection}{\numberline {9.2.5}A Proof of Concept Shows the Assay Works}{220}{subsection.9.2.5}%
-\contentsline {section}{\numberline {9.3}Discussion}{225}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Materials}{227}{section.9.4}%
-\contentsline {section}{\numberline {9.5}Methods}{229}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Standard Lab Protocols}{229}{subsection.9.5.1}%
-\contentsline {subsection}{\numberline {9.5.2}\(\beta \)-Galactosidase Assay}{230}{subsection.9.5.2}%
-\contentsline {chapter}{\numberline {10}Discussion and Conclusions}{233}{chapter.10}%
-\contentsline {chapter}{\numberline {11}Methods}{235}{chapter.11}%
-\contentsline {chapter}{Appendix}{236}{appendix*.135}%
-\contentsline {section}{\numberline {.1}The Effects of the Y220C Mutation and PK11000 on p53 Isoforms}{236}{section.Alph0.1}%
-\contentsline {section}{\numberline {.2}The Coupled Dynamics of p53 and DNA Across Binding Sequences}{236}{section.Alph0.2}%
+\contentsline {chapter}{\numberline {6}The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics and the Restorative Capabilities of PK11000}{155}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Motivation}{155}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Results}{157}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}PK11000 Rescues Some Global Dynamics of the 10 Hotspot Mutations}{157}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}PK11000 Rescues Some Hydrogen Bond Interactions with the DNA}{159}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Discussion}{165}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Methods}{167}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Generation of Starting Structure}{167}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Simulation Protocol and Data Analysis}{167}{subsection.6.4.2}%
+\contentsline {chapter}{\numberline {7}The Effects of Rezatapopt on Y220C p53}{168}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Motivation}{168}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Results}{169}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Global Dynamics are Not Clearly Rescued by Rezatapopt}{172}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Rezatapopt Rescues Some Local Dynamics of p53}{180}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Rezatapopt Makes Different Hydrogen Bonds with the DNA Compared to WT, Y220C}{188}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Discussion}{198}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Methods}{201}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Generation of Starting Structures}{201}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Simulation Protocol and Data Analysis}{201}{subsection.7.4.2}%
+\contentsline {part}{II\hspace {1em}Experimental Approaches to Test p53 Function}{202}{part.2}%
+\contentsline {chapter}{\numberline {8}Background on Experimental Techniques}{203}{chapter.8}%
+\contentsline {section}{\numberline {8.1}DNA Plasmids}{203}{section.8.1}%
+\contentsline {section}{\numberline {8.2}\textit {E. coli}}{204}{section.8.2}%
+\contentsline {section}{\numberline {8.3}\textit {Saccharomyces cerevisiae}}{205}{section.8.3}%
+\contentsline {section}{\numberline {8.4}DNA Gel Electrophoresis}{206}{section.8.4}%
+\contentsline {section}{\numberline {8.5}PCR}{207}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Restriction Digestion}{209}{section.8.6}%
+\contentsline {section}{\numberline {8.7}Gap Repair}{210}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Site-Directed Mutagenesis}{210}{section.8.8}%
+\contentsline {section}{\numberline {8.9}The \(\beta \)-Galactosidase Protein}{212}{section.8.9}%
+\contentsline {chapter}{\numberline {9}Development of a \(\beta \)-Galactosidase ONPG Assay for Measuring p53-Induced Transcription}{214}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Motivation}{214}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Results}{215}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Designing an Assay to Measure p53-Dependent Transcription with \textit {lacZ}}{215}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Building the p53 Expression Plasmid}{217}{subsection.9.2.2}%
+\contentsline {subsection}{\numberline {9.2.3}Building the p53-Dependent Transcription Reporter Plasmid}{219}{subsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.2.4}Studying Yeast Doubling Time to Optimize Experiment}{222}{subsection.9.2.4}%
+\contentsline {subsection}{\numberline {9.2.5}A Proof of Concept Shows the Assay Works}{227}{subsection.9.2.5}%
+\contentsline {section}{\numberline {9.3}Discussion}{232}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Materials}{234}{section.9.4}%
+\contentsline {section}{\numberline {9.5}Methods}{236}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Standard Lab Protocols}{236}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}\(\beta \)-Galactosidase Assay}{237}{subsection.9.5.2}%
+\contentsline {chapter}{\numberline {10}Discussion and Conclusions}{240}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Methods}{242}{chapter.11}%
+\contentsline {chapter}{Appendix}{243}{appendix*.133}%
+\contentsline {section}{\numberline {.1}The Effects of the Y220C Mutation and PK11000 on p53 Isoforms}{243}{section.Alph0.1}%
+\contentsline {section}{\numberline {.2}The Coupled Dynamics of p53 and DNA Across Binding Sequences}{243}{section.Alph0.2}%
+\contentsline {section}{\numberline {.3}The Effects of the Ten Most Common p53 Point Mutations on p53 Dynamics and the Restorative Capabilities of PK11000}{243}{section.Alph0.3}%

@@ -8,6 +8,15 @@ To do this, we have simulated two different versions of p53 with the Y220C mutat
 
 \section{Results}
 
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt.png}
+\caption[FL Y220C p53 with Rezatapopt]{The FL p53 structure with the Y220C mutation and Rezatapopt bound. p53 is shown in green and Rezatapopt is shown in purple. Residue 220C is indicated and shown in cyan sticks.}
+\label{fig:rezatapopt-struct}
+\end{figure}
+
+\figurepageref{fig:rezatapopt-struct} shows the FL p53 structure with the Y220C mutation and the small molecule Rezatapopt bound.
+
 \subsection{Global Dynamics are Not Clearly Rescued by Rezatapopt}
 
 \begin{figure}
@@ -77,7 +86,7 @@ Having seen that broadly, the binding of Rezatapopt increases the conformational
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_FL_DBD_Rezatapopt_RMSF.png}
-\caption[DBD and FL p53 RMSF + Rezatapopt]{RMSF values for the different systems, WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt, between the FL and DBD p53 simulations.}
+\caption[DBD and FL p53 RMSF + Rezatapopt]{RMSF values for the different systems, WT, Y220C, Y220C\_PK11000, and Y220C\_Rezatapopt, between the FL and DBD p53 simulations. Secondary structure is shown for each residue, blue indicates no secondary structure, red indicates a \(\beta\)-sheet for that residue, and yellow indicates an \(\alpha\)-helix.}
 \label{fig:rezatapopt-fl-dbd-p53-rmsf}
 \end{figure}
 
@@ -86,34 +95,34 @@ First, we plotted RMSF per residue between our system for the FL p53 and the p53
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_RMSF_Diff.png}
-\caption[FL p53 RMSF Difference Plot]{Difference RMSF plot for the FL p53. \(\Delta\)RMSF\textsubscript{WT \textminus{} Y220C}, \(\Delta\)RMSF\textsubscript{Y220C\_PK11000 \textminus{} Y220C}, and \(\Delta\)RMSF\textsubscript{Y220C\_Rezatapopt \textminus{} Y220C} are shown. A value greater than zero means that the Y220C p53 is less flexible than the other protein at that residue.}
+\caption[FL p53 RMSF Difference Plot]{Difference RMSF plot for the FL p53. \(\Delta\)RMSF\textsubscript{WT \textminus{} Y220C}, \(\Delta\)RMSF\textsubscript{Y220C\_PK11000 \textminus{} Y220C}, and \(\Delta\)RMSF\textsubscript{Y220C\_Rezatapopt \textminus{} Y220C} are shown. A value greater than zero means that the Y220C p53 is less flexible than the other protein at that residue. Secondary structure is shown for each residue, blue indicates no secondary structure, red indicates a \(\beta\)-sheet for that residue, and yellow indicates an \(\alpha\)-helix.}
 \label{fig:rezatapopt-fl-rmsf-diff}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_FL_Rezatapopt_RMSF_RescueScore.png}
-\caption[FL p53 RMSF Rescue Score]{The rescue score for PK11000 and Rezatapopt, using the metric of the FL p53 RMSF. A rescue score between \num{0} and \num{1} indicates a partial rescue of WT function, a score greater than \num{1} indicates an overshoot of WT function, and a score less than \num{0} indicates the presence of the drug worsens the deleterious effect of the mutation.}
+\caption[FL p53 RMSF Rescue Score]{The rescue score for PK11000 and Rezatapopt, using the metric of the FL p53 RMSF. A rescue score between \num{0} and \num{1} indicates a partial rescue of WT function, a score greater than \num{1} indicates an overshoot of WT function, and a score less than \num{0} indicates the presence of the drug worsens the deleterious effect of the mutation. Secondary structure is shown for each residue, blue indicates no secondary structure, red indicates a \(\beta\)-sheet for that residue, and yellow indicates an \(\alpha\)-helix.}
 \label{fig:rezatapopt-fl-rmsf-rescue-score}
 \end{figure}
 
 To see more clearly exactly how the binding of Rezatapopt was altering the dynamics of each residue, we computed the \(\Delta\)RMSF\textsubscript{WT \textminus Y220C}, \(\Delta\)RMSF\textsubscript{Y220C\_PK11000 \textminus Y220C}, and \(\Delta\)RMSF\textsubscript{Y220C\_Rezatapopt \textminus Y220C}, shown in figure \figurepageref{fig:rezatapopt-fl-rmsf-diff} and the rescue score for both PK11000 and Rezatapopt using the metric of RMSF, shown in \figurepageref{fig:rezatapopt-fl-rmsf-rescue-score}.
 
-For the \(\Delta\)RMSF plots, a value greater than \num{0} indicates the Y220C p53 is less flexible than the system it is being compared with. Generally speaking, in the N-terminal domain, the Y220C p53 is less flexible than the WT, whereas in the C-terminal domain, it is more flexible than the WT. \textcolor{red}{connection w/ CTD flexibility and HBonding?} We see that when PK11000 is bound to the Y220C mutant, it becomes much less flexible than the Y220C p53 throughout the entirety of the N-terminal domain. There are some residues in the C-terminal domain for which the Y220C is more flexible, and some where the Y220C\_PK11000 is more flexible. When Rezatapopt is bound to the Y220C p53, however, we see a roughly even spread in the N-terminal domain for residues that are made more or less flexible. In the C-terminal domain, nearly every residue is made more flexible by Rezatapopt binding. Given that the CTD of the Y220C mutant is already more flexible than the WT, this tells us the CTD of the Rezatapopt-bound Y220C is even more flexible than the WT.
+For the \(\Delta\)RMSF plots, a value greater than \num{0} indicates the Y220C p53 is less flexible than the system it is being compared with. Generally speaking, in the N-terminal domain, the Y220C p53 is less flexible than the WT, whereas in the C-terminal domain, it is more flexible than the WT. We see that when PK11000 is bound to the Y220C mutant, it becomes much less flexible than the Y220C p53 throughout the entirety of the N-terminal domain. There are some residues in the C-terminal domain for which the Y220C is more flexible, and some where the Y220C\_PK11000 is more flexible. When Rezatapopt is bound to the Y220C p53, however, we see a roughly even spread in the N-terminal domain for residues that are made more or less flexible. In the C-terminal domain, nearly every residue is made more flexible by Rezatapopt binding. Given that the CTD of the Y220C mutant is already more flexible than the WT, this tells us the CTD of the Rezatapopt-bound Y220C is even more flexible than the WT.
 
 When we look to the rescue score, it is not immediately apparent whether either drugs are able to restore the WT dynamics to the mutant p53. Certainly if they do, there must be more to the story than just RMSF. For PK11000, we can see some rescued residues in the DBD and some residues that are worsened by the presence of the drug, but comparing the same residues with the difference plot, we can see that there is only a small difference between the wild type, the mutant and the PK11000 bound p53. The disordered and N- and C-terminal domains show a variety all three possibilities: some residues are rescued, some residues overshoot WT function, and some residues are made worse. We see a similar pattern in the Rezatapopt-bound p53; residues within the DNA binding domain are either rescued or overshoot wild type dynamics, which is better than PK11000, but in the intrinsically disordered regions, we observe the sames variety of dynamics. Likely, these regions are too unstructured to draw conclusions regarding the rescue of p53.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_RMSF_Diff.png}
-\caption[p53 DBD RMSF Difference Plot]{Difference RMSF plot for the p53 DBD. \(\Delta\)RMSF\textsubscript{WT \textminus{} Y220C}, \(\Delta\)RMSF\textsubscript{Y220C\_PK11000 \textminus{} Y220C}, and \(\Delta\)RMSF\textsubscript{Y220C\_Rezatapopt \textminus{} Y220C} are shown. A value greater than zero means that the Y220C p53 is less flexible than the other protein at that residue.}
+\caption[p53 DBD RMSF Difference Plot]{Difference RMSF plot for the p53 DBD. \(\Delta\)RMSF\textsubscript{WT \textminus{} Y220C}, \(\Delta\)RMSF\textsubscript{Y220C\_PK11000 \textminus{} Y220C}, and \(\Delta\)RMSF\textsubscript{Y220C\_Rezatapopt \textminus{} Y220C} are shown. A value greater than zero means that the Y220C p53 is less flexible than the other protein at that residue. Secondary structure is shown for each residue, blue indicates no secondary structure, red indicates a \(\beta\)-sheet for that residue, and yellow indicates an \(\alpha\)-helix.}
 \label{fig:rezatapopt-dbd-rmsf-diff}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Rezatapopt/p53_DBD_Rezatapopt_RMSF_RescueScore.png}
-\caption[DBD p53 RMSF Rescue Score]{The rescue score for PK11000 and Rezatapopt, using the metric of the p53 DBD RMSF. A rescue score between \num{0} and \num{1} indicates a partial rescue of WT function, a score greater than \num{1} indicates an overshoot of WT function, and a score less than \num{0} indicates the presence of the drug worsens the deleterious effect of the mutation.}
+\caption[DBD p53 RMSF Rescue Score]{The rescue score for PK11000 and Rezatapopt, using the metric of the p53 DBD RMSF. A rescue score between \num{0} and \num{1} indicates a partial rescue of WT function, a score greater than \num{1} indicates an overshoot of WT function, and a score less than \num{0} indicates the presence of the drug worsens the deleterious effect of the mutation. Secondary structure is shown for each residue, blue indicates no secondary structure, red indicates a \(\beta\)-sheet for that residue, and yellow indicates an \(\alpha\)-helix.}
 \label{fig:rezatapopt-dbd-rmsf-rescue-score}
 \end{figure}
 
@@ -208,7 +217,7 @@ We observed that the Y220C\_Rezatapopt has a greater RMSD to its starting struct
 
 When we look to changes in the local dynamics of the protein, we see Rezatapopt drastically increases C-terminal flexibility relative to the FL WT. Within the FL\textbar\textsubscript{DBD}, we do see a restoration of WT-like dynamics of the Y220C\_Rezatapopt, though we do not see this when the DBD is simulated on its own.
 
-Looking to the dynamics of the Y220C\_Rezatapopt bound to the DNA, we see that the FL\textbar\textsubscript{DBD} makes a comparable number of interactions with the DNA per frame compared to the WT, but we see the same in the Y220C mutant, so it is hard to know the effects of the drug compared to the mutant. We see that the Y220C\_Rezatapopt FL\textbar\textsubscript{DBD} makes slightly more unique interactions with the DNA, both atomic level and residue-nucleotide level, and an approximately equal number of interactions with the DNA that are present for at least \qty{10}{\percent} of frames. Interestingly, we see a large difference across constructs in the FL\textbar\textsubscript{CTD}. We see the Y220C\_Rezatapopt making fewer interactions with the DNA per frame, significantly more unique hydrogen bonds with the DNA, and significantly less interactions with the DNA present for \qty{10}{\percent} of frames.
+Looking to the dynamics of the Y220C\_Rezatapopt bound to the DNA, we see that the FL\textbar\textsubscript{DBD} makes a comparable number of interactions with the DNA per frame compared to the WT, but we see the same in the Y220C mutant, so it is hard to know the effects of the drug compared to the mutant. We see that the Y220C\_Rezatapopt FL\textbar\textsubscript{DBD} makes slightly more unique interactions with the DNA, both atomic level and residue-nucleotide level, and an approximately equal number of interactions with the DNA that are present for at least \qty{10}{\percent} of frames. Interestingly, we see a large difference across constructs in the FL\textbar\textsubscript{CTD}. We see the Y220C\_Rezatapopt making fewer interactions with the DNA per frame, significantly more unique hydrogen bonds with the DNA, and significantly less interactions with the DNA present for \qty{10}{\percent} of frames. We hypothesize that the large flexibility in the C-terminal domain is responsible for the large number of different interactions made between the C-terminal domain of the FL p53 and the DNA.
 
 The simulated DBD tells a more convincing rescue pattern. The Y220C\_Rezatapopt makes an equivalent number of interactions per frame with the DNA as Y220C\_PK11000, though also with the Y220C; the WT makes several more. The Y220C\_Rezatapopt makes comparable specific interactions, nitrogenous-base specific interactions, and total number of unique interactions, although there is not a great separation of the Y220C mutant from the WT.
 
