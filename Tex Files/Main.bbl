@@ -1636,14 +1636,16 @@
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{url}
       \field{labeltitlesource}{title}
-      \field{howpublished}{http://www.chemhume.co.uk/ASCHEM/Unit\%201/Ch3IMF/chapter\_3\_\_chemical\_bonding\_andc.htm}
       \field{title}{Chapter 3}
       \field{urlday}{12}
       \field{urlmonth}{3}
       \field{urlyear}{2026}
       \field{urldateera}{ce}
-      \verb{file}
-      \verb /Users/Sean/Zotero/storage/R96PLXHN/chapter_3__chemical_bonding_andc.html
+      \verb{urlraw}
+      \verb http://www.chemhume.co.uk/ASCHEM/Unit%201/Ch3IMF/chapter_3__chemical_bonding_andc.htm
+      \endverb
+      \verb{url}
+      \verb http://www.chemhume.co.uk/ASCHEM/Unit%201/Ch3IMF/chapter_3__chemical_bonding_andc.htm
       \endverb
     \endentry
     \entry{chebaroIntrinsicallyDisorderedEnergy2015}{article}{}

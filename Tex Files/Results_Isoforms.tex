@@ -261,6 +261,7 @@ For the Y220C\_PK11000 and WT\_PK11000 simulations, three replicates were used, 
 All-atom simulations were performed with explicit solvent in an octahedral water box with periodic boundary conditions using the Amber 18 simulation suite \parencite{amber18}.  Particle-mesh Ewald electrostatics were used to handle long-range interactions. The ff14SB forcefield was chosen for protein dynamics \parencite{maierFf14SBImprovingAccuracy2015}, Bsc1 for DNA \parencite{ivaniParmbsc1RefinedForce2016}, and TIP3P for water \parencite{jorgensenComparisonSimplePotential1983}. The \ce{Zn}\textsuperscript{\num{2}+} atom was covalently bound to its coordinating residues, and parameterized using Zaff \parencite{petersStructuralSurveyZincContaining2010}. \ce{Na+} ions were added to maintain electroneutrality. Simulations were conducted using the GPU-optimized pmemd.cuda program \parencite{salomon-ferrerRoutineMicrosecondMolecular2013}. A timestep of \qty{1}{\femto\second} was used.
 
 \subsection{Data Analysis}
+\label{chap:sawnergy}
 
 Simulation data was first analyzed using CPPTRAJ \parencite{roePTRAJCPPTRAJSoftware2013}. The first \qty{100}{\nano\second} of simulation data was disregarded, and only the last \qty{1}{\micro\second} of data was analyzed. Subsequent analyses were performed using Python, making extensive use of Pandas, Numpy, and Matplotlib.
 
