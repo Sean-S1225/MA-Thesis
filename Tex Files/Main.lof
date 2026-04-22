@@ -3,119 +3,121 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Atom Diagram}}{7}{figure.caption.4}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Chemical Bonds}}{9}{figure.caption.5}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Polar Bonds}}{13}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Hydrogen Bonds}}{14}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Van der Waals Forces}}{15}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Protein Structure Hierarchy}}{16}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Amino Acid Structure}}{18}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces The 21 Amino Acids}}{18}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces \((\phi , \psi )\) Dihedral Angles and Ramachandran Plots}}{20}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Protein Secondary Structure}}{22}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Protein Tertiary Structure}}{24}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Protein Quaternary Structure}}{26}{figure.caption.22}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces The Protein Energetic Landscape}}{30}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Y220C p53 with PK11000 bound}}{34}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces p53 Functional Domains}}{35}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces p53 Bound to DNA}}{38}{figure.caption.31}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces p53 DBD-DNA Interactions}}{38}{figure.caption.32}%
-\contentsline {figure}{\numberline {2.18}{\ignorespaces The p53 Signaling Network}}{43}{figure.caption.36}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces The Frequency of Common Cancer-Associated p53 Mutants}}{47}{figure.caption.47}%
-\contentsline {figure}{\numberline {2.20}{\ignorespaces p53 Splice Variants}}{50}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Atom Diagram}}{7}{figure.caption.5}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Chemical Bonds}}{10}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Polar Bonds}}{13}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Hydrogen Bonds}}{14}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Van der Waals Forces}}{15}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Protein Structure Hierarchy}}{17}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Amino Acid Structure}}{18}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces The 21 Amino Acids}}{18}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \((\phi , \psi )\) Dihedral Angles and Ramachandran Plots}}{21}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Protein Secondary Structure}}{22}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Protein Tertiary Structure}}{24}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Protein Quaternary Structure}}{26}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces The Protein Energetic Landscape}}{31}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Y220C p53 with PK11000 bound}}{34}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces p53 Functional Domains}}{36}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces p53 Bound to DNA}}{39}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces p53 DBD-DNA Interactions}}{39}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces The p53 Signaling Network}}{43}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces The Frequency of Common Cancer-Associated p53 Mutants}}{48}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces p53 Splice Variants}}{50}{figure.caption.49}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A Summary of Compute Resources}}{65}{figure.caption.65}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces DNA Helicoidal Parameters}}{69}{figure.caption.66}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The Seven Bridges of Königsberg}}{73}{figure.caption.67}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces An Example of a Graph}}{73}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces A Summary of Compute Resources}}{66}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces DNA Helicoidal Parameters}}{70}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The Seven Bridges of Königsberg}}{74}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces An Example of a Graph}}{74}{figure.caption.69}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Structural Diagram of the p53 Isoforms}}{93}{figure.caption.71}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces RMSD vs Time of p53 Isoforms}}{95}{figure.caption.72}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces p53 Isoform RMSD Violin Plot}}{97}{figure.caption.73}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces p53 Isoform RMSD Difference Plot}}{99}{figure.caption.74}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces p53 Isoform RMSD Rescue Score}}{101}{figure.caption.75}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Truncated p53 Isoform 1 RMSD Heatmaps}}{103}{figure.caption.76}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Isoform 1 Residues that Increase RMSD}}{104}{figure.caption.77}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces p53 Isoform Violin Plot}}{106}{figure.caption.78}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces p53 Isoform RMSF}}{109}{figure.caption.79}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces p53 Isoform RMSF Difference Plot}}{110}{figure.caption.80}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces p53 Isoform RMSF Rescue Score}}{112}{figure.caption.81}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces p53 Isoform Hydrogen Bonding}}{114}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces p53 Isoform Hydrogen Bonding Difference Plot}}{117}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces p53 Isoform Hydrogen Bonding Rescue Score}}{118}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces p53 Isoform Embedding Error Score}}{122}{figure.caption.85}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces p53 Isoform Embedding Error Y220C vs Y220C\_PK11000}}{122}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The p53 Splice Variants}}{94}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Structural Diagram of the p53 Isoforms}}{95}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces RMSD vs Time of p53 Isoforms}}{97}{figure.caption.74}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces p53 Isoform RMSD Violin Plot}}{100}{figure.caption.75}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces p53 Isoform RMSD Difference Plot}}{101}{figure.caption.76}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces p53 Isoform RMSD Rescue Score}}{104}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Truncated p53 Isoform 1 RMSD Heatmaps}}{105}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Isoform 1 Residues that Increase RMSD}}{106}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces p53 Isoform Violin Plot}}{108}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces p53 Isoform RMSF}}{111}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces p53 Isoform RMSF Difference Plot}}{112}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces p53 Isoform RMSF Rescue Score}}{115}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces p53 Isoform Hydrogen Bonding}}{117}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces p53 Isoform Hydrogen Bonding Difference Plot}}{119}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces p53 Isoform Hydrogen Bonding Rescue Score}}{120}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces p53 Isoform Embedding Error Score}}{124}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces p53 Isoform Embedding Error Y220C vs Y220C\_PK11000}}{124}{figure.caption.88}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces p53 Response Element RMSD}}{132}{figure.caption.87}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces p53 Response Element DNA Bend}}{133}{figure.caption.88}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces p53 Response Element DNA End-to-End Distance}}{135}{figure.caption.89}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces p53 Response Element \(\Delta \)RMSF}}{136}{figure.caption.90}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces p53 Response Element \(\Delta \)Rise}}{138}{figure.caption.91}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces p53 Response Element \(\Delta \)Twist}}{139}{figure.caption.92}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Response Element DNA-DNA Hydrogen Bonds}}{141}{figure.caption.93}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces p53 RMSD Across Response Elements}}{144}{figure.caption.94}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces p53 RMSF Across Response Elements}}{145}{figure.caption.95}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Response Element p53-DNA Hydrogen Bonds}}{147}{figure.caption.96}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces p53-DNA Hydrogen Bonds vs p53 Consensus Similarity}}{148}{figure.caption.97}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces p53 Bound to Different Response Elements}}{133}{figure.caption.89}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces p53 Response Element RMSD}}{135}{figure.caption.90}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces p53 Response Element DNA Bend}}{136}{figure.caption.91}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces p53 Response Element DNA End-to-End Distance}}{138}{figure.caption.92}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces p53 Response Element \(\Delta \)RMSF}}{139}{figure.caption.93}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces p53 Response Element \(\Delta \)Rise}}{141}{figure.caption.94}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces p53 Response Element \(\Delta \)Twist}}{142}{figure.caption.95}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Response Element DNA-DNA Hydrogen Bonds}}{144}{figure.caption.96}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces p53 RMSD Across Response Elements}}{147}{figure.caption.97}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces p53 RMSF Across Response Elements}}{148}{figure.caption.98}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Response Element p53-DNA Hydrogen Bonds}}{150}{figure.caption.99}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces p53-DNA Hydrogen Bonds vs p53 Consensus Similarity}}{151}{figure.caption.100}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces p53 Hotspots RMSD vs Time}}{158}{figure.caption.99}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces p53 Hotspots RoG vs Time}}{160}{figure.caption.100}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces p53-DNA Hydrogen Bonds vs Time}}{161}{figure.caption.101}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces p53-DNA Specific Hydrogen Bonds vs Time}}{162}{figure.caption.102}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces p53-DNA Nitrogenous-Base-Interacting Hydrogen Bonds vs Time}}{163}{figure.caption.103}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces p53 Hotspot Mutations Mapped to p53 Structure}}{159}{figure.caption.102}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces p53 Hotspot Mutations Classes Mapped to p53 Structure}}{160}{figure.caption.103}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces p53 Hotspots RMSD vs Time}}{162}{figure.caption.104}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces p53 Hotspots RoG vs Time}}{163}{figure.caption.105}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces p53-DNA Hydrogen Bonds vs Time}}{165}{figure.caption.106}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces p53-DNA Specific Hydrogen Bonds vs Time}}{167}{figure.caption.107}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces p53-DNA Nitrogenous-Base-Interacting Hydrogen Bonds vs Time}}{168}{figure.caption.108}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces FL Y220C p53 with Rezatapopt}}{170}{figure.caption.104}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces RMSD of FL p53 + Rezatapopt}}{171}{figure.caption.105}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces RMSD of DBD p53 + Rezatapopt}}{172}{figure.caption.106}%
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Violin Plots of FL and DBD p53 + Rezatapopt RMSD}}{175}{figure.caption.107}%
-\contentsline {figure}{\numberline {7.5}{\ignorespaces RoG of FL p53 + Rezatapopt}}{177}{figure.caption.108}%
-\contentsline {figure}{\numberline {7.6}{\ignorespaces RoG of DBD p53 + Rezatapopt}}{178}{figure.caption.109}%
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Violin Plots of FL and DBD p53 + Rezatapopt RoG}}{179}{figure.caption.110}%
-\contentsline {figure}{\numberline {7.8}{\ignorespaces DBD and FL p53 RMSF + Rezatapopt}}{181}{figure.caption.111}%
-\contentsline {figure}{\numberline {7.9}{\ignorespaces FL p53 RMSF Difference Plot}}{182}{figure.caption.112}%
-\contentsline {figure}{\numberline {7.10}{\ignorespaces FL p53 RMSF Rescue Score}}{183}{figure.caption.113}%
-\contentsline {figure}{\numberline {7.11}{\ignorespaces p53 DBD RMSF Difference Plot}}{185}{figure.caption.114}%
-\contentsline {figure}{\numberline {7.12}{\ignorespaces DBD p53 RMSF Rescue Score}}{186}{figure.caption.115}%
-\contentsline {figure}{\numberline {7.13}{\ignorespaces FL p53 HBonding vs Time}}{187}{figure.caption.116}%
-\contentsline {figure}{\numberline {7.14}{\ignorespaces DBD p53 HBonding vs Time}}{190}{figure.caption.117}%
-\contentsline {figure}{\numberline {7.15}{\ignorespaces p53\textbar \textsubscript {DBD} HBonding vs p53\textbar \textsubscript {CTD}}}{192}{figure.caption.118}%
-\contentsline {figure}{\numberline {7.16}{\ignorespaces FL p53 HBonding PCA}}{194}{figure.caption.119}%
-\contentsline {figure}{\numberline {7.17}{\ignorespaces DBD p53 HBonding PCA}}{197}{figure.caption.120}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces FL Y220C p53 with Rezatapopt}}{174}{figure.caption.109}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces RMSD of FL p53 + Rezatapopt}}{174}{figure.caption.110}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces RMSD of DBD p53 + Rezatapopt}}{175}{figure.caption.111}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Violin Plots of FL and DBD p53 + Rezatapopt RMSD}}{178}{figure.caption.112}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces RoG of FL p53 + Rezatapopt}}{180}{figure.caption.113}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces RoG of DBD p53 + Rezatapopt}}{181}{figure.caption.114}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Violin Plots of FL and DBD p53 + Rezatapopt RoG}}{182}{figure.caption.115}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces DBD and FL p53 RMSF + Rezatapopt}}{184}{figure.caption.116}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces FL p53 RMSF Difference Plot}}{185}{figure.caption.117}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces FL p53 RMSF Rescue Score}}{186}{figure.caption.118}%
+\contentsline {figure}{\numberline {7.11}{\ignorespaces p53 DBD RMSF Difference Plot}}{188}{figure.caption.119}%
+\contentsline {figure}{\numberline {7.12}{\ignorespaces DBD p53 RMSF Rescue Score}}{189}{figure.caption.120}%
+\contentsline {figure}{\numberline {7.13}{\ignorespaces FL p53 HBonding vs Time}}{190}{figure.caption.121}%
+\contentsline {figure}{\numberline {7.14}{\ignorespaces DBD p53 HBonding vs Time}}{193}{figure.caption.122}%
+\contentsline {figure}{\numberline {7.15}{\ignorespaces p53\textbar \textsubscript {DBD} HBonding vs p53\textbar \textsubscript {CTD}}}{195}{figure.caption.123}%
+\contentsline {figure}{\numberline {7.16}{\ignorespaces FL p53 HBonding PCA}}{197}{figure.caption.124}%
+\contentsline {figure}{\numberline {7.17}{\ignorespaces DBD p53 HBonding PCA}}{200}{figure.caption.125}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces PCR}}{208}{figure.caption.121}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Gap Repair}}{211}{figure.caption.122}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces \(\beta \)-Galactosidase Function}}{212}{figure.caption.123}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces PCR}}{211}{figure.caption.126}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Gap Repair}}{214}{figure.caption.127}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces \(\beta \)-Galactosidase Function}}{215}{figure.caption.128}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces The p53 Expression Plasmid}}{218}{figure.caption.124}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces The p53 Transcription Reporter Plasmid}}{220}{figure.caption.125}%
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Yeast Growth vs Time}}{223}{figure.caption.126}%
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Yeast Doubling Time}}{225}{figure.caption.127}%
-\contentsline {figure}{\numberline {9.5}{\ignorespaces \(\beta \)-Galactosidase Assay Conducted on Control Strains}}{228}{figure.caption.128}%
-\contentsline {figure}{\numberline {9.6}{\ignorespaces \(\beta \)-Galactosidase Assay: Proof of Concept}}{230}{figure.caption.129}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces The p53 Expression Plasmid}}{221}{figure.caption.129}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces The p53 Transcription Reporter Plasmid}}{223}{figure.caption.130}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Yeast Growth vs Time}}{226}{figure.caption.131}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Yeast Doubling Time}}{228}{figure.caption.132}%
+\contentsline {figure}{\numberline {9.5}{\ignorespaces \(\beta \)-Galactosidase Assay Conducted on Control Strains}}{231}{figure.caption.133}%
+\contentsline {figure}{\numberline {9.6}{\ignorespaces \(\beta \)-Galactosidase Assay: Proof of Concept}}{233}{figure.caption.134}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces RMSD vs Time of p53 Isoforms (DBD')}}{244}{figure.caption.134}%
-\contentsline {figure}{\numberline {2}{\ignorespaces RMSD vs Time of p53 Isoforms (DBD'')}}{245}{figure.caption.135}%
-\contentsline {figure}{\numberline {3}{\ignorespaces p53 Isoform RMSD Violin Plot for DBD' Subset}}{246}{figure.caption.136}%
-\contentsline {figure}{\numberline {4}{\ignorespaces p53 Isoform RMSD Violin Plot for DBD'' Subset}}{247}{figure.caption.137}%
-\contentsline {figure}{\numberline {5}{\ignorespaces p53 Isoform RoG Rescue Score}}{248}{figure.caption.138}%
-\contentsline {figure}{\numberline {6}{\ignorespaces RoG vs Time of p53 Isoforms (DBD')}}{249}{figure.caption.139}%
-\contentsline {figure}{\numberline {7}{\ignorespaces RoG vs Time of p53 Isoforms (DBD'')}}{250}{figure.caption.140}%
-\contentsline {figure}{\numberline {8}{\ignorespaces p53 Isoform Violin Plot for the DBD' subset}}{251}{figure.caption.141}%
-\contentsline {figure}{\numberline {9}{\ignorespaces p53 Isoform Violin Plot for the DBD'' subset}}{252}{figure.caption.142}%
-\contentsline {figure}{\numberline {10}{\ignorespaces RoG vs Time of p53 Isoforms}}{253}{figure.caption.143}%
-\contentsline {figure}{\numberline {11}{\ignorespaces p53 Isoform \(\Delta \)(Embedding Error) Score}}{254}{figure.caption.144}%
-\contentsline {figure}{\numberline {12}{\ignorespaces BAX DNA Bend vs End-to-End Distance}}{256}{figure.caption.145}%
-\contentsline {figure}{\numberline {13}{\ignorespaces BAX DNA Roll vs End-to-End Distance}}{257}{figure.caption.146}%
-\contentsline {figure}{\numberline {14}{\ignorespaces p53 Response Element \(\Delta \)Buckle}}{258}{figure.caption.147}%
-\contentsline {figure}{\numberline {15}{\ignorespaces p53 Response Element \(\Delta \)Propeller}}{259}{figure.caption.148}%
-\contentsline {figure}{\numberline {16}{\ignorespaces p53 Response Element \(\Delta \)Tip}}{260}{figure.caption.149}%
-\contentsline {figure}{\numberline {17}{\ignorespaces p53 Response Element \(\Delta \)Inclination}}{261}{figure.caption.150}%
-\contentsline {figure}{\numberline {18}{\ignorespaces p53 Response Element \(\Delta \)Roll}}{262}{figure.caption.151}%
-\contentsline {figure}{\numberline {19}{\ignorespaces p53 Hotspots RMSD vs Time, No Replicate Averaging}}{264}{figure.caption.152}%
-\contentsline {figure}{\numberline {20}{\ignorespaces p53 Hotspots RMSD vs Time for the DBD' subset}}{265}{figure.caption.153}%
-\contentsline {figure}{\numberline {21}{\ignorespaces p53 Hotspots RMSD vs Time for the DBD'' subset}}{266}{figure.caption.154}%
-\contentsline {figure}{\numberline {22}{\ignorespaces p53 Hotspots RoG vs Time, No Replicate Averaging}}{267}{figure.caption.155}%
-\contentsline {figure}{\numberline {23}{\ignorespaces p53 Hotspots RoG vs Time for the DBD' subset}}{268}{figure.caption.156}%
-\contentsline {figure}{\numberline {24}{\ignorespaces p53 Hotspots RoG vs Time for the DBD'' subset}}{269}{figure.caption.157}%
-\contentsline {figure}{\numberline {25}{\ignorespaces p53 Hotspots RMSF}}{270}{figure.caption.158}%
+\contentsline {figure}{\numberline {1}{\ignorespaces RMSD vs Time of p53 Isoforms (DBD')}}{247}{figure.caption.139}%
+\contentsline {figure}{\numberline {2}{\ignorespaces RMSD vs Time of p53 Isoforms (DBD'')}}{248}{figure.caption.140}%
+\contentsline {figure}{\numberline {3}{\ignorespaces RoG vs Time of p53 Isoforms}}{249}{figure.caption.141}%
+\contentsline {figure}{\numberline {4}{\ignorespaces RoG vs Time of p53 Isoforms (DBD')}}{250}{figure.caption.142}%
+\contentsline {figure}{\numberline {5}{\ignorespaces RoG vs Time of p53 Isoforms (DBD'')}}{251}{figure.caption.143}%
+\contentsline {figure}{\numberline {6}{\ignorespaces p53 Isoform RMSD Violin Plot for DBD' Subset}}{252}{figure.caption.144}%
+\contentsline {figure}{\numberline {7}{\ignorespaces p53 Isoform RMSD Violin Plot for DBD'' Subset}}{253}{figure.caption.145}%
+\contentsline {figure}{\numberline {8}{\ignorespaces p53 Isoform RoG Rescue Score}}{254}{figure.caption.146}%
+\contentsline {figure}{\numberline {9}{\ignorespaces p53 Isoform \(\Delta \)(Embedding Error) Score}}{255}{figure.caption.147}%
+\contentsline {figure}{\numberline {10}{\ignorespaces BAX DNA Bend vs End-to-End Distance}}{257}{figure.caption.148}%
+\contentsline {figure}{\numberline {11}{\ignorespaces BAX DNA Roll vs End-to-End Distance}}{258}{figure.caption.149}%
+\contentsline {figure}{\numberline {12}{\ignorespaces p53 Response Element \(\Delta \)Buckle}}{259}{figure.caption.150}%
+\contentsline {figure}{\numberline {13}{\ignorespaces p53 Response Element \(\Delta \)Propeller}}{260}{figure.caption.151}%
+\contentsline {figure}{\numberline {14}{\ignorespaces p53 Response Element \(\Delta \)Tip}}{261}{figure.caption.152}%
+\contentsline {figure}{\numberline {15}{\ignorespaces p53 Response Element \(\Delta \)Inclination}}{262}{figure.caption.153}%
+\contentsline {figure}{\numberline {16}{\ignorespaces p53 Response Element \(\Delta \)Roll}}{263}{figure.caption.154}%
+\contentsline {figure}{\numberline {17}{\ignorespaces p53 Hotspots RMSD vs Time, No Replicate Averaging}}{265}{figure.caption.155}%
+\contentsline {figure}{\numberline {18}{\ignorespaces p53 Hotspots RMSD vs Time for the DBD' subset}}{266}{figure.caption.156}%
+\contentsline {figure}{\numberline {19}{\ignorespaces p53 Hotspots RMSD vs Time for the DBD'' subset}}{267}{figure.caption.157}%
+\contentsline {figure}{\numberline {20}{\ignorespaces p53 Hotspots RoG vs Time, No Replicate Averaging}}{268}{figure.caption.158}%
+\contentsline {figure}{\numberline {21}{\ignorespaces p53 Hotspots RoG vs Time for the DBD' subset}}{269}{figure.caption.159}%
+\contentsline {figure}{\numberline {22}{\ignorespaces p53 Hotspots RoG vs Time for the DBD'' subset}}{270}{figure.caption.160}%
+\contentsline {figure}{\numberline {23}{\ignorespaces p53 Hotspots RMSF}}{271}{figure.caption.161}%

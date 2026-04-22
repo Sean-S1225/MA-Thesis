@@ -4897,6 +4897,79 @@
       \verb https://www.science.org/doi/10.1126/science.7878469
       \endverb
     \endentry
+    \entry{jensenInvestigatingMetalbindingProteins2007}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=36e509c23a6c07ec267c8d03477d2966}{%
+           family={Jensen},
+           familyi={J\bibinitperiod},
+           given={M.\bibnamedelimi Ringkjøbing},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be76370c5add0c414342eff6ad2e1b22}{%
+           family={Hass},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi A.\bibnamedelimi S.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=39e80cc58a3fbc0121f7c699faf4bae1}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={D.\bibnamedelimi F.},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f49d274ace98619f9c1d8dbfa199874}{%
+           family={Led},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e59340b86ae95257d062e44fdbd683f8}
+      \strng{fullhash}{9419c6254b0732ec476887ae0b436eb7}
+      \strng{bibnamehash}{e59340b86ae95257d062e44fdbd683f8}
+      \strng{authorbibnamehash}{e59340b86ae95257d062e44fdbd683f8}
+      \strng{authornamehash}{e59340b86ae95257d062e44fdbd683f8}
+      \strng{authorfullhash}{9419c6254b0732ec476887ae0b436eb7}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Metal ions play a key role for the function of many proteins. The interaction of the metal ion with the protein and its involvement in the function of the protein vary widely. In some proteins, the metal ion is bound tightly to the ligand residues and may be the key player in the function of the protein, as in the case of blue copper proteins. In other proteins, the metal ion is bound only temporarily and loosely to the protein, as in the case of some metalloenzymes and other proteins where the metal ion acts as a cofactor necessary for the function of the protein. Such proteins are often known as metal ion-activated proteins. The review focuses on recent nuclear magnetic resonance (NMR) studies of a series of metal-dependent proteins and the characterization of the metal-binding sites. In particular, we focus on NMR techniques for studying metal binding to proteins such as chemical shift mapping, paramagnetic NMR and changes in backbone dynamics upon metal binding.}
+      \field{day}{31}
+      \field{eprinttype}{pubmed}
+      \field{issn}{1420-682X}
+      \field{journaltitle}{Cellular and Molecular Life Sciences: CMLS}
+      \field{month}{3}
+      \field{number}{9}
+      \field{shortjournal}{Cell Mol Life Sci}
+      \field{title}{Investigating Metal-Binding in Proteins by Nuclear Magnetic Resonance}
+      \field{urlday}{21}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{64}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1085}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/s00018-007-6447-x
+      \endverb
+      \verb{eprint}
+      \verb 17396226
+      \endverb
+      \verb{file}
+      \verb /Users/Sean/Zotero/storage/LK4RVXH3/Jensen et al. - 2007 - Investigating metal-binding in proteins by nuclear magnetic resonance.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC11136199/
+      \endverb
+      \verb{url}
+      \verb https://pmc.ncbi.nlm.nih.gov/articles/PMC11136199/
+      \endverb
+    \endentry
     \entry{jesusIncreasedExpressionD133p53v2023}{article}{}
       \name{author}{16}{}{%
         {{un=0,uniquepart=base,hash=59cc71f7785151facd83304fdfffdcb0}{%
